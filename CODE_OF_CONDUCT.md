@@ -26,7 +26,7 @@ Examples of unacceptable behavior by participants include:
 * The use of sexualized language or imagery and unwelcome sexual attention or
  advances
 * Trolling, insulting/derogatory comments, and personal or political attacks
-* Attacking a religion or ideology. Checkmate, Islamophobes.
+* Attacking a religion or ideology. Checkmate, Ｉｓｌａｍｏｐｈｏｂｅｓ.
 * Public or private harassment
 * Publishing others' private information, such as a physical or electronic
  address, without explicit permission
