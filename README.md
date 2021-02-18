@@ -17,7 +17,7 @@ npm i battlelog.js
 BattlelogJS doesn't much require any dependencies, only axios. While of course, it does requires on some dev dependencies so that we can develop the library easier. 
 
 - [jsdoc](https://github.com/jsdoc/jsdoc) - JavaScript documentation generator.
-- []
+- [discordjs/docgen](https://github.com/discordjs/docgen) - With 
 
 ## Misc stuff
 
