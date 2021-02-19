@@ -17,3 +17,5 @@ const res = await axios.get('https://battlelog.battlefield.com/bf3/user/Nefomeme
 console.log(res.data)
 ```
 
+And alright, we can rut it in RunKit. [Click here if you want to take a look.](https://runkit.com/nefomemes/axios-battlelog-api-user)
+
