@@ -1,11 +1,18 @@
 ## How the API works
-Alright, so basically it works like this. You open Battlelog, go to a page you wish. And that's it. Thhat's the endpoint. Easy peasy.
+Alright, so basically it works like this, The API endpoints works parallel with the HTML pages we normaly see. We need to add something to make the server return JSON output. 
 
-### But how I will be able to get the JSON output? It will just return barebones HTML.
-
-Add these headers.
+Alright, Add these headers.
 ```
 X-Requested-With: XMLHttpRequest
 X-AjaxNavigation: 1
 ```
 
+So it would be like this:
+```js
+const axios = require('axios');
+
+const res = await axios.get('https://battlelog.battlefield.com/bf3/user/Nefomemes',
+{headers: {"X-Requested-With":"XMLHttpRequest", "X-AjaxNavigation":"1"}})
+
+console.log(res)
+```
