@@ -21,3 +21,6 @@ console.log(res.data)
 
 And alright, we can rut it in RunKit. [Click here if you want to take a look](https://runkit.com/nefomemes/axios-battlelog-api-user). [You can run it in Replit aswell tho.](https://repl.it/@Nefomemes/axios-battlelog-api-user#index.js)
 
+## Endpoints
+
+This is not the scope of this tutorial. But in the future I will try to document Battlelog API and stuff.
