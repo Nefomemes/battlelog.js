@@ -1,6 +1,8 @@
 # battlelog.js
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js?ref=badge_shield) ![](https://img.shields.io/github/workflow/status/Nefomemes/battlelog.js/ESLint?label=ESLint&style=flat-square) [![GitHub pages](https://github.com/Nefomemes/battlelog.js/actions/workflows/docs.yml/badge.svg)](https://github.com/Nefomemes/battlelog.js/actions/workflows/docs.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js?ref=badge_shield)
+![](https://img.shields.io/github/workflow/status/Nefomemes/battlelog.js/ESLint?label=ESLint&style=flat-square)
+[![GitHub pages](https://github.com/Nefomemes/battlelog.js/actions/workflows/docs.yml/badge.svg)](https://github.com/Nefomemes/battlelog.js/actions/workflows/docs.yml)
 
 Unofficial API wrapper for battlelog.battlefield.com
 
