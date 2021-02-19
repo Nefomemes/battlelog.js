@@ -4,7 +4,7 @@
 Alright, so basically it works like this, The API endpoints works parallel with the HTML pages we normaly see. So we need to add something to make the server return JSON output. 
 
 Alright, let's try adding these headers.
-```
+```yaml
 X-Requested-With: XMLHttpRequest
 X-AjaxNavigation: 1
 ```
