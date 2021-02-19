@@ -1,3 +1,5 @@
+
+
 ## How the API works
 Alright, so basically it works like this, The API endpoints works parallel with the HTML pages we normaly see. We need to add something to make the server return JSON output. 
 
@@ -17,5 +19,5 @@ const res = await axios.get('https://battlelog.battlefield.com/bf3/user/Nefomeme
 console.log(res.data)
 ```
 
-And alright, we can rut it in RunKit. [Click here if you want to take a look.](https://runkit.com/nefomemes/axios-battlelog-api-user)
+And alright, we can rut it in RunKit. [Click here if you want to take a look.](https://runkit.com/nefomemes/axios-battlelog-api-user). [Or if you are one of those pesky Replit fanboys.](https://repl.it/@Nefomemes/axios-battlelog-api-user#index.js)
 
