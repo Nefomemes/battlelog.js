@@ -39,9 +39,20 @@ function validateOptions(data, rules){
 	return data;
 	
 }
+
+/**
+* Populate an object with a raw data object.
+*
+* @function 
+* @param {object} cls - The class / object to populate
+* @param {object} data - The data whose properties will be used to populate the class / object.
+* @param {object} [options]- An object filled with how things should be done.
+*/
 function structureData(cls, data, options = {}) {
 	if(!data) return;
 	if(!cls) throw Error();
+	
+	
 
 	setDefault(options, 'blacklist', []);
 	setDefault(options, 'nicknames', {});
