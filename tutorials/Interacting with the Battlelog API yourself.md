@@ -1,4 +1,4 @@
-
+Wanna make your own BattlelogJS? Or perhaps there is no Battlelog wrapper in your preferred programming language? We gotchu fam. Here we will teach you how to interact with the Battlelog API yourself.
 
 ## How the API works
 Alright, so basically it works like this, The API endpoints works parallel with the HTML pages we normaly see. So we need to add something to make the server return JSON output. 
@@ -23,4 +23,4 @@ And alright, we can rut it in RunKit. [Click here if you want to take a look](ht
 
 ## Endpoints
 
-This is not the scope of this tutorial. But in the future I will try to document Battlelog API and stuff.
+This is not the scope of this tutorial. But in the future perhaps I will try to fully document Battlelog API and stuff.
