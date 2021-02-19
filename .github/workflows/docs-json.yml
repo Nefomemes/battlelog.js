@@ -1,4 +1,4 @@
-name: Deployment
+name: Documentation JSON
 on:
   push:
     branches:
