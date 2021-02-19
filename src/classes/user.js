@@ -9,14 +9,33 @@ const { stringify } = require("querystring");
  * @param {object} data - Raw object data of the user. 
  */
 class User {
+	/**
+	 * The user's email hash.
+	 * 
+	 * @property 
+	 * 
+	 */
+	gravatarEmailHash;
 
-	#gravatar;
+	/**
+	 * @typedef {(User|string|object)} UserResolvable - Something that can be parsed into a User instance. Could be a User instance, the username of the user, or a raw data object of the user. 
+	 *  
+	 */
 	
-	#client;
+	/**
+	 * Creates a new User instance.
+	 * 
+	 * @constructor
+	 * @param {Client} - The client for this user.
+	 * @param {UserResolvable} [data] - The user's data.
+	 */
 
 	constructor (client, data){
 		
 	this.client = client;	
+	/**
+	 * @property {GameClient} client - The client used to access this user.
+	 */
 	if(typeof data === "object"){
 	this.structureData(data);
 	} else if(typeof data == "string"){
@@ -34,7 +53,7 @@ class User {
 
 			const profile = res.data.context.profileCommon;
 			this.structureData(profile);
-this.soldiers = res.data.context.soldiersBox;
+
 this.activities = res.data.context.activityStream;
 	return this;
 	}
@@ -50,11 +69,14 @@ this.activities = res.data.context.activityStream;
 		if(data.user){
 		utils.structureData(this, data.user, {blacklist: ["gravatarMd5"]});
 
-		this.#gravatar = data.user.gravatarMd5;
-
+		if(data.user.gravatarMd5){
+		this.gravatarEmailHash = data.user.gravatarMd5;
+		}
 		}
 
-
+		/**
+		 * @property {Map<User>} friends =
+		 */
 		if(data.tenFriends){
 			this.friends = data.tenFriends.map((i) => new User(this.client, i));
 		}
