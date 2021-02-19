@@ -23,4 +23,4 @@ And alright, we can rut it in RunKit. [Click here if you want to take a look](ht
 
 ## Endpoints
 
-This is not in the scope of this tutorial. But in the future perhaps I will try to fully document Battlelog API and stuff.
+This is not the scope of this tutorial. But in the future perhaps I will try to fully document Battlelog API and stuff.
