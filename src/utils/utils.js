@@ -12,10 +12,14 @@ function getArticle(str, plural) {
 
 
 /**
- * Manages 
+ * Manages options. Does not support recursion yet.
+ * 
+ * @function
+ * @param {object} data - The options object data.
+ * @param {object} rules - The rules used to manage the options.
  */
 function validateOptions(data, rules) {
-
+	
 
 	if (rules.alias) {
 		for (let [name, value] of Object.entries(rules.alias)) {
@@ -41,7 +45,20 @@ function validateOptions(data, rules) {
 		}
 	}
 
+	if(rules.requiredToBe){
+		for (let [prop, value] of Object.entries(rules.requiredToBe)){
+			if(value && value.length){
+					
+				if(!value.includes(data[prop])) throw Error(`Option ${prop} is required to be ${(() => {
 
+					var lastOne = value.pop();
+
+					return `${value.map(i => `'${i}'`).join(', ')}, or '${lastOne}'`;
+
+				})()}`)
+			}
+		}
+	}
 
 	return data;
 
@@ -52,14 +69,14 @@ function validateOptions(data, rules) {
 * 
 * @param {object} cls - The class/object to populate
 * @param {object} data - The data whose properties will be used to populate the class / object.
-* @param {object} [options] - An object filled with how things should be done.
-* @param {array} [options.blacklist] - An array filled with properties that should be ignored
-* @param {array} [options.setBoolean] - An array filled with properties that should be set to true if they are truthy or false if they are falsy.
-* @param {object} [options.alias] - An object that rules which properties should be renamed and what should they be renamed to.
-* @param {array} [options.onlyAssignIfTruthy] - An array filled 
+* @param {object} [rules] - An object filled with how things should be done.
+* @param {array} [rules.blacklist] - An array filled with properties that should be ignored
+* @param {array} [rules.setBoolean] - An array filled with properties that should be set to true if they are truthy or false if they are falsy.
+* @param {object} [rules.alias] - An object that rules which properties should be renamed and what should they be renamed to.
+* @param {array} [rules.onlyAssignIfTruthy] - An array filled 
 * @returns {object} - The class/object
 */
-function structureData(cls, data, options = {}) {
+function structureData(cls, data, rules = {}) {
 	if (!data) return;
 	if (!cls) throw Error();
 
@@ -68,13 +85,13 @@ function structureData(cls, data, options = {}) {
 			"blacklist": "array",
 			"setBoolean":"array",
 			"alias":"object",
-			"onlyAssignIfTruthy":"array"
+			"onlyAssignIfTruthy":"array",
 		},
 		defaults: {
 			"blacklist":[],
 			"setBoolean": [],
 			"alias": {},
-			"onlyAssignIfTruthy":[]
+			"onlyAssignIfTruthy":[],
 		}
 	})
 

@@ -29,26 +29,18 @@ class Platoon {
 	structureData(data){
 		utils.structureData(this, data, {blacklist: ['badgePath']});
 
-
-		this.#badgePathRaw = data.badgePath;
+		/**
+		 * @typedef
+		 */
+		this.badge = {};
+		
+		var badgeUrl1 = data.badgePath.split("[FORMAT]").join("png").split("[SIZE]");
+		
+		badge[60] = badgeUrl1.join('60');
+		badge[320] = badgeUrl1.join('320');
 		
 	}
-	/**
-	 * 
-	 * @param {object} [options]  
-	 */
-	getBadge(options = {}){
 
-		if(!options.format) options.format = "png";
-
-		if(!options.size) options.size = 128;
-
-		if(typeof options.format !== 'string') throw Error("Option 'format' is required to be a string.");
-
-
-
-		return this["#badgePathRaw"].split("[FORMAT]").join(options.format).split("[SIZE]").join(options.size);
-	}
 	
 	async fetch(){
 		const res = await this.client.axios.get(`/platoon/${this.id}/`);
