@@ -33,7 +33,7 @@ class SoldiersManager {
     }
 
    async fetch(){
-        var res = await this.user.axios.get('/user/overviewBoxStats/3307924356088947575`);
+        var res = await this.user.axios.get(`/user/overviewBoxStats/${this.persona.personaId}`);
         
         this.structureData(res.data.soldiersBox, true);
         

@@ -7,7 +7,12 @@ const { User } = require("./user");
  */
 class Server {
 
-	
+	/**
+	 * Creates a new Server instance.
+	 * 
+	 * @param {GameClient} client 
+	 * @param {object} data 
+	 */
 	constructor(client, data) {
 		
 		
@@ -58,5 +63,5 @@ class Server {
 			
 		return this;
 	}
-}
+}  
 //

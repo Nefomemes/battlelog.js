@@ -6,8 +6,20 @@ const utils = require("../utils/utils");
  */
 class Platoon {
 
-
+	/**
+	 * The raw template of the platoon's badge.
+	 * 
+	 * @property {string}
+	 * @private
+	 */
 	#badgePathRaw;
+
+	/**
+	 * 
+	 * 
+	 * @property 
+	 */
+	badge = {60: null, 320: null};
 	/**
 	 * Creates a new Platoon instance.
 	 * 
@@ -29,15 +41,11 @@ class Platoon {
 	structureData(data){
 		utils.structureData(this, data, {blacklist: ['badgePath']});
 
-		/**
-		 * @typedef
-		 */
-		this.badge = {};
 		
 		var badgeUrl1 = data.badgePath.split("[FORMAT]").join("png").split("[SIZE]");
 		
-		badge[60] = badgeUrl1.join('60');
-		badge[320] = badgeUrl1.join('320');
+		this.badge[60] = badgeUrl1.join('60');
+		this.badge[320] = badgeUrl1.join('320');
 		
 	}
 

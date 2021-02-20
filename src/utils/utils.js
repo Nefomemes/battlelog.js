@@ -4,7 +4,7 @@ function getArticle(str, plural) {
 
 	if (typeof str !== "string") throw Error(`Expected parameter 'str' to be a string. While it is actually ${getArticle(typeof str)} ${typeof str}.`);
 	if (plural && plural === true) return 'some';
-	if ('aiueo'.includes(str[0])) return 'an';
+	if(['a','i','u', 'e', 'o'].includes(str.shift())) return 'an';
 	return 'a';
 }
 
@@ -41,7 +41,7 @@ function validateOptions(data, rules) {
 
 	if (rules.typeof) {
 		for (let [prop, value] of Object.entries(rules.typeof)) {
-			if (typeof data[prop] !== value) throw Error(`Option '${prop} is required to be ${getArticle(value)} while it is a ${typeof data[prop]}.`);
+			if (typeof data[prop] !== value) throw Error(`Option '${prop}' is required to be ${getArticle(value)} ${value} while it is ${getArticle(data[prop])} ${typeof data[prop]}.`);
 		}
 	}
 
@@ -80,7 +80,7 @@ function structureData(cls, data, rules = {}) {
 	if (!data) return;
 	if (!cls) throw Error();
 
-	validateOptions(options, {
+	validateOptions(rules, {
 		typeof: {
 			"blacklist": "array",
 			"setBoolean":"array",
@@ -100,10 +100,10 @@ function structureData(cls, data, rules = {}) {
 
 
 	for (let [name, value] of Object.entries(data)) {
-		if(options.alias[name]) name = options.alias[name];
-		if (!options.onlyAssignIfTruthy.includes(name) || value){
-			if (!options.blacklist.includes(name)) {
-				if (!options.setBoolean) {
+		if(rules.alias[name]) name = rules.alias[name];
+		if (!rules.onlyAssignIfTruthy.includes(name) || value){
+			if (!rules.blacklist.includes(name)) {
+				if (!rules.setBoolean) {
 					cls[name] = value;
 				} else {
 					cls[name] = value ? true : false;
