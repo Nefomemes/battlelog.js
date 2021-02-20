@@ -1,6 +1,6 @@
-const {Platoon} = require("./platoon");
+const { Platoon } = require("./platoon");
 const utils = require("../utils/utils");
-const {stringify} = require("querystring");
+const { stringify } = require("querystring");
 /**
  * Represents a Battlelog user.
  *
@@ -9,13 +9,11 @@ const {stringify} = require("querystring");
  * @param {object} data - Raw object data of the user.
  */
 class User {
-
   #gravatar;
 
   #client;
 
   constructor(client, data) {
-
     this.client = client;
     if (typeof data === "object") {
       this.structureData(data);
@@ -46,12 +44,11 @@ class User {
    * @returns {User} the User
    */
   structureData(data) {
-
-    utils.structureData(
-        this, data,
-        {blacklist : [ "user", "tenFriends", "platoons", "platoonFans" ]});
+    utils.structureData(this, data, {
+      blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
+    });
     if (data.user) {
-      utils.structureData(this, data.user, {blacklist : [ "gravatarMd5" ]});
+      utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
 
       this.#gravatar = data.user.gravatarMd5;
     }
@@ -65,8 +62,9 @@ class User {
     }
 
     if (data.platoonFans) {
-      this.platoonFans =
-          data.platoonFans.map((i) => new Platoon(this.client, i));
+      this.platoonFans = data.platoonFans.map(
+        (i) => new Platoon(this.client, i)
+      );
     }
 
     if (this.club) {
@@ -84,10 +82,9 @@ class User {
    * @returns {string} URL string for the user's avatar.
    */
   displayAvatarURL(options = {}) {
-
     utils.validateOptions(options, {
-      alias : {size : 's', rating : 'r', 'default' : 'd', extension : 'e'},
-      defaults : {'default' : 'retro'}
+      alias: { size: "s", rating: "r", default: "d", extension: "e" },
+      defaults: { default: "retro" },
     });
 
     if (options.size && options.size > 2048)
@@ -96,26 +93,37 @@ class User {
       throw Error("Option 'size' is required to be more than 1.");
     if (options.rating === "r")
       throw Error(
-          "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted.");
+        "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted."
+      );
 
-    if (options.rating === "x")
-      throw Error("Ok coomer");
+    if (options.rating === "x") throw Error("Ok coomer");
 
-    if (!['g', 'pg'].includes(options.rating))
-      throw Error("");
-    if (!(options.default.startsWith("http://") ||
-          options.default.startsWith("https://")) &&
-        !['404', 'mp', 'identicon', 'monsterid', 'wavatar', 'retro', 'robohash',
-          'blank']
-             .includes(options.default))
+    if (!["g", "pg"].includes(options.rating)) throw Error("");
+    if (
+      !(
+        options.default.startsWith("http://") ||
+        options.default.startsWith("https://")
+      ) &&
+      ![
+        "404",
+        "mp",
+        "identicon",
+        "monsterid",
+        "wavatar",
+        "retro",
+        "robohash",
+        "blank",
+      ].includes(options.default)
+    )
       throw Error(
-          "Option 'default' did not provide a valid default profile picture");
-    let params = {r : options.rating, d : options.default, s : options.size};
+        "Option 'default' did not provide a valid default profile picture"
+      );
+    let params = { r: options.rating, d: options.default, s: options.size };
 
-    if (options.forceDefault)
-      params.f = 'y';
+    if (options.forceDefault) params.f = "y";
     return `https://www.gravatar.com/avatar/${this.#gravatar}.${
-        options.extension}?${stringify(params)}`;
+      options.extension
+    }?${stringify(params)}`;
   }
 }
 
