@@ -45,9 +45,9 @@ class Platoon {
 	async fetch(){
 		const res = await this.client.axios.get(`/platoon/${this.id}/`);
 
-		this.structureData(res.context.platoon);
+		this.structureData(this, res.data.context.platoon);
 
-		this.isFan = res.context.isFan;
+		this.isFan = res.data.context.isFan;
 	}
 }
 

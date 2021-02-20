@@ -16,15 +16,28 @@ class SoldiersManager {
         this.user = user;
 
     }
-    
-    structureData(data){
-        for(let soldier of data){
-            this.cache.set(soldier.persona.personaId, new Soldier())
-        }
+    /**
+     * Add 
+     */
+    structureData(data, fetch){
+    	for(let soldier of data){
+    	var existingSoldier =	this.cache.get(soldier.persona.personaId)
+    		if(existingSoldier){
+    			soldier.structureData(soldier, true)
+    		} else {
+        new Soldier(this.user, soldier, fetch );
+    	}
+    }
+    	
+    	return this;
     }
 
-    fetch(){
-        return this.user.fetch();
+   async fetch(){
+        var res = await this.user.axios.get('/user/overviewBoxStats/3307924356088947575`);
+        
+        this.structureData(res.data.soldiersBox, true);
+        
+        return this;
     }
 }
 
