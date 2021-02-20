@@ -27,7 +27,7 @@ jobs:
           CI: TRUE
       - name: Test Code Linting
         run: npm run lint
-      -
+  
     
       - name: Commit the fix
         run: |
