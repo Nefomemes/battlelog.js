@@ -10,28 +10,26 @@
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output docs/docs.json",
     "docs:test": "docgen --source ./src",
-            "build:browser": "webpack"
+    "build:browser": "webpack"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-
   "dependencies": {
     "axios": "^0.21.1"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^6.0.1",
-    "eslint": "^7.1.0", 
-    "eslint-plugin-jsdoc":"^32.0.2",
-    "eslint-plugin-import":"^2.22.1",
-    "eslint-plugin-node":"^11.1.0",
-    "eslint-plugin-promise":"^4.3.1", 
-    "@babel/eslint-parser":"^7.12.16",
-    "@babel/core":">=7.2.0",
-    "@babel/plugin-proposal-class-properties":"^7.12.13",
+    "eslint": "^7.1.0",
+    "eslint-plugin-jsdoc": "^32.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/core": ">=7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
     "discord.js-docgen": "git+https://github.com/discordjs/docgen.git",
-    "babel-loader":"^8.2.2",
-    "@babel/preset-env":"^7.12.16"
-    
+    "babel-loader": "^8.2.2",
+    "@babel/preset-env": "^7.12.16"
   }
 }

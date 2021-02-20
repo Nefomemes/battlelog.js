@@ -1,4 +1,8 @@
 
+/**
+ * @param str
+ * @param plural
+ */
 function getArticle(str, plural) {
 	if(!str) throw Error("Expected parameter 'str'. Found no parameters.");
 	
@@ -9,12 +13,21 @@ function getArticle(str, plural) {
 }
 
 
+/**
+ * @param obj
+ * @param prop
+ * @param value
+ */
 function setDefault(obj, prop, value){
 	if(!obj[prop]) return obj[prop] = value;
 
 }
 
 
+/**
+ * @param data
+ * @param rules
+ */
 function validateOptions(data, rules){
 
 
@@ -41,13 +54,14 @@ function validateOptions(data, rules){
 }
 
 /**
-* Populate an object with a raw data object.
-*
-* @function 
-* @param {object} cls - The class / object to populate
-* @param {object} data - The data whose properties will be used to populate the class / object.
-* @param {object} [options]- An object filled with how things should be done.
-*/
+ * Populate an object with a raw data object.
+ *
+ * @function 
+ * @param {object} cls - The class / object to populate
+ * @param {object} data - The data whose properties will be used to populate the class / object.
+ * @param options
+ * @param {object} [options]- An object filled with how things should be done.
+ */
 function structureData(cls, data, options = {}) {
 	if(!data) return;
 	if(!cls) throw Error();
