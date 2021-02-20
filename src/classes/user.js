@@ -1,6 +1,9 @@
 const { Platoon } = require("./platoon");
 const utils = require("../utils/utils");
 const { stringify } = require("querystring");
+const { SoldiersManager } = require("./sodliersmanager");
+const { Soldier } = require("./soldier");
+
 /**
  * Represents a Battlelog user.
  * 

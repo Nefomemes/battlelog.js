@@ -48,4 +48,4 @@ const utils = require("../utils/utils");
 		const res = await this.user.axios.get();
 	}
 
-}
+}  
