@@ -8,7 +8,7 @@ const { ServerBrowser } = require("./classes/sb");
 const { Server } = require("./classes/server");
 const utils = require("./utils/utils");
 module.exports = (...params) => {
-	return new BattlelogClient(...params);
+  return new BattlelogClient(...params);
 };
 
 module.exports.BattlelogClient = BattlelogClient;
