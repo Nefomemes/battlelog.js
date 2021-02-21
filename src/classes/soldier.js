@@ -38,5 +38,7 @@ class Soldier {
     return this;
   }
 
-  async fetch() { const res = await this.user.axios.get(); }
+  async fetch() {
+    const res = await this.user.axios.get();
+  }
 }

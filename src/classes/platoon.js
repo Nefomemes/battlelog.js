@@ -20,7 +20,7 @@ class Platoon {
    * @property {string} 60 - The badge in 60px.
    * @property {string} 320 - The badge in 320px.
    */
-  badge = {60 : null, 320: null};
+  badge = { 60: null, 320: null };
   /**
    * Creates a new Platoon instance.
    *
@@ -40,12 +40,12 @@ class Platoon {
    * @returns {User} the User
    */
   structureData(data) {
-    utils.structureData(this, data, {blacklist : [ "badgePath", "" ]});
+    utils.structureData(this, data, { blacklist: ["badgePath", ""] });
 
     var badgeUrl1 = (data.badgePath || data.emblemPath)
-                        .split("[FORMAT]")
-                        .join("png")
-                        .split("[SIZE]");
+      .split("[FORMAT]")
+      .join("png")
+      .split("[SIZE]");
 
     this.badge[60] = badgeUrl1.join("60");
     this.badge[320] = badgeUrl1.join("320");
