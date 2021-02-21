@@ -21,7 +21,7 @@
    "rules":{
       "no-unused-vars":"off",
       "no-mixed-spaces-and-tabs": "off",
-      "no-empty":"warning"
+      "no-empty":"warn"
    },
    "parser":"@babel/eslint-parser",
    "parserOptions":{
