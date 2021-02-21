@@ -1,4 +1,3 @@
-
 /**
  * Utilities function to help things out.
  *
@@ -12,18 +11,17 @@
  * @param {boolean} plural
  */
 function getArticle(str, plural) {
-  if (!str)
-    throw Error("Expected parameter 'str'. Found no parameters.");
+  if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
 
   if (typeof str !== "string")
     throw Error(
-        `Expected parameter 'str' to be a string. While it is actually ${
-            getArticle(typeof str)} ${typeof str}.`);
-  if (plural && plural === true)
-    return 'some';
-  if ([ 'a', 'i', 'u', 'e', 'o' ].includes(str[0]))
-    return 'an';
-  return 'a';
+      `Expected parameter 'str' to be a string. While it is actually ${getArticle(
+        typeof str
+      )} ${typeof str}.`
+    );
+  if (plural && plural === true) return "some";
+  if (["a", "i", "u", "e", "o"].includes(str[0])) return "an";
+  return "a";
 }
 
 /**
@@ -34,18 +32,15 @@ function getArticle(str, plural) {
  * @param {object} rules - The rules used to manage the options.
  */
 function validateOptions(data, rules) {
-
   if (rules.alias) {
     for (let [name, value] of Object.entries(rules.alias)) {
-      if (typeof data[name] === "undefined")
-        data[name] = data[value];
+      if (typeof data[name] === "undefined") data[name] = data[value];
     }
   }
 
   if (rules.defaults) {
     for (let [name, value] of Object.entries(rules.defaults)) {
-      if (typeof data[name] === "undefined")
-        data[name] = value;
+      if (typeof data[name] === "undefined") data[name] = value;
     }
   }
 
@@ -53,7 +48,8 @@ function validateOptions(data, rules) {
     for (let required of rules.required) {
       if (!data[required])
         throw Error(
-            `Option '${required}' is required. While it's not provided.`);
+          `Option '${required}' is required. While it's not provided.`
+        );
     }
   }
 
@@ -61,21 +57,27 @@ function validateOptions(data, rules) {
     for (let [prop, value] of Object.entries(rules.typeof)) {
       let type = Array.isArray(data[prop]) ? "array" : typeof data[prop];
       if (type !== value)
-        throw Error(`Option '${prop}' is required to be ${getArticle(value)} ${
-            value} while it is actually ${getArticle(type)} ${type}.`);
+        throw Error(
+          `Option '${prop}' is required to be ${getArticle(
+            value
+          )} ${value} while it is actually ${getArticle(type)} ${type}.`
+        );
     }
   }
 
   if (rules.requiredToBe) {
     for (let [prop, value] of Object.entries(rules.requiredToBe)) {
       if (value && value.length) {
-
         if (!value.includes(data[prop]))
-          throw Error(`Option ${prop} is required to be ${(() => {
-            var lastOne = value.pop();
+          throw Error(
+            `Option ${prop} is required to be ${(() => {
+              var lastOne = value.pop();
 
-            return `${value.map(i => `'${i}'`).join(', ')}, or '${lastOne}'`;
-          })()}`)
+              return `${value
+                .map((i) => `'${i}'`)
+                .join(", ")}, or '${lastOne}'`;
+            })()}`
+          );
       }
     }
   }
@@ -101,29 +103,26 @@ function validateOptions(data, rules) {
  * @returns {object} - The class/object
  */
 function structureData(cls, data, rules = {}) {
-  if (!data)
-    return;
-  if (!cls)
-    throw Error();
+  if (!data) return;
+  if (!cls) throw Error();
 
   validateOptions(rules, {
-    typeof : {
-      "blacklist" : "array",
-      "setBoolean" : "array",
-      "alias" : "object",
-      "onlyAssignIfTruthy" : "array",
+    typeof: {
+      blacklist: "array",
+      setBoolean: "array",
+      alias: "object",
+      onlyAssignIfTruthy: "array",
     },
-    defaults : {
-      "blacklist" : [],
-      "setBoolean" : [],
-      "alias" : {},
-      "onlyAssignIfTruthy" : [],
-    }
-  })
+    defaults: {
+      blacklist: [],
+      setBoolean: [],
+      alias: {},
+      onlyAssignIfTruthy: [],
+    },
+  });
 
   for (let [name, value] of Object.entries(data)) {
-    if (rules.alias[name])
-      name = rules.alias[name];
+    if (rules.alias[name]) name = rules.alias[name];
     if (!rules.onlyAssignIfTruthy.includes(name) || value) {
       if (!rules.blacklist.includes(name)) {
         if (!rules.setBoolean.includes[name]) {

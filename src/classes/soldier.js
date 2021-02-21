@@ -6,7 +6,6 @@ const utils = require("../utils/utils");
  */
 
 class Soldier {
-
   /**
    * Creates a new Soldier instance
    *
@@ -18,7 +17,7 @@ class Soldier {
 
   constructor(user, data, fetch) {
     this.user = user;
-    this.structureData(data, fetch)
+    this.structureData(data, fetch);
   }
   /**
    * Populate an object with a raw data object.
@@ -39,5 +38,7 @@ class Soldier {
     return this;
   }
 
-  async fetch() { const res = await this.user.axios.get(); }
+  async fetch() {
+    const res = await this.user.axios.get();
+  }
 }

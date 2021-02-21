@@ -1,12 +1,11 @@
 const utils = require("../utils/utils");
-const {User} = require("./user");
+const { User } = require("./user");
 /**
  * Represents a server.
  *
  * @class
  */
 class Server {
-
   /**
    * Creates a new Server instance.
    *
@@ -14,7 +13,6 @@ class Server {
    * @param {object} data
    */
   constructor(client, data) {
-
     this.client = client;
     this.structureData(data);
   }
@@ -27,31 +25,31 @@ class Server {
   async fetch() {
     const res = await this.client.axios.get(`/servers/show/pc/${this.guid}`);
     this.structureData(res.data.context.server);
-    this.players =
-        res.data.context.players.map((i) => new User(this.client, i));
+    this.players = res.data.context.players.map(
+      (i) => new User(this.client, i)
+    );
 
     return this;
   }
 
   structureData(data) {
     utils.structureData(this, data, {
-      blacklist : [ 'settings' ],
-      setBoolean : [ 'punkbuster', 'fairfight', 'hasPassword', 'ranked' ]
+      blacklist: ["settings"],
+      setBoolean: ["punkbuster", "fairfight", "hasPassword", "ranked"],
     });
     this.client.servers.cache.set(this.guid, this);
 
     utils.structureData(this.settings, data.settings, {
-      alias : {
-        vhud : 'displayHUD',
-        vffi : 'friendlyFire',
-        vtkk : 'teamKillsBeforeKicked',
-        vbdm : 'bulletDamageModifier',
-        vmin : 'showMinimap',
-        vkca : 'showKillcam',
-
+      alias: {
+        vhud: "displayHUD",
+        vffi: "friendlyFire",
+        vtkk: "teamKillsBeforeKicked",
+        vbdm: "bulletDamageModifier",
+        vmin: "showMinimap",
+        vkca: "showKillcam",
       },
-      setBoolean : [ 'vhud', 'vffi', 'vmin', 'vkca' ]
-    })
+      setBoolean: ["vhud", "vffi", "vmin", "vkca"],
+    });
 
     return this;
   }
