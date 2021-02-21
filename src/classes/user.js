@@ -15,7 +15,7 @@ class User {
   /**
    * The user's email hash.
    *
-   * @property
+   * @property {string}
    *
    */
   gravatarEmailHash;
