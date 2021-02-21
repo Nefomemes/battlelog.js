@@ -40,7 +40,7 @@ class Server {
 		utils.structureData(this, data, { 
 			blacklist: ['settings'], 
 			setBoolean: ['punkbuster', 'fairfight', 'hasPassword', 'ranked'] 
-		})
+		});
 		this.client.servers.cache.set(this.guid, this);
 
 		utils.structureData(this.settings, data.settings,
