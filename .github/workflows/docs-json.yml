@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Generate documentation in JSON
-        run: ./node_modules/.bin/jsdoc -template ./node_modules/jsdoc-json --destination docs.json --recurse src
+        run: ./node_modules/.bin/jsdoc --template ./node_modules/jsdoc-json --destination docs.json --recurse src
       - name: Commit the fix
         run: |
              git add --all
