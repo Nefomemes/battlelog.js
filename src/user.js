@@ -28,10 +28,10 @@ class User {
 	platoons = new BattlelogMap();
 
 	/**
-	  * The platoons the user is a fan of.
-	* 
-	  * @property {Map<Platoon>} 
-	  */
+	 * The platoons the user is a fan of.
+	 * 
+	 * @property {Map<Platoon>} 
+  	 */
 
 	platoonFans = new BattlelogMap();
 
