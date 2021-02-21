@@ -1,4 +1,4 @@
-(async function () {
+(async function() {
   const bl = require("./src/index.js");
 
   var client = bl();
