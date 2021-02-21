@@ -1,18 +1,35 @@
 const utils = require("../utils/utils");
 const { User } = require("./user");
+/**
+ * Represents a server.
+ * 
+ * @class
+ */
 class Server {
+
+	
 	constructor(client, data) {
+		
+		
 		this.client = client;
 		this.structureData(data);
 
 
 	}
-
+	/**
+	 * Fetch the server and populate the server's stats again.
+	 * 
+	 * @function
+	 * @returns {Server} - The server
+	 */
 	async fetch() {
 		const res = await this.client.axios.get(`/servers/show/pc/${this.guid}`);
 		this.structureData(res.data.context.server);
 		this.players = res.data.context.players.map((i) => new User(this.client, i));
+	
+		return this;
 	}
+
 
 	structureData(data) {
 		utils.structureData(this, data, { 
@@ -20,8 +37,6 @@ class Server {
 			setBoolean: ['punkbuster', 'fairfight', 'hasPassword', 'ranked'] 
 		})
 		this.client.servers.cache.set(this.guid, this);
-
-		this.settings = {};
 
 		utils.structureData(this.settings, data.settings,
 			{
