@@ -14,9 +14,11 @@ class Platoon {
   #badgePathRaw;
 
   /**
-   *
-   *
-   * @property
+   * The platoon's badge.
+   * 
+   * @property {object} badge
+   * @property {string} 60 - The badge in 60px.
+   * @property {string} 320 - The badge in 320px.
    */
   badge = { 60: null, 320: null };
   /**
