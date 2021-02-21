@@ -3,10 +3,7 @@
     {
       "comment": "/**\n * Represents a Battlelog session.\n *\n * @class\n */",
       "meta": {
-        "range": [
-          146,
-          732
-        ],
+        "range": [146, 732],
         "filename": "blclient.js",
         "lineno": 9,
         "columnno": 0,
@@ -15,9 +12,7 @@
           "id": "astnode100000016",
           "name": "BattlelogClient",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "options"
-          ]
+          "paramnames": ["options"]
         }
       },
       "name": "BattlelogClient",
@@ -32,9 +27,7 @@
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The options used here.",
           "name": "options-"
@@ -46,10 +39,7 @@
     {
       "comment": "/**\n * Creates a new GameClient instance.\n *\n * @param {...*} params - The params used to create the instance.\n */",
       "meta": {
-        "range": [
-          665,
-          728
-        ],
+        "range": [665, 728],
         "filename": "blclient.js",
         "lineno": 35,
         "columnno": 1,
@@ -58,9 +48,7 @@
           "id": "astnode100000051",
           "name": "BattlelogClient#game",
           "type": "MethodDefinition",
-          "paramnames": [
-            "params"
-          ]
+          "paramnames": ["params"]
         },
         "vars": {
           "": null
@@ -70,9 +58,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "*"
-            ]
+            "names": ["*"]
           },
           "variable": true,
           "description": "The params used to create the instance.",
@@ -90,10 +76,7 @@
     {
       "comment": "/**\n * Custom Map class for battlelog.js utilities.\n *\n * @class\n * @augments Map\n */",
       "meta": {
-        "range": [
-          86,
-          561
-        ],
+        "range": [86, 561],
         "filename": "blmap.js",
         "lineno": 7,
         "columnno": 0,
@@ -107,9 +90,7 @@
       },
       "classdesc": "Custom Map class for battlelog.js utilities.",
       "kind": "class",
-      "augments": [
-        "Map"
-      ],
+      "augments": ["Map"],
       "name": "BattlelogMap",
       "longname": "BattlelogMap",
       "scope": "global",
@@ -119,10 +100,7 @@
     {
       "comment": "/**\n   * If the key existed in the instance, calls\n   *\n   * @function\n   * @param {*} key\n   * @param {*} value\n   * @param {...*} structureDataStuff - The additional parameters to be passed\n   *     to the key's structureData method.\n   */",
       "meta": {
-        "range": [
-          365,
-          559
-        ],
+        "range": [365, 559],
         "filename": "blmap.js",
         "lineno": 17,
         "columnno": 2,
@@ -131,11 +109,7 @@
           "id": "astnode100000077",
           "name": "BattlelogMap#structureData",
           "type": "MethodDefinition",
-          "paramnames": [
-            "key",
-            "value",
-            "structureDataStuff"
-          ]
+          "paramnames": ["key", "value", "structureDataStuff"]
         },
         "vars": {
           "": null
@@ -146,25 +120,19 @@
       "params": [
         {
           "type": {
-            "names": [
-              "*"
-            ]
+            "names": ["*"]
           },
           "name": "key"
         },
         {
           "type": {
-            "names": [
-              "*"
-            ]
+            "names": ["*"]
           },
           "name": "value"
         },
         {
           "type": {
-            "names": [
-              "*"
-            ]
+            "names": ["*"]
           },
           "variable": true,
           "description": "The additional parameters to be passed\n    to the key's structureData method.",
@@ -181,10 +149,7 @@
     {
       "comment": "/**\n * Represents /:game/forum\n */",
       "meta": {
-        "range": [
-          35,
-          70
-        ],
+        "range": [35, 70],
         "filename": "forums.js",
         "lineno": 4,
         "columnno": 0,
@@ -207,10 +172,7 @@
     {
       "comment": "/**\n *  Represents that /:game/ part. The main brain of everything.\n *\n * @class\n */",
       "meta": {
-        "range": [
-          223,
-          1349
-        ],
+        "range": [223, 1349],
         "filename": "gameclient.js",
         "lineno": 11,
         "columnno": 0,
@@ -219,11 +181,7 @@
           "id": "astnode100000151",
           "name": "GameClient",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "client",
-            "game",
-            "options"
-          ]
+          "paramnames": ["client", "game", "options"]
         }
       },
       "name": "GameClient",
@@ -235,9 +193,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "BattlelogClient"
-            ]
+            "names": ["BattlelogClient"]
           },
           "description": "The client of this instance.",
           "name": "client"
@@ -251,9 +207,7 @@
         },
         {
           "type": {
-            "names": [
-              "GameType"
-            ]
+            "names": ["GameType"]
           },
           "name": ""
         }
@@ -273,12 +227,7 @@
       "kind": "typedef",
       "name": "GameType",
       "type": {
-        "names": [
-          "'bf3'",
-          "'bf4'",
-          "'bfh'",
-          "'mohw'"
-        ]
+        "names": ["'bf3'", "'bf4'", "'bfh'", "'mohw'"]
       },
       "longname": "GameType",
       "scope": "global",
@@ -288,10 +237,7 @@
     {
       "comment": "/**\n\t\t *  @property {GameType} game - The game\n\t\t */",
       "meta": {
-        "range": [
-          1058,
-          1078
-        ],
+        "range": [1058, 1078],
         "filename": "gameclient.js",
         "lineno": 43,
         "columnno": 2,
@@ -307,9 +253,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "GameType"
-            ]
+            "names": ["GameType"]
           },
           "description": "The game",
           "name": "game"
@@ -326,10 +270,7 @@
     {
       "comment": "/**\n   * The raw template of the platoon's badge.\n   *\n   * @property {string}\n   * @private\n   */",
       "meta": {
-        "range": [
-          205,
-          219
-        ],
+        "range": [205, 219],
         "filename": "platoon.js",
         "lineno": 14,
         "columnno": 2,
@@ -344,9 +285,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           }
         }
       ],
@@ -362,10 +301,7 @@
     {
       "comment": "/**\n   * The platoon's badge.\n   *\n   * @property {object} badge\n   * @property {string} 60 - The badge in 60px.\n   * @property {string} 320 - The badge in 320px.\n   */",
       "meta": {
-        "range": [
-          394,
-          426
-        ],
+        "range": [394, 426],
         "filename": "platoon.js",
         "lineno": 23,
         "columnno": 2,
@@ -380,26 +316,20 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "name": "badge"
         },
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           },
           "description": "The badge in 60px.",
           "name": "60"
         },
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           },
           "description": "The badge in 320px.",
           "name": "320"
@@ -416,10 +346,7 @@
     {
       "comment": "/**\n * Represents a Platoon\n *\n * @class\n */",
       "meta": {
-        "range": [
-          86,
-          1306
-        ],
+        "range": [86, 1306],
         "filename": "platoon.js",
         "lineno": 7,
         "columnno": 0,
@@ -428,10 +355,7 @@
           "id": "astnode100000290",
           "name": "Platoon",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "client",
-            "data"
-          ]
+          "paramnames": ["client", "data"]
         }
       },
       "name": "Platoon",
@@ -443,17 +367,13 @@
       "params": [
         {
           "type": {
-            "names": [
-              "GameClient"
-            ]
+            "names": ["GameClient"]
           },
           "name": "client"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "name": "data"
         }
@@ -464,10 +384,7 @@
     {
       "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
       "meta": {
-        "range": [
-          803,
-          1113
-        ],
+        "range": [803, 1113],
         "filename": "platoon.js",
         "lineno": 42,
         "columnno": 2,
@@ -476,9 +393,7 @@
           "id": "astnode100000315",
           "name": "Platoon#structureData",
           "type": "MethodDefinition",
-          "paramnames": [
-            "data"
-          ]
+          "paramnames": ["data"]
         },
         "vars": {
           "": null
@@ -488,9 +403,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The data used to structure the class",
           "name": "data"
@@ -499,9 +412,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "the User"
         }
@@ -517,10 +428,7 @@
     {
       "comment": "/**\n\t * \n\t */",
       "meta": {
-        "range": [
-          181,
-          199
-        ],
+        "range": [181, 199],
         "filename": "sb.js",
         "lineno": 13,
         "columnno": 1,
@@ -542,10 +450,7 @@
     {
       "comment": "/**\n * Represents Battlelog server browser/\n * \n * @class\n */",
       "meta": {
-        "range": [
-          143,
-          507
-        ],
+        "range": [143, 507],
         "filename": "sb.js",
         "lineno": 9,
         "columnno": 0,
@@ -554,10 +459,7 @@
           "id": "astnode100000449",
           "name": "ServerBrowser",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "client",
-            "data"
-          ]
+          "paramnames": ["client", "data"]
         }
       },
       "name": "ServerBrowser",
@@ -571,10 +473,7 @@
     {
       "comment": "/**\n * Represents a server.\n *\n * @class\n */",
       "meta": {
-        "range": [
-          122,
-          1311
-        ],
+        "range": [122, 1311],
         "filename": "server.js",
         "lineno": 8,
         "columnno": 0,
@@ -583,10 +482,7 @@
           "id": "astnode100000537",
           "name": "Server",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "client",
-            "data"
-          ]
+          "paramnames": ["client", "data"]
         }
       },
       "name": "Server",
@@ -598,17 +494,13 @@
       "params": [
         {
           "type": {
-            "names": [
-              "GameClient"
-            ]
+            "names": ["GameClient"]
           },
           "name": "client"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "name": "data"
         }
@@ -619,10 +511,7 @@
     {
       "comment": "/**\n   * Fetch the server and populate the server's stats again.\n   *\n   * @function\n   * @returns {Server} - The server\n   */",
       "meta": {
-        "range": [
-          469,
-          727
-        ],
+        "range": [469, 727],
         "filename": "server.js",
         "lineno": 25,
         "columnno": 2,
@@ -642,9 +531,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "Server"
-            ]
+            "names": ["Server"]
           },
           "description": "- The server"
         }
@@ -661,10 +548,7 @@
     {
       "comment": "/**\n * Represents a Battlelog soldier.\n *\n * @class\n */",
       "meta": {
-        "range": [
-          98,
-          925
-        ],
+        "range": [98, 925],
         "filename": "soldier.js",
         "lineno": 8,
         "columnno": 0,
@@ -673,11 +557,7 @@
           "id": "astnode100000696",
           "name": "Soldier",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "user",
-            "data",
-            "fetch"
-          ]
+          "paramnames": ["user", "data", "fetch"]
         }
       },
       "name": "Soldier",
@@ -689,18 +569,14 @@
       "params": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "The user of this soldier.",
           "name": "user"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "optional": true,
           "description": "The raw data object to be used to populate the\n    instance.",
@@ -713,10 +589,7 @@
     {
       "comment": "/**\n   * Populate an object with a raw data object.\n   *\n   * @param {object} data - The raw data\n   * @param {boolean} [fetch] - Whether the raw data is from a fetch function.\n   * @returns {Soldier} - The soldier\n   */",
       "meta": {
-        "range": [
-          651,
-          855
-        ],
+        "range": [651, 855],
         "filename": "soldier.js",
         "lineno": 29,
         "columnno": 2,
@@ -725,10 +598,7 @@
           "id": "astnode100000719",
           "name": "Soldier#structureData",
           "type": "MethodDefinition",
-          "paramnames": [
-            "data",
-            "fetch"
-          ]
+          "paramnames": ["data", "fetch"]
         },
         "vars": {
           "": null
@@ -738,18 +608,14 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The raw data",
           "name": "data"
         },
         {
           "type": {
-            "names": [
-              "boolean"
-            ]
+            "names": ["boolean"]
           },
           "optional": true,
           "description": "Whether the raw data is from a fetch function.",
@@ -759,9 +625,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "Soldier"
-            ]
+            "names": ["Soldier"]
           },
           "description": "- The soldier"
         }
@@ -777,10 +641,7 @@
     {
       "comment": "/**\n * Manages a user's soldiers.\n *\n * @class\n */",
       "meta": {
-        "range": [
-          139,
-          890
-        ],
+        "range": [139, 890],
         "filename": "soldiersmanager.js",
         "lineno": 9,
         "columnno": 0,
@@ -789,10 +650,7 @@
           "id": "astnode100000794",
           "name": "SoldiersManager",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "user",
-            "data"
-          ]
+          "paramnames": ["user", "data"]
         }
       },
       "name": "SoldiersManager",
@@ -803,18 +661,14 @@
       "params": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "The user that owns this SoldiersManager instance.",
           "name": "user"
         },
         {
           "type": {
-            "names": [
-              "Array"
-            ]
+            "names": ["Array"]
           },
           "optional": true,
           "description": "Raw array data of the user's soldiers.",
@@ -827,10 +681,7 @@
     {
       "comment": "/**\n   * Add\n   *\n   * @param data\n   * @param fetch\n   */",
       "meta": {
-        "range": [
-          472,
-          695
-        ],
+        "range": [472, 695],
         "filename": "soldiersmanager.js",
         "lineno": 25,
         "columnno": 2,
@@ -839,10 +690,7 @@
           "id": "astnode100000812",
           "name": "SoldiersManager#structureData",
           "type": "MethodDefinition",
-          "paramnames": [
-            "data",
-            "fetch"
-          ]
+          "paramnames": ["data", "fetch"]
         },
         "vars": {
           "": null
@@ -868,10 +716,7 @@
     {
       "comment": "/**\n   * The user's email hash.\n   *\n   * @property {string}\n   *\n   */",
       "meta": {
-        "range": [
-          540,
-          558
-        ],
+        "range": [540, 558],
         "filename": "user.js",
         "lineno": 21,
         "columnno": 2,
@@ -886,9 +731,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           }
         }
       ],
@@ -903,10 +746,7 @@
     {
       "comment": "/**\n   * The platoon the user is a part of. Please do not confuse this with\n   * User#platoon\n   *\n   * @property {Map<Platoon>}\n   */",
       "meta": {
-        "range": [
-          699,
-          729
-        ],
+        "range": [699, 729],
         "filename": "user.js",
         "lineno": 29,
         "columnno": 2,
@@ -921,9 +761,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "Map.<Platoon>"
-            ]
+            "names": ["Map.<Platoon>"]
           }
         }
       ],
@@ -938,10 +776,7 @@
     {
       "comment": "/**\n   * The platoons the user is a fan of.\n   *\n   * @property {Map<Platoon>}\n   */",
       "meta": {
-        "range": [
-          821,
-          854
-        ],
+        "range": [821, 854],
         "filename": "user.js",
         "lineno": 37,
         "columnno": 2,
@@ -956,9 +791,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "Map.<Platoon>"
-            ]
+            "names": ["Map.<Platoon>"]
           }
         }
       ],
@@ -973,10 +806,7 @@
     {
       "comment": "/**\n   * The user's friemd ;ist. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
       "meta": {
-        "range": [
-          990,
-          1019
-        ],
+        "range": [990, 1019],
         "filename": "user.js",
         "lineno": 44,
         "columnno": 2,
@@ -991,9 +821,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "BattlelogMap.<User>"
-            ]
+            "names": ["BattlelogMap.<User>"]
           }
         }
       ],
@@ -1008,10 +836,7 @@
     {
       "comment": "/**\n   * The platoon of the user. This is different than User#platoons as that\n   * property is only available if the game supports joining multiple platoons.\n   *\n   * @property {Platoon}\n   */",
       "meta": {
-        "range": [
-          1221,
-          1229
-        ],
+        "range": [1221, 1229],
         "filename": "user.js",
         "lineno": 53,
         "columnno": 2,
@@ -1026,9 +851,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "Platoon"
-            ]
+            "names": ["Platoon"]
           }
         }
       ],
@@ -1052,11 +875,7 @@
       "kind": "typedef",
       "name": "UserResolvable",
       "type": {
-        "names": [
-          "User",
-          "string",
-          "object"
-        ]
+        "names": ["User", "string", "object"]
       },
       "description": "Something that can be\nparsed into a User instance. Could be a User instance, the username of the\nuser, or a raw data object of the user.",
       "longname": "UserResolvable",
@@ -1067,10 +886,7 @@
     {
       "comment": "/**\n   * The soldiers of this user/\n   *\n   * @property {SoldiersManager}\n   */",
       "meta": {
-        "range": [
-          1534,
-          1567
-        ],
+        "range": [1534, 1567],
         "filename": "user.js",
         "lineno": 67,
         "columnno": 2,
@@ -1085,9 +901,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "SoldiersManager"
-            ]
+            "names": ["SoldiersManager"]
           }
         }
       ],
@@ -1102,10 +916,7 @@
     {
       "comment": "/**\n * Represents a Battlelog user.\n *\n * @class\n * @param {GameClient} client - The client used to access this user.\n * @param {object} data - Raw object data of the user.\n */",
       "meta": {
-        "range": [
-          451,
-          5165
-        ],
+        "range": [451, 5165],
         "filename": "user.js",
         "lineno": 14,
         "columnno": 0,
@@ -1114,10 +925,7 @@
           "id": "astnode100000999",
           "name": "User",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "client",
-            "data"
-          ]
+          "paramnames": ["client", "data"]
         }
       },
       "name": "User",
@@ -1129,18 +937,14 @@
       "params": [
         {
           "type": {
-            "names": [
-              "GameClient"
-            ]
+            "names": ["GameClient"]
           },
           "description": "The client used to access this user.",
           "name": "client"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "Raw object data of the user.",
           "name": "data"
@@ -1152,10 +956,7 @@
     {
       "comment": "/**\n   * Fetch the user in Battlelog and refresh his data with the raw data\n   * Battlelog gave.\n   *\n   * @async\n   * @returns {User} the User\n   */",
       "meta": {
-        "range": [
-          2201,
-          2479
-        ],
+        "range": [2201, 2479],
         "filename": "user.js",
         "lineno": 95,
         "columnno": 2,
@@ -1175,9 +976,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "the User"
         }
@@ -1194,10 +993,7 @@
     {
       "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
       "meta": {
-        "range": [
-          2644,
-          3614
-        ],
+        "range": [2644, 3614],
         "filename": "user.js",
         "lineno": 110,
         "columnno": 2,
@@ -1206,9 +1002,7 @@
           "id": "astnode100001112",
           "name": "User#structureData",
           "type": "MethodDefinition",
-          "paramnames": [
-            "data"
-          ]
+          "paramnames": ["data"]
         },
         "vars": {
           "": null
@@ -1218,9 +1012,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The data used to structure the class",
           "name": "data"
@@ -1229,9 +1021,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "the User"
         }
@@ -1247,10 +1037,7 @@
     {
       "comment": "/**\n   * Get the URL string of the user's avatar.\n   *\n   * @function\n   * @param {object} options - Options used\n   * @returns {string} URL string for the user's avatar.\n   */",
       "meta": {
-        "range": [
-          3797,
-          5163
-        ],
+        "range": [3797, 5163],
         "filename": "user.js",
         "lineno": 157,
         "columnno": 2,
@@ -1259,9 +1046,7 @@
           "id": "astnode100001292",
           "name": "User#displayAvatarURL",
           "type": "MethodDefinition",
-          "paramnames": [
-            "options"
-          ]
+          "paramnames": ["options"]
         },
         "vars": {
           "": null
@@ -1272,9 +1057,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "Options used",
           "name": "options"
@@ -1283,9 +1066,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           },
           "description": "URL string for the user's avatar."
         }
@@ -1300,10 +1081,7 @@
     {
       "comment": "/**\n   * The user's email hash.\n   *\n   * @property {string}\n   *\n   */",
       "meta": {
-        "range": [
-          540,
-          558
-        ],
+        "range": [540, 558],
         "filename": "user.js",
         "lineno": 21,
         "columnno": 2,
@@ -1318,9 +1096,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           }
         }
       ],
@@ -1335,10 +1111,7 @@
     {
       "comment": "/**\n   * The platoon the user is a part of. Please do not confuse this with\n   * User#platoon\n   *\n   * @property {Map<Platoon>}\n   */",
       "meta": {
-        "range": [
-          699,
-          729
-        ],
+        "range": [699, 729],
         "filename": "user.js",
         "lineno": 29,
         "columnno": 2,
@@ -1353,9 +1126,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "Map.<Platoon>"
-            ]
+            "names": ["Map.<Platoon>"]
           }
         }
       ],
@@ -1370,10 +1141,7 @@
     {
       "comment": "/**\n   * The platoons the user is a fan of.\n   *\n   * @property {Map<Platoon>}\n   */",
       "meta": {
-        "range": [
-          821,
-          854
-        ],
+        "range": [821, 854],
         "filename": "user.js",
         "lineno": 37,
         "columnno": 2,
@@ -1388,9 +1156,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "Map.<Platoon>"
-            ]
+            "names": ["Map.<Platoon>"]
           }
         }
       ],
@@ -1405,10 +1171,7 @@
     {
       "comment": "/**\n   * The user's friemd ;ist. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
       "meta": {
-        "range": [
-          990,
-          1019
-        ],
+        "range": [990, 1019],
         "filename": "user.js",
         "lineno": 44,
         "columnno": 2,
@@ -1423,9 +1186,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "BattlelogMap.<User>"
-            ]
+            "names": ["BattlelogMap.<User>"]
           }
         }
       ],
@@ -1440,10 +1201,7 @@
     {
       "comment": "/**\n   * The platoon of the user. This is different than User#platoons as that\n   * property is only available if the game supports joining multiple platoons.\n   *\n   * @property {Platoon}\n   */",
       "meta": {
-        "range": [
-          1221,
-          1229
-        ],
+        "range": [1221, 1229],
         "filename": "user.js",
         "lineno": 53,
         "columnno": 2,
@@ -1458,9 +1216,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "Platoon"
-            ]
+            "names": ["Platoon"]
           }
         }
       ],
@@ -1484,11 +1240,7 @@
       "kind": "typedef",
       "name": "UserResolvable",
       "type": {
-        "names": [
-          "User",
-          "string",
-          "object"
-        ]
+        "names": ["User", "string", "object"]
       },
       "description": "Something that can be\nparsed into a User instance. Could be a User instance, the username of the\nuser, or a raw data object of the user.",
       "longname": "UserResolvable",
@@ -1499,10 +1251,7 @@
     {
       "comment": "/**\n   * The soldiers of this user/\n   *\n   * @property {SoldiersManager}\n   */",
       "meta": {
-        "range": [
-          1534,
-          1571
-        ],
+        "range": [1534, 1571],
         "filename": "user.js",
         "lineno": 67,
         "columnno": 2,
@@ -1517,9 +1266,7 @@
       "properties": [
         {
           "type": {
-            "names": [
-              "SoldiersManager"
-            ]
+            "names": ["SoldiersManager"]
           }
         }
       ],
@@ -1534,10 +1281,7 @@
     {
       "comment": "/**\n * Represents a Battlelog user.\n *\n * @class\n * @param {GameClient} client - The client used to access this user.\n * @param {object} data - Raw object data of the user.\n */",
       "meta": {
-        "range": [
-          451,
-          5169
-        ],
+        "range": [451, 5169],
         "filename": "user.js",
         "lineno": 14,
         "columnno": 0,
@@ -1546,10 +1290,7 @@
           "id": "astnode100001652",
           "name": "User",
           "type": "ClassDeclaration",
-          "paramnames": [
-            "client",
-            "data"
-          ]
+          "paramnames": ["client", "data"]
         }
       },
       "name": "User",
@@ -1561,18 +1302,14 @@
       "params": [
         {
           "type": {
-            "names": [
-              "GameClient"
-            ]
+            "names": ["GameClient"]
           },
           "description": "The client used to access this user.",
           "name": "client"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "Raw object data of the user.",
           "name": "data"
@@ -1584,10 +1321,7 @@
     {
       "comment": "/**\n   * Fetch the user in Battlelog and refresh his data with the raw data\n   * Battlelog gave.\n   *\n   * @async\n   * @returns {User} the User\n   */",
       "meta": {
-        "range": [
-          2205,
-          2483
-        ],
+        "range": [2205, 2483],
         "filename": "user.js",
         "lineno": 95,
         "columnno": 2,
@@ -1607,9 +1341,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "the User"
         }
@@ -1626,10 +1358,7 @@
     {
       "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
       "meta": {
-        "range": [
-          2648,
-          3618
-        ],
+        "range": [2648, 3618],
         "filename": "user.js",
         "lineno": 110,
         "columnno": 2,
@@ -1638,9 +1367,7 @@
           "id": "astnode100001766",
           "name": "User#structureData",
           "type": "MethodDefinition",
-          "paramnames": [
-            "data"
-          ]
+          "paramnames": ["data"]
         },
         "vars": {
           "": null
@@ -1650,9 +1377,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The data used to structure the class",
           "name": "data"
@@ -1661,9 +1386,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "User"
-            ]
+            "names": ["User"]
           },
           "description": "the User"
         }
@@ -1679,10 +1402,7 @@
     {
       "comment": "/**\n   * Get the URL string of the user's avatar.\n   *\n   * @function\n   * @param {object} options - Options used\n   * @returns {string} URL string for the user's avatar.\n   */",
       "meta": {
-        "range": [
-          3801,
-          5167
-        ],
+        "range": [3801, 5167],
         "filename": "user.js",
         "lineno": 157,
         "columnno": 2,
@@ -1691,9 +1411,7 @@
           "id": "astnode100001946",
           "name": "User#displayAvatarURL",
           "type": "MethodDefinition",
-          "paramnames": [
-            "options"
-          ]
+          "paramnames": ["options"]
         },
         "vars": {
           "": null
@@ -1704,9 +1422,7 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "Options used",
           "name": "options"
@@ -1715,9 +1431,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           },
           "description": "URL string for the user's avatar."
         }
@@ -1748,10 +1462,7 @@
     {
       "comment": "/**\n * Get the article of a noun\n *\n * @param {string} str\n * @param {boolean} plural\n */",
       "meta": {
-        "range": [
-          161,
-          580
-        ],
+        "range": [161, 580],
         "filename": "utils.js",
         "lineno": 13,
         "columnno": 0,
@@ -1760,27 +1471,20 @@
           "id": "astnode100002126",
           "name": "getArticle",
           "type": "FunctionDeclaration",
-          "paramnames": [
-            "str",
-            "plural"
-          ]
+          "paramnames": ["str", "plural"]
         }
       },
       "description": "Get the article of a noun",
       "params": [
         {
           "type": {
-            "names": [
-              "string"
-            ]
+            "names": ["string"]
           },
           "name": "str"
         },
         {
           "type": {
-            "names": [
-              "boolean"
-            ]
+            "names": ["boolean"]
           },
           "name": "plural"
         }
@@ -1796,10 +1500,7 @@
     {
       "comment": "/**\n * Manages options. Does not support recursion yet.\n *\n * @function\n * @param {object} data - The options object data.\n * @param {object} rules - The rules used to manage the options.\n */",
       "meta": {
-        "range": [
-          774,
-          2230
-        ],
+        "range": [774, 2230],
         "filename": "utils.js",
         "lineno": 34,
         "columnno": 0,
@@ -1808,10 +1509,7 @@
           "id": "astnode100002181",
           "name": "validateOptions",
           "type": "FunctionDeclaration",
-          "paramnames": [
-            "data",
-            "rules"
-          ]
+          "paramnames": ["data", "rules"]
         },
         "vars": {
           "undefined": null,
@@ -1826,18 +1524,14 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The options object data.",
           "name": "data"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The rules used to manage the options.",
           "name": "rules"
@@ -1853,10 +1547,7 @@
     {
       "comment": "/**\n * Populate an object with a raw data object. Does not currently support\n * recursion.\n *\n * @param {object} cls - The class/object to populate\n * @param {object} data - The data whose properties will be used to populate the\n *     class / object.\n * @param {object} [rules] - An object filled with how things should be done.\n * @param {Array} [rules.blacklist] - An array filled with properties that\n *     should be ignored\n * @param {Array} [rules.setBoolean] - An array filled with properties that\n *     should be set to true if they are truthy or false if they are falsy.\n * @param {object} [rules.alias] - An object that rules which properties should\n *     be renamed and what should they be renamed to.\n * @param {Array} [rules.onlyAssignIfTruthy] - An array filled\n * @returns {object} - The class/object\n */",
       "meta": {
-        "range": [
-          3055,
-          3824
-        ],
+        "range": [3055, 3824],
         "filename": "utils.js",
         "lineno": 105,
         "columnno": 0,
@@ -1865,11 +1556,7 @@
           "id": "astnode100002408",
           "name": "structureData",
           "type": "FunctionDeclaration",
-          "paramnames": [
-            "cls",
-            "data",
-            "rules"
-          ]
+          "paramnames": ["cls", "data", "rules"]
         },
         "vars": {
           "undefined": null,
@@ -1881,27 +1568,21 @@
       "params": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The class/object to populate",
           "name": "cls"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "The data whose properties will be used to populate the\n    class / object.",
           "name": "data"
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "optional": true,
           "description": "An object filled with how things should be done.",
@@ -1909,9 +1590,7 @@
         },
         {
           "type": {
-            "names": [
-              "Array"
-            ]
+            "names": ["Array"]
           },
           "optional": true,
           "description": "An array filled with properties that\n    should be ignored",
@@ -1919,9 +1598,7 @@
         },
         {
           "type": {
-            "names": [
-              "Array"
-            ]
+            "names": ["Array"]
           },
           "optional": true,
           "description": "An array filled with properties that\n    should be set to true if they are truthy or false if they are falsy.",
@@ -1929,9 +1606,7 @@
         },
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "optional": true,
           "description": "An object that rules which properties should\n    be renamed and what should they be renamed to.",
@@ -1939,9 +1614,7 @@
         },
         {
           "type": {
-            "names": [
-              "Array"
-            ]
+            "names": ["Array"]
           },
           "optional": true,
           "description": "An array filled",
@@ -1951,9 +1624,7 @@
       "returns": [
         {
           "type": {
-            "names": [
-              "object"
-            ]
+            "names": ["object"]
           },
           "description": "- The class/object"
         }
