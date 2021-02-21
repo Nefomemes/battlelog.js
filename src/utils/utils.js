@@ -1,3 +1,4 @@
+
 /**
  * Utilities function to help things out.
  * @module utils
@@ -128,3 +129,5 @@ function structureData(cls, data, rules = {}) {
 module.exports.getArticle = getArticle;
 module.exports.structureData = structureData;
 module.exports.validateOptions = validateOptions;
+
+

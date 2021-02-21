@@ -13,8 +13,10 @@ class GameClient {
 	/**
 	 * Creates a new GameClient instance.
 	 *
-	 * @constructor
+	 * @class
 	 * @param {BattlelogClient} client - The client of this instance.
+	 * @param game
+	 * @param options
 	 * @param {GameType}
 	 */
 	constructor(client, game = 'bf3', options = {}) {
