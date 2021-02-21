@@ -15,7 +15,7 @@ class User {
 	/**
 	 * The user's email hash.
 	 * 
-	 * @property 
+	 * @property {string}
 	 * 
 	 */
 	gravatarEmailHash;
@@ -99,7 +99,7 @@ class User {
 	}
 	/**
 	 * Structure the class using the data provided. 
-   *
+   	 *
 	 * @param {object} data - The data used to structure the class  
 	 * @returns {User} the User
 	 */
@@ -142,7 +142,7 @@ class User {
 
 	/**
 	 * Get the URL string of the user's avatar.
-   *
+         *
 	 * @function
 	 * @param {object} options - Options used 
 	 * @returns {string} URL string for the user's avatar.
