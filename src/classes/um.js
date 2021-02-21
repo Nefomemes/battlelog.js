@@ -1,15 +1,11 @@
-const { User } = require("./user");
-const { BattlelogMap } = require("./blmap")
+const {User} = require("./user");
+const {BattlelogMap} = require("./blmap")
 class UsersManager {
-	constructor(client){
-		this.client = client;
-	}
+  constructor(client) { this.client = client; }
 
-	fetch(...params){
-		return new User(this.client, ...params).fetch();
-	}
+  fetch(...params) { return new User(this.client, ...params).fetch(); }
 
-	cache = new BattlelogMap()
+  cache = new BattlelogMap()
 }
 
 module.exports.UsersManager = UsersManager;

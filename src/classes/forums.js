@@ -5,7 +5,5 @@
  */
 class Forums {
 
-    constructor(){
-
-    }
+  constructor() {}
 }
