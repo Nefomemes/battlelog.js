@@ -4,9 +4,9 @@ const bl = require("./src/index.js");
 
 var client = bl();
 
-var bf3 = client.game('bf4');
+var bf3 = client.game('bf3');
 
-var user = await bf3.users.fetch( "DANNYonPC");
+var user = await bf3.users.fetch( "Nefomemes");
 
 
 

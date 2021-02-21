@@ -39,11 +39,13 @@ class Platoon {
 	 * @returns {User} the User
 	 */
 	structureData(data){
-		utils.structureData(this, data, {blacklist: ['badgePath']});
+		utils.structureData(this, data, {blacklist: ['badgePath', '']});
 
+			
 		
-		var badgeUrl1 = data.badgePath.split("[FORMAT]").join("png").split("[SIZE]");
-		
+
+		var badgeUrl1 = (data.badgePath || data.emblemPath).split("[FORMAT]").join("png").split("[SIZE]");
+
 		this.badge[60] = badgeUrl1.join('60');
 		this.badge[320] = badgeUrl1.join('320');
 		

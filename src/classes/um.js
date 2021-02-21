@@ -1,5 +1,5 @@
-const { User } = require("./user.js");
-
+const { User } = require("./user");
+const { BattlelogMap } = require("./blmap")
 class UsersManager {
 	constructor(client){
 		this.client = client;
@@ -9,7 +9,7 @@ class UsersManager {
 		return new User(this.client, ...params).fetch();
 	}
 
-	cache = new Map()
+	cache = new BattlelogMap()
 }
 
 module.exports.UsersManager = UsersManager;

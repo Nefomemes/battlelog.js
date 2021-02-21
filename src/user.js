@@ -60,7 +60,7 @@ class User {
 	 * 
 	 * @property {SoldiersManager}
 	 */
-	soldiers = new SoldiersManager();
+	soldiers = new SoldiersManager(this);
 
 
 	/**

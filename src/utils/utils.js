@@ -1,15 +1,22 @@
+/**
+ * Utilities function to help things out.
+ * @module utils
+ */
 
+/**
+ * Get the article of a noun
+ * 
+ * @param {string} str 
+ * @param {boolean} plural 
+ */
 function getArticle(str, plural) {
 	if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
 
 	if (typeof str !== "string") throw Error(`Expected parameter 'str' to be a string. While it is actually ${getArticle(typeof str)} ${typeof str}.`);
 	if (plural && plural === true) return 'some';
-	if(['a','i','u', 'e', 'o'].includes(str.shift())) return 'an';
+	if(['a','i','u', 'e', 'o'].includes(str[0])) return 'an';
 	return 'a';
 }
-
-
-
 
 /**
  * Manages options. Does not support recursion yet.
@@ -38,10 +45,11 @@ function validateOptions(data, rules) {
 			if (!data[required]) throw Error(`Option '${required}' is required. While it's not provided.`);
 		}
 	}
-
+ 
 	if (rules.typeof) {
 		for (let [prop, value] of Object.entries(rules.typeof)) {
-			if (typeof data[prop] !== value) throw Error(`Option '${prop}' is required to be ${getArticle(value)} ${value} while it is ${getArticle(data[prop])} ${typeof data[prop]}.`);
+			let type = Array.isArray(data[prop]) ? "array" : typeof data[prop];
+			if (type !== value) throw Error(`Option '${prop}' is required to be ${getArticle(value)} ${value} while it is actually ${getArticle(type)} ${type}.`);
 		}
 	}
 
@@ -102,8 +110,8 @@ function structureData(cls, data, rules = {}) {
 	for (let [name, value] of Object.entries(data)) {
 		if(rules.alias[name]) name = rules.alias[name];
 		if (!rules.onlyAssignIfTruthy.includes(name) || value){
-			if (!rules.blacklist.includes(name)) {
-				if (!rules.setBoolean) {
+			if (!rules.blacklist.includes(name)) {                                                                                                  
+				if (!rules.setBoolean.includes[name]) {
 					cls[name] = value;
 				} else {
 					cls[name] = value ? true : false;
@@ -114,6 +122,8 @@ function structureData(cls, data, rules = {}) {
 
 	return cls;
 }
+
+
 
 module.exports.getArticle = getArticle;
 module.exports.structureData = structureData;

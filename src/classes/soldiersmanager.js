@@ -1,3 +1,5 @@
+const { Soldier } = require("./soldier");
+const { BattlelogMap } = require("./blmap");
 
 /**
  * Manages a user's soldiers.
@@ -6,7 +8,7 @@
  */
 class SoldiersManager {
 
-    cache = new Map();
+    cache = new BattlelogMap();
     /**
      * 
      * @param {User} user - The user that owns this SoldiersManager instance.
@@ -21,19 +23,14 @@ class SoldiersManager {
      */
     structureData(data, fetch){
     	for(let soldier of data){
-    	var existingSoldier =	this.cache.get(soldier.persona.personaId)
-    		if(existingSoldier){
-    			soldier.structureData(soldier, true)
-    		} else {
-        new Soldier(this.user, soldier, fetch );
-    	}
+            this.cache.structureData(soldier.persona.personaId, new Soldier(this.user ,data, fetch), fetch)
     }
     	
     	return this;
     }
 
    async fetch(){
-        var res = await this.user.axios.get(`/user/overviewBoxStats/${this.persona.personaId}`);
+        var res = await this.user.axios.get(`/user/overviewBoxStats/${this.user.userId}`);
         
         this.structureData(res.data.soldiersBox, true);
         
