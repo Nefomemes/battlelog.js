@@ -23,7 +23,7 @@ class Platoon {
 	/**
 	 * Creates a new Platoon instance.
 	 * 
-	 * @constructor
+	 * @class
 	 * @param {GameClient} client 
 	 * @param {object} data 
 	 */
@@ -34,7 +34,7 @@ class Platoon {
 		}
 	/**
 	 * Structure the class using the data provided. 
-   *
+	 *
 	 * @param {object} data - The data used to structure the class  
 	 * @returns {User} the User
 	 */

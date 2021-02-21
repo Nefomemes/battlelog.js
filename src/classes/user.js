@@ -21,32 +21,32 @@ class User {
 	gravatarEmailHash;
 
 	/**
-	* The platoon the user is a part of. Please do not confuse this with User#platoon
-	* 
-	* @property {Map<Platoon>}
-	*/
+	 * The platoon the user is a part of. Please do not confuse this with User#platoon
+	 * 
+	 * @property {Map<Platoon>}
+	 */
 	platoons = new BattlelogMap();
 
 	/**
-	  * The platoons the user is a fan of.
-	* 
-	  * @property {Map<Platoon>} 
-	  */
+	 * The platoons the user is a fan of.
+	 * 
+	 * @property {Map<Platoon>} 
+	 */
 
 	platoonFans = new BattlelogMap();
 
 	/**
-	* The user's friemd ;ist. Only have 10 of all of the user's friends though.
-	* 
-	* @property {BattlelogMap<User>}
-	*/
+	 * The user's friemd ;ist. Only have 10 of all of the user's friends though.
+	 * 
+	 * @property {BattlelogMap<User>}
+	 */
 	friends = new BattlelogMap();
 
 	/**
-	* The platoon of the user. This is different than User#platoons as that property is only available if the game supports joining multiple platoons. 
-	* 
-	* @property {Platoon}
-	*/
+	 * The platoon of the user. This is different than User#platoons as that property is only available if the game supports joining multiple platoons. 
+	 * 
+	 * @property {Platoon}
+	 */
 
 	platoon;
 
@@ -66,8 +66,9 @@ class User {
 	/**
 	 * Creates a new User instance.
 	 * 
-	 * @constructor
+	 * @class
 	 * @param {Client} - The client for this user.
+	 * @param client
 	 * @param {UserResolvable} [data] - The user's data.
 	 */
 	constructor(client, data) {

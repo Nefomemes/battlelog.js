@@ -12,7 +12,7 @@ class SoldiersManager {
     /**
      * 
      * @param {User} user - The user that owns this SoldiersManager instance.
-     * @param {array} [data] -  Raw array data of the user's soldiers.
+     * @param {Array} [data] -  Raw array data of the user's soldiers.
      */
 	constructor(user, data){
         this.user = user;
@@ -20,6 +20,9 @@ class SoldiersManager {
     }
     /**
      * Add 
+     *
+     * @param data
+     * @param fetch
      */
     structureData(data, fetch){
     	for(let soldier of data){

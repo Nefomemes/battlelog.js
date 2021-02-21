@@ -2,7 +2,7 @@
  * Custom Map class for battlelog.js utilities.
  * 
  * @class
- * @extends Map
+ * @augments Map
  */
 class BattlelogMap extends Map {
     /**

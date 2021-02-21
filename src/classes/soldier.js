@@ -10,7 +10,7 @@ const utils = require("../utils/utils");
 	/**
 	 * Creates a new Soldier instance
 	 *  
-	 * @constructor
+	 * @class
 	 * @param {User} user - The user of this soldier.
 	 * @param {object} [data] - The raw data object to be used to populate the instance.
 	 */

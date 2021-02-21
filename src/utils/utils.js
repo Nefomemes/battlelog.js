@@ -1,6 +1,7 @@
 
 /**
  * Utilities function to help things out.
+ *
  * @module utils
  */
 
@@ -74,17 +75,17 @@ function validateOptions(data, rules) {
 }
 
 /**
-* Populate an object with a raw data object. Does not currently support recursion.
-* 
-* @param {object} cls - The class/object to populate
-* @param {object} data - The data whose properties will be used to populate the class / object.
-* @param {object} [rules] - An object filled with how things should be done.
-* @param {array} [rules.blacklist] - An array filled with properties that should be ignored
-* @param {array} [rules.setBoolean] - An array filled with properties that should be set to true if they are truthy or false if they are falsy.
-* @param {object} [rules.alias] - An object that rules which properties should be renamed and what should they be renamed to.
-* @param {array} [rules.onlyAssignIfTruthy] - An array filled 
-* @returns {object} - The class/object
-*/
+ * Populate an object with a raw data object. Does not currently support recursion.
+ * 
+ * @param {object} cls - The class/object to populate
+ * @param {object} data - The data whose properties will be used to populate the class / object.
+ * @param {object} [rules] - An object filled with how things should be done.
+ * @param {Array} [rules.blacklist] - An array filled with properties that should be ignored
+ * @param {Array} [rules.setBoolean] - An array filled with properties that should be set to true if they are truthy or false if they are falsy.
+ * @param {object} [rules.alias] - An object that rules which properties should be renamed and what should they be renamed to.
+ * @param {Array} [rules.onlyAssignIfTruthy] - An array filled 
+ * @returns {object} - The class/object
+ */
 function structureData(cls, data, rules = {}) {
 	if (!data) return;
 	if (!cls) throw Error();
