@@ -29,9 +29,7 @@ const utils = require("../utils/utils");
 	 * @returns {Soldier} - The soldier
 	 */
 	structureData(data, fetch){
-		var rules =  {
-			
-		}
+		var rules =  {};
 		if(!fetch) {
 
 		}
