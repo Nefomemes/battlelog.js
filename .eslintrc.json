@@ -20,7 +20,7 @@
    ],
    "rules":{
       "no-unused-vars":"off",
-      "no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
+      "no-mixed-spaces-and-tabs": "off"
    },
    "parser":"@babel/eslint-parser",
    "parserOptions":{
