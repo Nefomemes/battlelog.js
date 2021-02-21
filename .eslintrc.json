@@ -19,7 +19,9 @@
       "eslint:recommended"
    ],
    "rules":{
-      "no-unused-vars":"off"
+      "no-unused-vars":"off",
+      "no-mixed-spaces-and-tabs": "off",
+      "no-empty":"warn"
    },
    "parser":"@babel/eslint-parser",
    "parserOptions":{

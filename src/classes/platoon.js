@@ -1,54 +1,63 @@
 const utils = require("../utils/utils");
 /**
  * Represents a Platoon
- * 
+ *
  * @class
  */
 class Platoon {
-
-
-	#badgePathRaw;
-	/**
-	 * Creates a new Platoon instance.
-	 * 
-	 * @constructor
-	 * @param {GameClient} client 
-	 * @param {object} data 
-	 */
-	constructor(client, data){
-	if(data){
-	this.structureData(data);
-	}
-		}
-	/**
-	 * Structure the class using the data provided. 
+  /**
+   * The raw template of the platoon's badge.
    *
-	 * @param {object} data - The data used to structure the class  
-	 * @returns {User} the User
-	 */
-	structureData(data){
-		utils.structureData(this, data, {blacklist: ['badgePath']});
+   * @property {string}
+   * @private
+   */
+  #badgePathRaw;
 
-		/**
-		 * @typedef
-		 */
-		this.badge = {};
-		
-		var badgeUrl1 = data.badgePath.split("[FORMAT]").join("png").split("[SIZE]");
-		
-		badge[60] = badgeUrl1.join('60');
-		badge[320] = badgeUrl1.join('320');
-		
-	}
+  /**
+   * The platoon's badge.
+   *
+   * @property {object} badge
+   * @property {string} 60 - The badge in 60px.
+   * @property {string} 320 - The badge in 320px.
+   */
+  badge = { 60: null, 320: null };
+  /**
+   * Creates a new Platoon instance.
+   *
+   * @class
+   * @param {GameClient} client
+   * @param {object} data
+   */
+  constructor(client, data) {
+    if (data) {
+      this.structureData(data);
+    }
+  }
+  /**
+   * Structure the class using the data provided.
+   *
+   * @param {object} data - The data used to structure the class
+   * @returns {User} the User
+   */
+  structureData(data) {
+    utils.structureData(this, data, { blacklist: ["badgePath", ""] });
 
-	
-	async fetch(){
-		const res = await this.client.axios.get(`/platoon/${this.id}/`);
+    var badgeUrl1 = (data.badgePath || data.emblemPath)
+      .split("[FORMAT]")
+      .join("png")
+      .split("[SIZE]");
 
-		this.structureData(this, res.data.context.platoon);
+    this.badge[60] = badgeUrl1.join("60");
+    this.badge[320] = badgeUrl1.join("320");
+  }
 
-		this.isFan = res.data.context.isFan;
-	}
+  async fetch() {
+    const res = await this.client.axios.get(`/platoon/${this.id}/`);
+
+    this.structureData(this, res.data.context.platoon);
+
+    this.isFan = res.data.context.isFan;
+  }
 }
 
 module.exports.Platoon = Platoon;
