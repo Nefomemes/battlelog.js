@@ -1,1696 +1,1992 @@
-[
+{
+  "docs": [
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                8,
-                12
-            ],
-            "filename": "index.js",
-            "lineno": 1,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000005",
-                "name": "User",
-                "type": "Identifier",
-                "value": "User"
-            }
-        },
-        "undocumented": true,
-        "name": "User",
-        "longname": "User",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                52,
-                59
-            ],
-            "filename": "index.js",
-            "lineno": 2,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000013",
-                "name": "Platoon",
-                "type": "Identifier",
-                "value": "Platoon"
-            }
-        },
-        "undocumented": true,
-        "name": "Platoon",
-        "longname": "Platoon",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                102,
-                112
-            ],
-            "filename": "index.js",
-            "lineno": 3,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000021",
-                "name": "GameClient",
-                "type": "Identifier",
-                "value": "GameClient"
-            }
-        },
-        "undocumented": true,
-        "name": "GameClient",
-        "longname": "GameClient",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                158,
-                173
-            ],
-            "filename": "index.js",
-            "lineno": 4,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000029",
-                "name": "BattlelogClient",
-                "type": "Identifier",
-                "value": "BattlelogClient"
-            }
-        },
-        "undocumented": true,
-        "name": "BattlelogClient",
-        "longname": "BattlelogClient",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                217,
-                229
-            ],
-            "filename": "index.js",
-            "lineno": 5,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000037",
-                "name": "UsersManager",
-                "type": "Identifier",
-                "value": "UsersManager"
-            }
-        },
-        "undocumented": true,
-        "name": "UsersManager",
-        "longname": "UsersManager",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                267,
-                274
-            ],
-            "filename": "index.js",
-            "lineno": 6,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000045",
-                "name": "Soldier",
-                "type": "Identifier",
-                "value": "Soldier"
-            }
-        },
-        "undocumented": true,
-        "name": "Soldier",
-        "longname": "Soldier",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                317,
-                330
-            ],
-            "filename": "index.js",
-            "lineno": 7,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000053",
-                "name": "ServerBrowser",
-                "type": "Identifier",
-                "value": "ServerBrowser"
-            }
-        },
-        "undocumented": true,
-        "name": "ServerBrowser",
-        "longname": "ServerBrowser",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                368,
-                374
-            ],
-            "filename": "index.js",
-            "lineno": 8,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000061",
-                "name": "Server",
-                "type": "Identifier",
-                "value": "Server"
-            }
-        },
-        "undocumented": true,
-        "name": "Server",
-        "longname": "Server",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                414,
-                446
-            ],
-            "filename": "index.js",
-            "lineno": 9,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000067",
-                "name": "utils",
-                "type": "CallExpression",
-                "value": ""
-            }
-        },
-        "undocumented": true,
-        "name": "utils",
-        "longname": "utils",
-        "kind": "constant",
-        "scope": "global",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                448,
-                524
-            ],
-            "filename": "index.js",
-            "lineno": 10,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000073",
-                "name": "module.exports",
-                "type": "ArrowFunctionExpression",
-                "paramnames": [
-                    "params"
-                ]
-            }
-        },
-        "undocumented": true,
-        "name": "exports",
-        "longname": "module.exports",
-        "kind": "function",
-        "memberof": "module",
-        "scope": "static"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                527,
-                575
-            ],
-            "filename": "index.js",
-            "lineno": 14,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000087",
-                "name": "module.exports.BattlelogClient",
-                "type": "Identifier",
-                "value": "BattlelogClient",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "BattlelogClient",
-        "longname": "BattlelogClient",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                577,
-                615
-            ],
-            "filename": "index.js",
-            "lineno": 15,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000095",
-                "name": "module.exports.GameClient",
-                "type": "Identifier",
-                "value": "GameClient",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "GameClient",
-        "longname": "GameClient",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                617,
-                649
-            ],
-            "filename": "index.js",
-            "lineno": 16,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000103",
-                "name": "module.exports.Platoon",
-                "type": "Identifier",
-                "value": "Platoon",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "Platoon",
-        "longname": "Platoon",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                651,
-                677
-            ],
-            "filename": "index.js",
-            "lineno": 17,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000111",
-                "name": "module.exports.User",
-                "type": "Identifier",
-                "value": "User",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "User",
-        "longname": "User",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                679,
-                721
-            ],
-            "filename": "index.js",
-            "lineno": 18,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000119",
-                "name": "module.exports.UsersManager",
-                "type": "Identifier",
-                "value": "UsersManager",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "UsersManager",
-        "longname": "UsersManager",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                723,
-                751
-            ],
-            "filename": "index.js",
-            "lineno": 19,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000127",
-                "name": "module.exports.utils",
-                "type": "Identifier",
-                "value": "utils",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "utils",
-        "longname": "utils",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                8,
-                15
-            ],
-            "filename": "user.js",
-            "lineno": 1,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000139",
-                "name": "Platoon",
-                "type": "Identifier",
-                "value": "Platoon"
-            }
-        },
-        "undocumented": true,
-        "name": "Platoon",
-        "longname": "Platoon",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                48,
-                81
-            ],
-            "filename": "user.js",
-            "lineno": 2,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000145",
-                "name": "utils",
-                "type": "CallExpression",
-                "value": ""
-            }
-        },
-        "undocumented": true,
-        "name": "utils",
-        "longname": "utils",
-        "kind": "constant",
-        "scope": "global",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                91,
-                100
-            ],
-            "filename": "user.js",
-            "lineno": 3,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000153",
-                "name": "stringify",
-                "type": "Identifier",
-                "value": "stringify"
-            }
-        },
-        "undocumented": true,
-        "name": "stringify",
-        "longname": "stringify",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                137,
-                152
-            ],
-            "filename": "user.js",
-            "lineno": 4,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000161",
-                "name": "SoldiersManager",
-                "type": "Identifier",
-                "value": "SoldiersManager"
-            }
-        },
-        "undocumented": true,
-        "name": "SoldiersManager",
-        "longname": "SoldiersManager",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                195,
-                202
-            ],
-            "filename": "user.js",
-            "lineno": 5,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000169",
-                "name": "Soldier",
-                "type": "Identifier",
-                "value": "Soldier"
-            }
-        },
-        "undocumented": true,
-        "name": "Soldier",
-        "longname": "Soldier",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                237,
-                249
-            ],
-            "filename": "user.js",
-            "lineno": 6,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000177",
-                "name": "BattlelogMap",
-                "type": "Identifier",
-                "value": "BattlelogMap"
-            }
-        },
-        "undocumented": true,
-        "name": "BattlelogMap",
-        "longname": "BattlelogMap",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "/**\n * Represents a Battlelog user.\n *\n * @class\n * @param {GameClient} client - The client used to access this user.\n * @param {object} data - Raw object data of the user.\n */",
-        "meta": {
-            "range": [
-                451,
-                5169
-            ],
-            "filename": "user.js",
-            "lineno": 14,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000182",
-                "name": "User",
-                "type": "ClassDeclaration",
-                "paramnames": [
-                    "client",
-                    "data"
-                ]
-            }
-        },
-        "classdesc": "Represents a Battlelog user.",
-        "kind": "class",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "GameClient"
-                    ]
-                },
-                "description": "The client used to access this user.",
-                "name": "client"
-            },
-            {
-                "type": {
-                    "names": [
-                        "object"
-                    ]
-                },
-                "description": "Raw object data of the user.",
-                "name": "data"
-            }
+      "comment": "/**\n * Represents a Battlelog session.\n *\n * @class\n */",
+      "meta": {
+        "range": [
+          146,
+          732
         ],
-        "name": "User",
-        "longname": "User",
-        "scope": "global",
-        "undocumented": true
-    },
-    {
-        "comment": "/**\n   * The user's email hash.\n   *\n   * @property {string}\n   *\n   */",
-        "meta": {
-            "range": [
-                540,
-                558
-            ],
-            "filename": "user.js",
-            "lineno": 21,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000185",
-                "name": "gravatarEmailHash",
-                "type": "ClassProperty"
-            }
+        "filename": "blclient.js",
+        "lineno": 9,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000016",
+          "name": "BattlelogClient",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "options"
+          ]
+        }
+      },
+      "name": "BattlelogClient",
+      "longname": "BattlelogClient",
+      "kind": "class",
+      "classdesc": "Represents a Battlelog session.",
+      "scope": "global",
+      "description": "Creates a new Battlelog session.",
+      "params": [
+        {
+          "name": "options"
         },
-        "description": "The user's email hash.",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "string"
-                    ]
-                }
-            }
-        ],
-        "name": "gravatarEmailHash",
-        "longname": "User#gravatarEmailHash",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * The platoon the user is a part of. Please do not confuse this with\n   * User#platoon\n   *\n   * @property {Map<Platoon>}\n   */",
-        "meta": {
-            "range": [
-                699,
-                729
-            ],
-            "filename": "user.js",
-            "lineno": 29,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000186",
-                "name": "platoons",
-                "type": "ClassProperty"
-            }
-        },
-        "description": "The platoon the user is a part of. Please do not confuse this with\nUser#platoon",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "Map.<Platoon>"
-                    ]
-                }
-            }
-        ],
-        "name": "platoons",
-        "longname": "User#platoons",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * The platoons the user is a fan of.\n   *\n   * @property {Map<Platoon>}\n   */",
-        "meta": {
-            "range": [
-                821,
-                854
-            ],
-            "filename": "user.js",
-            "lineno": 37,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000189",
-                "name": "platoonFans",
-                "type": "ClassProperty"
-            }
-        },
-        "description": "The platoons the user is a fan of.",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "Map.<Platoon>"
-                    ]
-                }
-            }
-        ],
-        "name": "platoonFans",
-        "longname": "User#platoonFans",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * The user's friemd ;ist. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
-        "meta": {
-            "range": [
-                990,
-                1019
-            ],
-            "filename": "user.js",
-            "lineno": 44,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000192",
-                "name": "friends",
-                "type": "ClassProperty"
-            }
-        },
-        "description": "The user's friemd ;ist. Only have 10 of all of the user's friends though.",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "BattlelogMap.<User>"
-                    ]
-                }
-            }
-        ],
-        "name": "friends",
-        "longname": "User#friends",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * The platoon of the user. This is different than User#platoons as that\n   * property is only available if the game supports joining multiple platoons.\n   *\n   * @property {Platoon}\n   */",
-        "meta": {
-            "range": [
-                1221,
-                1229
-            ],
-            "filename": "user.js",
-            "lineno": 53,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000195",
-                "name": "platoon",
-                "type": "ClassProperty"
-            }
-        },
-        "description": "The platoon of the user. This is different than User#platoons as that\nproperty is only available if the game supports joining multiple platoons.",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "Platoon"
-                    ]
-                }
-            }
-        ],
-        "name": "platoon",
-        "longname": "User#platoon",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * @typedef {(User|string|object)} UserResolvable - Something that can be\n   * parsed into a User instance. Could be a User instance, the username of the\n   * user, or a raw data object of the user.\n   *\n   */",
-        "meta": {
-            "filename": "user.js",
-            "lineno": 55,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {}
-        },
-        "kind": "typedef",
-        "name": "UserResolvable",
-        "type": {
+        {
+          "type": {
             "names": [
-                "User",
-                "string",
-                "object"
+              "object"
             ]
-        },
-        "description": "Something that can be\nparsed into a User instance. Could be a User instance, the username of the\nuser, or a raw data object of the user.",
-        "longname": "UserResolvable",
-        "scope": "global"
+          },
+          "description": "The options used here.",
+          "name": "options-"
+        }
+      ],
+      "___id": "T000002R000007",
+      "___s": true
     },
     {
-        "comment": "/**\n   * The soldiers of this user/\n   *\n   * @property {SoldiersManager}\n   */",
-        "meta": {
-            "range": [
-                1534,
-                1571
-            ],
-            "filename": "user.js",
-            "lineno": 67,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000196",
-                "name": "soldiers",
-                "type": "ClassProperty"
-            }
-        },
-        "description": "The soldiers of this user/",
-        "properties": [
-            {
-                "type": {
-                    "names": [
-                        "SoldiersManager"
-                    ]
-                }
-            }
+      "comment": "/**\n * Creates a new GameClient instance.\n *\n * @param {...*} params - The params used to create the instance.\n */",
+      "meta": {
+        "range": [
+          665,
+          728
         ],
-        "name": "soldiers",
-        "longname": "User#soldiers",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
+        "filename": "blclient.js",
+        "lineno": 35,
+        "columnno": 1,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000051",
+          "name": "BattlelogClient#game",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "params"
+          ]
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Creates a new GameClient instance.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "*"
+            ]
+          },
+          "variable": true,
+          "description": "The params used to create the instance.",
+          "name": "params"
+        }
+      ],
+      "name": "game",
+      "longname": "BattlelogClient#game",
+      "kind": "function",
+      "memberof": "BattlelogClient",
+      "scope": "instance",
+      "___id": "T000002R000008",
+      "___s": true
     },
     {
-        "comment": "/**\n   * Creates a new User instance.\n   *\n   * @class\n   * @param {Client} - The client for this user.\n   * @param client\n   * @param {UserResolvable} [data] - The user's data.\n   */",
-        "meta": {
-            "range": [
-                1761,
-                2050
-            ],
-            "filename": "user.js",
-            "lineno": 77,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000200",
-                "name": "User",
-                "type": "MethodDefinition",
-                "paramnames": [
-                    "client",
-                    "data"
-                ]
-            },
-            "vars": {
-                "": null
-            }
-        },
-        "description": "Creates a new User instance.",
-        "kind": "class",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "Client"
-                    ]
-                },
-                "description": "The client for this user.",
-                "name": "client"
-            },
-            {
-                "name": "client"
-            },
-            {
-                "type": {
-                    "names": [
-                        "UserResolvable"
-                    ]
-                },
-                "optional": true,
-                "description": "The user's data.",
-                "name": "data"
-            }
+      "comment": "/**\n * Custom Map class for battlelog.js utilities.\n *\n * @class\n * @augments Map\n */",
+      "meta": {
+        "range": [
+          86,
+          561
         ],
-        "name": "User",
-        "longname": "User",
-        "scope": "global",
-        "undocumented": true
+        "filename": "blmap.js",
+        "lineno": 7,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000073",
+          "name": "BattlelogMap",
+          "type": "ClassDeclaration",
+          "paramnames": []
+        }
+      },
+      "classdesc": "Custom Map class for battlelog.js utilities.",
+      "kind": "class",
+      "augments": [
+        "Map"
+      ],
+      "name": "BattlelogMap",
+      "longname": "BattlelogMap",
+      "scope": "global",
+      "___id": "T000002R000010",
+      "___s": true
     },
     {
-        "comment": "/**\n * Represents a Battlelog user.\n *\n * @class\n * @param {GameClient} client - The client used to access this user.\n * @param {object} data - Raw object data of the user.\n */",
-        "meta": {
-            "range": [
-                451,
-                5169
-            ],
-            "filename": "user.js",
-            "lineno": 14,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000182",
-                "name": "User",
-                "type": "ClassDeclaration",
-                "paramnames": [
-                    "client",
-                    "data"
-                ]
-            }
+      "comment": "/**\n   * If the key existed in the instance, calls\n   *\n   * @function\n   * @param {*} key\n   * @param {*} value\n   * @param {...*} structureDataStuff - The additional parameters to be passed\n   *     to the key's structureData method.\n   */",
+      "meta": {
+        "range": [
+          365,
+          559
+        ],
+        "filename": "blmap.js",
+        "lineno": 17,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000077",
+          "name": "BattlelogMap#structureData",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "key",
+            "value",
+            "structureDataStuff"
+          ]
         },
-        "name": "User",
-        "longname": "User",
-        "kind": "class",
-        "classdesc": "Represents a Battlelog user.",
-        "scope": "global",
-        "description": "Creates a new User instance.",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "GameClient"
-                    ]
-                },
-                "description": "The client used to access this user.",
-                "name": "client"
-            },
-            {
-                "type": {
-                    "names": [
-                        "object"
-                    ]
-                },
-                "description": "Raw object data of the user.",
-                "name": "data"
-            }
+        "vars": {
+          "": null
+        }
+      },
+      "description": "If the key existed in the instance, calls",
+      "kind": "function",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "*"
+            ]
+          },
+          "name": "key"
+        },
+        {
+          "type": {
+            "names": [
+              "*"
+            ]
+          },
+          "name": "value"
+        },
+        {
+          "type": {
+            "names": [
+              "*"
+            ]
+          },
+          "variable": true,
+          "description": "The additional parameters to be passed\n    to the key's structureData method.",
+          "name": "structureDataStuff"
+        }
+      ],
+      "name": "structureData",
+      "longname": "BattlelogMap#structureData",
+      "memberof": "BattlelogMap",
+      "scope": "instance",
+      "___id": "T000002R000011",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Represents /:game/forum\n */",
+      "meta": {
+        "range": [
+          35,
+          70
+        ],
+        "filename": "forums.js",
+        "lineno": 4,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000122",
+          "name": "Forums",
+          "type": "ClassDeclaration",
+          "paramnames": []
+        }
+      },
+      "name": "Forums",
+      "longname": "Forums",
+      "kind": "class",
+      "classdesc": "Represents /:game/forum",
+      "scope": "global",
+      "___id": "T000002R000015",
+      "___s": true
+    },
+    {
+      "comment": "/**\n *  Represents that /:game/ part. The main brain of everything.\n *\n * @class\n */",
+      "meta": {
+        "range": [
+          223,
+          1349
+        ],
+        "filename": "gameclient.js",
+        "lineno": 11,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000151",
+          "name": "GameClient",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "client",
+            "game",
+            "options"
+          ]
+        }
+      },
+      "name": "GameClient",
+      "longname": "GameClient",
+      "kind": "class",
+      "classdesc": "Represents that /:game/ part. The main brain of everything.",
+      "scope": "global",
+      "description": "Creates a new GameClient instance.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "BattlelogClient"
+            ]
+          },
+          "description": "The client of this instance.",
+          "name": "client"
+        },
+        {
+          "name": "game",
+          "defaultvalue": "bf3"
+        },
+        {
+          "name": "options"
+        },
+        {
+          "type": {
+            "names": [
+              "GameType"
+            ]
+          },
+          "name": ""
+        }
+      ],
+      "___id": "T000002R000022",
+      "___s": true
+    },
+    {
+      "comment": "/**\n\t\t * @typedef {('bf3'|'bf4'|'bfh'|'mohw')} GameType\n\t\t */",
+      "meta": {
+        "filename": "gameclient.js",
+        "lineno": 35,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {}
+      },
+      "kind": "typedef",
+      "name": "GameType",
+      "type": {
+        "names": [
+          "'bf3'",
+          "'bf4'",
+          "'bfh'",
+          "'mohw'"
         ]
+      },
+      "longname": "GameType",
+      "scope": "global",
+      "___id": "T000002R000024",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                1793,
-                1813
-            ],
-            "filename": "user.js",
-            "lineno": 78,
-            "columnno": 4,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000207",
-                "name": "this.client",
-                "type": "Identifier",
-                "value": "client",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "client",
-        "longname": "User#client",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2023,
-                2039
-            ],
-            "filename": "user.js",
-            "lineno": 85,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000231",
-                "name": "this.name",
-                "type": "Identifier",
-                "value": "data",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "name",
-        "longname": "User#name",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * Fetch the user in Battlelog and refresh his data with the raw data\n   * Battlelog gave.\n   *\n   * @async\n   * @returns {User} the User\n   */",
-        "meta": {
-            "range": [
-                2205,
-                2483
-            ],
-            "filename": "user.js",
-            "lineno": 95,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000236",
-                "name": "User#fetch",
-                "type": "MethodDefinition",
-                "paramnames": []
-            },
-            "vars": {
-                "": null
-            }
-        },
-        "description": "Fetch the user in Battlelog and refresh his data with the raw data\nBattlelog gave.",
-        "async": true,
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "User"
-                    ]
-                },
-                "description": "the User"
-            }
+      "comment": "/**\n\t\t *  @property {GameType} game - The game\n\t\t */",
+      "meta": {
+        "range": [
+          1058,
+          1078
         ],
-        "name": "fetch",
-        "longname": "User#fetch",
-        "kind": "function",
-        "memberof": "User",
-        "scope": "instance",
-        "params": []
+        "filename": "gameclient.js",
+        "lineno": 43,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000221",
+          "name": "this.client",
+          "type": "Identifier",
+          "value": "client",
+          "paramnames": []
+        }
+      },
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "GameType"
+            ]
+          },
+          "description": "The game",
+          "name": "game"
+        }
+      ],
+      "name": "client",
+      "longname": "GameClient#client",
+      "kind": "member",
+      "memberof": "GameClient",
+      "scope": "instance",
+      "___id": "T000002R000026",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                2231,
-                2286
-            ],
-            "filename": "user.js",
-            "lineno": 96,
-            "columnno": 10,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000241",
-                "name": "res",
-                "type": "AwaitExpression",
-                "value": ""
-            }
-        },
-        "undocumented": true,
-        "name": "res",
-        "longname": "<anonymous>~res",
-        "kind": "constant",
-        "memberof": "<anonymous>",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2299,
-                2339
-            ],
-            "filename": "user.js",
-            "lineno": 98,
-            "columnno": 10,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000259",
-                "name": "profile",
-                "type": "MemberExpression",
-                "value": "res.data.context.profileCommon"
-            }
-        },
-        "undocumented": true,
-        "name": "profile",
-        "longname": "<anonymous>~profile",
-        "kind": "constant",
-        "memberof": "<anonymous>",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2412,
-                2461
-            ],
-            "filename": "user.js",
-            "lineno": 101,
-            "columnno": 4,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000283",
-                "name": "this.activities",
-                "type": "MemberExpression",
-                "value": "res.data.context.activityStream",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "activities",
-        "longname": "User#activities",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
-        "meta": {
-            "range": [
-                2648,
-                3618
-            ],
-            "filename": "user.js",
-            "lineno": 110,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000296",
-                "name": "User#structureData",
-                "type": "MethodDefinition",
-                "paramnames": [
-                    "data"
-                ]
-            },
-            "vars": {
-                "": null
-            }
-        },
-        "description": "Structure the class using the data provided.",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "object"
-                    ]
-                },
-                "description": "The data used to structure the class",
-                "name": "data"
-            }
+      "comment": "/**\n   * The raw template of the platoon's badge.\n   *\n   * @property {string}\n   * @private\n   */",
+      "meta": {
+        "range": [
+          205,
+          219
         ],
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "User"
-                    ]
-                },
-                "description": "the User"
-            }
+        "filename": "platoon.js",
+        "lineno": 14,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000293",
+          "name": "badgePathRaw",
+          "type": "ClassPrivateProperty"
+        }
+      },
+      "description": "The raw template of the platoon's badge.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          }
+        }
+      ],
+      "access": "private",
+      "name": "badgePathRaw",
+      "longname": "Platoon#badgePathRaw",
+      "kind": "member",
+      "memberof": "Platoon",
+      "scope": "instance",
+      "___id": "T000002R000035",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The platoon's badge.\n   *\n   * @property {object} badge\n   * @property {string} 60 - The badge in 60px.\n   * @property {string} 320 - The badge in 320px.\n   */",
+      "meta": {
+        "range": [
+          394,
+          426
         ],
-        "name": "structureData",
-        "longname": "User#structureData",
-        "kind": "function",
-        "memberof": "User",
-        "scope": "instance"
+        "filename": "platoon.js",
+        "lineno": 23,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000294",
+          "name": "badge",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoon's badge.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "name": "badge"
+        },
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          },
+          "description": "The badge in 60px.",
+          "name": "60"
+        },
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          },
+          "description": "The badge in 320px.",
+          "name": "320"
+        }
+      ],
+      "name": "badge",
+      "longname": "Platoon#badge",
+      "kind": "member",
+      "memberof": "Platoon",
+      "scope": "instance",
+      "___id": "T000002R000036",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                2714,
-                2774
-            ],
-            "filename": "user.js",
-            "lineno": 112,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000309",
-                "name": "blacklist",
-                "type": "ArrayExpression",
-                "value": "[\"user\",\"tenFriends\",\"platoons\",\"platoonFans\"]"
-            }
-        },
-        "undocumented": true,
-        "name": "blacklist",
-        "longname": "blacklist",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2873,
-                2899
-            ],
-            "filename": "user.js",
-            "lineno": 118,
-            "columnno": 45,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000330",
-                "name": "blacklist",
-                "type": "ArrayExpression",
-                "value": "[\"gravatarMd5\"]"
-            }
-        },
-        "undocumented": true,
-        "name": "blacklist",
-        "longname": "blacklist",
-        "kind": "member",
-        "scope": "global"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                2948,
-                2994
-            ],
-            "filename": "user.js",
-            "lineno": 121,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000341",
-                "name": "this.gravatarEmailHash",
-                "type": "MemberExpression",
-                "value": "data.user.gravatarMd5",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "gravatarEmailHash",
-        "longname": "User#gravatarEmailHash",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3070,
-                3137
-            ],
-            "filename": "user.js",
-            "lineno": 126,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000362",
-                "name": "this.friends",
-                "type": "CallExpression",
-                "value": "",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "friends",
-        "longname": "User#friends",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3177,
-                3246
-            ],
-            "filename": "user.js",
-            "lineno": 130,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000386",
-                "name": "this.platoons",
-                "type": "CallExpression",
-                "value": "",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "platoons",
-        "longname": "User#platoons",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3289,
-                3380
-            ],
-            "filename": "user.js",
-            "lineno": 134,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000410",
-                "name": "this.platoonFans",
-                "type": "CallExpression",
-                "value": "",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "platoonFans",
-        "longname": "User#platoonFans",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3416,
-                3466
-            ],
-            "filename": "user.js",
-            "lineno": 140,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000434",
-                "name": "this.platoon",
-                "type": "NewExpression",
-                "value": "",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "platoon",
-        "longname": "User#platoon",
-        "kind": "member",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "/**\n   * Get the URL string of the user's avatar.\n   *\n   * @function\n   * @param {object} options - Options used\n   * @returns {string} URL string for the user's avatar.\n   */",
-        "meta": {
-            "range": [
-                3801,
-                5167
-            ],
-            "filename": "user.js",
-            "lineno": 157,
-            "columnno": 2,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000476",
-                "name": "User#displayAvatarURL",
-                "type": "MethodDefinition",
-                "paramnames": [
-                    "options"
-                ]
-            },
-            "vars": {
-                "": null
-            }
-        },
-        "description": "Get the URL string of the user's avatar.",
-        "kind": "function",
-        "params": [
-            {
-                "type": {
-                    "names": [
-                        "object"
-                    ]
-                },
-                "description": "Options used",
-                "name": "options"
-            }
+      "comment": "/**\n * Represents a Platoon\n *\n * @class\n */",
+      "meta": {
+        "range": [
+          86,
+          1306
         ],
-        "returns": [
-            {
-                "type": {
-                    "names": [
-                        "string"
-                    ]
-                },
-                "description": "URL string for the user's avatar."
-            }
+        "filename": "platoon.js",
+        "lineno": 7,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000290",
+          "name": "Platoon",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "client",
+            "data"
+          ]
+        }
+      },
+      "name": "Platoon",
+      "longname": "Platoon",
+      "kind": "class",
+      "classdesc": "Represents a Platoon",
+      "scope": "global",
+      "description": "Creates a new Platoon instance.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "GameClient"
+            ]
+          },
+          "name": "client"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "name": "data"
+        }
+      ],
+      "___id": "T000002R000040",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
+      "meta": {
+        "range": [
+          803,
+          1113
         ],
-        "name": "displayAvatarURL",
-        "longname": "User#displayAvatarURL",
-        "memberof": "User",
-        "scope": "instance"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3877,
-                3940
-            ],
-            "filename": "user.js",
-            "lineno": 159,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000490",
-                "name": "alias",
-                "type": "ObjectExpression",
-                "value": "{\"size\":\"s\",\"rating\":\"r\",\"default\":\"d\",\"extension\":\"e\"}"
-            }
+        "filename": "platoon.js",
+        "lineno": 42,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000315",
+          "name": "Platoon#structureData",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "data"
+          ]
         },
-        "undocumented": true,
-        "name": "alias",
-        "longname": "alias",
-        "kind": "member",
-        "scope": "global"
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Structure the class using the data provided.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The data used to structure the class",
+          "name": "data"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "the User"
+        }
+      ],
+      "name": "structureData",
+      "longname": "Platoon#structureData",
+      "kind": "function",
+      "memberof": "Platoon",
+      "scope": "instance",
+      "___id": "T000002R000041",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                3886,
-                3895
-            ],
-            "filename": "user.js",
-            "lineno": 159,
-            "columnno": 15,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000492",
-                "name": "size",
-                "type": "Literal",
-                "value": "s"
-            }
+      "comment": "/**\n\t * \n\t */",
+      "meta": {
+        "range": [
+          181,
+          199
+        ],
+        "filename": "sb.js",
+        "lineno": 13,
+        "columnno": 1,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000452",
+          "name": "cache",
+          "type": "ClassProperty"
+        }
+      },
+      "name": "cache",
+      "longname": "ServerBrowser#cache",
+      "kind": "member",
+      "memberof": "ServerBrowser",
+      "scope": "instance",
+      "___id": "T000002R000053",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Represents Battlelog server browser/\n * \n * @class\n */",
+      "meta": {
+        "range": [
+          143,
+          507
+        ],
+        "filename": "sb.js",
+        "lineno": 9,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000449",
+          "name": "ServerBrowser",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "client",
+            "data"
+          ]
+        }
+      },
+      "name": "ServerBrowser",
+      "longname": "ServerBrowser",
+      "kind": "class",
+      "classdesc": "Represents Battlelog server browser/",
+      "scope": "global",
+      "___id": "T000002R000055",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Represents a server.\n *\n * @class\n */",
+      "meta": {
+        "range": [
+          122,
+          1311
+        ],
+        "filename": "server.js",
+        "lineno": 8,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000537",
+          "name": "Server",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "client",
+            "data"
+          ]
+        }
+      },
+      "name": "Server",
+      "longname": "Server",
+      "kind": "class",
+      "classdesc": "Represents a server.",
+      "scope": "global",
+      "description": "Creates a new Server instance.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "GameClient"
+            ]
+          },
+          "name": "client"
         },
-        "undocumented": true,
-        "name": "size",
-        "longname": "alias.size",
-        "kind": "member",
-        "memberof": "alias",
-        "scope": "static"
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "name": "data"
+        }
+      ],
+      "___id": "T000002R000064",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                3897,
-                3908
-            ],
-            "filename": "user.js",
-            "lineno": 159,
-            "columnno": 26,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000494",
-                "name": "rating",
-                "type": "Literal",
-                "value": "r"
-            }
+      "comment": "/**\n   * Fetch the server and populate the server's stats again.\n   *\n   * @function\n   * @returns {Server} - The server\n   */",
+      "meta": {
+        "range": [
+          469,
+          727
+        ],
+        "filename": "server.js",
+        "lineno": 25,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000558",
+          "name": "Server#fetch",
+          "type": "MethodDefinition",
+          "paramnames": []
         },
-        "undocumented": true,
-        "name": "rating",
-        "longname": "alias.rating",
-        "kind": "member",
-        "memberof": "alias",
-        "scope": "static"
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Fetch the server and populate the server's stats again.",
+      "kind": "function",
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "Server"
+            ]
+          },
+          "description": "- The server"
+        }
+      ],
+      "name": "fetch",
+      "longname": "Server#fetch",
+      "memberof": "Server",
+      "scope": "instance",
+      "params": [],
+      "async": true,
+      "___id": "T000002R000066",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                3910,
-                3922
-            ],
-            "filename": "user.js",
-            "lineno": 159,
-            "columnno": 39,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000496",
-                "name": "default",
-                "type": "Literal",
-                "value": "d"
-            }
+      "comment": "/**\n * Represents a Battlelog soldier.\n *\n * @class\n */",
+      "meta": {
+        "range": [
+          98,
+          925
+        ],
+        "filename": "soldier.js",
+        "lineno": 8,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000696",
+          "name": "Soldier",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "user",
+            "data",
+            "fetch"
+          ]
+        }
+      },
+      "name": "Soldier",
+      "longname": "Soldier",
+      "kind": "class",
+      "classdesc": "Represents a Battlelog soldier.",
+      "scope": "global",
+      "description": "Creates a new Soldier instance",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "The user of this soldier.",
+          "name": "user"
         },
-        "undocumented": true,
-        "name": "default",
-        "longname": "alias.default",
-        "kind": "member",
-        "memberof": "alias",
-        "scope": "static"
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "optional": true,
+          "description": "The raw data object to be used to populate the\n    instance.",
+          "name": "data"
+        }
+      ],
+      "___id": "T000002R000083",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                3924,
-                3938
-            ],
-            "filename": "user.js",
-            "lineno": 159,
-            "columnno": 53,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000498",
-                "name": "extension",
-                "type": "Literal",
-                "value": "e"
-            }
+      "comment": "/**\n   * Populate an object with a raw data object.\n   *\n   * @param {object} data - The raw data\n   * @param {boolean} [fetch] - Whether the raw data is from a fetch function.\n   * @returns {Soldier} - The soldier\n   */",
+      "meta": {
+        "range": [
+          651,
+          855
+        ],
+        "filename": "soldier.js",
+        "lineno": 29,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000719",
+          "name": "Soldier#structureData",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "data",
+            "fetch"
+          ]
         },
-        "undocumented": true,
-        "name": "extension",
-        "longname": "alias.extension",
-        "kind": "member",
-        "memberof": "alias",
-        "scope": "static"
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                3948,
-                3978
-            ],
-            "filename": "user.js",
-            "lineno": 160,
-            "columnno": 6,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000500",
-                "name": "defaults",
-                "type": "ObjectExpression",
-                "value": "{\"default\":\"retro\"}"
-            }
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Populate an object with a raw data object.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The raw data",
+          "name": "data"
         },
-        "undocumented": true,
-        "name": "defaults",
-        "longname": "defaults",
-        "kind": "member",
-        "scope": "global"
+        {
+          "type": {
+            "names": [
+              "boolean"
+            ]
+          },
+          "optional": true,
+          "description": "Whether the raw data is from a fetch function.",
+          "name": "fetch"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "Soldier"
+            ]
+          },
+          "description": "- The soldier"
+        }
+      ],
+      "name": "structureData",
+      "longname": "Soldier#structureData",
+      "kind": "function",
+      "memberof": "Soldier",
+      "scope": "instance",
+      "___id": "T000002R000085",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                3960,
-                3976
-            ],
-            "filename": "user.js",
-            "lineno": 160,
-            "columnno": 18,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000502",
-                "name": "default",
-                "type": "Literal",
-                "value": "retro"
-            }
+      "comment": "/**\n * Manages a user's soldiers.\n *\n * @class\n */",
+      "meta": {
+        "range": [
+          139,
+          890
+        ],
+        "filename": "soldiersmanager.js",
+        "lineno": 9,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000794",
+          "name": "SoldiersManager",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "user",
+            "data"
+          ]
+        }
+      },
+      "name": "SoldiersManager",
+      "longname": "SoldiersManager",
+      "kind": "class",
+      "classdesc": "Manages a user's soldiers.",
+      "scope": "global",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "The user that owns this SoldiersManager instance.",
+          "name": "user"
         },
-        "undocumented": true,
-        "name": "default",
-        "longname": "defaults.default",
-        "kind": "member",
-        "memberof": "defaults",
-        "scope": "static"
+        {
+          "type": {
+            "names": [
+              "Array"
+            ]
+          },
+          "optional": true,
+          "description": "Raw array data of the user's soldiers.",
+          "name": "data"
+        }
+      ],
+      "___id": "T000002R000094",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                4922,
-                4989
-            ],
-            "filename": "user.js",
-            "lineno": 194,
-            "columnno": 8,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000606",
-                "name": "params",
-                "type": "ObjectExpression",
-                "value": "{\"r\":\"\",\"d\":\"\",\"s\":\"\"}"
-            }
+      "comment": "/**\n   * Add\n   *\n   * @param data\n   * @param fetch\n   */",
+      "meta": {
+        "range": [
+          472,
+          695
+        ],
+        "filename": "soldiersmanager.js",
+        "lineno": 25,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000812",
+          "name": "SoldiersManager#structureData",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "data",
+            "fetch"
+          ]
         },
-        "undocumented": true,
-        "name": "params",
-        "longname": "<anonymous>~params",
-        "kind": "member",
-        "memberof": "<anonymous>",
-        "scope": "inner",
-        "params": []
-    },
-    {
-        "comment": "",
-        "meta": {
-            "range": [
-                4933,
-                4950
-            ],
-            "filename": "user.js",
-            "lineno": 194,
-            "columnno": 19,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000609",
-                "name": "r",
-                "type": "MemberExpression",
-                "value": "options.rating"
-            }
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Add",
+      "params": [
+        {
+          "name": "data"
         },
-        "undocumented": true,
-        "name": "r",
-        "longname": "<anonymous>~params.r",
-        "kind": "member",
-        "memberof": "<anonymous>~params",
-        "scope": "static"
+        {
+          "name": "fetch"
+        }
+      ],
+      "name": "structureData",
+      "longname": "SoldiersManager#structureData",
+      "kind": "function",
+      "memberof": "SoldiersManager",
+      "scope": "instance",
+      "___id": "T000002R000096",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                4952,
-                4970
-            ],
-            "filename": "user.js",
-            "lineno": 194,
-            "columnno": 38,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000613",
-                "name": "d",
-                "type": "MemberExpression",
-                "value": "options.default"
-            }
-        },
-        "undocumented": true,
-        "name": "d",
-        "longname": "<anonymous>~params.d",
-        "kind": "member",
-        "memberof": "<anonymous>~params",
-        "scope": "static"
+      "comment": "/**\n   * The user's email hash.\n   *\n   * @property {string}\n   *\n   */",
+      "meta": {
+        "range": [
+          540,
+          558
+        ],
+        "filename": "user.js",
+        "lineno": 21,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001002",
+          "name": "gravatarEmailHash",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The user's email hash.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          }
+        }
+      ],
+      "name": "gravatarEmailHash",
+      "longname": "User#gravatarEmailHash",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000116",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                4972,
-                4987
-            ],
-            "filename": "user.js",
-            "lineno": 194,
-            "columnno": 58,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000617",
-                "name": "s",
-                "type": "MemberExpression",
-                "value": "options.size"
-            }
-        },
-        "undocumented": true,
-        "name": "s",
-        "longname": "<anonymous>~params.s",
-        "kind": "member",
-        "memberof": "<anonymous>~params",
-        "scope": "static"
+      "comment": "/**\n   * The platoon the user is a part of. Please do not confuse this with\n   * User#platoon\n   *\n   * @property {Map<Platoon>}\n   */",
+      "meta": {
+        "range": [
+          699,
+          729
+        ],
+        "filename": "user.js",
+        "lineno": 29,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001003",
+          "name": "platoons",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoon the user is a part of. Please do not confuse this with\nUser#platoon",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "Map.<Platoon>"
+            ]
+          }
+        }
+      ],
+      "name": "platoons",
+      "longname": "User#platoons",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000117",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                5022,
-                5036
-            ],
-            "filename": "user.js",
-            "lineno": 196,
-            "columnno": 30,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000626",
-                "name": "params.f",
-                "type": "Literal",
-                "funcscope": "<anonymous>",
-                "value": "y",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "f",
-        "longname": "<anonymous>~params.f",
-        "kind": "member",
-        "memberof": "<anonymous>~params",
-        "scope": "static"
+      "comment": "/**\n   * The platoons the user is a fan of.\n   *\n   * @property {Map<Platoon>}\n   */",
+      "meta": {
+        "range": [
+          821,
+          854
+        ],
+        "filename": "user.js",
+        "lineno": 37,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001006",
+          "name": "platoonFans",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoons the user is a fan of.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "Map.<Platoon>"
+            ]
+          }
+        }
+      ],
+      "name": "platoonFans",
+      "longname": "User#platoonFans",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000118",
+      "___s": true
     },
     {
-        "comment": "",
-        "meta": {
-            "range": [
-                5171,
-                5197
-            ],
-            "filename": "user.js",
-            "lineno": 203,
-            "columnno": 0,
-            "path": "/home/runner/work/battlelog.js/battlelog.js/src",
-            "code": {
-                "id": "astnode100000647",
-                "name": "module.exports.User",
-                "type": "Identifier",
-                "value": "User",
-                "paramnames": []
-            }
-        },
-        "undocumented": true,
-        "name": "User",
-        "longname": "User",
-        "kind": "member",
-        "scope": "global"
+      "comment": "/**\n   * The user's friemd ;ist. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
+      "meta": {
+        "range": [
+          990,
+          1019
+        ],
+        "filename": "user.js",
+        "lineno": 44,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001009",
+          "name": "friends",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The user's friemd ;ist. Only have 10 of all of the user's friends though.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "BattlelogMap.<User>"
+            ]
+          }
+        }
+      ],
+      "name": "friends",
+      "longname": "User#friends",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000119",
+      "___s": true
     },
     {
-        "kind": "package",
-        "longname": "package:undefined",
-        "files": [
-            "/home/runner/work/battlelog.js/battlelog.js/src/index.js",
-            "/home/runner/work/battlelog.js/battlelog.js/src/user.js"
+      "comment": "/**\n   * The platoon of the user. This is different than User#platoons as that\n   * property is only available if the game supports joining multiple platoons.\n   *\n   * @property {Platoon}\n   */",
+      "meta": {
+        "range": [
+          1221,
+          1229
+        ],
+        "filename": "user.js",
+        "lineno": 53,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001012",
+          "name": "platoon",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoon of the user. This is different than User#platoons as that\nproperty is only available if the game supports joining multiple platoons.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "Platoon"
+            ]
+          }
+        }
+      ],
+      "name": "platoon",
+      "longname": "User#platoon",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000120",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * @typedef {(User|string|object)} UserResolvable - Something that can be\n   * parsed into a User instance. Could be a User instance, the username of the\n   * user, or a raw data object of the user.\n   *\n   */",
+      "meta": {
+        "filename": "user.js",
+        "lineno": 55,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {}
+      },
+      "kind": "typedef",
+      "name": "UserResolvable",
+      "type": {
+        "names": [
+          "User",
+          "string",
+          "object"
         ]
+      },
+      "description": "Something that can be\nparsed into a User instance. Could be a User instance, the username of the\nuser, or a raw data object of the user.",
+      "longname": "UserResolvable",
+      "scope": "global",
+      "___id": "T000002R000121",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The soldiers of this user/\n   *\n   * @property {SoldiersManager}\n   */",
+      "meta": {
+        "range": [
+          1534,
+          1567
+        ],
+        "filename": "user.js",
+        "lineno": 67,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001013",
+          "name": "soldiers",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The soldiers of this user/",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "SoldiersManager"
+            ]
+          }
+        }
+      ],
+      "name": "soldiers",
+      "longname": "User#soldiers",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000122",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Represents a Battlelog user.\n *\n * @class\n * @param {GameClient} client - The client used to access this user.\n * @param {object} data - Raw object data of the user.\n */",
+      "meta": {
+        "range": [
+          451,
+          5165
+        ],
+        "filename": "user.js",
+        "lineno": 14,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100000999",
+          "name": "User",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "client",
+            "data"
+          ]
+        }
+      },
+      "name": "User",
+      "longname": "User",
+      "kind": "class",
+      "classdesc": "Represents a Battlelog user.",
+      "scope": "global",
+      "description": "Creates a new User instance.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "GameClient"
+            ]
+          },
+          "description": "The client used to access this user.",
+          "name": "client"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "Raw object data of the user.",
+          "name": "data"
+        }
+      ],
+      "___id": "T000002R000124",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Fetch the user in Battlelog and refresh his data with the raw data\n   * Battlelog gave.\n   *\n   * @async\n   * @returns {User} the User\n   */",
+      "meta": {
+        "range": [
+          2201,
+          2479
+        ],
+        "filename": "user.js",
+        "lineno": 95,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001052",
+          "name": "User#fetch",
+          "type": "MethodDefinition",
+          "paramnames": []
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Fetch the user in Battlelog and refresh his data with the raw data\nBattlelog gave.",
+      "async": true,
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "the User"
+        }
+      ],
+      "name": "fetch",
+      "longname": "User#fetch",
+      "kind": "function",
+      "memberof": "User",
+      "scope": "instance",
+      "params": [],
+      "___id": "T000002R000127",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
+      "meta": {
+        "range": [
+          2644,
+          3614
+        ],
+        "filename": "user.js",
+        "lineno": 110,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001112",
+          "name": "User#structureData",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "data"
+          ]
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Structure the class using the data provided.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The data used to structure the class",
+          "name": "data"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "the User"
+        }
+      ],
+      "name": "structureData",
+      "longname": "User#structureData",
+      "kind": "function",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000131",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Get the URL string of the user's avatar.\n   *\n   * @function\n   * @param {object} options - Options used\n   * @returns {string} URL string for the user's avatar.\n   */",
+      "meta": {
+        "range": [
+          3797,
+          5163
+        ],
+        "filename": "user.js",
+        "lineno": 157,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
+        "code": {
+          "id": "astnode100001292",
+          "name": "User#displayAvatarURL",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "options"
+          ]
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Get the URL string of the user's avatar.",
+      "kind": "function",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "Options used",
+          "name": "options"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          },
+          "description": "URL string for the user's avatar."
+        }
+      ],
+      "name": "displayAvatarURL",
+      "longname": "User#displayAvatarURL",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000139",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The user's email hash.\n   *\n   * @property {string}\n   *\n   */",
+      "meta": {
+        "range": [
+          540,
+          558
+        ],
+        "filename": "user.js",
+        "lineno": 21,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001655",
+          "name": "gravatarEmailHash",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The user's email hash.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          }
+        }
+      ],
+      "name": "gravatarEmailHash",
+      "longname": "User#gravatarEmailHash",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000176",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The platoon the user is a part of. Please do not confuse this with\n   * User#platoon\n   *\n   * @property {Map<Platoon>}\n   */",
+      "meta": {
+        "range": [
+          699,
+          729
+        ],
+        "filename": "user.js",
+        "lineno": 29,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001656",
+          "name": "platoons",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoon the user is a part of. Please do not confuse this with\nUser#platoon",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "Map.<Platoon>"
+            ]
+          }
+        }
+      ],
+      "name": "platoons",
+      "longname": "User#platoons",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000177",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The platoons the user is a fan of.\n   *\n   * @property {Map<Platoon>}\n   */",
+      "meta": {
+        "range": [
+          821,
+          854
+        ],
+        "filename": "user.js",
+        "lineno": 37,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001659",
+          "name": "platoonFans",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoons the user is a fan of.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "Map.<Platoon>"
+            ]
+          }
+        }
+      ],
+      "name": "platoonFans",
+      "longname": "User#platoonFans",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000178",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The user's friemd ;ist. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
+      "meta": {
+        "range": [
+          990,
+          1019
+        ],
+        "filename": "user.js",
+        "lineno": 44,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001662",
+          "name": "friends",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The user's friemd ;ist. Only have 10 of all of the user's friends though.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "BattlelogMap.<User>"
+            ]
+          }
+        }
+      ],
+      "name": "friends",
+      "longname": "User#friends",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000179",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The platoon of the user. This is different than User#platoons as that\n   * property is only available if the game supports joining multiple platoons.\n   *\n   * @property {Platoon}\n   */",
+      "meta": {
+        "range": [
+          1221,
+          1229
+        ],
+        "filename": "user.js",
+        "lineno": 53,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001665",
+          "name": "platoon",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The platoon of the user. This is different than User#platoons as that\nproperty is only available if the game supports joining multiple platoons.",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "Platoon"
+            ]
+          }
+        }
+      ],
+      "name": "platoon",
+      "longname": "User#platoon",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000180",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * @typedef {(User|string|object)} UserResolvable - Something that can be\n   * parsed into a User instance. Could be a User instance, the username of the\n   * user, or a raw data object of the user.\n   *\n   */",
+      "meta": {
+        "filename": "user.js",
+        "lineno": 55,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {}
+      },
+      "kind": "typedef",
+      "name": "UserResolvable",
+      "type": {
+        "names": [
+          "User",
+          "string",
+          "object"
+        ]
+      },
+      "description": "Something that can be\nparsed into a User instance. Could be a User instance, the username of the\nuser, or a raw data object of the user.",
+      "longname": "UserResolvable",
+      "scope": "global",
+      "___id": "T000002R000181",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * The soldiers of this user/\n   *\n   * @property {SoldiersManager}\n   */",
+      "meta": {
+        "range": [
+          1534,
+          1571
+        ],
+        "filename": "user.js",
+        "lineno": 67,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001666",
+          "name": "soldiers",
+          "type": "ClassProperty"
+        }
+      },
+      "description": "The soldiers of this user/",
+      "properties": [
+        {
+          "type": {
+            "names": [
+              "SoldiersManager"
+            ]
+          }
+        }
+      ],
+      "name": "soldiers",
+      "longname": "User#soldiers",
+      "kind": "member",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000182",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Represents a Battlelog user.\n *\n * @class\n * @param {GameClient} client - The client used to access this user.\n * @param {object} data - Raw object data of the user.\n */",
+      "meta": {
+        "range": [
+          451,
+          5169
+        ],
+        "filename": "user.js",
+        "lineno": 14,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001652",
+          "name": "User",
+          "type": "ClassDeclaration",
+          "paramnames": [
+            "client",
+            "data"
+          ]
+        }
+      },
+      "name": "User",
+      "longname": "User",
+      "kind": "class",
+      "classdesc": "Represents a Battlelog user.",
+      "scope": "global",
+      "description": "Creates a new User instance.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "GameClient"
+            ]
+          },
+          "description": "The client used to access this user.",
+          "name": "client"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "Raw object data of the user.",
+          "name": "data"
+        }
+      ],
+      "___id": "T000002R000184",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Fetch the user in Battlelog and refresh his data with the raw data\n   * Battlelog gave.\n   *\n   * @async\n   * @returns {User} the User\n   */",
+      "meta": {
+        "range": [
+          2205,
+          2483
+        ],
+        "filename": "user.js",
+        "lineno": 95,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001706",
+          "name": "User#fetch",
+          "type": "MethodDefinition",
+          "paramnames": []
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Fetch the user in Battlelog and refresh his data with the raw data\nBattlelog gave.",
+      "async": true,
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "the User"
+        }
+      ],
+      "name": "fetch",
+      "longname": "User#fetch",
+      "kind": "function",
+      "memberof": "User",
+      "scope": "instance",
+      "params": [],
+      "___id": "T000002R000187",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Structure the class using the data provided.\n   *\n   * @param {object} data - The data used to structure the class\n   * @returns {User} the User\n   */",
+      "meta": {
+        "range": [
+          2648,
+          3618
+        ],
+        "filename": "user.js",
+        "lineno": 110,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001766",
+          "name": "User#structureData",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "data"
+          ]
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Structure the class using the data provided.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The data used to structure the class",
+          "name": "data"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "User"
+            ]
+          },
+          "description": "the User"
+        }
+      ],
+      "name": "structureData",
+      "longname": "User#structureData",
+      "kind": "function",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000191",
+      "___s": true
+    },
+    {
+      "comment": "/**\n   * Get the URL string of the user's avatar.\n   *\n   * @function\n   * @param {object} options - Options used\n   * @returns {string} URL string for the user's avatar.\n   */",
+      "meta": {
+        "range": [
+          3801,
+          5167
+        ],
+        "filename": "user.js",
+        "lineno": 157,
+        "columnno": 2,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src",
+        "code": {
+          "id": "astnode100001946",
+          "name": "User#displayAvatarURL",
+          "type": "MethodDefinition",
+          "paramnames": [
+            "options"
+          ]
+        },
+        "vars": {
+          "": null
+        }
+      },
+      "description": "Get the URL string of the user's avatar.",
+      "kind": "function",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "Options used",
+          "name": "options"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          },
+          "description": "URL string for the user's avatar."
+        }
+      ],
+      "name": "displayAvatarURL",
+      "longname": "User#displayAvatarURL",
+      "memberof": "User",
+      "scope": "instance",
+      "___id": "T000002R000199",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Utilities function to help things out.\n *\n * @module utils\n */",
+      "meta": {
+        "filename": "utils.js",
+        "lineno": 1,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
+        "code": {}
+      },
+      "description": "Utilities function to help things out.",
+      "kind": "module",
+      "name": "utils",
+      "longname": "module:utils",
+      "___id": "T000002R000213",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Get the article of a noun\n *\n * @param {string} str\n * @param {boolean} plural\n */",
+      "meta": {
+        "range": [
+          161,
+          580
+        ],
+        "filename": "utils.js",
+        "lineno": 13,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
+        "code": {
+          "id": "astnode100002126",
+          "name": "getArticle",
+          "type": "FunctionDeclaration",
+          "paramnames": [
+            "str",
+            "plural"
+          ]
+        }
+      },
+      "description": "Get the article of a noun",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "string"
+            ]
+          },
+          "name": "str"
+        },
+        {
+          "type": {
+            "names": [
+              "boolean"
+            ]
+          },
+          "name": "plural"
+        }
+      ],
+      "name": "getArticle",
+      "longname": "module:utils~getArticle",
+      "kind": "function",
+      "scope": "inner",
+      "memberof": "module:utils",
+      "___id": "T000002R000214",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Manages options. Does not support recursion yet.\n *\n * @function\n * @param {object} data - The options object data.\n * @param {object} rules - The rules used to manage the options.\n */",
+      "meta": {
+        "range": [
+          774,
+          2230
+        ],
+        "filename": "utils.js",
+        "lineno": 34,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
+        "code": {
+          "id": "astnode100002181",
+          "name": "validateOptions",
+          "type": "FunctionDeclaration",
+          "paramnames": [
+            "data",
+            "rules"
+          ]
+        },
+        "vars": {
+          "undefined": null,
+          "data[undefined]": "module:utils~data[undefined]",
+          "required": "module:utils~validateOptions~required",
+          "type": "module:utils~validateOptions~type",
+          "": null
+        }
+      },
+      "description": "Manages options. Does not support recursion yet.",
+      "kind": "function",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The options object data.",
+          "name": "data"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The rules used to manage the options.",
+          "name": "rules"
+        }
+      ],
+      "name": "validateOptions",
+      "longname": "module:utils~validateOptions",
+      "scope": "inner",
+      "memberof": "module:utils",
+      "___id": "T000002R000215",
+      "___s": true
+    },
+    {
+      "comment": "/**\n * Populate an object with a raw data object. Does not currently support\n * recursion.\n *\n * @param {object} cls - The class/object to populate\n * @param {object} data - The data whose properties will be used to populate the\n *     class / object.\n * @param {object} [rules] - An object filled with how things should be done.\n * @param {Array} [rules.blacklist] - An array filled with properties that\n *     should be ignored\n * @param {Array} [rules.setBoolean] - An array filled with properties that\n *     should be set to true if they are truthy or false if they are falsy.\n * @param {object} [rules.alias] - An object that rules which properties should\n *     be renamed and what should they be renamed to.\n * @param {Array} [rules.onlyAssignIfTruthy] - An array filled\n * @returns {object} - The class/object\n */",
+      "meta": {
+        "range": [
+          3055,
+          3824
+        ],
+        "filename": "utils.js",
+        "lineno": 105,
+        "columnno": 0,
+        "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
+        "code": {
+          "id": "astnode100002408",
+          "name": "structureData",
+          "type": "FunctionDeclaration",
+          "paramnames": [
+            "cls",
+            "data",
+            "rules"
+          ]
+        },
+        "vars": {
+          "undefined": null,
+          "name": "module:utils~name",
+          "cls[undefined]": "module:utils~cls[undefined]"
+        }
+      },
+      "description": "Populate an object with a raw data object. Does not currently support\nrecursion.",
+      "params": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The class/object to populate",
+          "name": "cls"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "The data whose properties will be used to populate the\n    class / object.",
+          "name": "data"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "optional": true,
+          "description": "An object filled with how things should be done.",
+          "name": "rules"
+        },
+        {
+          "type": {
+            "names": [
+              "Array"
+            ]
+          },
+          "optional": true,
+          "description": "An array filled with properties that\n    should be ignored",
+          "name": "rules.blacklist"
+        },
+        {
+          "type": {
+            "names": [
+              "Array"
+            ]
+          },
+          "optional": true,
+          "description": "An array filled with properties that\n    should be set to true if they are truthy or false if they are falsy.",
+          "name": "rules.setBoolean"
+        },
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "optional": true,
+          "description": "An object that rules which properties should\n    be renamed and what should they be renamed to.",
+          "name": "rules.alias"
+        },
+        {
+          "type": {
+            "names": [
+              "Array"
+            ]
+          },
+          "optional": true,
+          "description": "An array filled",
+          "name": "rules.onlyAssignIfTruthy"
+        }
+      ],
+      "returns": [
+        {
+          "type": {
+            "names": [
+              "object"
+            ]
+          },
+          "description": "- The class/object"
+        }
+      ],
+      "name": "structureData",
+      "longname": "module:utils~structureData",
+      "kind": "function",
+      "scope": "inner",
+      "memberof": "module:utils",
+      "___id": "T000002R000221",
+      "___s": true
+    },
+    {
+      "kind": "package",
+      "longname": "package:undefined",
+      "files": [
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/blclient.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/blmap.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/forums.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/gameclient.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/platoon.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/sb.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/server.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/soldier.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/soldiersmanager.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/um.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/classes/user.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/index.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/user.js",
+        "/home/runner/work/battlelog.js/battlelog.js/src/utils/utils.js"
+      ],
+      "___id": "T000002R000238",
+      "___s": true
     }
-]
+  ]
+}
