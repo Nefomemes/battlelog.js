@@ -13,13 +13,23 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@master
-      - name: Install Node v12
+      - name: Install Node
         uses: actions/setup-node@master
         with:
-          node-version: 12
+          node-version: 14
+          check-latest: true
       - name: Install dependencies
         run: npm install
-      - name: Build and deploy documentation
-        uses: discordjs/action-docs@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Generate documentation in JSON
+        run: jsdoc -X ./src/ > ./docs.json
+      - name: Commit the fix
+        run: |
+             git add --all
+             git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+             git config --local user.name "github-actions[bot]"
+             git commit -m "Generate JSON documentation" -a
+      - name: Push the fix
+        uses: ad-m/github-push-action@master
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
+           branch: ${{ github.ref }}
