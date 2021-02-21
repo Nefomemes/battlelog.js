@@ -1,15 +1,12 @@
-(async function(){
-	
-const bl = require("./src/index.js");
 
-var client = bl();
+(async function () {
+  const bl = require("./src/index.js");
 
-var bf3 = client.game('bf4');
+  var client = bl();
 
-var user = await bf3.users.fetch( "DANNYonPC");
+  var bf3 = client.game("bf3");
 
+  var user = await bf3.users.fetch("Nefomemes");
 
-
-console.log(user);
-})()
-
+  console.log(user);
+})();
