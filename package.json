@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "jsdoc": "^3.6.6",
-    "jsdoc-json":"^2.0.2",
+    "jsdoc-json": "^2.0.2",
     "eslint": "^7.1.0",
     "eslint-plugin-jsdoc": "^32.0.2",
     "eslint-plugin-import": "^2.22.1",
