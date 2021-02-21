@@ -62,7 +62,7 @@ this.activities = res.data.context.activityStream;
 	}
 	/**
 	 * Structure the class using the data provided. 
-   *
+	 *
 	 * @param {object} data - The data used to structure the class  
 	 * @returns {User} the User
 	 */
@@ -102,7 +102,7 @@ this.activities = res.data.context.activityStream;
 
 	/**
 	 * Get the URL string of the user's avatar.
-   *
+	 *
 	 * @function
 	 * @param {object} options - Options used 
 	 * @returns {string} URL string for the user's avatar.
