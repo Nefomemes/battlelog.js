@@ -15,12 +15,12 @@ class FriendsManager {
     cache = new Map()
     
   /**
-     * Creates a new FriendsManager instance.
-     * 
-     * @constructor
-     * @param {User} user - The user that owns this friend list.
-     * @param {array} data - An array of the user's friend. 
-     */
+   * Creates a new FriendsManager instance.
+   * 
+   * @class
+   * @param {User} user - The user that owns this friend list.
+   * @param {Array} data - An array of the user's friend. 
+   */
     constructor(user, data){
         /**
          * The user of this instance.

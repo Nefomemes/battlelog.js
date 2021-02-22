@@ -2,7 +2,7 @@
 const utils = require("../utils/utils");
 const { GameClient } = require("./gameclient");
 /**
-
+ 
  * Represents a Battlelog session.
  *
  * @class
@@ -15,7 +15,7 @@ class BattlelogClient {
 
 
 /**
-
+ 
  * Creates a new Battlelog session.
  *
  * @class
@@ -32,7 +32,7 @@ class BattlelogClient {
 	}
 	
 /**
-
+ 
  * Creates a new GameClient instance.
  *
  * @param {...*} params - The params used to create the instance.
