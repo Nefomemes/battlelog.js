@@ -1,14 +1,14 @@
 {
   "docs": [
     {
-      "comment": "/**\n * Represents a Battlelog session.\n *\n * @class\n */",
+      "comment": "/**\n \n * Represents a Battlelog session.\n *\n * @class\n */",
       "meta": {
         "range": [
-          146,
-          732
+          149,
+          740
         ],
         "filename": "blclient.js",
-        "lineno": 9,
+        "lineno": 11,
         "columnno": 0,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
         "code": {
@@ -44,14 +44,14 @@
       "___s": true
     },
     {
-      "comment": "/**\n * Creates a new GameClient instance.\n *\n * @param {...*} params - The params used to create the instance.\n */",
+      "comment": "/**\n \n * Creates a new GameClient instance.\n *\n * @param {...*} params - The params used to create the instance.\n */",
       "meta": {
         "range": [
-          665,
-          728
+          673,
+          736
         ],
         "filename": "blclient.js",
-        "lineno": 35,
+        "lineno": 40,
         "columnno": 1,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
         "code": {
@@ -182,11 +182,11 @@
       "comment": "/**\n * Represents /:game/forum\n */",
       "meta": {
         "range": [
-          35,
-          70
+          36,
+          71
         ],
         "filename": "forums.js",
-        "lineno": 4,
+        "lineno": 5,
         "columnno": 0,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
         "code": {
@@ -1733,7 +1733,7 @@
       "comment": "/**\n * Utilities function to help things out.\n *\n * @module utils\n */",
       "meta": {
         "filename": "utils.js",
-        "lineno": 1,
+        "lineno": 2,
         "columnno": 0,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
         "code": {}
@@ -1749,11 +1749,11 @@
       "comment": "/**\n * Get the article of a noun\n *\n * @param {string} str\n * @param {boolean} plural\n */",
       "meta": {
         "range": [
-          161,
-          580
+          162,
+          581
         ],
         "filename": "utils.js",
-        "lineno": 13,
+        "lineno": 14,
         "columnno": 0,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
         "code": {
@@ -1797,11 +1797,11 @@
       "comment": "/**\n * Manages options. Does not support recursion yet.\n *\n * @function\n * @param {object} data - The options object data.\n * @param {object} rules - The rules used to manage the options.\n */",
       "meta": {
         "range": [
-          774,
-          2230
+          775,
+          2231
         ],
         "filename": "utils.js",
-        "lineno": 34,
+        "lineno": 35,
         "columnno": 0,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
         "code": {
@@ -1854,11 +1854,11 @@
       "comment": "/**\n * Populate an object with a raw data object. Does not currently support\n * recursion.\n *\n * @param {object} cls - The class/object to populate\n * @param {object} data - The data whose properties will be used to populate the\n *     class / object.\n * @param {object} [rules] - An object filled with how things should be done.\n * @param {Array} [rules.blacklist] - An array filled with properties that\n *     should be ignored\n * @param {Array} [rules.setBoolean] - An array filled with properties that\n *     should be set to true if they are truthy or false if they are falsy.\n * @param {object} [rules.alias] - An object that rules which properties should\n *     be renamed and what should they be renamed to.\n * @param {Array} [rules.onlyAssignIfTruthy] - An array filled\n * @returns {object} - The class/object\n */",
       "meta": {
         "range": [
-          3055,
-          3824
+          3056,
+          3826
         ],
         "filename": "utils.js",
-        "lineno": 105,
+        "lineno": 106,
         "columnno": 0,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/utils",
         "code": {
