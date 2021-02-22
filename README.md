@@ -28,7 +28,7 @@ BattlelogJS doesn't much require any dependencies, only [axios](https://github.c
 
 
 ## License
-This library is lisenced with the permissible MIT Lisence. You are free to use this library, for commercial or non-commercial work, as long as you credit us, the devs, in your "Credits" page or something. 
+This library is lisenced with the permissible MIT Lisence. You are free to use this library, for commercial or non-commercial work, as long as you credit us, the devs of this library, in your "Credits" page or something. 
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js?ref=badge_large)
 
