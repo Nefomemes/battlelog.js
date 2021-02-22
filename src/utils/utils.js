@@ -1,3 +1,4 @@
+
 /**
  * Utilities function to help things out.
  *
@@ -135,6 +136,7 @@ function structureData(cls, data, rules = {}) {
   }
 
   return cls;
+
 }
 
 module.exports.getArticle = getArticle;

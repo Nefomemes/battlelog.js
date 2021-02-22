@@ -10,7 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install React
-        run: npm install react
+        run: npm install react --save-dev
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
@@ -20,6 +20,12 @@ jobs:
           template: better-docs
           front_page: README.md
           recurse: true 
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+            github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+            publish_branch: gh-pages
+            publish_dir: ./out
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

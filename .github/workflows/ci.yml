@@ -1,4 +1,5 @@
 name: ESLint
+
 on: [push]
 jobs:
   eslint:
@@ -24,6 +25,7 @@ jobs:
           CI: TRUE
       - name: Test Code Linting
         run: npm run lint
+
       - name: Commit the fix
         run: |
              git add --all
