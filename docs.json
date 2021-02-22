@@ -1403,7 +1403,7 @@
       "___s": true
     },
     {
-      "comment": "/**\n   * The user's friemd ;ist. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
+      "comment": "/**\n   * The user's friemd list. Only have 10 of all of the user's friends though.\n   *\n   * @property {BattlelogMap<User>}\n   */",
       "meta": {
         "range": [
           990,
@@ -1419,7 +1419,7 @@
           "type": "ClassProperty"
         }
       },
-      "description": "The user's friemd ;ist. Only have 10 of all of the user's friends though.",
+      "description": "The user's friemd list. Only have 10 of all of the user's friends though.",
       "properties": [
         {
           "type": {
