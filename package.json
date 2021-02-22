@@ -6,11 +6,7 @@
   "scripts": {
     "test": "node test.js",
     "start": "node index.js",
-<<<<<<< HEAD
-    "lint": "eslint ./src",
-=======
     "lint": "eslint ./src --fix",
->>>>>>> 6fe0176185972ab1cc56d3c914a6ea767c145171
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output docs/docs.json",
     "docs:test": "docgen --source ./src",
@@ -22,13 +18,9 @@
   "dependencies": {
     "axios": "^0.21.1"
   },
-  "devDependencies": {
-<<<<<<< HEAD
-    "jsdoc-to-markdown": "^6.0.1",
-=======
+  "devDependencies": {    
     "jsdoc": "^3.6.6",
     "jsdoc-json": "^2.0.2",
->>>>>>> 6fe0176185972ab1cc56d3c914a6ea767c145171
     "eslint": "^7.1.0",
     "eslint-plugin-jsdoc": "^32.0.2",
     "eslint-plugin-import": "^2.22.1",
@@ -37,10 +29,7 @@
     "@babel/eslint-parser": "^7.12.16",
     "@babel/core": ">=7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
-<<<<<<< HEAD
     "discord.js-docgen": "git+https://github.com/discordjs/docgen.git",
-=======
->>>>>>> 6fe0176185972ab1cc56d3c914a6ea767c145171
     "babel-loader": "^8.2.2",
     "@babel/preset-env": "^7.12.16"
   }
