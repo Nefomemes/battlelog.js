@@ -10,7 +10,7 @@ Unofficial API wrapper for [Battlefield Battlelog](https://battlelog.battlefield
 
 
 ## Installation
-
+<details>
 ```bash
 npm i battlelog.js
 ```
@@ -20,7 +20,9 @@ Or if you use Yarn:
 yarn add battlelog.js 
 ```
 
-Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub:
+Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub.
+</details>
+
 
 ```bash
 npm i Nefomemes/battlelog.js
