@@ -26,7 +26,7 @@ yarn add battlelog.js
 Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub.
 </details>
 
-
+Installing trough GitHub:
 ```bash
 npm i Nefomemes/battlelog.js
 ```
