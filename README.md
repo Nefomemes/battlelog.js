@@ -15,6 +15,17 @@ Unofficial API wrapper for [Battlefield Battlelog](https://battlelog.battlefield
 npm i battlelog.js
 ```
 
+Or if you use Yarn:
+```bash
+yarn i battlelog.js 
+```
+
+Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub:
+
+```
+
+```
+
 ## Resources
 
 - [API Reference](https://nefomemes.github.io/battlelog.js)
