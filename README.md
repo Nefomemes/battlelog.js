@@ -17,14 +17,19 @@ npm i battlelog.js
 
 Or if you use Yarn:
 ```bash
-yarn i battlelog.js 
+yarn add battlelog.js 
 ```
 
 Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub:
 
+```bash
+npm i Nefomemes/battlelog.js
 ```
-
+Or if you use Yarn:
 ```
+yarn add https://github.com/Nefomemes/battlelog.js.git
+```
+(I'm not quite sure whether this is right lol)
 
 ## Resources
 
