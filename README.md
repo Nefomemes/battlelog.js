@@ -12,6 +12,8 @@ Unofficial API wrapper for [Battlefield Battlelog](https://battlelog.battlefield
 ## Installation
 <details>
   
+  <summary>NPM (not yet available)</summary>
+  
 ```bash
 npm i battlelog.js
 ```
