@@ -10,9 +10,9 @@ Unofficial API wrapper for
 ## Installation
 
 <details>
-  
+
   <summary>NPM (not yet available)</summary>
-  
+
 ```bash
 npm i battlelog.js
 ```
