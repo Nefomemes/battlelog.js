@@ -39,6 +39,7 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 ## Resources
 
 - [API Reference](https://nefomemes.github.io/battlelog.js)
+- [Discord server](https://discord.gg/gTB3Vzf5)
 
 ## Dependencies
 BattlelogJS doesn't much require any dependencies, only [axios](https://github.com/axios/axios). While of course, it does requires on some dev dependencies so that we can develop the library easier. You can check 'em out in the package.json file.
