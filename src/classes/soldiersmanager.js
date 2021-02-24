@@ -23,7 +23,7 @@ class SoldiersManager {
    * @function
    * @param {object} data - The data
    * @param {boolean} [fetch] - Whether the data is a result of SoldiersManager#fetch
-   
+   * @returns {SoldiersManager} this
    */
   structureData(data, fetch) {
     for (let soldier of data) {
