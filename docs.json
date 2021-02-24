@@ -5,7 +5,7 @@
       "meta": {
         "range": [
           149,
-          740
+          722
         ],
         "filename": "blclient.js",
         "lineno": 11,
@@ -28,9 +28,6 @@
       "description": "Creates a new Battlelog session.",
       "params": [
         {
-          "name": "options"
-        },
-        {
           "type": {
             "names": [
               "object"
@@ -47,11 +44,11 @@
       "comment": "/**\n \n * Creates a new GameClient instance.\n *\n * @param {...*} params - The params used to create the instance.\n */",
       "meta": {
         "range": [
-          673,
-          736
+          655,
+          718
         ],
         "filename": "blclient.js",
-        "lineno": 40,
+        "lineno": 39,
         "columnno": 1,
         "path": "/home/runner/work/battlelog.js/battlelog.js/src/classes",
         "code": {
