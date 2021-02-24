@@ -10,7 +10,7 @@ class SoldiersManager {
   cache = new BattlelogMap();
   /**
    *
-   * @constructor 
+   * @class 
    * @param {User} user - The user that owns this SoldiersManager instance.
    * @param {Array} [data] -  Raw array data of the user's soldiers.
    */
@@ -37,12 +37,12 @@ class SoldiersManager {
     return this;
   }
   /**
-  * Get all soldiers the user have.
-  *
-  * @function
-  * @async
-  * @returns {SoldiersManager} this
-  */
+   * Get all soldiers the user have.
+   *
+   * @function
+   * @async
+   * @returns {SoldiersManager} this
+   */
   async fetch() {
     var res = await this.user.axios.get(
       `/user/overviewBoxStats/${this.user.userId}`
