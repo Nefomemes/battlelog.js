@@ -15,9 +15,8 @@ class GameClient {
 	 *
 	 * @class
 	 * @param {BattlelogClient} client - The client of this instance.
-	 * @param game
-	 * @param options
-	 * @param {GameType}
+	 * @param {GameType} game - The game of this GameClient.
+	 * @param {options} [options] - The options used for this instance.
 	 */
 	constructor(client, game = 'bf3', options = {}) {
 		if (!client) throw Error("The 'client' parameter is required. ");

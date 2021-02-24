@@ -19,7 +19,6 @@ class BattlelogClient {
  * Creates a new Battlelog session.
  *
  * @class
- * @param options
  * @param {object} options- The options used here.
  */
 
