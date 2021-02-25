@@ -1,0 +1,38 @@
+name: Browser Support
+
+on: 
+    push:
+         branches:
+            - '*'
+            - '!docs'
+         tags:
+            - '*'
+jobs:
+     webpack: 
+          name: Build
+          runs_on: ubuntu-latest
+          steps:
+         
+             - name: Checkout things
+               uses: actions/checkout@v2
+             - name: Setup Node.js v14
+               uses: actions/setup-node@v2
+               with:
+                 node-version: '14'
+             - name: Build browser version
+               run: |
+                 npm ci
+                 npm run build
+             - name: Push to GitHub
+               uses: Nefomemes/action-push-to-another-branch@v1
+               env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  TARGET_BRANCH: browser
+                  FILE_DIR: ../bundle.js
+               
+            
+           
+             
+               
+     
+          
