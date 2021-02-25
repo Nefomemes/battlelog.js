@@ -55,7 +55,7 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 <details>
 
-<summary><h3>Browsee</h3></summary>
+<summary><h3>Browser</h3></summary>
 
 
 
