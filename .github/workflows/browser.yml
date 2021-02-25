@@ -28,7 +28,7 @@ jobs:
                env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   TARGET_BRANCH: browser
-                  FILE_DIR: ../bundle.js
+                  FILE_DIR: ./bundle.js
                
             
            
