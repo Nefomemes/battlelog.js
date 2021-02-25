@@ -24,7 +24,7 @@ jobs:
                  npm ci
                  npm run build
              - name: Push to GitHub
-               uses: Nefomemes/action-push-to-another-branch@v2
+               uses: Nefomemes/action-push-to-another-branch@v2.0.1
                env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   TARGET_BRANCH: browser
