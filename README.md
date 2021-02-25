@@ -56,7 +56,12 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 <details>
 
 <summary><h3>Browsee</h3></summary>
+
+
+
 </details>
+
+
 ## Resources
 
 - [API Reference](https://nefomemes.github.io/battlelog.js)
