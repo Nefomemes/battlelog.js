@@ -28,7 +28,7 @@ jobs:
                env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   TARGET_BRANCH: browser
-                  FILE_DIR: /home/runner/work/battlelog.js/battlelog.js/main.js
+                  FILE_DIR: /home/runner/work/battlelog.js/battlelog.js/dist/main.js
                
             
            
