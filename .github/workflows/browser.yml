@@ -3,7 +3,7 @@ on:
     push:
          branches:
             - '*'
-            - '!docs'
+            - '!gh-pages'
          tags:
             - '*'
 jobs:
@@ -17,13 +17,20 @@ jobs:
                uses: actions/setup-node@v2
                with:
                  node-version: '14'
-             - name: Build browser version
+             - name: Generate browser-supported dist
                run: |
                  npm ci
                  npm run build
-             - name: Push to GitHub
-               uses: Nefomemes/action-push-to-another-branch@master
-               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  TARGET_BRANCH: browser
-                  FILE_DIR: /home/runner/work/battlelog.js/battlelog.js/dist/main.js
+             - name: Commit the dist
+               run: |
+                git add --all
+                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                git config --local user.name "github-actions[bot]"
+                git commit -m "Generated browser-supported dist" -a
+               continue-on-error: true
+             - name: Push the dist
+               uses: adm/github-push-action@master
+               with:
+                 github_token: ${{ secrets.GITHUB_TOKEN }}
+                 branch: ${{ github.ref }}
+               continue-on-error: true
