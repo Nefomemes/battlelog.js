@@ -36,7 +36,7 @@ Note that this library isn't available on NPM yet. But in the mean time, you can
 
 </details>
 <details>
-<summary> Installing trough GitHub:</summary>
+<summary><h4>Installing trough GitHub:</h4></summary>
 
 ```bash
 npm i Nefomemes/battlelog.js
