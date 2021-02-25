@@ -8,7 +8,7 @@
     "start": "node index.js",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
-    "docs": "docgen --source ./src --output docs/docs.json",
+    "docs": "docgen --source ./src --output dist/docs.json",
     "docs:test": "docgen --source ./src",
     "build": "webpack"
   },
