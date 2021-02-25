@@ -18,7 +18,7 @@ If you are installing battlelog.js in a Node.js environment:
 
 <details>
 
-  <summary>NPM (not yet available)</summary>
+  <summary><h4>NPM (not yet available)</h4></summary>
 <br/>
 If you want to install this trough the NPM registry.
 
@@ -32,12 +32,11 @@ Or if you use Yarn:
 yarn add battlelog.js
 ```
 
-Note that this library isn't available on NPM yet. But in the mean time, you can
-install it trought GitHub.
+Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub.
 
 </details>
-
-Installing trough GitHub:
+<details>
+<summary> Installing trough GitHub:</summary>
 
 ```bash
 npm i Nefomemes/battlelog.js
@@ -51,6 +50,7 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 (I'm not quite sure whether this is right lol)
 
+</details>
 </details>
 
 ## Resources
