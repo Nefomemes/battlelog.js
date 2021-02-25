@@ -1,7 +1,7 @@
 {
   "name": "battlelog.js",
   "version": "0.1.0",
-  "description": "",
+  "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
