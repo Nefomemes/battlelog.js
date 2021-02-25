@@ -29,7 +29,7 @@ jobs:
                 git commit -m "Generated browser-supported dist" -a
                continue-on-error: true
              - name: Push the dist
-               uses: adm/github-push-action@master
+               uses: ad-m/github-push-action@master
                with:
                  github_token: ${{ secrets.GITHUB_TOKEN }}
                  branch: ${{ github.ref }}
