@@ -21,9 +21,4 @@ jobs:
                run: |
                  npm ci
                  npm run build
-             - name: Push to GitHub
-               uses: Nefomemes/action-push-to-another-branch@master
-               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-                  TARGET_BRANCH: browser
-                  FILE_DIR: /home/runner/work/battlelog.js/battlelog.js/dist/main.js
+             
