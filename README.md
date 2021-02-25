@@ -9,10 +9,18 @@ Unofficial API wrapper for
 [Battlefield Battlelog](https://battlelog.battlefield.com)
 
 ## Installation
+<details>
+  
+<summary>Node.js environment</summary>
+<br/>
+
+If you are installing battlelog.js in a Node.js environment:
 
 <details>
 
   <summary>NPM (not yet available)</summary>
+<br/>
+If you want to install this trough the NPM registry.
 
 ```bash
 npm i battlelog.js
@@ -43,17 +51,13 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 (I'm not quite sure whether this is right lol)
 
+</details>
+
 ## Resources
 
 - [API Reference](https://nefomemes.github.io/battlelog.js)
 - [Discord server](https://discord.gg/gTB3Vzf5)
 
-## Dependencies
-
-BattlelogJS doesn't much require any dependencies, only
-[axios](https://github.com/axios/axios). While of course, it does requires on
-some dev dependencies so that we can develop the library easier. You can check
-'em out in the package.json file.
 
 ## Misc stuff
 
