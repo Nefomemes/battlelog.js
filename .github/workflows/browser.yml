@@ -3,7 +3,7 @@ on:
     push:
          branches:
             - '*'
-            - '!docs'
+            - '!gh-pages'
          tags:
             - '*'
 jobs:
@@ -17,18 +17,18 @@ jobs:
                uses: actions/setup-node@v2
                with:
                  node-version: '14'
-             - name: Build browser version
+             - name: Generate browser-supported dist
                run: |
                  npm ci
                  npm run build
-             - name: Commit the fix
+             - name: Commit the dist
                run: |
                 git add --all
                 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
                 git config --local user.name "github-actions[bot]"
                 git commit -m "Generated browser-supported dist" -a
                continue-on-error: true
-             - name: Push the fix
+             - name: Push the dist
                uses: ad-m/github-push-action@master
                with:
                  github_token: ${{ secrets.GITHUB_TOKEN }}
