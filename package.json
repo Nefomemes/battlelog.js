@@ -31,7 +31,7 @@
     "discord.js-docgen": "git+https://github.com/Nefomemes/docgen.git",
     "babel-loader": "^8.2.2",
     "@babel/preset-env": "^7.12.16",
-    "webpack":"^5.24.2",
-    "webpack-cli":"^4.5.0"
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
   }
 }
