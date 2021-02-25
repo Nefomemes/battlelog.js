@@ -10,7 +10,7 @@ on:
 jobs:
      webpack: 
           name: Build
-          runs_on: ubuntu-latest
+          runs-on: ubuntu-latest
           steps:
          
              - name: Checkout things
