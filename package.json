@@ -10,7 +10,7 @@
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output docs/docs.json",
     "docs:test": "docgen --source ./src",
-    "build:browser": "webpack"
+    "build": "webpack"
   },
   "keywords": [],
   "author": "",
