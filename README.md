@@ -11,7 +11,7 @@ Unofficial API wrapper for
 ## Installation
 <details>
   
-<summary><h3>Node.js environment</h3></summary>
+<summary><h3>Node.js</h3></summary>
 <br/>
 
 If you are installing battlelog.js in a Node.js environment:
