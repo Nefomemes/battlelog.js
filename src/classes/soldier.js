@@ -44,7 +44,7 @@ class Soldier {
     return this;
   }
 
-  async fetch() {
+  async fetch => () {
     const res = await this.user.axios.get(`/overviewPopulateStats/${this.user.userId}/o/1/`);
   }
 }
