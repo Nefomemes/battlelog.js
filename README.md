@@ -11,7 +11,7 @@ Unofficial API wrapper for
 ## Installation
 
 <details>
-  
+
 <summary><h3>Node.js</h3></summary>
 <br/>
 
