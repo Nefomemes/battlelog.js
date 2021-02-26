@@ -27,6 +27,7 @@ jobs:
                 rm -rf .git/
                 git init
                 git remote add origin https://github.com/Nefomemes/battlelog.js.git
+                git pull
                 git add --all
                 git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
                 git config --local user.name "github-actions[bot]"
