@@ -2,7 +2,7 @@
 
 <details>
 
-<summary><h3>Node.js</h3></summary>
+<summary><bold>Node.js</bold></summary>
 <br/>
 
 If you are installing battlelog.js in a Node.js environment:
@@ -47,6 +47,6 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 <details>
 
-<summary><h3>Browser</h3></summary>
+<summary><bold>Browser</bold></summary>
 
 </details>
