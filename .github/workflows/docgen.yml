@@ -30,6 +30,7 @@ jobs:
          
       - name: Commit the documentation 
         run: |
+           git branch -u origin/${GITHUB_REF##*/}
            git pull
            git add --all
            git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
