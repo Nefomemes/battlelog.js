@@ -29,12 +29,18 @@ class Soldier {
   structureData(data, fetch) {
     var rules = {};
     if (!fetch) {
+      rules = {
+        ...rules,
+      
     }
 
     utils.structureData(this, data, rules);
 
     this.user.soldiers.cache.set(this.persona.personaId, this);
-
+    if(data.stats){
+      
+    }
+    
     return this;
   }
 
