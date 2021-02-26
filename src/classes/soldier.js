@@ -39,6 +39,6 @@ class Soldier {
   }
 
   async fetch() {
-    const res = await this.user.axios.get();
+    const res = await this.user.axios.get(`/overviewPopulateStats/${this.user.userId}/o/1/`);
   }
 }
