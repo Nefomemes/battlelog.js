@@ -21,7 +21,10 @@ jobs:
                run: |
                 rm -rf .git/
                 git init
+                
                 git remote add origin https://github.com/Nefomemes/battlelog.js.git
+                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                git config --local user.name "github-actions[bot]"
                 git commit -m "Root commit"
                 git pull origin ${GITHUB_REF##*/}
              - name: Generate browser-supported dist
@@ -33,8 +36,7 @@ jobs:
                run: |
                 
                 git add --all
-                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                git config --local user.name "github-actions[bot]"
+                
                 git commit -m "Generated browser-supported dist" -a
                continue-on-error: true
              - name: Push the dist
