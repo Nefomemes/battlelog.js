@@ -30,10 +30,10 @@ class Soldier {
     var rules = {};
     if (!fetch) {
       rules = {
-        ...rules,
+        ...rules
       
     }
-
+}
     utils.structureData(this, data, rules);
 
     this.user.soldiers.cache.set(this.persona.personaId, this);
@@ -44,7 +44,7 @@ class Soldier {
     return this;
   }
 
-  async fetch => () {
+  async fetch() {
     const res = await this.user.axios.get(`/overviewPopulateStats/${this.user.userId}/o/1/`);
   }
 }
