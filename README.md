@@ -9,14 +9,7 @@ Unofficial API wrapper for
 [Battlefield Battlelog](https://battlelog.battlefield.com)
 
 
-</details>
-</details>
 
-<details>
-
-<summary><h3>Browser</h3></summary>
-
-</details>
 
 ## Resources
 
