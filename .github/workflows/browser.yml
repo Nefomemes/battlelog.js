@@ -35,7 +35,7 @@ jobs:
              - name: Commit the dist
                run: |
                 
-                git add --all
+                git add dist/bundle.js
                 
                 git commit -m "Generated browser-supported dist" -a
                continue-on-error: true
