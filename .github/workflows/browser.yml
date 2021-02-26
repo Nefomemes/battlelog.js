@@ -19,9 +19,10 @@ jobs:
                  node-version: '14'
              - name: Clear files
                run: |
-                rm -rf ./
+                rm -rf .git/
                 git init
                 git remote add origin https://github.com/Nefomemes/battlelog.js.git
+                git commit -m "Root commit"
                 git pull origin ${GITHUB_REF##*/}
              - name: Generate browser-supported dist
                run: |
