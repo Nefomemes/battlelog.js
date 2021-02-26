@@ -24,11 +24,11 @@ yarn add battlelog.js
 ```
 
 Note that this library isn't available on NPM yet. But in the mean time, you can
-install it trought GitHub.
+install it trough GitHub.
 
 </details>
 <details>
-<summary>Installing trough GitHub</summary>
+<summary>GitHub</summary>
 <br/>
   
 ```bash
