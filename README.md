@@ -9,6 +9,7 @@ Unofficial API wrapper for
 [Battlefield Battlelog](https://battlelog.battlefield.com)
 
 ## Installation
+
 <details>
   
 <summary><h3>Node.js</h3></summary>
@@ -32,7 +33,8 @@ Or if you use Yarn:
 yarn add battlelog.js
 ```
 
-Note that this library isn't available on NPM yet. But in the mean time, you can install it trought GitHub.
+Note that this library isn't available on NPM yet. But in the mean time, you can
+install it trought GitHub.
 
 </details>
 <details>
@@ -57,16 +59,12 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 <summary><h3>Browser</h3></summary>
 
-
-
 </details>
-
 
 ## Resources
 
 - [API Reference](https://nefomemes.github.io/battlelog.js)
 - [Discord server](https://discord.gg/gTB3Vzf5)
-
 
 ## Misc stuff
 
