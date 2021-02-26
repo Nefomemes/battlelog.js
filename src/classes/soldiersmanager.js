@@ -10,7 +10,7 @@ class SoldiersManager {
   cache = new BattlelogMap();
   /**
    *
-   * @class 
+   * @class
    * @param {User} user - The user that owns this SoldiersManager instance.
    * @param {Array} [data] -  Raw array data of the user's soldiers.
    */
@@ -22,7 +22,8 @@ class SoldiersManager {
    *
    * @function
    * @param {object} data - The data
-   * @param {boolean} [fetch] - Whether the data is a result of SoldiersManager#fetch
+   * @param {boolean} [fetch] - Whether the data is a result of
+   *     SoldiersManager#fetch
    * @returns {SoldiersManager} this
    */
   structureData(data, fetch) {
