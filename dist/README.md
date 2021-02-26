@@ -1,5 +1,6 @@
 
 # Battlelog.js Dist
+We store Battlelog.js dist files here.
 
 Table of Contents:
 
