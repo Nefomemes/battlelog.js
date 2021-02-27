@@ -94,6 +94,7 @@ class Soldier {
     deaths: 0,
     /**
      * The soldier's accuracy.
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
