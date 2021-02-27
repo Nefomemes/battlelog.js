@@ -21,7 +21,7 @@ const params = new URLSearchParams();
 	
 */
 
-	var authRes = await axios.get('http://battlelog.battlefield.com/bf3/user/Nefomemes', {
+	var authRes = await axios.get('http://battlelog.battlefield.com/bf3/forums', {
 
 		headers: {
 			"X-Requested-With": "XMLHttpRequest",
