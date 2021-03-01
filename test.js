@@ -9,6 +9,6 @@
   var user = await bf3.users.fetch("Nefomemes");
 
 
-  await user.soldiers.fetch()
-  console.log(await user.soldiers.cache.map(i => i)[0].fetch())
+  await user.soldiers.fetch();
+  console.log(await user.soldiers.cache.values(i => i)[0].fetch());
 })();
