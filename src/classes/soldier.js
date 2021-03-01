@@ -152,3 +152,5 @@ class Soldier {
 
   }
 }
+
+module.exports.Soldier = Soldier;
