@@ -139,7 +139,7 @@ console.log(this)
   }
 
   async fetch() {
-    const res = await this.user.axios.get(`/overviewPopulateStats/${this.persona.personaId}/o/1/`);
+    const res = await this.user.axios.client.get(`/overviewPopulateStats/${this.persona.personaId}/o/1/`);
 
     utils.structureData(this.stats, res.data.data.overviewStats, {
       alias: {
