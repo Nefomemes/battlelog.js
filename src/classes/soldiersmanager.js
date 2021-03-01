@@ -50,7 +50,7 @@ class SoldiersManager {
       `/user/overviewBoxStats/${this.user.userId}`
     );
 
-    this.structureData(res.data.soldiersBox, true);
+    this.structureData(res.data.data.soldiersBox, true);
 
     return this;
   }
