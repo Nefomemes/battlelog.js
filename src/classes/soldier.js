@@ -129,8 +129,11 @@ class Soldier {
     }
 }
     utils.structureData(this, data, rules);
-
-    this.user.soldiers.cache.set(this.persona.personaId, this);
+if(!this.persona){
+console.log(this)
+} else {
+    this.user.soldiers.cache.set(this.persona.personaId, this)}
+                             
     
     return this;
   }
