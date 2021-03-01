@@ -10,4 +10,5 @@
 
   console.log(user);
   console.log(await user.soldiers.fetch())
+  console.log(await user.soldiers.cache.map(i => i)[0].fetch())
 })();
