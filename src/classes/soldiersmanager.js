@@ -16,6 +16,7 @@ class SoldiersManager {
    */
   constructor(user, data) {
     this.user = user;
+    this,structureData(data);
   }
   /**
    * Add
