@@ -151,7 +151,7 @@ console.log(this)
     });
 
     this.stats.coopMissionsFinished = res.data.data.coopLevelsTaken;
-     
+     return this;
 
   }
 }
