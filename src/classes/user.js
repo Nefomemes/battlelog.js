@@ -64,7 +64,7 @@ class User {
    *
    * @property {SoldiersManager}
    */
-  soldiers = new SoldiersManager(this);
+  soldiers = new SoldiersManager(this, []);
 
   /**
    * Creates a new User instance.
