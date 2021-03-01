@@ -46,7 +46,7 @@ class SoldiersManager {
    * @returns {SoldiersManager} this
    */
   async fetch() {
-    var res = await this.user.axios.get(
+    var res = await this.user.client.axios.get(
       `/user/overviewBoxStats/${this.user.userId}`
     );
 
