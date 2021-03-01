@@ -9,5 +9,5 @@
   var user = await bf3.users.fetch("Nefomemes");
 
   console.log(user);
-  console.log(user.soldiers.fetch())
+  console.log(await user.soldiers.fetch())
 })();
