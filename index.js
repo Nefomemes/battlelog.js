@@ -1,6 +1,6 @@
-(async function() {
-  const axios = require('axios');
-  const fs = require('fs');
+(async function () {
+  const axios = require("axios");
+  const fs = require("fs");
   /*
   const params = new URLSearchParams();
           params.append('redirect', '');
@@ -20,14 +20,11 @@
 
   */
 
-  var authRes = await axios.get('http://battlelog.battlefield.com/bf3/forums', {
-
-    headers : {
-      "X-Requested-With" : "XMLHttpRequest",
-      "X-AjaxNavigation" : "1",
-
-    }
-
+  var authRes = await axios.get("http://battlelog.battlefield.com/bf3/forums", {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+      "X-AjaxNavigation": "1",
+    },
   });
 
   console.log(authRes.data);

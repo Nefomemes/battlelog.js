@@ -6,7 +6,6 @@ const utils = require("../utils/utils");
  */
 
 class Soldier {
-
   /**
    * The user of this soldier.
    *
@@ -27,7 +26,7 @@ class Soldier {
      * @type {number}
      * @memberof Soldier.stats
      */
-    coopMissionsFinished : 0,
+    coopMissionsFinished: 0,
 
     /**
      * How many unlockable weapons have the soldier unlocked by playing coop
@@ -126,15 +125,14 @@ class Soldier {
     var rules = {};
     if (!fetch) {
       rules = {
-        ...rules
-
-      }
+        ...rules,
+      };
     }
     utils.structureData(this, data, rules);
     if (!this.persona) {
-      console.log(this)
+      console.log(this);
     } else {
-      this.user.soldiers.cache.set(this.persona.personaId, this)
+      this.user.soldiers.cache.set(this.persona.personaId, this);
     }
 
     return this;
@@ -142,15 +140,16 @@ class Soldier {
 
   async fetch() {
     const res = await this.user.client.axios.get(
-        `/overviewPopulateStats/${this.persona.personaId}/o/1/`);
+      `/overviewPopulateStats/${this.persona.personaId}/o/1/`
+    );
 
     utils.structureData(this.stats, res.data.data.overviewStats, {
-      alias : {
-        "numWins" : "wins",
-        "numRounds" : "matchesPlayed",
-        "mcomDestroy" : "mcomDestroyed",
-        "killAssists" : "assists"
-      }
+      alias: {
+        numWins: "wins",
+        numRounds: "matchesPlayed",
+        mcomDestroy: "mcomDestroyed",
+        killAssists: "assists",
+      },
     });
 
     this.stats.coopMissionsFinished = res.data.data.coopLevelsTaken;
