@@ -1,10 +1,10 @@
 {
   "name": "battlelog.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js  --trace-warnings",
+    "test": "node test.js && node index.js",
     "start": "node index.js",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
