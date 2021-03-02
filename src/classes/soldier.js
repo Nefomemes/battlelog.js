@@ -26,7 +26,7 @@ class Soldier {
      * @type {number}
      * @memberof Soldier.stats
      */
-    coopMissionsFinished: 0,
+    coopMissionsFinished : 0,
 
     /**
      * How many unlockable weapons have the soldier unlocked by playing coop
@@ -140,15 +140,14 @@ class Soldier {
 
   async fetch() {
     const res = await this.user.client.axios.get(
-      `/overviewPopulateStats/${this.persona.personaId}/o/1/`
-    );
+        `/overviewPopulateStats/${this.persona.personaId}/o/1/`);
 
     utils.structureData(this.stats, res.data.data.overviewStats, {
-      alias: {
-        numWins: "wins",
-        numRounds: "matchesPlayed",
-        mcomDestroy: "mcomDestroyed",
-        killAssists: "assists",
+      alias : {
+        numWins : "wins",
+        numRounds : "matchesPlayed",
+        mcomDestroy : "mcomDestroyed",
+        killAssists : "assists",
       },
     });
 

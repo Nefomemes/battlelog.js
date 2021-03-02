@@ -1,9 +1,9 @@
-const { Platoon } = require("./platoon");
+const {Platoon} = require("./platoon");
 const utils = require("../utils/utils");
-const { stringify } = require("querystring");
-const { SoldiersManager } = require("./soldiersmanager");
-const { Soldier } = require("./soldier");
-const { BattlelogMap } = require("./blmap");
+const {stringify} = require("querystring");
+const {SoldiersManager} = require("./soldiersmanager");
+const {Soldier} = require("./soldier");
+const {BattlelogMap} = require("./blmap");
 /**
  * Represents a Battlelog user.
  *
@@ -65,40 +65,40 @@ class User {
    * @property {SoldiersManager}
    */
   soldiers = new SoldiersManager(this, []);
-/*
-userinfo: {
-    privacyFeedAndGameActivity: 2,
-    twitchUsername: null,
-    userId: '3307924356088947575',
-    introSectionBitmask: 48,
-    feedHidden: false,
-    pushSettings: -1,
-    showDetails: false,
-    forumSignature: null,
-    locality: null,
-    location: null,
-    icon: 0,
-    presentation: '',
-    profileBlocked: 0,
-    allowFriendRequests: true,
-    showFriendsUI: false,
-    gravatarHidden: false,
-    presencePrivacy: 0,
-    presentationHidden: false,
-    loginCounter: 140,
-    privacyShowFriends: 2,
-    forumSignatureHidden: false,
-    name: null,
-    age: null,
-    birthdate: null,
-    feedActive: false,
-    lastLogin: 1614320260,
-    privacyDetails: 2
-  },
-*/
+  /*
+  userinfo: {
+      privacyFeedAndGameActivity: 2,
+      twitchUsername: null,
+      userId: '3307924356088947575',
+      introSectionBitmask: 48,
+      feedHidden: false,
+      pushSettings: -1,
+      showDetails: false,
+      forumSignature: null,
+      locality: null,
+      location: null,
+      icon: 0,
+      presentation: '',
+      profileBlocked: 0,
+      allowFriendRequests: true,
+      showFriendsUI: false,
+      gravatarHidden: false,
+      presencePrivacy: 0,
+      presentationHidden: false,
+      loginCounter: 140,
+      privacyShowFriends: 2,
+      forumSignatureHidden: false,
+      name: null,
+      age: null,
+      birthdate: null,
+      feedActive: false,
+      lastLogin: 1614320260,
+      privacyDetails: 2
+    },
+  */
   /**
    * Much more detailed properties of the user.
-   * 
+   *
    * @namespace
    * @property {object}
    */
@@ -107,10 +107,10 @@ userinfo: {
      * The user's Twitch username.
      *
      * @type {string}
-     * 
+     *
      */
-    twitchUsername: ''
-  }; 
+    twitchUsername : ''
+  };
 
   /**
    * Creates a new User instance.
@@ -155,13 +155,13 @@ userinfo: {
    */
   structureData(data) {
     utils.structureData(this, data, {
-      blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
+      blacklist : [ "user", "tenFriends", "platoons", "platoonFans" ],
     });
     /**
      *
      */
     if (data.user) {
-      utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
+      utils.structureData(this, data.user, {blacklist : [ "gravatarMd5" ]});
 
       if (data.user.gravatarMd5) {
         this.gravatarEmailHash = data.user.gravatarMd5;
@@ -177,9 +177,8 @@ userinfo: {
     }
 
     if (data.platoonFans) {
-      this.platoonFans = data.platoonFans.map(
-        (i) => new Platoon(this.client, i)
-      );
+      this.platoonFans =
+          data.platoonFans.map((i) => new Platoon(this.client, i));
     }
 
     if (data.club) {
@@ -202,8 +201,8 @@ userinfo: {
    */
   displayAvatarURL(options = {}) {
     utils.validateOptions(options, {
-      alias: { size: "s", rating: "r", default: "d", extension: "e" },
-      defaults: { default: "retro" },
+      alias : {size : "s", rating : "r", default : "d", extension : "e"},
+      defaults : {default : "retro"},
     });
 
     if (options.size && options.size > 2048)
@@ -212,37 +211,32 @@ userinfo: {
       throw Error("Option 'size' is required to be more than 1.");
     if (options.rating === "r")
       throw Error(
-        "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted."
-      );
+          "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted.");
 
-    if (options.rating === "x") throw Error("Ok coomer");
+    if (options.rating === "x")
+      throw Error("Ok coomer");
 
-    if (!["g", "pg"].includes(options.rating)) throw Error("");
-    if (
-      !(
-        options.default.startsWith("http://") ||
-        options.default.startsWith("https://")
-      ) &&
-      ![
-        "404",
-        "mp",
-        "identicon",
-        "monsterid",
-        "wavatar",
-        "retro",
-        "robohash",
-        "blank",
-      ].includes(options.default)
-    )
+    if (!["g", "pg"].includes(options.rating))
+      throw Error("");
+    if (!(options.default.startsWith("http://") ||
+          options.default.startsWith("https://")) &&
+        !["404",
+          "mp",
+          "identicon",
+          "monsterid",
+          "wavatar",
+          "retro",
+          "robohash",
+          "blank",
+    ].includes(options.default))
       throw Error(
-        "Option 'default' did not provide a valid default profile picture"
-      );
-    let params = { r: options.rating, d: options.default, s: options.size };
+          "Option 'default' did not provide a valid default profile picture");
+    let params = {r : options.rating, d : options.default, s : options.size};
 
-    if (options.forceDefault) params.f = "y";
+    if (options.forceDefault)
+      params.f = "y";
     return `https://www.gravatar.com/avatar/${this.gravatarEmailHash}.${
-      options.extension
-    }?${stringify(params)}`;
+        options.extension}?${stringify(params)}`;
   }
 }
 

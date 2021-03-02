@@ -1,4 +1,4 @@
-(async function () {
+(async function() {
   const bl = require("./src/index.js");
 
   var client = bl();
@@ -9,8 +9,5 @@
 
   await user.soldiers.fetch();
   console.log(
-    await Array.from(user.soldiers.cache)
-      .map((i) => i[1])[0]
-      .fetch()
-  );
+      await Array.from(user.soldiers.cache).map((i) => i[1])[0].fetch());
 })();
