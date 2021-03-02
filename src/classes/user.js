@@ -97,18 +97,18 @@ userinfo: {
   },
 */
   /**
-  * Much more detailed properties of the user.
-  * 
-  * @namespace
-  * @property {object}
-  */
+   * Much more detailed properties of the user.
+   * 
+   * @namespace
+   * @property {object}
+   */
   userinfo = {
     /**
-    * The user's Twitch username.
-    *
-    * @type {string}
-    * 
-    */
+     * The user's Twitch username.
+     *
+     * @type {string}
+     * 
+     */
     twitchUsername: ''
   }; 
 
