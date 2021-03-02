@@ -16,13 +16,7 @@
           {
             "name": "options-",
             "description": "The options used here.",
-            "type": [
-              [
-                [
-                  "object"
-                ]
-              ]
-            ]
+            "type": [[["object"]]]
           }
         ]
       },
@@ -35,11 +29,7 @@
               "name": "params",
               "description": "The params used to create the instance.",
               "variable": true,
-              "type": [
-                [
-                  "*"
-                ]
-              ]
+              "type": [["*"]]
             }
           ],
           "meta": {
@@ -58,13 +48,7 @@
     {
       "name": "BattlelogMap",
       "description": "Custom Map class for battlelog.js utilities.",
-      "extends": [
-        [
-          [
-            "Map"
-          ]
-        ]
-      ],
+      "extends": [[["Map"]]],
       "methods": [
         {
           "name": "structureData",
@@ -72,29 +56,17 @@
           "params": [
             {
               "name": "key",
-              "type": [
-                [
-                  "*"
-                ]
-              ]
+              "type": [["*"]]
             },
             {
               "name": "value",
-              "type": [
-                [
-                  "*"
-                ]
-              ]
+              "type": [["*"]]
             },
             {
               "name": "structureDataStuff",
               "description": "The additional parameters to be passed\n    to the key's structureData method.",
               "variable": true,
-              "type": [
-                [
-                  "*"
-                ]
-              ]
+              "type": [["*"]]
             }
           ],
           "meta": {
@@ -129,37 +101,19 @@
           {
             "name": "client",
             "description": "The client of this instance.",
-            "type": [
-              [
-                [
-                  "BattlelogClient"
-                ]
-              ]
-            ]
+            "type": [[["BattlelogClient"]]]
           },
           {
             "name": "game",
             "description": "The game of this GameClient.",
             "default": "bf3",
-            "type": [
-              [
-                [
-                  "GameType"
-                ]
-              ]
-            ]
+            "type": [[["GameType"]]]
           },
           {
             "name": "options",
             "description": "The options used for this instance.",
             "optional": true,
-            "type": [
-              [
-                [
-                  "options"
-                ]
-              ]
-            ]
+            "type": [[["options"]]]
           }
         ]
       },
@@ -170,13 +124,7 @@
             {
               "name": "game",
               "description": "The game",
-              "type": [
-                [
-                  [
-                    "GameType"
-                  ]
-                ]
-              ]
+              "type": [[["GameType"]]]
             }
           ],
           "meta": {
@@ -201,23 +149,11 @@
         "params": [
           {
             "name": "client",
-            "type": [
-              [
-                [
-                  "GameClient"
-                ]
-              ]
-            ]
+            "type": [[["GameClient"]]]
           },
           {
             "name": "data",
-            "type": [
-              [
-                [
-                  "object"
-                ]
-              ]
-            ]
+            "type": [[["object"]]]
           }
         ]
       },
@@ -228,13 +164,7 @@
           "access": "private",
           "props": [
             {
-              "type": [
-                [
-                  [
-                    "string"
-                  ]
-                ]
-              ]
+              "type": [[["string"]]]
             }
           ],
           "meta": {
@@ -249,35 +179,17 @@
           "props": [
             {
               "name": "badge",
-              "type": [
-                [
-                  [
-                    "object"
-                  ]
-                ]
-              ]
+              "type": [[["object"]]]
             },
             {
               "name": "60",
               "description": "The badge in 60px.",
-              "type": [
-                [
-                  [
-                    "string"
-                  ]
-                ]
-              ]
+              "type": [[["string"]]]
             },
             {
               "name": "320",
               "description": "The badge in 320px.",
-              "type": [
-                [
-                  [
-                    "string"
-                  ]
-                ]
-              ]
+              "type": [[["string"]]]
             }
           ],
           "meta": {
@@ -295,23 +207,11 @@
             {
               "name": "data",
               "description": "The data used to structure the class",
-              "type": [
-                [
-                  [
-                    "object"
-                  ]
-                ]
-              ]
+              "type": [[["object"]]]
             }
           ],
           "returns": {
-            "types": [
-              [
-                [
-                  "User"
-                ]
-              ]
-            ],
+            "types": [[["User"]]],
             "description": "the User"
           },
           "meta": {
@@ -355,23 +255,11 @@
         "params": [
           {
             "name": "client",
-            "type": [
-              [
-                [
-                  "GameClient"
-                ]
-              ]
-            ]
+            "type": [[["GameClient"]]]
           },
           {
             "name": "data",
-            "type": [
-              [
-                [
-                  "object"
-                ]
-              ]
-            ]
+            "type": [[["object"]]]
           }
         ]
       },
@@ -381,13 +269,7 @@
           "description": "Fetch the server and populate the server's stats again.",
           "async": true,
           "returns": {
-            "types": [
-              [
-                [
-                  "Server"
-                ]
-              ]
-            ],
+            "types": [[["Server"]]],
             "description": "- The server"
           },
           "meta": {
@@ -413,25 +295,13 @@
           {
             "name": "user",
             "description": "The user of this soldier.",
-            "type": [
-              [
-                [
-                  "User"
-                ]
-              ]
-            ]
+            "type": [[["User"]]]
           },
           {
             "name": "data",
             "description": "The raw data object to be used to populate the\n    instance.",
             "optional": true,
-            "type": [
-              [
-                [
-                  "object"
-                ]
-              ]
-            ]
+            "type": [[["object"]]]
           }
         ]
       },
@@ -441,13 +311,7 @@
           "description": "The user of this soldier.",
           "props": [
             {
-              "type": [
-                [
-                  [
-                    "User"
-                  ]
-                ]
-              ]
+              "type": [[["User"]]]
             }
           ],
           "meta": {
@@ -465,35 +329,17 @@
             {
               "name": "data",
               "description": "The raw data",
-              "type": [
-                [
-                  [
-                    "object"
-                  ]
-                ]
-              ]
+              "type": [[["object"]]]
             },
             {
               "name": "fetch",
               "description": "Whether the raw data is from a fetch function.",
               "optional": true,
-              "type": [
-                [
-                  [
-                    "boolean"
-                  ]
-                ]
-              ]
+              "type": [[["boolean"]]]
             }
           ],
           "returns": {
-            "types": [
-              [
-                [
-                  "Soldier"
-                ]
-              ]
-            ],
+            "types": [[["Soldier"]]],
             "description": "- The soldier"
           },
           "meta": {
@@ -518,25 +364,13 @@
           {
             "name": "user",
             "description": "The user that owns this SoldiersManager instance.",
-            "type": [
-              [
-                [
-                  "User"
-                ]
-              ]
-            ]
+            "type": [[["User"]]]
           },
           {
             "name": "data",
             "description": "Raw array data of the user's soldiers.",
             "optional": true,
-            "type": [
-              [
-                [
-                  "Array"
-                ]
-              ]
-            ]
+            "type": [[["Array"]]]
           }
         ]
       },
@@ -548,35 +382,17 @@
             {
               "name": "data",
               "description": "The data",
-              "type": [
-                [
-                  [
-                    "object"
-                  ]
-                ]
-              ]
+              "type": [[["object"]]]
             },
             {
               "name": "fetch",
               "description": "Whether the data is a result of\n    SoldiersManager#fetch",
               "optional": true,
-              "type": [
-                [
-                  [
-                    "boolean"
-                  ]
-                ]
-              ]
+              "type": [[["boolean"]]]
             }
           ],
           "returns": {
-            "types": [
-              [
-                [
-                  "SoldiersManager"
-                ]
-              ]
-            ],
+            "types": [[["SoldiersManager"]]],
             "description": "this"
           },
           "meta": {
@@ -590,13 +406,7 @@
           "description": "Get all soldiers the user have.",
           "async": true,
           "returns": {
-            "types": [
-              [
-                [
-                  "SoldiersManager"
-                ]
-              ]
-            ],
+            "types": [[["SoldiersManager"]]],
             "description": "this"
           },
           "meta": {
@@ -622,24 +432,12 @@
           {
             "name": "client",
             "description": "The client used to access this user.",
-            "type": [
-              [
-                [
-                  "GameClient"
-                ]
-              ]
-            ]
+            "type": [[["GameClient"]]]
           },
           {
             "name": "data",
             "description": "Raw object data of the user.",
-            "type": [
-              [
-                [
-                  "object"
-                ]
-              ]
-            ]
+            "type": [[["object"]]]
           }
         ]
       },
@@ -649,13 +447,7 @@
           "description": "The user's email hash.",
           "props": [
             {
-              "type": [
-                [
-                  [
-                    "string"
-                  ]
-                ]
-              ]
+              "type": [[["string"]]]
             }
           ],
           "meta": {
@@ -671,14 +463,8 @@
             {
               "type": [
                 [
-                  [
-                    "Map",
-                    "<"
-                  ],
-                  [
-                    "Platoon",
-                    ">"
-                  ]
+                  ["Map", "<"],
+                  ["Platoon", ">"]
                 ]
               ]
             }
@@ -696,14 +482,8 @@
             {
               "type": [
                 [
-                  [
-                    "Map",
-                    "<"
-                  ],
-                  [
-                    "Platoon",
-                    ">"
-                  ]
+                  ["Map", "<"],
+                  ["Platoon", ">"]
                 ]
               ]
             }
@@ -721,14 +501,8 @@
             {
               "type": [
                 [
-                  [
-                    "BattlelogMap",
-                    "<"
-                  ],
-                  [
-                    "User",
-                    ">"
-                  ]
+                  ["BattlelogMap", "<"],
+                  ["User", ">"]
                 ]
               ]
             }
@@ -744,13 +518,7 @@
           "description": "The platoon of the user. This is different than User#platoons as that\nproperty is only available if the game supports joining multiple platoons.",
           "props": [
             {
-              "type": [
-                [
-                  [
-                    "Platoon"
-                  ]
-                ]
-              ]
+              "type": [[["Platoon"]]]
             }
           ],
           "meta": {
@@ -764,13 +532,7 @@
           "description": "The soldiers of this user/",
           "props": [
             {
-              "type": [
-                [
-                  [
-                    "SoldiersManager"
-                  ]
-                ]
-              ]
+              "type": [[["SoldiersManager"]]]
             }
           ],
           "meta": {
@@ -786,13 +548,7 @@
           "description": "Fetch the user in Battlelog and refresh his data with the raw data\nBattlelog gave.",
           "async": true,
           "returns": {
-            "types": [
-              [
-                [
-                  "User"
-                ]
-              ]
-            ],
+            "types": [[["User"]]],
             "description": "the User"
           },
           "meta": {
@@ -808,23 +564,11 @@
             {
               "name": "data",
               "description": "The data used to structure the class",
-              "type": [
-                [
-                  [
-                    "object"
-                  ]
-                ]
-              ]
+              "type": [[["object"]]]
             }
           ],
           "returns": {
-            "types": [
-              [
-                [
-                  "User"
-                ]
-              ]
-            ],
+            "types": [[["User"]]],
             "description": "the User"
           },
           "meta": {
@@ -840,23 +584,11 @@
             {
               "name": "options",
               "description": "Options used",
-              "type": [
-                [
-                  [
-                    "object"
-                  ]
-                ]
-              ]
+              "type": [[["object"]]]
             }
           ],
           "returns": {
-            "types": [
-              [
-                [
-                  "string"
-                ]
-              ]
-            ],
+            "types": [[["string"]]],
             "description": "URL string for the user's avatar."
           },
           "meta": {
@@ -877,32 +609,7 @@
   "typedefs": [
     {
       "name": "GameType",
-      "type": [
-        [
-          [
-            "bf3",
-            "'"
-          ]
-        ],
-        [
-          [
-            "bf4",
-            "'"
-          ]
-        ],
-        [
-          [
-            "bfh",
-            "'"
-          ]
-        ],
-        [
-          [
-            "mohw",
-            "'"
-          ]
-        ]
-      ],
+      "type": [[["bf3", "'"]], [["bf4", "'"]], [["bfh", "'"]], [["mohw", "'"]]],
       "meta": {
         "line": 34,
         "file": "gameclient.js",
@@ -912,23 +619,7 @@
     {
       "name": "UserResolvable",
       "description": "Something that can be\nparsed into a User instance. Could be a User instance, the username of the\nuser, or a raw data object of the user.",
-      "type": [
-        [
-          [
-            "User"
-          ]
-        ],
-        [
-          [
-            "string"
-          ]
-        ],
-        [
-          [
-            "object"
-          ]
-        ]
-      ],
+      "type": [[["User"]], [["string"]], [["object"]]],
       "meta": {
         "line": 55,
         "file": "user.js",
