@@ -20,7 +20,7 @@
 
   */
 
-  var authRes = await axios.get("http://battlelog.battlefield.com/bf3/forums", {
+  var authRes = await axios.get("https://battlelog.battlefield.com/bf3/forum", {
     headers: {
       "X-Requested-With": "XMLHttpRequest",
       "X-AjaxNavigation": "1",
