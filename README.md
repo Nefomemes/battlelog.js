@@ -8,9 +8,6 @@
 Unofficial API wrapper for
 [Battlefield Battlelog](https://battlelog.battlefield.com)
 
-
-
-
 ## Resources
 
 - [API Reference](https://nefomemes.github.io/battlelog.js)
