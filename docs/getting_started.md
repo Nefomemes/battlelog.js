@@ -30,7 +30,7 @@ install it trough GitHub.
 <details>
 <summary>GitHub</summary>
 <br/>
-  
+
 ```bash
 npm i Nefomemes/battlelog.js
 ```
