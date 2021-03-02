@@ -9,8 +9,8 @@
 
   await user.soldiers.fetch();
   console.log(
-    await Array.from(user.soldiers.cache)
-      .map((i) => i[1])[0]
-      .fetch()
-  );
+   user
+      
+ 
+  )
 })();
