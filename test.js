@@ -1,4 +1,4 @@
-(async function () {
+(async function() {
   const bl = require("./src/index.js");
 
   var client = bl();
@@ -8,9 +8,7 @@
   var user = await bf3.users.fetch("JackFrags");
 
   await user.soldiers.fetch();
-  console.log(
-   user.soldiers.cache
-      
- 
+  console.log(user.soldiers.cache
+
   )
 })();

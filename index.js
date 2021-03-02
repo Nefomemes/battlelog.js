@@ -1,4 +1,4 @@
-(async function () {
+(async function() {
   const axios = require("axios");
   const fs = require("fs");
   /*
@@ -21,9 +21,9 @@
   */
 
   var authRes = await axios.get("https://battlelog.battlefield.com/bf3/forum", {
-    headers: {
-      "X-Requested-With": "XMLHttpRequest",
-      "X-AjaxNavigation": "1",
+    headers : {
+      "X-Requested-With" : "XMLHttpRequest",
+      "X-AjaxNavigation" : "1",
     },
   });
 
