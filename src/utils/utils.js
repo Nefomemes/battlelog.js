@@ -111,14 +111,16 @@ function structureData(cls, data, rules = {}) {
     typeof: {
       blacklist: "array",
       setBoolean: "array",
-      alias: "object",
-      onlyAssignIfTruthy: "array",
+      alias: "object"
+      onlyAssignIfTruthy: "aararray
+      whitelist: "aaray"
     },
     defaults: {
       blacklist: [],
       setBoolean: [],
       alias: {},
       onlyAssignIfTruthy: [],
+      whitelist: []
     },
   });
 

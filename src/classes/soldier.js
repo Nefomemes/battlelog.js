@@ -125,7 +125,7 @@ class Soldier {
     var rules = {};
     if (!fetch) {
       rules = {
-        ...rules,
+   
       };
     }
     utils.structureData(this, data, rules);
