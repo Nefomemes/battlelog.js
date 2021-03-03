@@ -8,7 +8,6 @@
   var user = await bf3.users.fetch("JackFrags");
 
 
-  console.log(user);
-  console.log(user.soldiers.fetch())
-
+  await user.soldiers.fetch();
+  console.log(user.soldiers.cache);
 })();
