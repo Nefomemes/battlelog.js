@@ -123,12 +123,13 @@ class Soldier {
    */
   structureData(data, fetch) {
     var rules = {};
+    var soldierRootStats = [ 'timePlayed', 'killed', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
+      'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses'];
     if (!fetch) {
-
+      
    rules = {
-      blacklist: [ 'timePlayed', 'killed', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
-      'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses']
 
+ blacklist: soldierRootStats
       /*
       activeEmblem: null,
       timePlayed: 87851,
