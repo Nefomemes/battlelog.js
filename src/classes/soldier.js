@@ -124,9 +124,7 @@ class Soldier {
   structureData(data, fetch) {
     var rules = {};
     if (!fetch) {
-      rules = {
-      blacklist: ['']
-      };
+      rules = { blacklist: [""] };
     }
     utils.structureData(this, data, rules);
     if (!this.persona) {
