@@ -1,4 +1,3 @@
-
 /**
  * Represents /:game/forum
  */
