@@ -69,88 +69,14 @@ When running this code, it should print:
 ```js
 User {
   gravatarEmailHash: '1f3a91144edb76fa883d94be70bd34cd',
-  platoons: [
-    Platoon {
-      badge: [Object],
-      website: '',
-      memberCounter: 2,
-      name: true,
-      creatorId: '3307924356088947575',
-      flag: '',
-      game: 2,
-      allowNewMembers: true,
-      platform: 1,
-      fans: [Array],
-      tag: 'NATF',
-      members: [Object],
-      fanCounter: 1,
-      blazeClubId: 1337,
-      hidden: false,
-      creationDate: 1613001600,
-      presentation: 'Hi! Welcome to the No Anime Task Force. \r\n' +
-        'This is a satirical platoon that basically, "No Anime".\r\n' +
-        '\r\n' +
-        "Well that's it, and remember guys- no anime.",
-      id: '3307924585601482205',
-      icon: ''
-    }
-  ],
-  platoonFans: [
-    Platoon {
-      badge: [Object],
-      website: '',
-      memberCounter: 2,
-      name: true,
-      creatorId: '3307924356088947575',
-      flag: '',
-      game: 2,
-      allowNewMembers: true,
-      platform: 1,
-      fans: [Array],
-      tag: 'NATF',
-      members: [Object],
-      fanCounter: 1,
-      blazeClubId: 1337,
-      hidden: false,
-      creationDate: 1613001600,
-      presentation: 'Hi! Welcome to the No Anime Task Force. \r\n' +
-        'This is a satirical platoon that basically, "No Anime".\r\n' +
-        '\r\n' +
-        "Well that's it, and remember guys- no anime.",
-      id: '3307924585601482205',
-      icon: ''
-    }
-  ],
+  platoons: [[Platoon]],
+  platoonFans: [[Platoon]],
   friends: [
-    User {
-      gravatarEmailHash: '94be45afafb1be267934a7f1e8c7b25b',
-      platoons: BattlelogMap(0) [Map] {},
-      platoonFans: BattlelogMap(0) [Map] {},
-      friends: BattlelogMap(0) [Map] {},
-      platoon: undefined,
-      soldiers: [SoldiersManager],
-      client: [GameClient],
-      userId: '3370545246938073741',
-      username: 'RealP3nguin',
-      createdAt: 1609147362,
-      presence: [Object]
-    },
-    User {
-      gravatarEmailHash: undefined,
-      platoons: BattlelogMap(0) [Map] {},
-      platoonFans: BattlelogMap(0) [Map] {},
-      friends: BattlelogMap(0) [Map] {},
-      platoon: undefined,
-      soldiers: [SoldiersManager],
-      client: [GameClient],
-      userId: '3307924270281690415',
-      username: 'Rakhonshm',
-      createdAt: 1607789245,
-      presence: [Object]
-    }
+   [User],
+    [User]
   ],
   platoon: undefined,
-  soldiers: SoldiersManager { cache: BattlelogMap(0) [Map] {}, user: undefined },
+  soldiers: SoldiersManager { cache: BattlelogMap(1) [Map] {'' => [Platoon]}, user: undefined },
   client: [GameClient],
   name: 'Nefomemes',
   friendCount: 2,
