@@ -124,8 +124,31 @@ class Soldier {
   structureData(data, fetch) {
     var rules = {};
     if (!fetch) {
-      rules = {
-      blacklist: ['']
+   rules = {
+      blacklist: [ 'timePlayed', 'killed', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
+      'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses']
+
+      /*
+      activeEmblem: null,
+      timePlayed: 87851,
+      persona: [Object],
+      kills: 182,
+      deaths: 824,
+      npStatus: null,
+      legendaryLevel: 0,
+      rsNumWins: 0,
+      rsNumLosses: 0,
+      rank: 13,
+      platforsNumWins 
+      game: 2,
+      score: 170945,
+      numLosses: 42,
+      isPersonaBanned: false,
+      active: true,
+      skill: 0,
+      dogtagsForPersona: [Object],
+      numWins: 26
+      */
       };
     }
     utils.structureData(this, data, rules);
