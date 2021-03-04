@@ -108,12 +108,12 @@ function structureData(cls, data, rules = {}) {
   if (!cls) throw Error();
 
   validateOptions(rules, {
-    typeof: {
+    typeof:{
       blacklist: "array",
       setBoolean: "array",
-      alias: "object"
-      onlyAssignIfTruthy: "aararray
-      whitelist: "aaray"
+      alias: "object",
+      onlyAssignIfTruthy: "array",
+      whitelist: "array"
     },
     defaults: {
       blacklist: [],
