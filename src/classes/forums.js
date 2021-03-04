@@ -5,6 +5,3 @@
 class Forums {
   constructor() {}
 }
-
-
-
