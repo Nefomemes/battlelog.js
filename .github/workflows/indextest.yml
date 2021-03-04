@@ -1,11 +1,10 @@
 name: Index.js test
-
 on: [push]
 jobs:
-   test: 
+   test:
        name: Test code
-       runs-on: ubuntu-latest 
-       steps: 
+       runs-on: ubuntu-latest
+       steps:
           - name: Checkout things
             uses: actions/checkout@v2
           - name: Setup Node.js v14

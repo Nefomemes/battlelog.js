@@ -1,4 +1,3 @@
-
 /**
  * Utilities function to help things out.
  *
@@ -108,19 +107,19 @@ function structureData(cls, data, rules = {}) {
   if (!cls) throw Error();
 
   validateOptions(rules, {
-    typeof:{
+    typeof: {
       blacklist: "array",
       setBoolean: "array",
       alias: "object",
       onlyAssignIfTruthy: "array",
-      whitelist: "array"
+      whitelist: "array",
     },
     defaults: {
       blacklist: [],
       setBoolean: [],
       alias: {},
       onlyAssignIfTruthy: [],
-      whitelist: []
+      whitelist: [],
     },
   });
 
@@ -138,7 +137,6 @@ function structureData(cls, data, rules = {}) {
   }
 
   return cls;
-
 }
 
 module.exports.getArticle = getArticle;

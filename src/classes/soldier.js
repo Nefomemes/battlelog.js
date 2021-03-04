@@ -124,6 +124,7 @@ class Soldier {
   structureData(data, fetch) {
     var rules = {};
     if (!fetch) {
+
    rules = {
       blacklist: [ 'timePlayed', 'killed', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
       'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses']
@@ -150,6 +151,7 @@ class Soldier {
       numWins: 26
       */
       };
+
     }
     utils.structureData(this, data, rules);
     if (!this.persona) {
