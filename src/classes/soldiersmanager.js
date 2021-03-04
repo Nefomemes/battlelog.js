@@ -16,6 +16,7 @@ class SoldiersManager {
    */
   constructor(user, data) {
     this.user = user;
+    this.structureData(data);
   }
   /**
    * Add
@@ -30,7 +31,7 @@ class SoldiersManager {
     for (let soldier of data) {
       this.cache.structureData(
         soldier.persona.personaId,
-        new Soldier(this.user, data, fetch),
+        new Soldier(this.user, soldier, fetch),
         fetch
       );
     }
@@ -45,11 +46,11 @@ class SoldiersManager {
    * @returns {SoldiersManager} this
    */
   async fetch() {
-    var res = await this.user.axios.get(
+    var res = await this.user.client.axios.get(
       `/user/overviewBoxStats/${this.user.userId}`
     );
 
-    this.structureData(res.data.soldiersBox, true);
+    this.structureData(res.data.data.soldiersBox, true);
 
     return this;
   }
