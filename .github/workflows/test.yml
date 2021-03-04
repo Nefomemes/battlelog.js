@@ -14,5 +14,4 @@ jobs:
           - name: Install
             run: npm install --only=production
           - name: Run test
-            run: npm run test
-       
+            run: npm run test      
