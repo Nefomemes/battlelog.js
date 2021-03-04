@@ -2,3 +2,7 @@
 This project is single-handedly developed by me, Nefomemes, there's no other maintainers helping me developing this huge project.
 
 So of course, contributions will always be appreciated. In this documentation, I'm just gonna dump everything you need in order to get start coding this thing.
+
+## Step 1: Fork this stuff and clone it from Git
+
+Alright, the first thing you need is a fork repository.
