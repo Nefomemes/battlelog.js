@@ -5,4 +5,4 @@ So of course, contributions will always be appreciated. In this documentation, I
 
 ## Step 1: Fork this s*** and clone it from Git
 
-Alright, the first thing you need is a fork repository of this repo. You can just fork this repo [here](https://github.com/Nefomemes/battlelog.js/fork).
+Alright, the first thing you need is a fork repository of this repo. [You can just click this to fork this repo](https://github.com/Nefomemes/battlelog.js/fork).
