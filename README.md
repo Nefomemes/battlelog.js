@@ -5,7 +5,7 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/nefomemes/battlelog.js/badge)](https://www.codefactor.io/repository/github/nefomemes/battlelog.js)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Nefomemes/battlelog.js)
 [![Browser Support](https://github.com/Nefomemes/battlelog.js/actions/workflows/browser.yml/badge.svg)](https://github.com/Nefomemes/battlelog.js/actions/workflows/browser.yml)
-
+[![Test](https://github.com/Nefomemes/battlelog.js/actions/workflows/test.yml/badge.svg)](https://github.com/Nefomemes/battlelog.js/actions/workflows/test.yml)
 Unofficial API wrapper for
 [Battlefield Battlelog](https://battlelog.battlefield.com)
 
