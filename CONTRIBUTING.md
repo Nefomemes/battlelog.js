@@ -14,3 +14,9 @@ Alright, the first thing you need is a fork repository of this repo. [You can ju
 
 After than we need to clone that fork repo into your local machine.
 
+```bash
+git clone https://github.com/YOUR_USERNAME/battlelog.js.git
+```
+
+Do **not** add `/` to the end of the URL. This can cause an error when pushing back the changes later on.
+
