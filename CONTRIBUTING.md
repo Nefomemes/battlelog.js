@@ -5,8 +5,12 @@ So of course, contributions will always be appreciated. In this documentation, I
 
 ## Things you need to prepare
 
-- A fully-ready development environment, 
-- The latest version of Node.js
+- Your preferred text editor.
+- The latest version of Git.
+- The latest version of Node.js)
+
+  For the text editor itself, I myself preferred [Visual Studio Code](https://github.com/microsoft/vscode), or if you want the Code OSS experience (that's the open source version of VSC) you can check out [VSCodium](https://github.com/VSCodium/vscodium).
+  
 
 ## Step 1: Fork this repo and clone it from Git
 
@@ -19,4 +23,5 @@ git clone https://github.com/YOUR_USERNAME/battlelog.js.git
 ```
 
 Do **not** add `/` to the end of the URL. This can cause an error when pushing back the changes later on.
+
 
