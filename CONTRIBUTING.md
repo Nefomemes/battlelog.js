@@ -5,12 +5,14 @@ So of course, contributions will always be appreciated. In this documentation, I
 
 ## Things you need to prepare
 
-- Your preferred text editor.
-- The latest version of Git.
-- The latest version of Node.js)
+- Your preferred text editor
+- Git, or your preferred Git client
+- The latest version of Node.js
 
-For the text editor itself, I myself preferred [Visual Studio Code](https://github.com/microsoft/vscode), or if you want the Code OSS experience (that's the open source version of VSC) you can check out [VSCodium](https://github.com/VSCodium/vscodium).
-  
+For the text editor itself, I myself preferred [Visual Studio Code](https://github.com/microsoft/vscode), or if you want the Code OSS experience (that's the open source version of VSC) you can check out [VSCodium](https://github.com/VSCodium/vscodium). If you want something else, there is Sublime Text and Notepad++, heck you can even use Vim.
+
+
+
 
 ## Step 1: Fork this repo and clone it from Git
 
