@@ -52,9 +52,19 @@ git config user.email "MY_NAME@example.com"
 ```
 
 Verify your configuration by displaying your configuration file:
+```bash
 cat .git/config
+```
 
 ### Step 3: Make changes
 
-Now you should be able to edit the files in your machine. Open the repo folder in your preffered text editor. And do your stuff. Move to Step 3 once you are done.
+Now you should be able to edit the files in your machine. Open the repo folder in your preffered text editor. And do your stuff. Move to Step 4 once you are done.
+
+### Step 4: Stage, commit, and push.
+
+
+```bash
+git add --all
+```
+
 
