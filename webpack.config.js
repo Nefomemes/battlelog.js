@@ -6,8 +6,18 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.min.js",
+  libraryTarget: 'umd',
+  library: 'bljs',
   },
   plugins: [new NodePolyfillPlugin()],
+externals: {
+      axios: {
+        commonjs: 'axios',
+        commonjs2: 'axios',
+        amd: 'axios',
+        root: '_',
+      },
+    },
   module: {
     rules: [
       {

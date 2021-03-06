@@ -123,17 +123,22 @@ class Soldier {
    */
   structureData(data, fetch) {
     var rules = {};
+    var soldierRootStats = [ 'timePlayed', 'kills', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
+      'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses'];
     if (!fetch) {
-      rules = { blacklist: [""] };
+      
+   rules = {
+
+ blacklist: soldierRootStats
+      };
+
     }
     utils.structureData(this, data, rules);
-    if (!this.persona) {
-      console.log(this);
-    } else {
+    
       this.user.soldiers.cache.set(this.persona.personaId, this);
-    }
-
-    return this;
+    utils.structureData(this.stats, data, {whitelist: soldierRootStats, });
+    
+        return this;
   }
 
   async fetch() {
@@ -147,6 +152,7 @@ class Soldier {
         numRounds: "matchesPlayed",
         mcomDestroy: "mcomDestroyed",
         killAssists: "assists",
+        numLosses: "losses"
       },
     });
 
