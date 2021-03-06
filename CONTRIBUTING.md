@@ -13,7 +13,7 @@ So of course, contributions will always be appreciated. In this documentation, I
 For the text editor itself, I myself preferred [Visual Studio Code](https://github.com/microsoft/vscode), or if you want the Code OSS experience (that's the open source version of VSC) you can check out [VSCodium](https://github.com/VSCodium/vscodium). If you want something else, there are [Sublime Text](https://www.sublimetext.com/) and Notepad++, heck you can even use [Vim](https://github.com/vim/vim). 
 
 
-## Start adding changes to the wrapper
+## Start adding changes to this wrapper
 
 ### Step 1: Fork this repo and clone it from Git
 
@@ -21,6 +21,8 @@ For the text editor itself, I myself preferred [Visual Studio Code](https://gith
 
 Alright, the first thing you need is a fork repository of this repo. If you haven't yet already, [you can just click this to fork this repo](https://github.com/Nefomemes/battlelog.js/fork).
 
+<details>
+  
 After than we need to clone that fork repo into your local machine. Ignore this and move to Step 2 if you have cloned the fork repository.
 
 ```bash
@@ -72,6 +74,7 @@ git push
 
 Also, it is recommed to follow our commit ettique. Check out [Commit Ettique]() for more.
 
+</details>
 ## Commit Ettique
 
 
