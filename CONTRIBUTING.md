@@ -35,7 +35,7 @@ If you have set the commit author globally in the past, you should skip this and
 
 In this step, you are setting up the commit author that will be registered with future commits.
 
-**Set it globally, so that you won't need to do this again in the future**
+**Set it globally, so that you won't need to do this again in the future when you are doing another projects**
 ```bash
 
 git config --global user.name "YOUR_NAME"
