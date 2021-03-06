@@ -72,8 +72,7 @@ Now you should be able to edit the files in your machine. Open the repo folder i
 ### Step 4: Stage, commit, and push.
 
 ```bash
-git add --all
-git commit -m "commit_type: changes"
+git commit -am "commit_type: changes"
 git push
 ```
 
