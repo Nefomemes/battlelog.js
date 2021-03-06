@@ -3,7 +3,7 @@ This project is single-handedly developed by me, Nefomemes, there's no other mai
 
 So of course, contributions will always be appreciated. In this documentation, I'm just gonna dump everything you need in order to get start coding this thing.
 
-### Things you need to prepare
+## Things you need to prepare
 
 - Your preferred text editor
 - Your preferred terminal
@@ -11,6 +11,9 @@ So of course, contributions will always be appreciated. In this documentation, I
 - The latest version of Node.js
 
 For the text editor itself, I myself preferred [Visual Studio Code](https://github.com/microsoft/vscode), or if you want the Code OSS experience (that's the open source version of VSC) you can check out [VSCodium](https://github.com/VSCodium/vscodium). If you want something else, there are [Sublime Text](https://www.sublimetext.com/) and Notepad++, heck you can even use [Vim](https://github.com/vim/vim). 
+
+
+## Start adding changes to the wrapper
 
 ### Step 1: Fork this repo and clone it from Git
 
@@ -61,9 +64,17 @@ Now you should be able to edit the files in your machine. Open the repo folder i
 
 ### Step 4: Stage, commit, and push.
 
-
 ```bash
 git add --all
+git commit -m "commit_type: changes"
+git push
 ```
+
+Also, it is recommed to follow our commit ettique. Check out [Commit Ettique]() for more.
+
+## Commit ettique
+
+
+
 
 
