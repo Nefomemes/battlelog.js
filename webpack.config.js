@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [new NodePolyfillPlugin()],
 externals: {
-      lodash: {
+      axios: {
         commonjs: 'lodash',
         commonjs2: 'lodash',
         amd: 'lodash',
