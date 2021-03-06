@@ -64,7 +64,7 @@ class User {
    *
    * @property {SoldiersManager}
    */
-  soldiers = new SoldiersManager();
+  soldiers = new SoldiersManager(this, []);
 
   /**
    * Creates a new User instance.
@@ -142,7 +142,7 @@ class User {
 
     if (data.soldiersBox) {
       this.soldiers.structureData(data.soldiersBox);
-    }
+    }  
 
     this.client.users.cache.set(this.userId, this);
   }

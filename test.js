@@ -9,4 +9,5 @@
   var user = await bf3.users.fetch("Nefomemes");
 
   console.log(user);
+  console.log(user.soldiers.cache)
 })();
