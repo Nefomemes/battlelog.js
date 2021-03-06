@@ -6,8 +6,18 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.min.js",
+  libraryTarget: 'umd',
+  library: 'bljs',
   },
   plugins: [new NodePolyfillPlugin()],
+externals: {
+      lodash: {
+        commonjs: 'lodash',
+        commonjs2: 'lodash',
+        amd: 'lodash',
+        root: '_',
+      },
+    },
   module: {
     rules: [
       {
