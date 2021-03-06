@@ -15,9 +15,11 @@ For version control, \inp
 
 ## Step 1: Fork this repo and clone it from Git
 
-Alright, the first thing you need is a fork repository of this repo. [You can just click this to fork this repo](https://github.com/Nefomemes/battlelog.js/fork).
 
-After than we need to clone that fork repo into your local machine.
+
+Alright, the first thing you need is a fork repository of this repo. If you haven't yet already, [you can just click this to fork this repo](https://github.com/Nefomemes/battlelog.js/fork).
+
+After than we need to clone that fork repo into your local machine. Ignore this and move to Step 2 if you have cloned the fork repository.
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/battlelog.js.git
@@ -27,4 +29,11 @@ Do **not** add `/` to the end of the URL. This can cause an error when pushing b
 
 If you are using a Git client then you can do stuff in your Git client. But of courfe. if you have Git CLI in your machine, you can run that command in your terminal and it should get displayed in your Git client as well.
 
+## Step 2: 
+
+If you have done this, you should 
+
+## Step 3: Make changes
+
+Now you should be able to edit the files in your machine. Open the repo folder in your preffered text editor. And do your stuff. Move to Step 3 once you are done.
 
