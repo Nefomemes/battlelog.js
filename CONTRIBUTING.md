@@ -7,7 +7,7 @@ So of course, contributions will always be appreciated. In this documentation, I
 
 <details>
   
-  <summary>Open this</summary>
+  <summary>Trough Git CLI</summary>
   
 ### Things you need to prepare
 
