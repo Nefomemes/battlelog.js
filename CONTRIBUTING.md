@@ -72,7 +72,7 @@ git push
 
 Also, it is recommed to follow our commit ettique. Check out [Commit Ettique]() for more.
 
-## Commit ettique
+## Commit Ettique
 
 
 
