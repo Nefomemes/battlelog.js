@@ -9,9 +9,9 @@ I'm just gonna dump everything you need in order to get start coding this thing.
 ## Adding changes in your local machine
 
 <details>
-  
+
   <summary>Trough Git CLI</summary>
-  
+
 ### Things you need to prepare
 
 - Your preferred text editor
