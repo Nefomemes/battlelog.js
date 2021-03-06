@@ -76,6 +76,10 @@ git push
 
 Also, it is recommed to follow our commit ettique. Check out [Commit Ettique]() for more.
 
+### Step 5: Showtime
+
+Go to your repo's GitHub page and create a new pull request to our repository. If your changes are good, we will implement it. Thank you for contributing in BattlelogJS.
+
 </details>
 
 ## Commit Ettique
