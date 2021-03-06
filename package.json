@@ -2,7 +2,7 @@
   "name": "battlelog.js",
   "version": "0.2.0",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
-  "main": "index.js",
+  "main": "dist/bundle.min.js",
   "scripts": {
     "test": "node test.js",
     "start": "node index.js",
