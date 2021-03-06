@@ -3,7 +3,7 @@ This project is single-handedly developed by me, Nefomemes, there's no other mai
 
 So of course, contributions will always be appreciated. In this documentation, I'm just gonna dump everything you need in order to get start coding this thing.
 
-## Things you need to prepare
+### Things you need to prepare
 
 - Your preferred text editor
 - Git CLI, or your preferred Git client
@@ -13,7 +13,7 @@ For the text editor itself, I myself preferred [Visual Studio Code](https://gith
 
 For version control, I prefer using Git from the CLI. 
 
-## Step 1: Fork this repo and clone it from Git
+### Step 1: Fork this repo and clone it from Git
 
 
 
@@ -29,11 +29,13 @@ Do **not** add `/` to the end of the URL. This can cause an error when pushing b
 
 If you are using a Git client then you can do stuff in your Git client. But of courfe. if you have Git CLI in your machine, you can run that command in your terminal and it should get displayed in your Git client as well.
 
-## Step 2: 
+### Step 2: 
 
 If you have set the commit author globally in the past, you should skip this and continue to Step 3.
 
-In this step, you are setting up the commit author that will be registered with future commits.
+In this step, you are setting up the commit author username and email that will be registered with future commits.
+
+Note: The email you use will be public. So don't use your main email if you don't eant it to be spammed. Also, GitHub requires author emails to have a GitHub account associated with it. So if you have't already, add the author email to your GitHub account.  
 
 **Set it globally, so that you won't need to do this again in the future when you are doing another projects**
 ```bash
@@ -42,7 +44,17 @@ git config --global user.name "YOUR_NAME"
 git config --global user.email "MY_NAME@example.com"
 ```
 
-## Step 3: Make changes
+**Set it locally, you will have to redo this step again in another projects**
+
+```bash
+git config user.name "YOUR_NAME"
+git config user.email "MY_NAME@example.com"
+```
+
+Verify your configuration by displaying your configuration file:
+cat .git/config
+
+### Step 3: Make changes
 
 Now you should be able to edit the files in your machine. Open the repo folder in your preffered text editor. And do your stuff. Move to Step 3 once you are done.
 
