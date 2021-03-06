@@ -23,6 +23,8 @@ Alright, the first thing you need is a fork repository of this repo. If you have
 
 <details>
   
+  <summary>Adding a lot of changes</summary>
+  
 After than we need to clone that fork repo into your local machine. Ignore this and move to Step 2 if you have cloned the fork repository.
 
 ```bash
@@ -75,6 +77,7 @@ git push
 Also, it is recommed to follow our commit ettique. Check out [Commit Ettique]() for more.
 
 </details>
+
 ## Commit Ettique
 
 
