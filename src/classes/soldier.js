@@ -6,88 +6,89 @@ const utils = require("../utils/utils");
  */
 
 class Soldier {
-
   /**
    * The user of this soldier.
-   * 
+   *
    * @property {User}
    */
   user;
 
   /**
    * The statistics of this soldier.
-   * 
+   *
    * @property {object}
    * @namespace
    */
   stats = {
     /**
      * How many coop missions have the soldier finished.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     coopMissionsFinished: 0,
 
     /**
-     * How many unlockable weapons have the soldier unlocked by playing coop missions.
-     * 
+     * How many unlockable weapons have the soldier unlocked by playing coop
+     * missions.
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     coopUnlocks: 0,
     /**
      * The rank of the soldier.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     rank: 0,
     /**
      * How many revives the soldier have done.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     revives: 0,
     /**
      * How many kills the soldier have.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     kills: 0,
     /**
      * How many matches the soldier have won.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     wins: 0,
     /**
-     * How many dogtags have the soldier collected. Usually when killing an enemy with a knife.
-     * 
+     * How many dogtags have the soldier collected. Usually when killing an
+     * enemy with a knife.
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     dogtagsCollected: 0,
     /**
      * How many kill assists the soldier have.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     assists: 0,
     /**
      * How many repairs the soldier have done when using the engineer class.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
     repairs: 0,
     /**
      * How many times the soldiers have died.
-     * 
+     *
      * @type {number}
      * @memberof Soldier.stats
      */
@@ -122,33 +123,42 @@ class Soldier {
    */
   structureData(data, fetch) {
     var rules = {};
+    var soldierRootStats = [ 'timePlayed', 'kills', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
+      'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses'];
     if (!fetch) {
-      rules = {
-        ...rules
       
-    }
-}
-    utils.structureData(this, data, rules);
+   rules = {
 
-    this.user.soldiers.cache.set(this.persona.personaId, this);
+ blacklist: soldierRootStats
+      };
+
+    }
+    utils.structureData(this, data, rules);
     
-    return this;
+      this.user.soldiers.cache.set(this.persona.personaId, this);
+    utils.structureData(this.stats, data, {whitelist: soldierRootStats, });
+    
+        return this;
   }
 
   async fetch() {
-    const res = await this.user.axios.get(`/overviewPopulateStats/${this.persona.personaId}/o/1/`);
+    const res = await this.user.client.axios.get(
+      `/overviewPopulateStats/${this.persona.personaId}/o/1/`
+    );
 
     utils.structureData(this.stats, res.data.data.overviewStats, {
       alias: {
-        "numWins":"wins",
-        "numRounds":"matchesPlayed",
-        "mcomDestroy":"mcomDestroyed",
-        "killAssists":"assists"
-      }
+        numWins: "wins",
+        numRounds: "matchesPlayed",
+        mcomDestroy: "mcomDestroyed",
+        killAssists: "assists",
+        numLosses: "losses"
+      },
     });
 
     this.stats.coopMissionsFinished = res.data.data.coopLevelsTaken;
-     
-
+    return this;
   }
 }
+
+module.exports.Soldier = Soldier;

@@ -65,6 +65,56 @@ class User {
    * @property {SoldiersManager}
    */
   soldiers = new SoldiersManager(this, []);
+  /*
+  userinfo: {
+      privacyFeedAndGameActivity: 2,
+      twitchUsername: null,
+      userId: '3307924356088947575',
+      introSectionBitmask: 48,
+      feedHidden: false,
+      pushSettings: -1,
+      showDetails: false,
+      forumSignature: null,
+      locality: null,
+      location: null,
+      icon: 0,
+      presentation: '',
+      profileBlocked: 0,
+      allowFriendRequests: true,
+      showFriendsUI: false,
+      gravatarHidden: false,
+      presencePrivacy: 0,
+      presentationHidden: false,
+      loginCounter: 140,
+      privacyShowFriends: 2,
+      forumSignatureHidden: false,
+      name: null,
+      age: null,
+      birthdate: null,
+      feedActive: false,
+      lastLogin: 1614320260,
+      privacyDetails: 2
+    },
+  */
+  /**
+   * Much more detailed properties of the user.
+   *
+   * @property {UserInfo}
+   */
+  userinfo = {
+    /**
+     * The user's Twitch username.
+     *
+     * @type {string}
+     *
+     */
+    twitchUsername: "",
+  };
+
+  /**
+   * 
+   * @typedef
+   */
 
   /**
    * Creates a new User instance.
