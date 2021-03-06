@@ -31,7 +31,16 @@ If you are using a Git client then you can do stuff in your Git client. But of c
 
 ## Step 2: 
 
-If you have done this, you should 
+If you have set the commit author globally in the past, you should skip this and continue to Step 3.
+
+In this step, you are setting up the commit author that will be registered with future commits.
+
+**Set it globally, so that you won't need to do this again in the future**
+```bash
+
+git config --global user.name "YOUR_NAME"
+git config --global user.email "MY_NAME@example.com"
+```
 
 ## Step 3: Make changes
 
