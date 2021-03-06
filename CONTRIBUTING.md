@@ -3,7 +3,12 @@ This project is single-handedly developed by me, Nefomemes, there's no other mai
 
 So of course, contributions will always be appreciated. In this documentation, I'm just gonna dump everything you need in order to get start coding this thing.
 
-## Things you need to prepare
+## Adding changes in your local machine
+
+<details>
+  
+  <summary>Open this</summary>
+### Things you need to prepare
 
 - Your preferred text editor
 - Your preferred terminal
@@ -21,9 +26,7 @@ For the text editor itself, I myself preferred [Visual Studio Code](https://gith
 
 Alright, the first thing you need is a fork repository of this repo. If you haven't yet already, [you can just click this to fork this repo](https://github.com/Nefomemes/battlelog.js/fork).
 
-<details>
-  
-  <summary>Adding a lot of changes</summary>
+
   
 After than we need to clone that fork repo into your local machine. Ignore this and move to Step 2 if you have cloned the fork repository.
 
