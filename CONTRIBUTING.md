@@ -6,6 +6,7 @@ So of course, contributions will always be appreciated. In this documentation, I
 ### Things you need to prepare
 
 - Your preferred text editor
+- Your preferred terminal
 - The latest version of Git
 - The latest version of Node.js
 
