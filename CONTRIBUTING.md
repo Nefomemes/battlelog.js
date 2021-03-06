@@ -35,7 +35,7 @@ If you have set the commit author globally in the past, you should skip this and
 
 In this step, you are setting up the commit author username and email that will be registered with future commits.
 
-Note: The email you use will be public. So don't use your main email if you don't eant it to be spammed. Also, GitHub requires author emails to have a GitHub account associated with it. So if you have't already, add the author email to your GitHub account.  
+Note: The email you use will be public. So don't use your main email if you are a paranoid guy who doesn't want your email to be leaked. Also, GitHub requires author emails to have a GitHub account associated with it. So if you have't already, add the author email to your GitHub account.  
 
 **Set it globally, so that you won't need to do this again in the future when you are doing another projects**
 ```bash
