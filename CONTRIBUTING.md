@@ -74,7 +74,7 @@ git commit -am "commit_type: changes"
 git push
 ```
 
-Also, it is recommed to follow our commit ettique. Check out [Commit Ettique]() for more.
+Also, it is recommed to follow our commit ettique. Check out [Commit Ettique](#commit-ettique) for more.
 
 ### Step 5: Showtime
 
