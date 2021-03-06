@@ -14,92 +14,26 @@ class Soldier {
   user;
 
   /**
+   * @typedef {object} SoldierStats 
+   * @property {number} coopMissionsFinished - How many coop missions have the soldier finished
+   * @property {number} coopUnlocks - How many unlockable weapons have the soldier unlocked by playing coop missions
+   * @property {number} rank - The soldier's rank
+   * @property {number} revives - How many revives the soldier have done
+   * @property {number} kills - How many kills the soldier have
+   * @property {number} wins - How many matches the soldier have won
+   * @property {number} dogtagsCollected - How many dogtags have the soldier collected. Usually when killing an enemy with a knife
+   * @property {number} assists - How many kill assists the soldier have
+   * @property {number} repairs - How many repairs the soldier have done when using the engineer class
+   * @property {number} deaths - How many times the soldiers have died
+   * @property {number} accuracy - The soldier's accuracy.
+   */
+
+  /**
    * The statistics of this soldier.
    *
-   * @property {object}
-   * @namespace
+   * @property {SoldierStats}
    */
-  stats = {
-    /**
-     * How many coop missions have the soldier finished.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    coopMissionsFinished: 0,
-
-    /**
-     * How many unlockable weapons have the soldier unlocked by playing coop
-     * missions.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    coopUnlocks: 0,
-    /**
-     * The rank of the soldier.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    rank: 0,
-    /**
-     * How many revives the soldier have done.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    revives: 0,
-    /**
-     * How many kills the soldier have.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    kills: 0,
-    /**
-     * How many matches the soldier have won.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    wins: 0,
-    /**
-     * How many dogtags have the soldier collected. Usually when killing an
-     * enemy with a knife.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    dogtagsCollected: 0,
-    /**
-     * How many kill assists the soldier have.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    assists: 0,
-    /**
-     * How many repairs the soldier have done when using the engineer class.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    repairs: 0,
-    /**
-     * How many times the soldiers have died.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-    deaths: 0,
-    /**
-     * The soldier's accuracy.
-     *
-     * @type {number}
-     * @memberof Soldier.stats
-     */
-  };
+  stats = {};
 
   /**
    * Creates a new Soldier instance

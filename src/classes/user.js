@@ -60,7 +60,7 @@ class User {
    */
 
   /**
-   * The soldiers of this user/
+   * The soldiers of this user.
    *
    * @property {SoldiersManager}
    */
@@ -96,25 +96,27 @@ class User {
       privacyDetails: 2
     },
   */
+
+
+   /**
+   * Much more detailed properties of the user..
+   * 
+   * @typedef UserInfo
+   * @property {string} twitchUsername - The user's Twitch username
+   * @property {number} lastLogin - The last time the user logged in to Battlelog
+   * @property {*} birthdate - Since when the user have played the game "Outside"
+   * @property {*} name - The user's username in the game "Outside"
+   * @property {boolean} gravatarHidden - Whether the user's avatar is hidden
+   */
+
   /**
-   * Much more detailed properties of the user.
+   * Much more detailed properties of the user..
    *
    * @property {UserInfo}
    */
-  userinfo = {
-    /**
-     * The user's Twitch username.
-     *
-     * @type {string}
-     *
-     */
-    twitchUsername: "",
-  };
+  userinfo = {};
 
-  /**
-   * 
-   * @typedef
-   */
+
 
   /**
    * Creates a new User instance.
