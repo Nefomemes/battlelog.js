@@ -13,6 +13,10 @@ const { BattlelogMap } = require("./blmap");
  */
 class User {
   /**
+  * @property {GameClient} client - The client used to access this user.
+  */
+  client;
+  /**
    * The user's email hash.
    *
    * @property {string}
@@ -107,6 +111,7 @@ class User {
    * @property {*} birthdate - Since when the user have played the game "Outside"
    * @property {*} name - The user's username in the game "Outside"
    * @property {boolean} gravatarHidden - Whether the user's avatar is hidden
+   * @property {string} presentation - The presentation of the user.
    */
 
   /**
@@ -127,10 +132,12 @@ class User {
    * @param {UserResolvable} [data] - The user's data.
    */
   constructor(client, data) {
-    this.client = client;
-    /**
-     * @property {GameClient} client - The client used to access this user.
-     */
+
+    Object.defineProperty(this, 'client', {
+      value: client,
+      enumerable: false
+    });
+
     if (typeof data === "object") {
       this.structureData(data);
     } else if (typeof data == "string") {

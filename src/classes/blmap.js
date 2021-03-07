@@ -17,6 +17,7 @@ class BattlelogMap extends Map {
    *     to the key's structureData method.
    */
   structureData(key, value, ...structureDataStuff) {
+    
     if(!key) throw Error("key is not specified");
     if(!value) throw Error("value is not specified");
      
