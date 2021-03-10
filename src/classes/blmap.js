@@ -1,5 +1,3 @@
-
-
 /**
  * Custom Map class for battlelog.js utilities.
  *
@@ -17,17 +15,13 @@ class BattlelogMap extends Map {
    *     to the key's structureData method.
    */
   structureData(key, value, ...structureDataStuff) {
-
-    if (!key)
-      throw Error("key is not specified");
-    if (!value)
-      throw Error("value is not specified");
+    if (!key) throw Error("key is not specified");
+    if (!value) throw Error("value is not specified");
 
     if (value.persona) {
-      console.log(key, value, ...structureDataStuff)
+      console.log(key, value, ...structureDataStuff);
     }
     if (super.get(key)) {
-
       super.get(key).structureData(value, ...structureDataStuff);
     } else {
       super.set(key, value);

@@ -62,22 +62,29 @@ class Soldier {
   structureData(data, fetch) {
     var rules = {};
     var soldierRootStats = [
-      'timePlayed', 'kills', 'deaths', 'npStatus', 'legendaryLevel',
-      'rsNumWins', 'rank', 'numLosses', 'numWins', 'skill', 'score',
-      'rsNumLosses'
+      "timePlayed",
+      "kills",
+      "deaths",
+      "npStatus",
+      "legendaryLevel",
+      "rsNumWins",
+      "rank",
+      "numLosses",
+      "numWins",
+      "skill",
+      "score",
+      "rsNumLosses",
     ];
     if (!fetch) {
-
       rules = {
-
-        blacklist : soldierRootStats
+        blacklist: soldierRootStats,
       };
     }
     utils.structureData(this, data, rules);
 
     this.user.soldiers.cache.set(this.persona.personaId, this);
     utils.structureData(this.stats, data, {
-      whitelist : soldierRootStats,
+      whitelist: soldierRootStats,
     });
 
     return this;
@@ -85,15 +92,16 @@ class Soldier {
 
   async fetch() {
     const res = await this.user.client.axios.get(
-        `/overviewPopulateStats/${this.persona.personaId}/o/1/`);
+      `/overviewPopulateStats/${this.persona.personaId}/o/1/`
+    );
 
     utils.structureData(this.stats, res.data.data.overviewStats, {
-      alias : {
-        numWins : "wins",
-        numRounds : "matchesPlayed",
-        mcomDestroy : "mcomDestroyed",
-        killAssists : "assists",
-        numLosses : "losses"
+      alias: {
+        numWins: "wins",
+        numRounds: "matchesPlayed",
+        mcomDestroy: "mcomDestroyed",
+        killAssists: "assists",
+        numLosses: "losses",
       },
     });
 
