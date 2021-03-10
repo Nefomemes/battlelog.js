@@ -1,9 +1,9 @@
-const { Platoon } = require("./platoon");
+const {Platoon} = require("./platoon");
 const utils = require("../utils/utils");
-const { stringify } = require("querystring");
-const { SoldiersManager } = require("./soldiersmanager");
-const { Soldier } = require("./soldier");
-const { BattlelogMap } = require("./blmap");
+const {stringify} = require("querystring");
+const {SoldiersManager} = require("./soldiersmanager");
+const {Soldier} = require("./soldier");
+const {BattlelogMap} = require("./blmap");
 /**
  * Represents a Battlelog user.
  *
@@ -13,8 +13,8 @@ const { BattlelogMap } = require("./blmap");
  */
 class User {
   /**
-  * @property {GameClient} client - The client used to access this user.
-  */
+   * @property {GameClient} client - The client used to access this user.
+   */
   client;
   /**
    * The user's email hash.
@@ -101,14 +101,15 @@ class User {
     },
   */
 
-
-   /**
+  /**
    * Much more detailed properties of the user..
-   * 
+   *
    * @typedef UserInfo
    * @property {string} twitchUsername - The user's Twitch username
-   * @property {number} lastLogin - The last time the user logged in to Battlelog
-   * @property {*} birthdate - Since when the user have played the game "Outside"
+   * @property {number} lastLogin - The last time the user logged in to
+   * Battlelog
+   * @property {*} birthdate - Since when the user have played the game
+   * "Outside"
    * @property {*} name - The user's username in the game "Outside"
    * @property {boolean} gravatarHidden - Whether the user's avatar is hidden
    * @property {string} presentation - The presentation of the user.
@@ -121,8 +122,6 @@ class User {
    */
   userinfo = {};
 
-
-
   /**
    * Creates a new User instance.
    *
@@ -133,10 +132,7 @@ class User {
    */
   constructor(client, data) {
 
-    Object.defineProperty(this, 'client', {
-      value: client,
-      enumerable: false
-    });
+    Object.defineProperty(this, 'client', {value : client, enumerable : false});
 
     if (typeof data === "object") {
       this.structureData(data);
@@ -168,13 +164,13 @@ class User {
    */
   structureData(data) {
     utils.structureData(this, data, {
-      blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
+      blacklist : [ "user", "tenFriends", "platoons", "platoonFans" ],
     });
     /**
      *
      */
     if (data.user) {
-      utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
+      utils.structureData(this, data.user, {blacklist : [ "gravatarMd5" ]});
 
       if (data.user.gravatarMd5) {
         this.gravatarEmailHash = data.user.gravatarMd5;
@@ -190,9 +186,8 @@ class User {
     }
 
     if (data.platoonFans) {
-      this.platoonFans = data.platoonFans.map(
-        (i) => new Platoon(this.client, i)
-      );
+      this.platoonFans =
+          data.platoonFans.map((i) => new Platoon(this.client, i));
     }
 
     if (data.club) {
@@ -201,7 +196,7 @@ class User {
 
     if (data.soldiersBox) {
       this.soldiers.structureData(data.soldiersBox);
-    }  
+    }
 
     this.client.users.cache.set(this.userId, this);
   }
@@ -215,8 +210,8 @@ class User {
    */
   displayAvatarURL(options = {}) {
     utils.validateOptions(options, {
-      alias: { size: "s", rating: "r", default: "d", extension: "e" },
-      defaults: { default: "retro" },
+      alias : {size : "s", rating : "r", default : "d", extension : "e"},
+      defaults : {default : "retro"},
     });
 
     if (options.size && options.size > 2048)
@@ -225,37 +220,32 @@ class User {
       throw Error("Option 'size' is required to be more than 1.");
     if (options.rating === "r")
       throw Error(
-        "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted."
-      );
+          "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted.");
 
-    if (options.rating === "x") throw Error("Ok coomer");
+    if (options.rating === "x")
+      throw Error("Ok coomer");
 
-    if (!["g", "pg"].includes(options.rating)) throw Error("");
-    if (
-      !(
-        options.default.startsWith("http://") ||
-        options.default.startsWith("https://")
-      ) &&
-      ![
-        "404",
-        "mp",
-        "identicon",
-        "monsterid",
-        "wavatar",
-        "retro",
-        "robohash",
-        "blank",
-      ].includes(options.default)
-    )
+    if (!["g", "pg"].includes(options.rating))
+      throw Error("");
+    if (!(options.default.startsWith("http://") ||
+          options.default.startsWith("https://")) &&
+        !["404",
+          "mp",
+          "identicon",
+          "monsterid",
+          "wavatar",
+          "retro",
+          "robohash",
+          "blank",
+    ].includes(options.default))
       throw Error(
-        "Option 'default' did not provide a valid default profile picture"
-      );
-    let params = { r: options.rating, d: options.default, s: options.size };
+          "Option 'default' did not provide a valid default profile picture");
+    let params = {r : options.rating, d : options.default, s : options.size};
 
-    if (options.forceDefault) params.f = "y";
+    if (options.forceDefault)
+      params.f = "y";
     return `https://www.gravatar.com/avatar/${this.gravatarEmailHash}.${
-      options.extension
-    }?${stringify(params)}`;
+        options.extension}?${stringify(params)}`;
   }
 }
 

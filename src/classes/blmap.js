@@ -17,11 +17,13 @@ class BattlelogMap extends Map {
    *     to the key's structureData method.
    */
   structureData(key, value, ...structureDataStuff) {
-    
-    if(!key) throw Error("key is not specified");
-    if(!value) throw Error("value is not specified");
-     
-    if(value.persona){
+
+    if (!key)
+      throw Error("key is not specified");
+    if (!value)
+      throw Error("value is not specified");
+
+    if (value.persona) {
       console.log(key, value, ...structureDataStuff)
     }
     if (super.get(key)) {
@@ -31,12 +33,10 @@ class BattlelogMap extends Map {
       super.set(key, value);
     }
 
-    if(value.persona){
-    console.log(this);
+    if (value.persona) {
+      console.log(this);
     }
   }
-
- 
 }
 
 module.exports.BattlelogMap = BattlelogMap;

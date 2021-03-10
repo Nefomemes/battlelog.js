@@ -1,27 +1,22 @@
-const { BattlelogMap } = require("./blmap");
+const {BattlelogMap} = require("./blmap");
 const utils = require("utils");
-const { ForumCategoriesManager } = require("./fcm");
+const {ForumCategoriesManager} = require("./fcm");
 
 /**
  * Manages all forums.
- * 
+ *
  * @class
  */
 class Forums {
   /**
    * Creates a new  Forums instance.
-   * 
-   * @param {GameClient} client 
-   * @param {array} data 
+   *
+   * @param {GameClient} client
+   * @param {array} data
    */
   constructor(client, data) {
-    Object.defineProperty(this, 'client', {
-      value: client,
-      enumerable: false
-    });
+    Object.defineProperty(this, 'client', {value : client, enumerable : false});
   }
 
   categories = new ForumCategoriesManager();
-
-  
 }
