@@ -39,11 +39,8 @@ class GameClient {
     /**
      *  @property {GameType} game - The game
      */
-    
-    Object.defineProperty(this, 'client', {
-      value: client,
-      enumerable: false
-    });
+
+    Object.defineProperty(this, "client", { value: client, enumerable: false });
 
     if (!options.axios) options.axios = {};
 
@@ -54,12 +51,7 @@ class GameClient {
       headers: { ...(options.axios.headers || {}), ...defaultHeader },
     });
 
-    
-    Object.defineProperty(this, 'axios', {
-      value: axios,
-      enumerable: false
-    });
-
+    Object.defineProperty(this, "axios", { value: axios, enumerable: false });
   }
 
   users = new UsersManager(this);
