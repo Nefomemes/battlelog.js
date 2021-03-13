@@ -55,19 +55,21 @@ function validateOptions(data, rules) {
 
   if (rules.typeof) {
     for (let [prop, value] of Object.entries(rules.typeof)) {
+      var isTrue;
 if(typeof value === "string"){
    isTrue = value === "array" ? Array.isArray(data[prop]) : typeof data[prop] === value;
 } else if(typeof value === 'function'){
    isTrue = data[prop] instanceof value;
+  
 } else {
 
-  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(typeof value)} ${typeof value}`)
+  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is a ${data[prop].constructor} (${typeof data[prop]})`)
 }
-      if (type !== value)
+      if (isTrue)
         throw Error(
           `Option '${prop}' is required to be ${getArticle(
             value
-          )} ${value} while it is actually ${getArticle(type)} ${type}.`
+          )} ${value} while it is actually ${getArticle(type)} ${type.constructor}.`
         );
     }
   }
