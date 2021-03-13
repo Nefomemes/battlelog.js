@@ -12,7 +12,7 @@ class Forums {
    * Creates a new  Forums instance.
    *
    * @param {GameClient} client
-   * @param {array} data
+   * @param {Array} data
    */
   constructor(client, data) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });

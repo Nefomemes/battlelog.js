@@ -15,8 +15,8 @@
   "keywords": [],
   "author": "Nefomemes",
   "license": "MIT",
-  "peerDependencies":{
-      "axios": "^0.21.1"
+  "peerDependencies": {
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "jsdoc": "^3.6.6",

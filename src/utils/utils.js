@@ -139,7 +139,7 @@ var alias;
     if (rules.alias[name]) {
       alias = rules.alias[name];
     
-    };
+    }
     if (rules.whitelist.length && (rules.whitelist.includes(name) || rules.whitelist.includes(alias)) ){
     if (!(rules.onlyAssignIfTruthy.includes(name) || rules.onlyAssignIfTruthy.includes(alias)) || value ) {
       if (!rules.blacklist.includes(name)) {
