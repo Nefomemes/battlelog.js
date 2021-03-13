@@ -63,7 +63,7 @@ if(typeof value === "string"){
   
 } else {
 
-  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is a `)
+  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(typeof value)} ${typeof value}`)
 }
       if (isTrue)
         throw Error(
