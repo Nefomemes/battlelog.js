@@ -1,7 +1,7 @@
 const axios = require("axios");
 const defaultHeader = require("../assets/json/headers.json");
 
-const { UsersManager } = require("./um");
+const {UsersManager} = require("./um");
 
 /**
  *  Represents that /:game/ part. The main brain of everything.
@@ -19,7 +19,8 @@ class GameClient {
    * @param {options} [options] - The options used for this instance.
    */
   constructor(client, game = "bf3", options = {}) {
-    if (!client) throw Error("The 'client' parameter is required. ");
+    if (!client)
+      throw Error("The 'client' parameter is required. ");
 
     if (typeof options !== "object")
       throw Error("Parameter 'options' is required to be an object. ");
@@ -40,18 +41,19 @@ class GameClient {
      *  @property {GameType} game - The game
      */
 
-    Object.defineProperty(this, "client", { value: client, enumerable: false });
+    Object.defineProperty(this, "client", {value : client, enumerable : false});
 
-    if (!options.axios) options.axios = {};
+    if (!options.axios)
+      options.axios = {};
 
     var axios = axios.create({
-      baseURL: `https://battlelog.battlefield.com/${this.game}`,
+      baseURL : `https://battlelog.battlefield.com/${this.game}`,
 
       ...options.axios,
-      headers: { ...(options.axios.headers || {}), ...defaultHeader },
+      headers : {...(options.axios.headers || {}), ...defaultHeader},
     });
 
-    Object.defineProperty(this, "axios", { value: axios, enumerable: false });
+    Object.defineProperty(this, "axios", {value : axios, enumerable : false});
   }
 
   users = new UsersManager(this);
