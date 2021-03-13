@@ -56,20 +56,27 @@ function validateOptions(data, rules) {
   if (rules.typeof) {
     for (let [prop, value] of Object.entries(rules.typeof)) {
       var isTrue;
-if(typeof value === "string"){
-   isTrue = value === "array" ? Array.isArray(data[prop]) : typeof data[prop] === value;
-} else if(typeof value === 'function'){
-   isTrue = data[prop] instanceof value;
-  
-} else {
-
-  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(typeof value)} ${typeof value}`)
-}
+      if (typeof value === "string") {
+        isTrue =
+          value === "array"
+            ? Array.isArray(data[prop])
+            : typeof data[prop] === value;
+      } else if (typeof value === "function") {
+        isTrue = data[prop] instanceof value;
+      } else {
+        throw Error(
+          `Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(
+            typeof value
+          )} ${typeof value}`
+        );
+      }
       if (isTrue)
         throw Error(
           `Option '${prop}' is required to be ${getArticle(
             value
-          )} ${value} while it is actually a ${data[prop].constructor} (${typeof data[prop]}).`
+          )} ${value} while it is actually a ${
+            data[prop].constructor
+          } (${typeof data[prop]}).`
         );
     }
   }
@@ -102,12 +109,13 @@ if(typeof value === "string"){
  * @param {object} data - The data whose properties will be used to populate the
  *     class / object.
  * @param {object} [rules] - An object filled with how things should be done.
- * @param {Array[string]} [rules.blacklist] - An array filled with properties that
- *     should be ignored
- * @param {Array[strimg]} [rules.setBoolean] - An array filled with properties that
- *     should be set to true if they are truthy or false if they are falsy.
+ * @param {Array[string]} [rules.blacklist] - An array filled with properties
+ *     that should be ignored
+ * @param {Array[strimg]} [rules.setBoolean] - An array filled with properties
+ *     that should be set to true if they are truthy or false if they are falsy.
  * @param {object} [rules.alias] - An object that rules which properties should
- *     be renamed and what should they be renamed to. Other rules will use this alias to refer the property
+ *     be renamed and what should they be renamed to. Other rules will use this
+ * alias to refer the property
  * @param {Array[string]} [rules.onlyAssignIfTruthy] - An array filled
  * @param {Array[string]}
  * @returns {object} - The class/object
@@ -134,22 +142,31 @@ function structureData(cls, data, rules = {}) {
   });
 
   for (let [name, value] of Object.entries(data)) {
-var alias;
+    var alias;
 
     if (rules.alias[name]) {
       alias = rules.alias[name];
-    
     }
-    if (rules.whitelist.length && (rules.whitelist.includes(name) || rules.whitelist.includes(alias)) ){
-    if (!(rules.onlyAssignIfTruthy.includes(name) || rules.onlyAssignIfTruthy.includes(alias)) || value ) {
-      if (!rules.blacklist.includes(name)) {
-        if (!rules.setBoolean.includes(name)) {
-          cls[alias || name] = value;
-        } else {
-          cls[alias || name] = value ? true : false;
+    if (
+      rules.whitelist.length &&
+      (rules.whitelist.includes(name) || rules.whitelist.includes(alias))
+    ) {
+      if (
+        !(
+          rules.onlyAssignIfTruthy.includes(name) ||
+          rules.onlyAssignIfTruthy.includes(alias)
+        ) ||
+        value
+      ) {
+        if (!rules.blacklist.includes(name)) {
+          if (!rules.setBoolean.includes(name)) {
+            cls[alias || name] = value;
+          } else {
+            cls[alias || name] = value ? true : false;
+          }
         }
       }
-    }}
+    }
   }
 
   return cls;
