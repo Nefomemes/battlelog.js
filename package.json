@@ -16,7 +16,6 @@
   "author": "Nefomemes",
   "license": "MIT",
   "dependencies": {
-  
     "axios": "^0.21.1"
   },
   "devDependencies": {
@@ -35,6 +34,5 @@
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0",
     "node-polyfill-webpack-plugin": "^1.0.3"
-
   }
 }
