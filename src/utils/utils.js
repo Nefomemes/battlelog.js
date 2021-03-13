@@ -63,13 +63,13 @@ if(typeof value === "string"){
   
 } else {
 
-  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is a ${data[prop].constructor} (${typeof data[prop]})`)
+  throw Error(`Rule typeof.${prop} is required to be a string or a class. While it is a `)
 }
       if (isTrue)
         throw Error(
           `Option '${prop}' is required to be ${getArticle(
             value
-          )} ${value} while it is actually ${getArticle(type)} ${type.constructor}.`
+          )} ${value} while it is actually a ${data[prop].constructor} (${typeof data[prop]}).`
         );
     }
   }
