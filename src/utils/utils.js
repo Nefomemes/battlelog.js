@@ -109,15 +109,15 @@ function validateOptions(data, rules) {
  * @param {object} data - The data whose properties will be used to populate the
  *     class / object.
  * @param {object} [rules] - An object filled with how things should be done.
- * @param {Array[string]} [rules.blacklist] - An array filled with properties
+ * @param {string[]} [rules.blacklist] - An array filled with properties
  *     that should be ignored
- * @param {Array[strimg]} [rules.setBoolean] - An array filled with properties
+ * @param {string[]} [rules.setBoolean] - An array filled with properties
  *     that should be set to true if they are truthy or false if they are falsy.
  * @param {object} [rules.alias] - An object that rules which properties should
  *     be renamed and what should they be renamed to. Other rules will use this
  * alias to refer the property
- * @param {Array[string]} [rules.onlyAssignIfTruthy] - An array filled
- * @param {Array[string]}
+ * @param {string[]} [rules.onlyAssignIfTruthy] - An array filled
+ * @param {string[]}
  * @returns {object} - The class/object
  */
 function structureData(cls, data, rules = {}) {
