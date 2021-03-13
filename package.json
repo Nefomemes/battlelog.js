@@ -34,7 +34,7 @@
     "@babel/preset-env": "^7.12.16",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0",
-    "node-polyfill-webpack-plugin": "^1.0.3",
+    "node-polyfill-webpack-plugin": "^1.0.3"
 
   }
 }
