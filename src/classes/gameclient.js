@@ -39,16 +39,19 @@ class GameClient {
     /**
      *  @property {GameType} game - The game
      */
-    this.client = client;
+
+    Object.defineProperty(this, "client", { value: client, enumerable: false });
 
     if (!options.axios) options.axios = {};
 
-    this.axios = axios.create({
+    var axios = axios.create({
       baseURL: `https://battlelog.battlefield.com/${this.game}`,
 
       ...options.axios,
       headers: { ...(options.axios.headers || {}), ...defaultHeader },
     });
+
+    Object.defineProperty(this, "axios", { value: axios, enumerable: false });
   }
 
   users = new UsersManager(this);
