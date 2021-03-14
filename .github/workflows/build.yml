@@ -17,6 +17,9 @@ jobs:
                uses: actions/setup-node@v2
                with:
                  node-version: '14'
+             - name: Install Yarn
+               run: npm i -g yarn
+
              - name: Pull
                run: |
                 
@@ -29,8 +32,9 @@ jobs:
                 git pull origin ${GITHUB_REF##*/}
              - name: Generate browser-supported dist
                run: |
-                 npm i
-                 npm run build
+               yarn install
+               yarn build:dev
+               yarn build:prod
              
              - name: Commit the dist
                run: |
