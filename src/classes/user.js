@@ -203,7 +203,7 @@ class User {
       this.soldiers.structureData(data.soldiersBox);
     }  
 
-    this.client.users.cache.set(this.userId, this);
+    
   }
 
   /**
