@@ -32,10 +32,9 @@ jobs:
                 git pull origin ${GITHUB_REF##*/}
              - name: Generate browser-supported dist
                run: |
-               yarn install
-               yarn build:dev
-               yarn build:prod
-             
+                yarn install
+                yarn build:dev
+                yarn build:prod
              - name: Commit the dist
                run: |
                 
