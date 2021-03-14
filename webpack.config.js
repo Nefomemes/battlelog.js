@@ -26,16 +26,17 @@ externals: {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [["@babel/preset-env", { targets: "defaults" }]],
-            "plugins": [
+            presets: [["@babel/preset-env", { targets: "defaults", "modules": "commonjs" }]],
+            plugins: [
               [
                 "@babel/plugin-transform-runtime",
                  {
-                            "regenerator": true,
-                            "corejs": 3
+                            regenerator: true,
+                            corejs: 3
                  }
               ],
-              "@babel/plugin-proposal-class-properties"
+              "@babel/plugin-proposal-class-properties",
+              "babel-plugin-add-module-exports"
            ]
           },
         },
