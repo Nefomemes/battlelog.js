@@ -4,6 +4,7 @@ const path = require("path");
 module.exports = {
   entry:  './src/index.js',
   output: {
+    globalObject: 'this',
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.min.js",
   libraryTarget: 'umd',
@@ -26,6 +27,7 @@ externals: {
         use: {
           loader: "babel-loader",
           options: {
+	    sourceType: "unambiguous",
             presets: [["@babel/preset-env", {  targets: "defaults",   "modules": "commonjs"}]],
             plugins: [
               [
