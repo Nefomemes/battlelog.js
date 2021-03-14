@@ -37,7 +37,7 @@ externals: {
                  }
               ],
               "@babel/plugin-proposal-class-properties",
-              "babel-plugin-add-module-exports"
+             // "babel-plugin-add-module-exports"
            ]
           },
         },
