@@ -10,7 +10,8 @@
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output dist/docs.json",
     "docs:test": "docgen --source ./src",
-    "build": "webpack"
+    "build:prod": "webpack -t production",
+    "build:dev":"webpack -t development"
   },
   "keywords": [],
   "author": "Nefomemes",
