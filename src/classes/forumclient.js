@@ -1,6 +1,6 @@
 const { BattlelogMap } = require("./blmap");
 const utils = require("utils");
-const { ForumCategoriesManager } = require("./forumcategory");
+const { ForumCategory } = require("./forumcategory");
 
 /**
  * Manages all forums.
