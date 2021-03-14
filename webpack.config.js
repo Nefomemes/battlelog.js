@@ -27,7 +27,16 @@ externals: {
           loader: "babel-loader",
           options: {
             presets: [["@babel/preset-env", { targets: "defaults" }]],
-            plugins: ["@babel/plugin-proposal-class-properties", "@babel/plugin-transform-runtime"],
+            "plugins": [
+              [
+                "@babel/plugin-transform-runtime",
+                 {
+                            "regenerator": true,
+                            "corejs": 3
+                 }
+              ],
+              "@babel/plugin-proposal-class-properties"
+           ]
           },
         },
       },
