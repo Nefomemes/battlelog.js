@@ -1,4 +1,4 @@
-(async function () {
+(async function() {
   const bl = require("./dist/bundle.js");
 
   var client = bl();
