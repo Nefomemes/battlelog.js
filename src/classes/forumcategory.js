@@ -13,7 +13,12 @@ class ForumCategory {
   
   /**
    * 
+   
    * @function
    */
+    structureData(){
+    }
  
 }
+
+module.exports.ForumCategory = ForumCategory;
