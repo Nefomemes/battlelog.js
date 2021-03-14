@@ -11,7 +11,7 @@
     "docs": "docgen --source ./src --output dist/docs.json",
     "docs:test": "docgen --source ./src",
     "build:prod": "webpack -t production",
-    "build:dev":"webpack -t development"
+    "build:dev": "webpack -t development"
   },
   "keywords": [],
   "author": "Nefomemes",
