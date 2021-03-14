@@ -1,15 +1,8 @@
-
-
-
 const { User } = require("./user");
 const { BattlelogMap } = require("./blmap");
 class UsersManager {
   constructor(client) {
-    Object.defineProperty(this, 'client', {
-      value: client,
-      enumerable: false
-    });
-
+    Object.defineProperty(this, "client", { value: client, enumerable: false });
   }
 
   fetch(...params) {

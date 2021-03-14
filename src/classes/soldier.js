@@ -14,16 +14,20 @@ class Soldier {
   user;
 
   /**
-   * @typedef {object} SoldierStats 
-   * @property {number} coopMissionsFinished - How many coop missions have the soldier finished
-   * @property {number} coopUnlocks - How many unlockable weapons have the soldier unlocked by playing coop missions
+   * @typedef {object} SoldierStats
+   * @property {number} coopMissionsFinished - How many coop missions have the
+   * soldier finished
+   * @property {number} coopUnlocks - How many unlockable weapons have the
+   * soldier unlocked by playing coop missions
    * @property {number} rank - The soldier's rank
    * @property {number} revives - How many revives the soldier have done
    * @property {number} kills - How many kills the soldier have
    * @property {number} wins - How many matches the soldier have won
-   * @property {number} dogtagsCollected - How many dogtags have the soldier collected. Usually when killing an enemy with a knife
+   * @property {number} dogtagsCollected - How many dogtags have the soldier
+   * collected. Usually when killing an enemy with a knife
    * @property {number} assists - How many kill assists the soldier have
-   * @property {number} repairs - How many repairs the soldier have done when using the engineer class
+   * @property {number} repairs - How many repairs the soldier have done when
+   * using the engineer class
    * @property {number} deaths - How many times the soldiers have died
    * @property {number} accuracy - The soldier's accuracy.
    */
@@ -57,22 +61,33 @@ class Soldier {
    */
   structureData(data, fetch) {
     var rules = {};
-    var soldierRootStats = [ 'timePlayed', 'kills', 'deaths', 'npStatus', 'legendaryLevel',  'rsNumWins',
-      'rank', 'numLosses', 'numWins', 'skill', 'score', 'rsNumLosses'];
+    var soldierRootStats = [
+      "timePlayed",
+      "kills",
+      "deaths",
+      "npStatus",
+      "legendaryLevel",
+      "rsNumWins",
+      "rank",
+      "numLosses",
+      "numWins",
+      "skill",
+      "score",
+      "rsNumLosses",
+    ];
     if (!fetch) {
-      
-   rules = {
-
- blacklist: soldierRootStats
+      rules = {
+        blacklist: soldierRootStats,
       };
-
     }
     utils.structureData(this, data, rules);
-    
-      this.user.soldiers.cache.set(this.persona.personaId, this);
-    utils.structureData(this.stats, data, {whitelist: soldierRootStats, });
-    
-        return this;
+
+    this.user.soldiers.cache.set(this.persona.personaId, this);
+    utils.structureData(this.stats, data, {
+      whitelist: soldierRootStats,
+    });
+
+    return this;
   }
 
   async fetch() {
@@ -86,7 +101,7 @@ class Soldier {
         numRounds: "matchesPlayed",
         mcomDestroy: "mcomDestroyed",
         killAssists: "assists",
-        numLosses: "losses"
+        numLosses: "losses",
       },
     });
 

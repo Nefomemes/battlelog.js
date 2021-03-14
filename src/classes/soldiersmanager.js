@@ -15,14 +15,11 @@ class SoldiersManager {
    * @param {Array} [data] -  Raw array data of the user's soldiers.
    */
   constructor(user, data) {
-    Object.defineProperty(this, 'user', {
-      value: user,
-      enumerable: false
-    });
+    Object.defineProperty(this, "user", { value: user, enumerable: false });
 
-    Object.defineProperty(this, 'client', {
+    Object.defineProperty(this, "client", {
       value: user.client,
-      enumerable: false
+      enumerable: false,
     });
 
     this.structureData(data);
