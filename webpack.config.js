@@ -26,13 +26,14 @@ externals: {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [["@babel/preset-env", {  targets: "defaults" }]],
+            presets: [["@babel/preset-env", {  targets: "defaults"   "modules": "commonjs"}]],
             plugins: [
               [
                 "@babel/plugin-transform-runtime",
                  {
                             regenerator: true,
-                            corejs: 3
+                            corejs: 3,
+                            useESModules: false 
                  }
               ],
               "@babel/plugin-proposal-class-properties",
