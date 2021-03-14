@@ -1,6 +1,6 @@
 const utils = require("../utils/utils");
 const { Server } = require("./server")
-
+const { BattlelogMap } = require("./blmap");
 /**
  * Represents Battlelog server browser/
  * 
@@ -10,7 +10,7 @@ class ServerBrowser {
 	/**
 	 * 
 	 */
-	cache = new Map();
+	cache = new BattlelogMap();
 
 	constructor(client, data){
 		this.client = client;
