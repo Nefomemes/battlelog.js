@@ -18,7 +18,7 @@ Or if you use Yarn:
 
 ```bash
 yarn add battlelog.js
-``
+```
 
 You can even install it from GitHub:
 
