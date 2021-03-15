@@ -40,7 +40,7 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 First of all, you will need to get a CDN link. You can find a CDN link for this library in pretty much any major CDN services, like [JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js), [UnPKG](https://unpkg.com/), and [GitCDN](https://gitcdn.link)
 
-You can use two bundles, one is the Production bundle (dist/bundle.js) and the minified Production bundle (dist/bundle.min.js)
+You can use two bundles, one is the development bundle (dist/bundle.js) and the minified production bundle (dist/bundle.min.js)
 
 Note that due to [#67](https://github.com/Nefomemes/battlelog.js/issues/67), the production bundle is unusable. Please uae the development bundle instead.
 
