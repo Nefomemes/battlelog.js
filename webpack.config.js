@@ -20,7 +20,7 @@ module.exports = {
     },
   },
   optimization: {
-    concatenateModules: true,
+    concatenateModules: false,
   },
   module: {
     rules: [
