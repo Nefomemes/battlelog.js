@@ -16,9 +16,6 @@ Unofficial API wrapper for
 
 - [Discord server](https://discord.gg/gTB3Vzf5)
 
-### Getting Started
-Please read [this guide](https://github.com/Nefomemes/battlelog.js/blob/docs/docs/getting_started.md)
-
 ## Misc stuff
 
 - [CodeFactor](https://www.codefactor.io/repository/github/nefomemes/battlelog.js/issues)
