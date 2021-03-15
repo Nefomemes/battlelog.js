@@ -49,7 +49,7 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 [BLJS on JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js)
 
-Note that due to #67, the production bundle is unusable. Please uae the development bundle instead.
+Note that due to [#67](https://github.com/Nefomemes/battlelog.js/issues/67), the production bundle is unusable. Please uae the development bundle instead.
 
 </details>
 
