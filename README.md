@@ -17,7 +17,7 @@ Unofficial API wrapper for
 - [Discord server](https://discord.gg/gTB3Vzf5)
 
 ### Getting Started
-Please read [this guide](docs/getting-started.md)
+Please read [this guide](tree/docs/getting_started.md)
 
 ## Misc stuff
 
