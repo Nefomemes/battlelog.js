@@ -33,7 +33,7 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 ```
 
 </details>
-
+<details>
 <summary>Browser</summary>
 
 <br/>
