@@ -23,9 +23,6 @@ Or if you use Yarn:
 yarn add battlelog.js
 ```
 
-Note that this library isn't available on NPM yet. But in the mean time, you can
-install it trough GitHub.
-
 </details>
 <details>
 <summary>GitHub</summary>
