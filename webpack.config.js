@@ -19,6 +19,9 @@ module.exports = {
       root: "_",
     },
   },
+  optimization: {
+    concatenateModules: true,
+  },
   module: {
     rules: [
       {
