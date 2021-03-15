@@ -45,8 +45,11 @@ yarn add https://github.com/Nefomemes/battlelog.js.git
 
 <summary>Browser</summary>
 
-[JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js)
+<br/>
 
+[BLJS on JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js)
+
+Note that due to #67, the production bundle is unusable. Please uae the development bundle instead.
 
 </details>
 
