@@ -14,8 +14,10 @@ Unofficial API wrapper for
 
 ## Resources
 
-- [API Reference](https://nefomemes.github.io/battlelog.js)
 - [Discord server](https://discord.gg/gTB3Vzf5)
+
+### Getting Started
+Please read [this guide](docs/getting-started.md)
 
 ## Misc stuff
 
