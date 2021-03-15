@@ -19,9 +19,7 @@ module.exports = {
       root: "_",
     },
   },
-  optimization: {
-    concatenateModules: false,
-  },
+  
   module: {
     rules: [
       {
