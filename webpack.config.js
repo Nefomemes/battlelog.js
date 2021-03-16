@@ -2,43 +2,43 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry : "./src/index.js",
-  output : {
-    globalObject : "this",
-    path : path.resolve(__dirname, "dist"),
-    filename : "bundle.min.js",
-    libraryTarget : "umd",
-    library : "bljs",
+  entry: "./src/index.js",
+  output: {
+    globalObject: "this",
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.min.js",
+    libraryTarget: "umd",
+    library: "bljs",
   },
-  plugins : [ new NodePolyfillPlugin() ],
-  externals : {
-    axios : {
-      commonjs : "axios",
-      commonjs2 : "axios",
-      amd : "axios",
-      root : "_",
+  plugins: [new NodePolyfillPlugin()],
+  externals: {
+    axios: {
+      commonjs: "axios",
+      commonjs2: "axios",
+      amd: "axios",
+      root: "_",
     },
   },
 
-  module : {
-    rules : [
+  module: {
+    rules: [
       {
-        test : /\.m?js$/,
-        exclude : /node_modules/,
-        use : {
-          loader : "babel-loader",
-          options : {
-            sourceType : "unambiguous",
-            presets : [
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            sourceType: "unambiguous",
+            presets: [
               [
                 "@babel/preset-env",
-                {targets : "defaults", modules : "commonjs"},
+                { targets: "defaults", modules: "commonjs" },
               ],
             ],
-            plugins : [
+            plugins: [
               [
                 "@babel/plugin-transform-runtime",
-                {regenerator : true, corejs : 3, useESModules : false},
+                { regenerator: true, corejs: 3, useESModules: false },
               ],
               "@babel/plugin-proposal-class-properties",
               // "babel-plugin-add-module-exports"
