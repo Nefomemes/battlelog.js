@@ -6,24 +6,15 @@
   "scripts": {
     "test": "node test.js",
     "start": "node index.js",
-<<<<<<< HEAD
-=======
     "lint": "eslint ./src",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output docs/docs.json",
     "docs:test": "docgen --source ./src",
-            "build:browser": "webpack"
->>>>>>> e91eafa168cb93a426fd3c315c94e892461f29d8
+            "build:browser": "webpack" 
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-<<<<<<< HEAD
-  "dependencies": {
-    "axios": "
-  "devDependencies": {
-    "jsdoc-to-markdown": "^6.0.1"
-=======
   "dependencies":{
     "axios": "^0.21.1"    
   }, 
@@ -39,6 +30,5 @@
     "discord.js-docgen": "git+https://github.com/discordjs/docgen.git",
     "babel-loader":"^8.2.2",
     "@babel/preset-env":"7.12.16"
->>>>>>> e91eafa168cb93a426fd3c315c94e892461f29d8
   }
 }
