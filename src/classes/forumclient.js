@@ -1,5 +1,5 @@
 const { BattlelogMap } = require("./blmap");
-const utils = require("./utils/utils");
+const utils = require("../utils/utils");
 const { ForumCategory } = require("./forumcategory");
 
 /**
