@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-class SoldiersManager {
-	constructor(client){
-        
-    }
-}
-=======
 const { Soldier } = require("./soldier");
 const { BattlelogMap } = require("./blmap");
 
@@ -70,4 +63,4 @@ class SoldiersManager {
 }
 
 module.exports.SoldiersManager = SoldiersManager;
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
+

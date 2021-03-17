@@ -1,71 +1,9 @@
 const utils = require("../utils/utils");
-<<<<<<< HEAD
 
 class Platoon {
 
 
-	#badgePathRaw;
 
-	constructor(client, data){
-	if(data){
-	this.structureData(data);
-	}
-	}
-
-	structureData(data){
-		utils.structureData(this, data, {blacklist: ['badgePath']});
-
-
-		this.#badgePathRaw = data.badgePath;
-		
-	}
-
-	getBadge(options = {}){
-
-		if(!options.format) options.format = "png";
-
-		if(!options.size) options.size = 128;
-
-		if(typeof options.format !== 'string') throw Error("Option 'format' is required to be a string.");
-
-
-
-		return this["#badgePathRaw"].split("[FORMAT]").join(options.format).split("[SIZE]").join(options.size);
-	}
-
-	async fetch(){
-		const res = await this.client.axios.get(`/platoon/${this.id}/`);
-
-		this.structureData(res.context.platoon);
-
-		this.isFan = res.context.isFan;
-	}
-}
-
-module.exports.Platoon = Platoon;
-=======
-/**
- * Represents a Platoon
- *
- * @class
- */
-class Platoon {
-  /**
-   * The raw template of the platoon's badge.
-   *
-   * @property {string}
-   * @private
-   */
-  #badgePathRaw;
-
-  /**
-   * The platoon's badge.
-   *
-   * @property {object} badge
-   * @property {string} 60 - The badge in 60px.
-   * @property {string} 320 - The badge in 320px.
-   */
-  badge = { 60: null, 320: null };
   /**
    * Creates a new Platoon instance.
    *
@@ -106,4 +44,3 @@ class Platoon {
 }
 
 module.exports.Platoon = Platoon;
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb

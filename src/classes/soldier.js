@@ -1,23 +1,6 @@
-<<<<<<< HEAD
 
 
-class Soldier {
-	constructor(user, data){
-		this.user = user;
-		
-		
-	}
-	structureData(data){
-		
-	}
-	
-	async fetch(){
-		const res = await this.user.client.axios.get(`overviewPopulateStats/280966984/bf3-us-assault/1`)
 
-	}
-
-}
-=======
 const utils = require("../utils/utils");
 /**
  * Represents a Battlelog soldier.
@@ -131,4 +114,3 @@ class Soldier {
 }
 
 module.exports.Soldier = Soldier;
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb

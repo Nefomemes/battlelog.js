@@ -14,5 +14,4 @@ sourceType: "unambiguous",
               "@babel/plugin-proposal-class-properties",
               // "babel-plugin-add-module-exports"
             ],
-          },
-}
+          }

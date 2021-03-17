@@ -171,7 +171,7 @@ function structureData(cls, data, rules = {}) {
   }
 
   return cls;
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
+
 }
 
 module.exports.getArticle = getArticle;
