@@ -32,3 +32,5 @@ this.structureData(data);
 	}
 
 }
+
+module.exports.ServerBrowser = ServerBrowser;
