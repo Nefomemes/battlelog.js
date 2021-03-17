@@ -5,6 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
+<<<<<<< HEAD
             "type": "pwa-node",
             "request": "launch",
             "name": "Launch Program",
@@ -13,5 +14,19 @@
             ],
             "program": "${workspaceFolder}\\index.js"
         }
+=======
+            "command": "npm run test",
+            "name": "Run npm run test",
+            "request": "launch",
+            "type": "node-terminal"
+        }
+
+        
+        
+        
+        
+        
+        
+>>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
     ]
 }

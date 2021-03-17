@@ -1,40 +1,35 @@
-(async function() {
-	const axios = require('axios');
-	const fs = require('fs');
-/*
-const params = new URLSearchParams();
-	params.append('redirect', '');
-	params.append('submit', 'Sign in');
-	params.append('email', process.env.EMAIL);
-	params.append('password', process.env.PASSWORD);
- 
-	var res = await axios.post('https://battlelog.battlefield.com/bf3/gate', {
-	params,
-  headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
-  }
-});
 
-	delete res.data;
-	
-	console.log(res);
-	
-*/
+(async function () {
+  const axios = require("axios");
+  const fs = require("fs");
+  /*
+  const params = new URLSearchParams();
+          params.append('redirect', '');
+          params.append('submit', 'Sign in');
+          params.append('email', process.env.EMAIL);
+          params.append('password', process.env.PASSWORD);
 
-	var authRes = await axios.get('http://battlelog.battlefield.com/bf3/user/Nefomemes', {
+          var res = await
+  axios.post('https://battlelog.battlefield.com/bf3/gate', { params, headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  });
 
-		headers: {
-			"X-Requested-With": "XMLHttpRequest",
-			"X-AjaxNavigation": "1",
-		
-		}
-		
-	});
+          delete res.data;
 
-	
-console.log(authRes.data);
+          console.log(res);
 
+  */
+
+  var authRes = await axios.get("https://battlelog.battlefield.com/bf3/forum", {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest",
+      "X-AjaxNavigation": "1",
+    },
+  });
+
+  console.log(authRes.data);
 })();
 
 // .icon-danger
- 
+>>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
