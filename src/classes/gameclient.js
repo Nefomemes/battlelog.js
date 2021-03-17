@@ -1,7 +1,7 @@
 const axios = require("axios");
 const defaultHeader = require("../assets/json/headers.json");
 const { UsersManager } = require("./um");
-const { ServerBrowser } = require("/sb");
+const { ServerBrowser } = require("./sb");
 const { ForumClient } = require("./forumclient");
 /**
  *  Represents that /:game/ part. The main brain of everything.
