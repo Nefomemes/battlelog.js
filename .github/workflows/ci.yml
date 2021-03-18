@@ -1,4 +1,4 @@
-name: Webpack
+name: CI (lint, build, and test)
 on:
     push:
          branches:
