@@ -7,7 +7,7 @@ on:
          tags:
             - '*'
 jobs:
-     webpack:
+    build:
           name: Build
           runs-on: ubuntu-latest
           steps:
@@ -46,8 +46,8 @@ jobs:
                  github_token: ${{ secrets.GITHUB_TOKEN }}
                  branch: ${{ github.ref }}
                continue-on-error: true
-   test_prod:
-         name: Test code
+    test_prod:
+         name: Test prod bundle
          runs-on: ubuntu-latest
          needs: build
          steps:
@@ -56,11 +56,12 @@ jobs:
            - name: Setup Node.js v14
              uses: actions/setup-node@v2
              with:
-               node-version: '14
+               node-version: 14
            - name: Run test
              run: npm run test
-  test_dev:
-       name: Test code
+             
+    test_dev:
+       name: Test dev bundle
        runs-on: ubuntu-latest
        needs: build
        steps:
