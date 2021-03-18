@@ -58,7 +58,7 @@ jobs:
              with:
                node-version: '14
            - name: Run test
-             run: npm run test:prod
+             run: npm run test
   test_dev:
        name: Test code
        runs-on: ubuntu-latest
@@ -71,5 +71,5 @@ jobs:
             with:
               node-version: '14'
           - name: Run test
-            run: npm run test:dev
+            run: export BLJS_DEV="true" && npm run test
   
