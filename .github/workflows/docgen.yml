@@ -6,6 +6,8 @@ on:
       - '!gh-pages'
     tags:
       - '*'
+    paths:
+    - 'src/**.js'
 jobs:
   docs:
     name: Documentation
