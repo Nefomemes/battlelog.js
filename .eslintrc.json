@@ -19,13 +19,9 @@
       "eslint:recommended"
    ],
    "rules":{
-<<<<<<< HEAD
-      "no-unused-vars":"off"
-=======
       "no-unused-vars":"off",
       "no-mixed-spaces-and-tabs": "off",
       "no-empty":"warn"
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
    },
    "parser":"@babel/eslint-parser",
    "parserOptions":{
