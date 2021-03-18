@@ -1,5 +1,10 @@
 
-on: push
+on:
+  push:
+    branches: |
+         "*"
+    paths: |
+         "**.js"
 jobs:
   lint:
         name: Lint code
