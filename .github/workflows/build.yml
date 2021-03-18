@@ -71,5 +71,5 @@ jobs:
             with:
               node-version: '14'
           - name: Run test
-            run: export BLJS_DEV="true" && npm run test
+            run: export BLJS_DEV=true && npm run test
   
