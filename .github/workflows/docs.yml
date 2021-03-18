@@ -1,31 +1,19 @@
 name: GitHub pages
-<<<<<<< HEAD
 
-=======
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
 on:
   push:
     branches:
       - master
-<<<<<<< HEAD
 
-=======
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-<<<<<<< HEAD
 
-      - name: Install React
-        run: npm install react
-
-=======
       - name: Install React
         run: npm install react --save-dev
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
       - name: Build
         uses: andstor/jsdoc-action@v1
         with:
@@ -35,20 +23,10 @@ jobs:
           template: better-docs
           front_page: README.md
           recurse: true 
-<<<<<<< HEAD
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-  
-            github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-            publish_branch: gh-pages
-            publish_dir: ./out
-
-=======
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
             github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
             publish_branch: gh-pages
             publish_dir: ./out
@@ -58,4 +36,3 @@ jobs:
             github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
             publish_branch: gh-pages
             publish_dir: ./out
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
