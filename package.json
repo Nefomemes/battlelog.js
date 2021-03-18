@@ -4,7 +4,7 @@
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
   "main": "dist/bundle.prod.min.js",
   "scripts": {
-    "test": "node test.js",
+    "test:dev": "node test-build.js",
     "start": "node index.js",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
