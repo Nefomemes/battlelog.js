@@ -29,7 +29,6 @@ jobs:
                 git pull origin ${GITHUB_REF##*/}
                 
              - name: Generate browser-supported dist
- =
                run: |
                 yarn install
                 yarn build:dev
