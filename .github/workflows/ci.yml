@@ -1,11 +1,14 @@
 name: CI (lint, build, and test)
 on:
     push:
+         
          branches:
             - '*'
             - '!gh-pages'
          tags:
             - '*'
+         paths:
+            - 'src/**.js'
 jobs:
     lint:
         name: Lint code
