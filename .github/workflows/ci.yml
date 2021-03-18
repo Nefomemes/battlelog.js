@@ -19,7 +19,7 @@ jobs:
           with:
            node-version: "14"
         - name: Install Yarn
-          run: npm ci -g yarn
+          run: npm i -g yarn
         - name: Install dependencies
           run: yarn install
         - name: Test Code Linting
@@ -67,7 +67,7 @@ jobs:
                with:
                  node-version: '14'
              - name: Install Yarn
-               run: npm ci -g yarn
+               run: npm i -g yarn
 
              - name: Pull
                run: |
