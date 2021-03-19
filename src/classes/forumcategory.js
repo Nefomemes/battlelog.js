@@ -31,6 +31,7 @@ class ForumCategory {
    * 
    * 
    * @param {object} object - The object used to structure the instance.
+   * @param data
    * @function
    * @returns {ForumCategory}
    */
