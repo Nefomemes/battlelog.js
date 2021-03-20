@@ -13,7 +13,10 @@
     "build:prod": "webpack --mode production",
     "build:dev": "webpack --mode development --output-filename bundle.js "
   },
-  "keywords": ["battlelog", "battlefield"],
+  "keywords": [
+    "battlelog",
+    "battlefield"
+  ],
   "author": "Nefomemes",
   "license": "MIT",
   "dependencies": {

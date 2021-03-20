@@ -35,8 +35,8 @@ class ServerBrowser {
 		return this;
 	}
     /**
-	 * Fetchs all servers
-	 */
+     * Fetchs all servers
+     */
 	async fetch() {
 		const res = await this.client.axios.get('/servers');
 
