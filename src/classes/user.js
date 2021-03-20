@@ -13,17 +13,8 @@ const { BattlelogMap } = require("./blmap");
  * @param {object} data - Raw object data of the user.
  */
 class User {
-  /**
-   * @property {GameClient} client - The client used to access this user.
-   */
-  client;
-  /**
-   * The user's email hash.
-   *
-   * @property {string}
-   *
-   */
-  gravatarEmailHash;
+  
+  
 
   /**
    * The platoon the user is a part of. Please do not confuse this with
@@ -133,7 +124,10 @@ class User {
    */
   constructor(client, data) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
-
+  /**
+   * @property {GameClient} client - The client used to access this user.
+   */
+  
     if (typeof data === "object") {
       this.structureData(data);
     } else if (typeof data == "string") {
