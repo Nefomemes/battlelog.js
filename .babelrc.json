@@ -1,17 +1,17 @@
 {
-sourceType: "unambiguous",
-            presets: [
+"sourceType": "unambiguous",
+            "presets": [
               [
                 "@babel/preset-env",
-                { targets: "defaults", modules: "commonjs" },
+                { "targets": "defaults", "modules": "commonjs" },
               ],
             ],
-            plugins: [
+            "plugins": [
               [
                 "@babel/plugin-transform-runtime",
-                { regenerator: true, corejs: 3, useESModules: false },
+                { "regenerator": true, "corejs": 3, "useESModules": false },
               ],
               "@babel/plugin-proposal-class-properties",
-              // "babel-plugin-add-module-exports"
+        
             ],
           }
