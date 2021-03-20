@@ -12,9 +12,9 @@ class ServerBrowser {
 	 */
 	cache = new BattlelogMap();
 
+
 	constructor(client, data) {
 		Object.defineProperty(this, "client", { value: client, enumerable: false });
-
 
 
 
@@ -45,5 +45,6 @@ class ServerBrowser {
 		return this;
 	}
 
-
 }
+
+module.exports.ServerBrowser = ServerBrowser;

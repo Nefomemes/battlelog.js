@@ -1,26 +1,9 @@
 const utils = require("../utils/utils");
-/**
- * Represents a Platoon
- *
- * @class
- */
-class Platoon {
-  /**
-   * The raw template of the platoon's badge.
-   *
-   * @property {string}
-   * @private
-   */
-  #badgePathRaw;
 
-  /**
-   * The platoon's badge.
-   *
-   * @property {object} badge
-   * @property {string} 60 - The badge in 60px.
-   * @property {string} 320 - The badge in 320px.
-   */
-  badge = { 60: null, 320: null };
+class Platoon {
+
+
+
   /**
    * Creates a new Platoon instance.
    *

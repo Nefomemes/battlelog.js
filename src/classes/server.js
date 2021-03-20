@@ -1,5 +1,6 @@
 const utils = require("../utils/utils");
 const { User } = require("./user");
+
 /**
  * Represents a server.
  *

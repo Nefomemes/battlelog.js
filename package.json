@@ -2,16 +2,16 @@
   "name": "battlelog.js",
   "version": "0.2.2",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
-  "main": "dist/bundle.js",
+  "main": "dist/bundle.prod.min.js",
   "scripts": {
-    "test": "node test.js",
+    "test": "node test-build.js",
     "start": "node index.js",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output dist/docs.json",
     "docs:test": "docgen --source ./src",
-    "build:prod": "webpack --mode production",
-    "build:dev": "webpack --mode development --output-filename bundle.js "
+    "build:prod": "webpack --mode production --output-filename bundle.prod.min.js",
+    "build:dev": "webpack --mode development --output-filename bundle.dev.js "
   },
   "keywords": [
     "battlelog",
@@ -20,9 +20,11 @@
   "author": "Nefomemes",
   "license": "MIT",
   "dependencies": {
+    "@babel/runtime": "7.13.10",
     "axios": "^0.21.1"
   },
   "devDependencies": {
+    
     "@babel/core": ">=7.2.0",
     "@babel/eslint-parser": "^7.12.16",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
@@ -36,7 +38,7 @@
     "eslint-plugin-jsdoc": "^32.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "jsdoc": "^3.6.6",
+    
     "node-polyfill-webpack-plugin": "^1.0.3",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0"

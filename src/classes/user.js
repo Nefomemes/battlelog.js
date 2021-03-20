@@ -1,6 +1,7 @@
 const { Platoon } = require("./platoon");
 const utils = require("../utils/utils");
 const { stringify } = require("querystring");
+
 const { SoldiersManager } = require("./soldiersmanager");
 const { Soldier } = require("./soldier");
 const { BattlelogMap } = require("./blmap");
@@ -249,3 +250,4 @@ class User {
 }
 
 module.exports.User = User;
+

@@ -1,6 +1,12 @@
 (async function () {
-  const bl = require("./dist/bundle.js");
-
+  
+  var bl;
+  
+  if(process.env.BLJS_DEV){
+  bl = require("./dist/bundle.dev.js");
+} else {
+  bl = require("./dist/bundle.prod.min.js");
+  }
   var client = bl();
 
   var bf3 = client.game("bf4");
