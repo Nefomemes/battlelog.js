@@ -59,6 +59,8 @@ For example using GitCDN:
 
 Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
 
+Also, make sure Axios is loaded **before** BattlelogJS.
+
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 ```
