@@ -1,14 +1,6 @@
 name: CI (build and test)
-on:
-    push:
-         
-         branches:
-            - '*'
-            - '!gh-pages'
-         tags:
-            - '*'
-         paths:
-            - 'src/**.js'
+on: workflow_dispatch
+
 jobs:
     
           
@@ -30,8 +22,8 @@ jobs:
                run: |
 
                 git config pull.rebase false
-                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                git config --local user.name "github-actions[bot]"
+                git config --local user.email "nefothingy@hotmail.com"
+                git config --local user.name "Nefomemes"
                 git pull origin ${GITHUB_REF##*/}
                 
              - name: Generate browser-supported dist
@@ -44,7 +36,7 @@ jobs:
                 
                 git add --all
                 
-                git commit -m "Generated browser-supported dist" -a
+                git commit -m "Build: Generate browser-supported dist" -a
                continue-on-error: true
              - name: Push the dist
                uses: ad-m/github-push-action@master
