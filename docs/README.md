@@ -45,13 +45,23 @@ library in pretty much any major CDN services, like
 You can use two bundles, one is the development bundle (dist/bundle.dev.js) and the
 minified production bundle (dist/bundle.prod.min.js)
 
-Then you can of course paste the CDN link to your HTML file.
+Then you can of course paste the CDN link to your HTML app.
 
 ```html
-<script src="Battlelog.js config file"></script>
+<script src="Battlelog.js CDN link"></script>
 ```
 
-Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js on NPM, you also automatically install Axios as well. But this isn't the case for browsers. You will have to add 
+For example using GitCDN:
+
+```html
+<script src="gitcdn.link/cdn/Nefomemes/battlelog.js/master/dist/bundle.prod.min.js"></script>
+```
+
+Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js on NPM, you also automatically install Axios as well. But this isn't the case for browsers. You will have to add Axios into your HTML app.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+```
 
 </details>
 
