@@ -45,8 +45,13 @@ library in pretty much any major CDN services, like
 You can use two bundles, one is the development bundle (dist/bundle.dev.js) and the
 minified production bundle (dist/bundle.prod.min.js)
 
-Note that due to [#67](https://github.com/Nefomemes/battlelog.js/issues/67), the
-production bundle is unusable. Please uae the development bundle instead.
+Then you can of course paste the CDN link to your HTML file.
+
+```html
+<script src="Battlelog.js config file"></script>
+```
+
+Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js on NPM, you also automatically install Axios as well. But this isn't the case for browsers. You will have to add 
 
 </details>
 
