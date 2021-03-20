@@ -5,7 +5,6 @@
 <summary><bold>Node.js</bold></summary>
 <br/>
 
-If you are installing battlelog.js in a Node.js environment:
 
 If you want to install this trough the NPM registry.
 
