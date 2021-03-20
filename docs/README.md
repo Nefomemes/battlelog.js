@@ -63,6 +63,7 @@ Also, make sure Axios is loaded **before** BattlelogJS.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="Battlelog.js CDN link"></script>
 ```
 
 </details>
