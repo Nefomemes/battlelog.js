@@ -4,8 +4,8 @@ class ForumChannel {
     constructor(forum, data) {
 
         /**
-       * @property {GameClient} client - The client used to access this user.
-       */
+         * @property {GameClient} client - The client used to access this user.
+         */
         Object.defineProperties(this, {
             client: {
                 value: forum.client,
