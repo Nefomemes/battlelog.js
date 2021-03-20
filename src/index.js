@@ -1,11 +1,11 @@
-const {User} = require("./classes/user");
-const {Platoon} = require("./classes/platoon");
-const {GameClient} = require("./classes/gameclient");
-const {BattlelogClient} = require("./classes/blclient");
-const {UsersManager} = require("./classes/um");
-const {Soldier} = require("./classes/soldier");
-const {ServerBrowser} = require("./classes/sb");
-const {Server} = require("./classes/server");
+const { User } = require("./classes/user");
+const { Platoon } = require("./classes/platoon");
+const { GameClient } = require("./classes/gameclient");
+const { BattlelogClient } = require("./classes/blclient");
+const { UsersManager } = require("./classes/um");
+const { Soldier } = require("./classes/soldier");
+const { ServerBrowser } = require("./classes/sb");
+const { Server } = require("./classes/server");
 const utils = require("./utils/utils");
 module.exports = (...params) => {
   return new BattlelogClient(...params);

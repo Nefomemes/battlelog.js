@@ -1,6 +1,6 @@
-const {BattlelogMap} = require("./blmap");
+const { BattlelogMap } = require("./blmap");
 const utils = require("../utils/utils");
-const {ForumCategory} = require("./forumcategory");
+const { ForumCategory } = require("./forumcategory");
 
 /**
  * Manages all forums.
@@ -15,7 +15,7 @@ class Forums {
    * @param {Array} data
    */
   constructor(client, data) {
-    Object.defineProperty(this, 'client', {value : client, enumerable : false});
+    Object.defineProperty(this, "client", { value: client, enumerable: false });
   }
   /**
    *
@@ -25,7 +25,9 @@ class Forums {
   structureData(data) {
     for (let forumCategory of data) {
       this.categories.structureData(
-          forumCategory.id, new ForumCategory(this.client, forumCategory));
+        forumCategory.id,
+        new ForumCategory(this.client, forumCategory)
+      );
     }
     return this;
   }
@@ -35,7 +37,7 @@ class Forums {
    * @async
    */
   async fetch() {
-    const res = await this.client.get('/forum');
+    const res = await this.client.get("/forum");
 
     this.structureData(res.data.context.categories);
   }
