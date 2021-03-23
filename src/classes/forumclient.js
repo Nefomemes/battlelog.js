@@ -21,9 +21,10 @@ class Forums {
     });
   }
   /**
-   * 
-   *  
-   * @param {Array<ForumCategory>|ForumCategory} data 
+   * Structure data
+   *
+   * @function
+   * @param {Array<ForumCategory>|ForumCategory} data - 
    */
   structureData(data){
     if(Array.isArray){
