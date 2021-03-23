@@ -1,9 +1,13 @@
 {
   "tags": {
-    "allowUnknownTags": ["category"]
+    "allowUnknownTags": [
+      "category"
+    ]
   },
   "source": {
-    "include": ["./src"],
+    "include": [
+      "./src"
+    ],
     "includePattern": ".js$",
     "excludePattern": "(node_modules/|docs)"
   },
@@ -27,7 +31,9 @@
     "search": true,
     "default": {
       "staticFiles": {
-        "include": ["./static/"]
+        "include": [
+          "./static/"
+        ]
       }
     },
     "better-docs": {
