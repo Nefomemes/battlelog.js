@@ -2847,7 +2847,7 @@ jsdoc-to-markdown@^5.0.1:
     jsdoc-parse "^4.0.1"
     walk-back "^4.0.0"
 
-jsdoc@^3.6.3, jsdoc@^3.6.6:
+jsdoc@^3.6.3:
   version "3.6.6"
   resolved "https://registry.yarnpkg.com/jsdoc/-/jsdoc-3.6.6.tgz#9fe162bbdb13ee7988bf74352b5147565bcfd8e1"
   integrity sha512-znR99e1BHeyEkSvgDDpX0sTiTu+8aQyDl9DawrkOGZTTW8hv0deIFXx87114zJ7gRaDZKVQD/4tr1ifmJp9xhQ==
