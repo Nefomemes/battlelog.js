@@ -1,4 +1,4 @@
-(async function () {
+(async function() {
   var bl;
 
   if (process.env.BLJS_DEV) {

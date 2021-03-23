@@ -1,5 +1,5 @@
 const utils = require("../utils/utils");
-const { GameClient } = require("./gameclient");
+const {GameClient} = require("./gameclient");
 /**
 
  * Represents a Battlelog session.
@@ -21,10 +21,8 @@ class BattlelogClient {
   constructor(options = {}) {
     if (options && typeof options !== "object") {
       throw Error(
-        `Parameter 'options' is required to be an object.  While it is ${utils.getArticle(
-          typeof options
-        )} ${typeof options}.`
-      );
+          `Parameter 'options' is required to be an object.  While it is ${
+              utils.getArticle(typeof options)} ${typeof options}.`);
     }
   }
 
@@ -34,9 +32,7 @@ class BattlelogClient {
    *
    * @param {...*} params - The params used to create the instance.
    */
-  game(...params) {
-    return new GameClient(this, ...params);
-  }
+  game(...params) { return new GameClient(this, ...params); }
 }
 
 module.exports.BattlelogClient = BattlelogClient;
