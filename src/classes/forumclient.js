@@ -32,6 +32,8 @@ class Forums {
       this.categories.structureData(forumCategory.id, new ForumCategory(this.client, forumCategory));
  
     }} else if(data instanceof ForumCategory){
+        this.categories.structureData(data.id, data);
+
      }
     return this;
    }
