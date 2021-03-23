@@ -9,7 +9,6 @@ const { Server } = require("./classes/server");
 const utils = require("./utils/utils");
 module.exports = (...params) => {
   return new BattlelogClient(...params);
-
 };
 
 module.exports.BattlelogClient = BattlelogClient;

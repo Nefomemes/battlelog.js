@@ -28,8 +28,8 @@ the devs of this library, in your "Credits" page or something.
 
 # Legal
 
-This project is not affiliated Electronic Arts Inc. or EA Digital Illusins CE
-AB. Battlefield and Battlelog are registered trademarks of Electronic Arts Inc.
+This project is neither developed by Electronic Arts Inc. or EA Digital Illusins CE
+AB nor affiliated with them. Battlefield and Battlelog are registered trademarks of Electronic Arts Inc.
 All company, product, and service names, logos, and brands, and any other
 copyrighted materials are property of their respective owners and are used for
 identification purposes only. Use of these materials does not imply endorsement.

@@ -13,9 +13,6 @@ const { BattlelogMap } = require("./blmap");
  * @param {object} data - Raw object data of the user.
  */
 class User {
-  
-  
-
   /**
    * The platoon the user is a part of. Please do not confuse this with
    * User#platoon
@@ -124,10 +121,10 @@ class User {
    */
   constructor(client, data) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
-  /**
-   * @property {GameClient} client - The client used to access this user.
-   */
-  
+    /**
+     * @property {GameClient} client - The client used to access this user.
+     */
+
     if (typeof data === "object") {
       this.structureData(data);
     } else if (typeof data == "string") {
@@ -192,8 +189,6 @@ class User {
     if (data.soldiersBox) {
       this.soldiers.structureData(data.soldiersBox);
     }
-
-    
   }
 
   /**
@@ -250,4 +245,3 @@ class User {
 }
 
 module.exports.User = User;
-
