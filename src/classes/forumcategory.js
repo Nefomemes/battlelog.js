@@ -1,4 +1,4 @@
-const utils = require("../utils/utils")
+const utils = require("../utils/utils");
 
 /**
  * Represents a Forum Category.
@@ -6,20 +6,20 @@ const utils = require("../utils/utils")
  * @class
  */
 class ForumCategory {
-
   /**
    *
    * @param {ForumClient} forum - The forum client of this instance.
    * @param {object} data - The data of this instance.
    */
   constructor(forum, data) {
-    Object.defineProperty(this, 'client',
-                          {value : forum.client, enumerable : false});
+    Object.defineProperty(this, "client", {
+      value: forum.client,
+      enumerable: false,
+    });
 
-    Object
-        .defineProperty(this, 'forum', {value : forum, enumerable : false})
+    Object.defineProperty(this, "forum", { value: forum, enumerable: false });
 
-            this.structureData(data);
+    this.structureData(data);
   }
 
   /**
