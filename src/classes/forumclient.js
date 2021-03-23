@@ -23,13 +23,15 @@ class Forums {
   /**
    * 
    *  
-   * @param {Array[ForumCategory]} data 
+   * @param {Array<ForumCategory>|ForumCategory} data 
    */
   structureData(data){
+    if(Array.isArray){
     for(let forumCategory of data){
       this.categories.structureData(forumCategory.id, new ForumCategory(this.client, forumCategory));
  
-    }
+    }} else if(data instanceof ForumCategory){
+     }
     return this;
    }
    /**
