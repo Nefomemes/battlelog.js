@@ -52,7 +52,7 @@ jobs:
              with:
                node-version: 14
            - name: Run test
-             run: npm run test
+             run: npm install && npm run test
              
     test_dev:
        name: Test dev bundle
@@ -66,4 +66,4 @@ jobs:
             with:
               node-version: '14'
           - name: Run test
-            run: export BLJS_DEV=true && npm run test
+            run: npm install && export BLJS_DEV=true && npm run test
