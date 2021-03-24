@@ -5,7 +5,6 @@
 <summary><bold>Node.js</bold></summary>
 <br/>
 
-If you are installing battlelog.js in a Node.js environment:
 
 If you want to install this trough the NPM registry.
 
@@ -42,11 +41,29 @@ library in pretty much any major CDN services, like
 [JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js),
 [UnPKG](https://unpkg.com/), and [GitCDN](https://gitcdn.link)
 
-You can use two bundles, one is the development bundle (dist/bundle.dev.js) and the
-minified production bundle (dist/bundle.prod.min.js)
+You can use two bundles, one is the development bundle (dist/bundle.dev.js) and
+the minified production bundle (dist/bundle.prod.min.js)
 
-Note that due to [#67](https://github.com/Nefomemes/battlelog.js/issues/67), the
-production bundle is unusable. Please uae the development bundle instead.
+Then you can of course paste the CDN link to your HTML app.
+
+```html
+<script src="Battlelog.js CDN link"></script>
+```
+
+For example using GitCDN:
+
+```html
+<script src="gitcdn.link/cdn/Nefomemes/battlelog.js/master/dist/bundle.prod.min.js"></script>
+```
+
+Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
+
+Also, make sure Axios is loaded **before** BattlelogJS.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="Battlelog.js CDN link"></script>
+```
 
 </details>
 

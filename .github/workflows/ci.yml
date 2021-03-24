@@ -1,21 +1,10 @@
 name: CI (build and test)
-on:
-    push:
-         
-         branches:
-            - '*'
-            - '!gh-pages'
-         tags:
-            - '*'
-         paths:
-            - 'src/**.js'
-jobs:
-    
-          
+on: workflow_dispatch
+
+jobs:     
     build:
           name: Build
-          runs-on: ubuntu-latest
-          
+          runs-on: ubuntu-latest        
           steps:
              - name: Checkout things
                uses: actions/checkout@v2
@@ -30,11 +19,10 @@ jobs:
                run: |
 
                 git config pull.rebase false
-                git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                git config --local user.name "github-actions[bot]"
+                git config --local user.email "nefothingy@hotmail.com"
+                git config --local user.name "Nefomemes"
                 git pull origin ${GITHUB_REF##*/}
-                
-             - name: Generate browser-supported dist
+             - name: Build library
                run: |
                 yarn install
                 yarn build:dev
@@ -44,7 +32,7 @@ jobs:
                 
                 git add --all
                 
-                git commit -m "Generated browser-supported dist" -a
+                git commit -m "Build: Build library" -a
                continue-on-error: true
              - name: Push the dist
                uses: ad-m/github-push-action@master
@@ -79,4 +67,3 @@ jobs:
               node-version: '14'
           - name: Run test
             run: export BLJS_DEV=true && npm run test
-  

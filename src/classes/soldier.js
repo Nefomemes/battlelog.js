@@ -1,6 +1,3 @@
-
-
-
 const utils = require("../utils/utils");
 /**
  * Represents a Battlelog soldier.

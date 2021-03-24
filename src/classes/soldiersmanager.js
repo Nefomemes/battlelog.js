@@ -63,4 +63,3 @@ class SoldiersManager {
 }
 
 module.exports.SoldiersManager = SoldiersManager;
-

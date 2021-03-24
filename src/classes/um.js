@@ -1,4 +1,3 @@
-
 const { User } = require("./user");
 const { BattlelogMap } = require("./blmap");
 class UsersManager {
@@ -14,5 +13,3 @@ class UsersManager {
 }
 
 module.exports.UsersManager = UsersManager;
-
-

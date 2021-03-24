@@ -1,9 +1,6 @@
 const utils = require("../utils/utils");
 
 class Platoon {
-
-
-
   /**
    * Creates a new Platoon instance.
    *

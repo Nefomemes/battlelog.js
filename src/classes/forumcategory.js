@@ -1,24 +1,39 @@
-class ForumCategory {
-    constructor(forum, data){
-      Object.defineProperty(this, 'client', {
-        value: forum.client,
-        enumerable: false
-      });
+const utils = require("../utils/utils");
 
-      Object.defineProperty(this, 'forum', {
-        value: forum,
-        
-      })
-    }
-  
+/**
+ * Represents a Forum Category.
+ *
+ * @class
+ */
+class ForumCategory {
   /**
-   * 
-   
-   * @function
+   *
+   * @param {ForumClient} forum - The forum client of this instance.
+   * @param {object} data - The data of this instance.
    */
-    structureData(){
-    }
- 
+  constructor(forum, data) {
+    Object.defineProperty(this, "client", {
+      value: forum.client,
+      enumerable: false,
+    });
+
+    Object.defineProperty(this, "forum", { value: forum, enumerable: false });
+
+    this.structureData(data);
+  }
+
+  /**
+   *  Structure data
+   *
+   * @param {object} object - The object used to structure the instance.
+   * @param data
+   * @function
+   * @returns {ForumCategory} - The instance
+   */
+  structureData(data) {
+    utils.structureData(this, data);
+    return this;
+  }
 }
 
 module.exports.ForumCategory = ForumCategory;
