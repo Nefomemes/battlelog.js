@@ -57,7 +57,7 @@ class User {
    *
    * @property {SoldiersManager}
    */
-  soldiers = new SoldiersManager(this, []);
+  soldiers;
   /*
   userinfo: {
       privacyFeedAndGameActivity: 2,
@@ -121,6 +121,8 @@ class User {
    */
   constructor(client, data) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
+
+    this.soldiers = new SoldiersManager(this, []);
     /**
      * @property {GameClient} client - The client used to access this user.
      */
@@ -143,8 +145,8 @@ class User {
 
     const profile = res.data.context.profileCommon;
     this.structureData(profile);
-    res.data.context.soldiersBox;
-    this.activities = res.data.context.activityStream;
+    this.soldiers.structureData(res.data.context.soldiersBox);
+
     return this;
   }
   /**
@@ -157,15 +159,15 @@ class User {
     utils.structureData(this, data, {
       blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
     });
+
     /**
      *
      */
-    if (data.user) {
-      utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
 
-      if (data.user.gravatarMd5) {
-        this.gravatarEmailHash = data.user.gravatarMd5;
-      }
+    utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
+
+    if (data.user.gravatarMd5) {
+      this.gravatarEmailHash = data.user.gravatarMd5;
     }
 
     if (data.tenFriends && data.tenFriends.length) {

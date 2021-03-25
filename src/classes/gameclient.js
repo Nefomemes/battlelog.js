@@ -44,14 +44,17 @@ class GameClient {
 
     if (!options.axios) options.axios = {};
 
-    var axios = axios.create({
+    let instance = axios.create({
       baseURL: `https://battlelog.battlefield.com/${this.game}`,
 
       ...options.axios,
       headers: { ...(options.axios.headers || {}), ...defaultHeader },
     });
 
-    Object.defineProperty(this, "axios", { value: axios, enumerable: false });
+    Object.defineProperty(this, "axios", {
+      value: instance,
+      enumerable: false,
+    });
   }
 
   users = new UsersManager(this);

@@ -56,11 +56,10 @@ function validateOptions(data, rules) {
   if (rules.typeof) {
     for (let [prop, value] of Object.entries(rules.typeof)) {
       var isTrue;
-      if (typeof value === "string") {
-        isTrue =
-          value === "array"
-            ? Array.isArray(data[prop])
-            : typeof data[prop] === value;
+      if (value === "array") {
+        isTrue = Array.isArray(data[prop]);
+      } else if (typeof value === "string") {
+        isTrue = typeof data[prop] === value;
       } else if (typeof value === "function") {
         isTrue = data[prop] instanceof value;
       } else {
@@ -70,7 +69,7 @@ function validateOptions(data, rules) {
           )} ${typeof value}`
         );
       }
-      if (isTrue)
+      if (!isTrue)
         throw Error(
           `Option '${prop}' is required to be ${getArticle(
             value
@@ -148,8 +147,9 @@ function structureData(cls, data, rules = {}) {
       alias = rules.alias[name];
     }
     if (
-      rules.whitelist.length &&
-      (rules.whitelist.includes(name) || rules.whitelist.includes(alias))
+      !rules.whitelist.length ||
+      rules.whitelist.includes(name) ||
+      rules.whitelist.includes(alias)
     ) {
       if (
         !(
