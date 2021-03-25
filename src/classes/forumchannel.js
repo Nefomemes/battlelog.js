@@ -39,3 +39,5 @@ class ForumChannel {
 
     }
 }
+
+module.exports.ForumChannel = ForumChannel;
