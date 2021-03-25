@@ -48,3 +48,5 @@ class Forums {
 
   categories = new BattlelogMap();
 }
+
+module.exports.ForumClient = ForumClient;
