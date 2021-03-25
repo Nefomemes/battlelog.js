@@ -14,6 +14,5 @@
 
   var user = await bf3.users.fetch("JackFrags");
 
-  await user.soldiers.fetch();
-  console.log(Array.from(user.soldiers.cache).map(([i, e]) => e)[0]);
+  console.log(user)
 })();

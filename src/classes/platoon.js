@@ -13,6 +13,8 @@ class Platoon {
       this.structureData(data);
     }
   }
+  
+  badge = {};
   /**
    * Structure the class using the data provided.
    *
