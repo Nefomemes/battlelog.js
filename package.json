@@ -1,6 +1,6 @@
 {
   "name": "battlelog.js",
-  "version": "0.3.0",
+  "version": "0.2.3",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
   "main": "dist/bundle.prod.min.js",
   "scripts": {
