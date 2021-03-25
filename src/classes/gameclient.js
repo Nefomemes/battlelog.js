@@ -51,7 +51,10 @@ class GameClient {
       headers: { ...(options.axios.headers || {}), ...defaultHeader },
     });
 
-    Object.defineProperty(this, "axios", { value: instance, enumerable: false });
+    Object.defineProperty(this, "axios", {
+      value: instance,
+      enumerable: false,
+    });
   }
 
   users = new UsersManager(this);

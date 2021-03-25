@@ -1,8 +1,8 @@
 (async function () {
   var bl;
 
-  if(process.env.BLJS_RAW){
-  	bl = require("./src/index.js")
+  if (process.env.BLJS_RAW) {
+    bl = require("./src/index.js");
   } else if (process.env.BLJS_DEV) {
     bl = require("./dist/bundle.dev.js");
   } else {

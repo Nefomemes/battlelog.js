@@ -11,17 +11,17 @@
  * @param {boolean} plural
  */
 function getArticle(str, plural) {
-	if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
+  if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
 
-	if (typeof str !== 'string')
-		throw Error(
-			`Expected parameter 'str' to be a string. While it is actually ${getArticle(
-				typeof str
-			)} ${typeof str}.`
-		);
-	if (plural && plural === true) return 'some';
-	if (['a', 'i', 'u', 'e', 'o'].includes(str[0])) return 'an';
-	return 'a';
+  if (typeof str !== "string")
+    throw Error(
+      `Expected parameter 'str' to be a string. While it is actually ${getArticle(
+        typeof str
+      )} ${typeof str}.`
+    );
+  if (plural && plural === true) return "some";
+  if (["a", "i", "u", "e", "o"].includes(str[0])) return "an";
+  return "a";
 }
 
 /**
@@ -32,70 +32,72 @@ function getArticle(str, plural) {
  * @param {object} rules - The rules used to manage the options.
  */
 function validateOptions(data, rules) {
-	if (rules.alias) {
-		for (let [name, value] of Object.entries(rules.alias)) {
-			if (typeof data[name] === 'undefined') data[name] = data[value];
-		}
-	}
+  if (rules.alias) {
+    for (let [name, value] of Object.entries(rules.alias)) {
+      if (typeof data[name] === "undefined") data[name] = data[value];
+    }
+  }
 
-	if (rules.defaults) {
-		for (let [name, value] of Object.entries(rules.defaults)) {
-			if (typeof data[name] === 'undefined') data[name] = value;
-		}
-	}
+  if (rules.defaults) {
+    for (let [name, value] of Object.entries(rules.defaults)) {
+      if (typeof data[name] === "undefined") data[name] = value;
+    }
+  }
 
-	if (rules.required && rules.required.length) {
-		for (let required of rules.required) {
-			if (!data[required])
-				throw Error(
-					`Option '${required}' is required. While it's not provided.`
-				);
-		}
-	}
+  if (rules.required && rules.required.length) {
+    for (let required of rules.required) {
+      if (!data[required])
+        throw Error(
+          `Option '${required}' is required. While it's not provided.`
+        );
+    }
+  }
 
-	if (rules.typeof) {
-		for (let [prop, value] of Object.entries(rules.typeof)) {
-			var isTrue;
-			if (value === 'array') {
-				isTrue = Array.isArray(data[prop]);
-			} else if (typeof value === 'string') {
-				isTrue = typeof data[prop] === value;
-			} else if (typeof value === 'function') {
-				isTrue = data[prop] instanceof value;
-			} else {
-				throw Error(
-					`Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(
-						typeof value
-					)} ${typeof value}`
-				);
-			}
-			if (!isTrue)
-				throw Error(
-					`Option '${prop}' is required to be ${getArticle(
-						value
-					)} ${value} while it is actually a ${
-						data[prop].constructor
-					} (${typeof data[prop]}).`
-				);
-		}
-	}
+  if (rules.typeof) {
+    for (let [prop, value] of Object.entries(rules.typeof)) {
+      var isTrue;
+      if (value === "array") {
+        isTrue = Array.isArray(data[prop]);
+      } else if (typeof value === "string") {
+        isTrue = typeof data[prop] === value;
+      } else if (typeof value === "function") {
+        isTrue = data[prop] instanceof value;
+      } else {
+        throw Error(
+          `Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(
+            typeof value
+          )} ${typeof value}`
+        );
+      }
+      if (!isTrue)
+        throw Error(
+          `Option '${prop}' is required to be ${getArticle(
+            value
+          )} ${value} while it is actually a ${
+            data[prop].constructor
+          } (${typeof data[prop]}).`
+        );
+    }
+  }
 
-	if (rules.requiredToBe) {
-		for (let [prop, value] of Object.entries(rules.requiredToBe)) {
-			if (value && value.length) {
-				if (!value.includes(data[prop]))
-					throw Error(
-						`Option ${prop} is required to be ${(() => {
-							var lastOne = value.pop();
+  if (rules.requiredToBe) {
+    for (let [prop, value] of Object.entries(rules.requiredToBe)) {
+      if (value && value.length) {
+        if (!value.includes(data[prop]))
+          throw Error(
+            `Option ${prop} is required to be ${(() => {
+              var lastOne = value.pop();
 
-							return `${value.map(i => `'${i}'`).join(', ')}, or '${lastOne}'`;
-						})()}`
-					);
-			}
-		}
-	}
+              return `${value
+                .map((i) => `'${i}'`)
+                .join(", ")}, or '${lastOne}'`;
+            })()}`
+          );
+      }
+    }
+  }
 
-	return data;
+  return data;
 }
 
 /**
@@ -118,55 +120,56 @@ function validateOptions(data, rules) {
  * @returns {object} - The class/object
  */
 function structureData(cls, data, rules = {}) {
-	if (!data) return;
-	if (!cls) throw Error();
+  if (!data) return;
+  if (!cls) throw Error();
 
-	validateOptions(rules, {
-		typeof: {
-			blacklist: 'array',
-			setBoolean: 'array',
-			alias: 'object',
-			onlyAssignIfTruthy: 'array',
-			whitelist: 'array'
-		},
-		defaults: {
-			blacklist: [],
-			setBoolean: [],
-			alias: {},
-			onlyAssignIfTruthy: [],
-			whitelist: []
-		}
-	});
+  validateOptions(rules, {
+    typeof: {
+      blacklist: "array",
+      setBoolean: "array",
+      alias: "object",
+      onlyAssignIfTruthy: "array",
+      whitelist: "array",
+    },
+    defaults: {
+      blacklist: [],
+      setBoolean: [],
+      alias: {},
+      onlyAssignIfTruthy: [],
+      whitelist: [],
+    },
+  });
 
-	for (let [name, value] of Object.entries(data)) {
-		var alias;
+  for (let [name, value] of Object.entries(data)) {
+    var alias;
 
-		if (rules.alias[name]) {
-			alias = rules.alias[name];
-		}
-		if (
-			!rules.whitelist.length || (
-			(rules.whitelist.includes(name) || rules.whitelist.includes(alias)))
-		) {
-			if (
-				!(
-					rules.onlyAssignIfTruthy.includes(name) ||
-					rules.onlyAssignIfTruthy.includes(alias)
-				) ||
-				value
-			) {
-				if (!rules.blacklist.includes(name)) {
-					if (!rules.setBoolean.includes(name)) {
-						cls[alias || name] = value;
-					} else {
-						cls[alias || name] = value ? true : false;
-					}
-				}
-			}
-		}
-	}
+    if (rules.alias[name]) {
+      alias = rules.alias[name];
+    }
+    if (
+      !rules.whitelist.length ||
+      rules.whitelist.includes(name) ||
+      rules.whitelist.includes(alias)
+    ) {
+      if (
+        !(
+          rules.onlyAssignIfTruthy.includes(name) ||
+          rules.onlyAssignIfTruthy.includes(alias)
+        ) ||
+        value
+      ) {
+        if (!rules.blacklist.includes(name)) {
+          if (!rules.setBoolean.includes(name)) {
+            cls[alias || name] = value;
+          } else {
+            cls[alias || name] = value ? true : false;
+          }
+        }
+      }
+    }
+  }
 
-	return cls;
+  return cls;
 }
 
 module.exports.getArticle = getArticle;

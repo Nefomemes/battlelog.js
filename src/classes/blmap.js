@@ -18,7 +18,6 @@ class BattlelogMap extends Map {
     if (!key) throw Error("key is not specified");
     if (!value) throw Error("value is not specified");
 
-   
     if (super.get(key)) {
       super.get(key).structureData(value, ...structureDataStuff);
     } else {

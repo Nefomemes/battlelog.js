@@ -16,24 +16,26 @@ class ForumClient {
    */
   constructor(client, data) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
- 
-   }
+  }
   /**
    * Structure data
    *
    * @function
-   * @param {(Array<ForumCategory> | ForumCategory)} data - The data of this instance.
+   * @param {(Array<ForumCategory> | ForumCategory)} data - The data of this
+   *     instance.
    * @return {ForumClient} - The instance
    */
-  structureData(data){
-    if(Array.isArray){
-    for(let forumCategory of data){
-      this.categories.structureData(forumCategory.id, new ForumCategory(this.client, forumCategory));
- 
-    }} else if(data instanceof ForumCategory){
-        this.categories.structureData(data.id, data);
-
-     }
+  structureData(data) {
+    if (Array.isArray) {
+      for (let forumCategory of data) {
+        this.categories.structureData(
+          forumCategory.id,
+          new ForumCategory(this.client, forumCategory)
+        );
+      }
+    } else if (data instanceof ForumCategory) {
+      this.categories.structureData(data.id, data);
+    }
     return this;
   }
   /**

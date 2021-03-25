@@ -120,9 +120,8 @@ class User {
    * @param {UserResolvable} [data] - The user's data.
    */
   constructor(client, data) {
-  	
     Object.defineProperty(this, "client", { value: client, enumerable: false });
-    
+
     this.soldiers = new SoldiersManager(this, []);
     /**
      * @property {GameClient} client - The client used to access this user.
@@ -147,7 +146,7 @@ class User {
     const profile = res.data.context.profileCommon;
     this.structureData(profile);
     this.soldiers.structureData(res.data.context.soldiersBox);
-    
+
     return this;
   }
   /**
@@ -157,24 +156,19 @@ class User {
    * @returns {User} the User
    */
   structureData(data) {
- 
     utils.structureData(this, data, {
       blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
     });
-    
-    
-    
+
     /**
      *
      */
-    
-      utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
 
-     
-      if (data.user.gravatarMd5) {
-        this.gravatarEmailHash = data.user.gravatarMd5;
-      }
-    
+    utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
+
+    if (data.user.gravatarMd5) {
+      this.gravatarEmailHash = data.user.gravatarMd5;
+    }
 
     if (data.tenFriends && data.tenFriends.length) {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));

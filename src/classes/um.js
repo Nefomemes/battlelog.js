@@ -7,11 +7,10 @@ class UsersManager {
   }
 
   async fetch(...params) {
-let user = await new  User(this.client, ...params).fetch();
+    let user = await new User(this.client, ...params).fetch();
 
-this.cache.structureData(user.userId, user);
+    this.cache.structureData(user.userId, user);
     return user;
-    
   }
 
   cache = new BattlelogMap();
