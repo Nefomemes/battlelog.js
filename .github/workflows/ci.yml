@@ -1,5 +1,17 @@
 name: CI (build and test)
-on: workflow_dispatch
+on: 
+   push:
+        branches:
+          - '*'
+          - '!gh-pages'
+        tags:
+         - '*'
+        paths:
+        - 'src/**.js'
+   workflow_dispatch:
+        branches:
+          - '*'
+          - '!gh-pages'
 
 jobs:     
     build:
