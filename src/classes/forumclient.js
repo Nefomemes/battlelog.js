@@ -7,7 +7,7 @@ const { ForumCategory } = require("./forumcategory");
  *
  * @class
  */
-class Forums {
+class ForumClient {
   /**
    * Creates a new  Forums instance.
    *
@@ -22,7 +22,8 @@ class Forums {
    * Structure data
    *
    * @function
-   * @param {Array<ForumCategory>|ForumCategory} data - The data of this instance.
+   * @param {(Array<ForumCategory> | ForumCategory)} data - The data of this instance.
+   * @return {ForumClient} - The instance
    */
   structureData(data){
     if(Array.isArray){
@@ -39,6 +40,7 @@ class Forums {
    *
    * @function
    * @async
+   * @return {ForumClient} - This instance
    */
   async fetch() {
     const res = await this.client.get("/forum");
@@ -48,3 +50,5 @@ class Forums {
 
   categories = new BattlelogMap();
 }
+
+module.exports.ForumClient = ForumClient;

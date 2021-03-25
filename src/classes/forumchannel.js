@@ -12,11 +12,12 @@ class ForumChannel {
                 enumerable: false
             }, 
             forum: {
-                value: forum
+                value: forum,
+                enumerable: false
             }
         })
 
-        Object.defineProperty()
+       
 
         this.structureData(data);
     }
@@ -38,4 +39,9 @@ class ForumChannel {
         return this;
 
     }
+    
+    structureData(data){
+    	
+    }
+    
 }

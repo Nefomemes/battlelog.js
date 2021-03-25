@@ -49,8 +49,12 @@ class Soldier {
    */
 
   constructor(user, data, fetch) {
-    this.user = user;
+   
     this.structureData(data, fetch);
+    Object.defineProperties(this, {user: {
+    	value: user,
+    	enumerable: false
+    }, client: {value: user.client, enumerable: false}});
   }
   /**
    * Populate an object with a raw data object.
@@ -82,7 +86,7 @@ class Soldier {
     }
     utils.structureData(this, data, rules);
 
-    this.user.soldiers.cache.set(this.persona.personaId, this);
+   
     utils.structureData(this.stats, data, {
       whitelist: soldierRootStats,
     });

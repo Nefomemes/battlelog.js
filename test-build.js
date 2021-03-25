@@ -1,7 +1,9 @@
 (async function () {
   var bl;
 
-  if (process.env.BLJS_DEV) {
+  if(process.env.BLJS_RAW){
+  	bl = require("./src/index.js")
+  } else if (process.env.BLJS_DEV) {
     bl = require("./dist/bundle.dev.js");
   } else {
     bl = require("./dist/bundle.prod.min.js");
@@ -13,5 +15,5 @@
   var user = await bf3.users.fetch("JackFrags");
 
   await user.soldiers.fetch();
-  console.log(user.soldiers.cache);
+  console.log(Array.from(user.soldiers.cache).map(([i, e]) => e)[0]);
 })();
