@@ -1,5 +1,5 @@
-const { Soldier } = require("./soldier");
-const { BattlelogMap } = require("./blmap");
+const {Soldier} = require("./soldier");
+const {BattlelogMap} = require("./blmap");
 
 /**
  * Manages a user's soldiers.
@@ -15,14 +15,14 @@ class SoldiersManager {
    * @param {Array} [data] -  Raw array data of the user's soldiers.
    */
   constructor(user, data) {
-  	console.log(user.client);
-  		Object.defineProperty(this, "user", { value: user, enumerable: false });
+    console.log(user.client);
+    Object.defineProperty(this, "user", {value : user, enumerable : false});
 
     Object.defineProperty(this, "client", {
-      value: user.client,
-      enumerable: false,
+      value : user.client,
+      enumerable : false,
     });
-    
+
     this.structureData(data);
   }
   /**
@@ -35,16 +35,13 @@ class SoldiersManager {
    * @returns {SoldiersManager} this
    */
   structureData(data, fetch) {
-  	
-  if(Array.isArray(data)){
-    for (let soldier of data) {
-      this.cache.structureData(
-        soldier.persona.personaId,
-        new Soldier(this.user, soldier, fetch),
-        fetch
-      );
+
+    if (Array.isArray(data)) {
+      for (let soldier of data) {
+        this.cache.structureData(soldier.persona.personaId,
+                                 new Soldier(this.user, soldier, fetch), fetch);
+      }
     }
-} 
     return this;
   }
   /**
@@ -56,8 +53,7 @@ class SoldiersManager {
    */
   async fetch() {
     var res = await this.client.axios.get(
-      `/user/overviewBoxStats/${this.user.userId}`
-    );
+        `/user/overviewBoxStats/${this.user.userId}`);
 
     this.structureData(res.data.data.soldiersBox, true);
 
