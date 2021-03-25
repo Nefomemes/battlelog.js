@@ -49,11 +49,10 @@ class Soldier {
    */
 
   constructor(user, data, fetch) {
-
     this.structureData(data, fetch);
     Object.defineProperties(this, {
-      user : {value : user, enumerable : false},
-      client : {value : user.client, enumerable : false}
+      user: { value: user, enumerable: false },
+      client: { value: user.client, enumerable: false },
     });
   }
   /**
@@ -81,13 +80,13 @@ class Soldier {
     ];
     if (!fetch) {
       rules = {
-        blacklist : soldierRootStats,
+        blacklist: soldierRootStats,
       };
     }
     utils.structureData(this, data, rules);
 
     utils.structureData(this.stats, data, {
-      whitelist : soldierRootStats,
+      whitelist: soldierRootStats,
     });
 
     return this;
@@ -95,15 +94,16 @@ class Soldier {
 
   async fetch() {
     const res = await this.user.client.axios.get(
-        `/overviewPopulateStats/${this.persona.personaId}/o/1/`);
+      `/overviewPopulateStats/${this.persona.personaId}/o/1/`
+    );
 
     utils.structureData(this.stats, res.data.data.overviewStats, {
-      alias : {
-        numWins : "wins",
-        numRounds : "matchesPlayed",
-        mcomDestroy : "mcomDestroyed",
-        killAssists : "assists",
-        numLosses : "losses",
+      alias: {
+        numWins: "wins",
+        numRounds: "matchesPlayed",
+        mcomDestroy: "mcomDestroyed",
+        killAssists: "assists",
+        numLosses: "losses",
       },
     });
 
