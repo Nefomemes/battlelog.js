@@ -12,7 +12,7 @@
 
   var bf3 = client.game("bf4");
 
-  var user = await bf3.users.fetch("JackFrags");
+  var user = await bf3.users.fetch("DANNYonPC");
 
   console.log(user)
   console.log(user.displayAvatarURL());
