@@ -15,4 +15,5 @@
   var user = await bf3.users.fetch("JackFrags");
 
   console.log(user)
+  console.log(user.displayAvatarURL());
 })();

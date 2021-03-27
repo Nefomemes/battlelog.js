@@ -203,7 +203,7 @@ class User {
   displayAvatarURL(options = {}) {
     utils.validateOptions(options, {
       alias: { size: "s", rating: "r", default: "d", extension: "e" },
-      defaults: { default: "retro" },
+      defaults: { default: "retro", rating: 'g' },
     });
 
     if (options.size && options.size > 2048)
@@ -217,7 +217,7 @@ class User {
 
     if (options.rating === "x") throw Error("Ok coomer");
 
-    if (!["g", "pg"].includes(options.rating)) throw Error("");
+    if (!["g", "pg"].includes(options.rating)) throw Error("Rating must be either 'g' or 'pg'");
     if (
       !(
         options.default.startsWith("http://") ||
