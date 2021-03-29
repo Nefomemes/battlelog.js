@@ -1,8 +1,7 @@
-<p align="center">
-   
-# battlelog.js
-<p align="center">
-  
+
+
+![](https://raw.githubusercontent.com/Nefomemes/battlelog.js/master/docs/20210329_082904.png)
+
 ![Run this repo on Replit](https://replit.com/badge/github/Nefomemes/battlelog.js)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FNefomemes%2Fbattlelog.js?ref=badge_shield)
 [![CodeFactor](https://www.codefactor.io/repository/github/nefomemes/battlelog.js/badge)](https://www.codefactor.io/repository/github/nefomemes/battlelog.js)
