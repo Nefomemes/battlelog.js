@@ -1,2 +1,2 @@
 include:
-  - template: /.gitlab/ci/Dependency-Scanning.gitlab-ci.yml
+  - template: Dependency-Scanning.gitlab-ci.yml
