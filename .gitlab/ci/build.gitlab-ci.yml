@@ -34,4 +34,6 @@ build:
 test: 
     stage: test
     script:
+      - git pull
       - yarn install --prod
+      - yarn test
