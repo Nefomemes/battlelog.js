@@ -1,1 +1,25 @@
+image: node:latest
 
+stages:
+      - build
+      - test
+
+cache:
+      paths:
+        - node_modules/
+
+default:
+    before_script:
+        - npm i -g yarn
+        
+build:
+    stage: build
+    script:
+        - yarn install
+        - yarn build
+        - git config pull.rebase false
+        - git config --local user.email "nefothingy@hotmail.com"
+        - git config --local user.name "Nefomemes"
+        - git add .
+        - |-
+          git commit -m "build(bundle): build production and development bundle"
