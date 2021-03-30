@@ -5,7 +5,9 @@
   "main": "dist/bundle.prod.min.js",
   "scripts": {
     "test": "node test.js dev ; node test.js raw ; node test.js prod",
-
+    "test:prod":"node test.js prod",
+    "test:dev":"node test.js dev",
+    "test:raw":"node test.js raw",
     "start": "node index.js",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
