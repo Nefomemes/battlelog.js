@@ -18,8 +18,20 @@ build:
         - yarn install
         - yarn build
         - git config pull.rebase false
-        - git config --local user.email "nefothingy@hotmail.com"
-        - git config --local user.name "Nefomemes"
+        - git config --local user.email $GITCREDENTIALEMAIL
+        - git config --local user.name $GITCREDENTIALUSERNAME
+        - yarn global add git-credentials-envvar
+        - git config --global credential.helper envvar
+
+# Credit: https://forum.gitlab.com/t/git-push-from-inside-a-gitlab-runner/30554/2
         - git add .
         - |-
           git commit -m "build(bundle): build production and development bundle"
+        - git pull
+        - git push
+
+
+test: 
+    stage: test
+    script:
+      - yarn install --prod
