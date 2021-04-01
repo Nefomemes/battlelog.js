@@ -21,13 +21,13 @@ yarn add battlelog.js
 You can even install it from GitHub:
 
 ```bash
-npm i Nefomemes/battlelog.js
+npm i https://gitlab.com/BLThunderstorm/battlelog.js.git
 ```
 
 Or if you use Yarn:
 
-```
-yarn add https://github.com/Nefomemes/battlelog.js.git
+```bash
+yarn add https://gitlab.com/BLThunderstorm/battlelog.js.git
 ```
 
 </details>
