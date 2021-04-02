@@ -37,15 +37,6 @@ class User {
   friends = new BattlelogMap();
 
   /**
-   * The platoon of the user. This is different than User#platoons as that
-   * property is only available if the game supports joining multiple platoons.
-   *
-   * @property {Platoon}
-   */
-
-  platoon;
-
-  /**
    * @typedef {(User|string|object)} UserResolvable - Something that can be
    * parsed into a User instance. Could be a User instance, the username of the
    * user, or a raw data object of the user.
