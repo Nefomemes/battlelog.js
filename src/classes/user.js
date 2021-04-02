@@ -30,7 +30,7 @@ class User {
   platoonFans = new BattlelogMap();
 
   /**
-   * The user's friemd ;ist. Only have 10 of all of the user's friends though.
+   * The user's friend list. Only have 10 of all of the user's friends though.
    *
    * @property {BattlelogMap<User>}
    */
