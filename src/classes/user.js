@@ -155,11 +155,7 @@ class User {
      *
      */
 
-    utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
-
-    if (data.user.gravatarMd5) {
-      this.gravatarEmailHash = data.user.gravatarMd5;
-    }
+    utils.structureData(this, data.user);
 
     if (data.tenFriends && data.tenFriends.length) {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
@@ -231,7 +227,7 @@ class User {
     let params = { r: options.rating, d: options.default, s: options.size };
 
     if (options.forceDefault) params.f = "y";
-    return `https://www.gravatar.com/avatar/${this.gravatarEmailHash}.${
+    return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
       options.extension
     }?${stringify(params)}`;
   }
