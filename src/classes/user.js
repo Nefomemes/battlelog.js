@@ -162,14 +162,15 @@ class User {
     }
 
     if (data.platoons) {
-      this.platoons = data.platoons.map((i) => new Platoon(this.client, i));
-    }
+     for (let platoon of data.platoons){
+     	this.platoons.structureData(platoon.id, new Platoon (this.client, platoon));
+    }}
 
     if (data.platoonFans) {
-      this.platoonFans = data.platoonFans.map(
-        (i) => new Platoon(this.client, i)
-      );
-    }
+    	for(let platoon of  data.platoonFans){
+      	this.platoons.structureData(platoon.id, new Platoon (this.client, platoon));
+    
+    }}
 
     if (data.club) {
       this.platoon = new Platoon(this.client, data.club);

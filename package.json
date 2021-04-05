@@ -1,6 +1,6 @@
 {
   "name": "battlelog.js",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
   "main": "dist/bundle.prod.min.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "test:dev": "node test.js dev",
     "test:raw": "node test.js raw",
     "start": "node index.js",
-    "gitconfig":"bash gitconfig.sh",
+    "gitconfig": "bash gitconfig.sh",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output dist/docs.json",
