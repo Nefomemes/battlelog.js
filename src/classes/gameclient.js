@@ -53,7 +53,7 @@ class GameClient {
 
     Object.defineProperty(this, "axios", {
       value: instance,
-      enumerable: client,
+      enumerable: false,
     });
   }
 
