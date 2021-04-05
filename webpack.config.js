@@ -20,9 +20,9 @@ module.exports = {
       root: "_"
     }, 
     querystring: {
-      commonjs: "axios",
-      commonjs2: "axios",
-      amd: "axios",
+      commonjs: "querystring",
+      commonjs2: "querystring",
+      amd: "querystring",
       root: "_"
     },
   },
