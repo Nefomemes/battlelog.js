@@ -56,7 +56,7 @@ For example using GitCDN:
 <script src="gitcdn.link/cdn/Nefomemes/battlelog.js/master/dist/bundle.prod.min.js"></script>
 ```
 
-Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
+Secondly, Battlelog.js expects users install Axios and the `querystring` as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. And of course `querystring` is a pre-installed library.  But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
 
 Also, make sure Axios is loaded **before** BattlelogJS.
 

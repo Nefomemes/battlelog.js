@@ -1,6 +1,6 @@
 const { Platoon } = require("./platoon");
 const utils = require("../utils/utils");
-const { stringify } = require("querystring");
+
 
 const { SoldiersManager } = require("./soldiersmanager");
 const { Soldier } = require("./soldier");
@@ -189,6 +189,8 @@ class User {
    * @returns {string} URL string for the user's avatar.
    */
   displayAvatarURL(options = {}) {
+  	
+  	
     utils.validateOptions(options, {
       alias: { size: "s", rating: "r", default: "d", extension: "e" },
       defaults: { default: "retro", rating: 'g' },
@@ -228,6 +230,9 @@ class User {
     let params = { r: options.rating, d: options.default, s: options.size };
 
     if (options.forceDefault) params.f = "y";
+    
+    const { stringify } = require("querystring");
+    
     return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
       options.extension
     }?${stringify(params)}`;
