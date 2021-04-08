@@ -10,10 +10,11 @@
 Unofficial API wrapper for
 <a href="https://battlelog.battlefield.com">Battlefield Battlelog</a>
 </p>
-</div>
-## Resources
 
-- [Discord server](https://discord.gg/gTB3Vzf5)
+<p align="center">[Discord server](https://discord.gg/gTB3Vzf5) | [Documentation]()</p>
+</div>
+
+
 
 ## Branches
 
