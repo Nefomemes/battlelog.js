@@ -1,4 +1,3 @@
-
 [![](https://raw.githubusercontent.com/Nefomemes/battlelog.js/master/docs/20210329_082904.png)](https://github.com/Nefomemes/battlelog.js)
 
 ![Run this repo on Replit](https://replit.com/badge/github/Nefomemes/battlelog.js)
@@ -6,15 +5,12 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/nefomemes/battlelog.js/badge)](https://www.codefactor.io/repository/github/nefomemes/battlelog.js)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/Nefomemes/battlelog.js)
 [![CI (lint, build, and test)](https://github.com/Nefomemes/battlelog.js/actions/workflows/ci.yml/badge.svg)](https://github.com/Nefomemes/battlelog.js/actions/workflows/ci.yml)
-
-</p>
-<br/>
-
+<div>
+<p align="center">
 Unofficial API wrapper for
-[Battlefield Battlelog](https://battlelog.battlefield.com)
-
-</p> 
-
+<a href="https://battlelog.battlefield.com">Battlefield Battlelog</a>
+</p>
+</div>
 ## Resources
 
 - [Discord server](https://discord.gg/gTB3Vzf5)
