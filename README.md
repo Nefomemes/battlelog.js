@@ -1,5 +1,4 @@
 
-
 [![](https://raw.githubusercontent.com/Nefomemes/battlelog.js/master/docs/20210329_082904.png)](https://github.com/Nefomemes/battlelog.js)
 
 ![Run this repo on Replit](https://replit.com/badge/github/Nefomemes/battlelog.js)
@@ -20,7 +19,12 @@ Unofficial API wrapper for
 
 - [Discord server](https://discord.gg/gTB3Vzf5)
 
+## Branches
 
+| Name | Description |
+| ---- | ----------- |
+| dev | The dev branch for the repo. |
+| stable | Stable/prod branch for the repo. |
 
 ## License
 
