@@ -1,30 +1,21 @@
-<<<<<<< HEAD
-(async function(){
-	
-const bl = require("./src/index.js");
-
-var client = bl();
-
-var bf3 = client.game('bf4');
-
-var user = await bf3.users.fetch( "DANNYonPC");
-
-
-
-console.log(user);
-})()
-
-=======
 (async function () {
-  const bl = require("./src/index.js");
+  var bl;
 
+  if (process.env.BLJS_RAW) {
+    bl = require("./src/index.js");
+  } else if (process.env.BLJS_DEV) {
+    bl = require("./dist/bundle.dev.js");
+  } else {
+    bl = require("./dist/bundle.prod.min.js");
+  }
   var client = bl();
 
-  var bf3 = client.game("bf4");
+  var bf3 = client.game("bf3");
 
-  var user = await bf3.users.fetch("JackFrags");
+  var user = await bf3.users.fetch("DANNYonPC");
 
+  console.log(user);
+  
   await user.soldiers.fetch();
   console.log(user.soldiers.cache);
 })();
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb

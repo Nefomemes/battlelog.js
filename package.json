@@ -1,11 +1,13 @@
 {
   "name": "battlelog.js",
-  "version": "0.2.5",
+  "version": "0.2.8",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
   "main": "dist/bundle.prod.min.js",
   "scripts": {
-    "test": "node test-build.js",
-    "start": "node index.js",
+    "test": "node test.js dev ; node test.js prod",
+    "test:prod": "node test.js prod",
+    "test:dev": "node test.js dev",
+    "gitconfig": "bash gitconfig.sh",
     "lint": "eslint ./src --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./src",
     "docs": "docgen --source ./src --output dist/docs.json",
@@ -34,11 +36,13 @@
     "babel-loader": "^8.2.2",
     "discord.js-docgen": "git+https://github.com/Nefomemes/docgen.git",
     "eslint": "^7.1.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "^32.0.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "node-polyfill-webpack-plugin": "^1.0.3",
+    "prettier": "2.2.1",
     "webpack": "^5.27.2",
     "webpack-cli": "^4.5.0"
   }
