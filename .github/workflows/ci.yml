@@ -1,81 +1,81 @@
 name: CI (build and test)
-on: 
-   push:
-        branches:
-          - '*'
-          - '!gh-pages'
-        tags:
-         - '*'
-        paths:
-        - 'src/**.js'
-   workflow_dispatch:
-        branches:
-          - '*'
-          - '!gh-pages'
+on:
+  push:
+    branches:
+      - "*"
+      - "!gh-pages"
+    tags:
+      - "*"
+    paths:
+      - "src/**.js"
+  workflow_dispatch:
+    branches:
+      - "*"
+      - "!gh-pages"
 
-jobs:     
-    build:
-          name: Build
-          runs-on: ubuntu-latest        
-          steps:
-             - name: Checkout things
-               uses: actions/checkout@v2
-             - name: Setup Node.js v14
-               uses: actions/setup-node@v2
-               with:
-                 node-version: '14'
-             - name: Install Yarn
-               run: npm i -g yarn
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout things
+        uses: actions/checkout@v2
+      - name: Setup Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install Yarn
+        run: npm i -g yarn
 
-             - name: Pull
-               run: |
+      - name: Pull
+        run: |
 
-                git config pull.rebase false
-                git config --local user.email "nefothingy@hotmail.com"
-                git config --local user.name "Nefomemes"
-                git pull origin ${GITHUB_REF##*/}
-             - name: Build library
-               run: |
-                yarn install
-                yarn build:dev
-                yarn build:prod
-             - name: Commit the dist
-               run: |
-                
-                git add --all
-                
-                git commit -m "Build: Build library" -a
-               continue-on-error: true
-             - name: Push the dist
-               uses: ad-m/github-push-action@master
-               with:
-                 github_token: ${{ secrets.GITHUB_TOKEN }}
-                 branch: ${{ github.ref }}
-               continue-on-error: true
-    test_prod:
-         name: Test prod bundle
-         runs-on: ubuntu-latest
-         needs: build
-         steps:
-           - name: Checkout things
-             uses: actions/checkout@v2
-           - name: Setup Node.js v14
-             uses: actions/setup-node@v2
-             with:
-               node-version: 14
-           - name: Run test
-             run: npm install && npm run test
-             
-    test_dev:
-       name: Test dev bundle
-       runs-on: ubuntu-latest
-       needs: build
-       steps:
-          - name: Checkout things
-            uses: actions/checkout@v2
-          - name: Setup Node.js v14
-            uses: actions/setup-node@v2
-            with:
-              node-version: '14'
-          - name: Run test
-            run: npm install && export BLJS_DEV=true && npm run test
+          git config pull.rebase false
+          git config --local user.email "nefothingy@hotmail.com"
+          git config --local user.name "Nefomemes"
+          git pull origin ${GITHUB_REF##*/}
+      - name: Build library
+        run: |
+          yarn install
+          yarn build:dev
+          yarn build:prod
+      - name: Commit the dist
+        run: |
+
+          git add --all
+
+          git commit -m "Build: Build library" -a
+        continue-on-error: true
+      - name: Push the dist
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+        continue-on-error: true
+  test_prod:
+    name: Test prod bundle
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout things
+        uses: actions/checkout@v2
+      - name: Setup Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Run test
+        run: npm install && npm run test
+
+  test_dev:
+    name: Test dev bundle
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout things
+        uses: actions/checkout@v2
+      - name: Setup Node.js v14
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Run test
+        run: npm install && export BLJS_DEV=true && npm run test

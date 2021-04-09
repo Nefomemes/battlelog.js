@@ -1,7 +1,6 @@
 const { Platoon } = require("./platoon");
 const utils = require("../utils/utils");
 
-
 const { SoldiersManager } = require("./soldiersmanager");
 const { Soldier } = require("./soldier");
 const { BattlelogMap } = require("./blmap");
@@ -161,16 +160,19 @@ class User {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
     }
 
-    if (data.platoons) {
-     for (let platoon of data.platoons){
-     	this.platoons.structureData(platoon.id, new Platoon (this.client, platoon));
-    }}
 
+
+    if (data.platoons) {
+         	
+    }
     if (data.platoonFans) {
-    	for(let platoon of  data.platoonFans){
-      	this.platoons.structureData(platoon.id, new Platoon (this.client, platoon));
-    
-    }}
+      for (let platoon of data.platoonFans) {
+        this.platoons.structureData(
+          platoon.id,
+          new Platoon(this.client, platoon)
+        );
+      }
+    }
 
     if (data.club) {
       this.platoon = new Platoon(this.client, data.club);
@@ -189,11 +191,9 @@ class User {
    * @returns {string} URL string for the user's avatar.
    */
   displayAvatarURL(options = {}) {
-  	
-  	
     utils.validateOptions(options, {
       alias: { size: "s", rating: "r", default: "d", extension: "e" },
-      defaults: { default: "retro", rating: 'g' },
+      defaults: { default: "retro", rating: "g" },
     });
 
     if (options.size && options.size > 2048)
@@ -207,7 +207,8 @@ class User {
 
     if (options.rating === "x") throw Error("Ok coomer");
 
-    if (!["g", "pg"].includes(options.rating)) throw Error("Rating must be either 'g' or 'pg'");
+    if (!["g", "pg"].includes(options.rating))
+      throw Error("Rating must be either 'g' or 'pg'");
     if (
       !(
         options.default.startsWith("http://") ||
@@ -230,9 +231,9 @@ class User {
     let params = { r: options.rating, d: options.default, s: options.size };
 
     if (options.forceDefault) params.f = "y";
-    
+
     const { stringify } = require("querystring");
-    
+
     return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
       options.extension
     }?${stringify(params)}`;

@@ -3,7 +3,6 @@ const { BattlelogMap } = require("./blmap");
 class UsersManager {
   constructor(client) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
-    
   }
 
   async fetch(...params) {

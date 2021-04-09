@@ -1,6 +1,4 @@
 {
-
-"2":{"name":"Battlefield 3", "id":"bf3"},
-"2048":{"name":"Battlefield 4", "id": "bf4"}
-
+  "2": { "name": "Battlefield 3", "id": "bf3" },
+  "2048": { "name": "Battlefield 4", "id": "bf4" }
 }
