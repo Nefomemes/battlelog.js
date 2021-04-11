@@ -6,6 +6,7 @@ const { UsersManager } = require("./classes/um");
 const { Soldier } = require("./classes/soldier");
 const { ServerBrowser } = require("./classes/sb");
 const { Server } = require("./classes/server");
+const { BattlelogMap } = require("./classes/blmap");
 const utils = require("./utils/utils");
 module.exports = (...params) => {
   return new BattlelogClient(...params);
@@ -17,3 +18,4 @@ module.exports.Platoon = Platoon;
 module.exports.User = User;
 module.exports.UsersManager = UsersManager;
 module.exports.utils = utils;
+module.exports.BattlelogMap = BattlelogMap;

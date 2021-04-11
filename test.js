@@ -1,4 +1,4 @@
-const bljs = require("./dist/bundle.dev");
+const bljs = require("./src/index");
 
 test("BattlelogMap.structureData(key, value, options)", () => {
     let map = new bljs.BattlelogMap(); 
