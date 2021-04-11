@@ -18,7 +18,7 @@ Unofficial API wrapper for
 
 | |
 | ----- |
-| **Note** This project is mirrored from BattlelofJS' GitLab repository, which can be found [here](https://gitlab.com/BLThunderstorm/battlelog-js). All issues and pull requests should go there instead. We only use this repository for CI/CD. |
+| **Note** The GitHub repository of BattlelogJS, which can be found [here](https://gitlab.com/BLThunderstorm/battlelog.js),  is mirrored from BattlelofJS' GitLab repository, which can be found [here](https://gitlab.com/BLThunderstorm/battlelog-js). All issues and pull requests should go there instead. We will only use the GitHub repository for CI/CD moving forward, and Dependabot, So we are not going to archive the GitHub repo. |
 
 ## Resources
 
