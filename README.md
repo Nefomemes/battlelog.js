@@ -16,6 +16,10 @@ Unofficial API wrapper for
 
 </p> 
 
+| |
+| ----- |
+| **Note** This project is mirrored from BattlelofJS' GitLab repository, which can be found [here](https://gitlab.com/BLThunderstorm/battlelog.js). All issues and pull requests should go there instead. We only use this repository for CI/CD. |
+
 ## Resources
 
 - [Discord server](https://discord.gg/gTB3Vzf5)
