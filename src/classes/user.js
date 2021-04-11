@@ -160,18 +160,18 @@ class User {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
     }
 
-
+   let platoonOptions = {
+   	callbackKey: (k, v) => v.id,
+   	callbackValue: (k, v) => new Platoon(this.client, v)
+   };
 
     if (data.platoons) {
-         	
+         this.structureData(null, data.platoons, platoonOptions)	
     }
-    if (data.platoonFans) {
-      for (let platoon of data.platoonFans) {
-        this.platoons.structureData(
-          platoon.id,
-          new Platoon(this.client, platoon)
-        );
-      }
+    if (data.platoonFans){
+    	
+    this.structureData(null, data.platoonFans, platoonOptions);
+    
     }
 
     if (data.club) {

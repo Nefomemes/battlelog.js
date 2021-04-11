@@ -5,6 +5,6 @@ test("BattlelogMap.structureData(key, value, options)", () => {
 
     map.structureData("key", "value")
 
-    expect(Array.from(map)).toBe([["key", "value"]]);
+    expect(Array.from(map)).toStrictEqual([["key", "value"]]);
 
 })
