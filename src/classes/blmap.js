@@ -14,32 +14,45 @@ class BattlelogMap extends Map {
    * @param {...*} structureDataStuff - The additional parameters to be passed
    *     to the key's structureData method.
    */
-  structureData(options) {
-    if (!key) throw Error("key is not specified");
-    if (!value) throw Error("value is not specified");
-    // Easter egg! Reference to this article on DEV: https://dev.to/jmdejager/commit-or-vomit-cast-2b2g
-      switch (true) {
-        case (options.map instanceof Map): {
-          args[0].forEach((k, v) =>
-            this.structureData(k, v, ...structureDataStuff)
-          );
-          
-          break;
-        }
-        case (args[0] instanceof Array): {
-		for(let [key, value] of args[0]){
-		this.structureData()
 
-		}
-        	
-        	break;
+  structureData(key, value, options = {}) {
+    function runCallback(k, v) {
+      let result = [];
+
+      if(typeof options.callbackKey === "function") result[0] = options.callbackKey(k, v, options);
+      else result[0] = k;
+
+      if(typeof options.callbackValue === "function") result[1] = options.callbackValue(k, v, options);
+      else result[1] = v;
+      
+      return result;
+    }
+    
+    if (key && value) {
+        
+         
+        
+         if (super.get(key)) super.get(key).structuredata(value, ...options.structureDataParams);
+        else super.set(...runCallback(key, value, options));
+        
+      } else if (!key && value instanceof Map) {
+      	
+        value.forEach((k, v) => {
+          
+          return this.structureData(...runCallback(k, v));
         }
-        default: {
-    if (super.get(key)) super.get(key).structureData(value, ...structureDataStuff);
-    else super.set(key, value);
-        
-        
-    }}
+        );
+
+      
+      } else if (!key && Array.isArray(value)) {
+  
+        for (let v of value) {
+          this.structureData(...runCallback(null, v));
+        }
+
+      
+      } else throw Error("Invalid syntax");
+  return this;
   }
 }
 
