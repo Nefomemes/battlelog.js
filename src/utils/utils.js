@@ -121,7 +121,7 @@ function validateOptions(data, rules) {
  */
 function structureData(cls, data, rules = {}) {
   if (!data) return;
-  if (!cls) throw Error();
+  if (!cls) throw Error("Target object is not provided.");
 
   validateOptions(rules, {
     typeof: {
