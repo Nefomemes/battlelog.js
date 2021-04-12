@@ -52,7 +52,6 @@ class BattlelogMap extends Map {
 
       
       } else throw Error("Invalid syntax");
-
   return this;
   }
 }
