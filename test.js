@@ -14,10 +14,10 @@ test("BattlelogMap.structureData(key, value, op+tions)", () => {
 
 })
 
-test("Fetch my Battlelog profile and recycle it's User instance", async () => {
+test("Fetch Danny's profile and recycle it's User instance", async () => {
 	
 	
-	let user = await bf3.fetchUser("Nefomemes");
+	let user = await bf3.fetchUser("DANNYonPC");
 	
 	let recycledUser = new bljs.User(bf3, user);
 	

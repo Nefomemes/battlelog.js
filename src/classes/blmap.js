@@ -32,7 +32,7 @@ class BattlelogMap extends Map {
         
          
         
-         if (super.get(key)) super.get(key).structuredata(value, ...options.structureDataParams);
+         if (super.get(key)) super.get(key).structureData(value, ...(options.structureDataParams || []));
         else super.set(...runCallback(key, value, options));
         
       } else if (!key && value instanceof Map) {
