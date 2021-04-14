@@ -58,7 +58,7 @@ For example using GitCDN:
 Secondly, Battlelog.js expects users install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. And of course `querystring` is a pre-installed library. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
 | |
 | ------- |
-| If you are still developing the software/app taht uses this library. Do *not* use the production library.  |
+| If you are still developing the software/app that uses this library. Do **not** use the production library.  |
 
 Also, make sure Axios is loaded **before** BattlelogJS.
 
