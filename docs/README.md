@@ -40,8 +40,6 @@ library in pretty much any major CDN services, like
 [JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js),
 [UnPKG](https://unpkg.com/), and [GitCDN](https://gitcdn.link)
 
-You can use two bundles, one is the development bundle (dist/bundle.dev.js) and
-the minified production bundle (dist/bundle.prod.min.js)
 
 Then you can of course paste the CDN link to your HTML app.
 
@@ -80,3 +78,6 @@ var user = await bf3.users.fetch("Nefomemes");
 
 console.log(user);
 ```
+
+## Bundles
+BattlelogJS provides multiple bundles you can import. You can also pick what Webpack target you want to use, for now we support production and development target.
