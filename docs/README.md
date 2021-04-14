@@ -52,10 +52,13 @@ Then you can of course paste the CDN link to your HTML app.
 For example using GitCDN:
 
 ```html
-<script src="gitcdn.link/cdn/Nefomemes/battlelog.js/master/dist/bundle.prod.min.js"></script>
+<script src="gitcdn.link/cdn/BLThunderstorm/battlelog.js/master/dist/bundle.prod.min.js"></script>
 ```
 
-Secondly, Battlelog.js expects users install Axios and the `querystring` as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. And of course `querystring` is a pre-installed library. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
+Secondly, Battlelog.js expects users install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. And of course `querystring` is a pre-installed library. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
+| |
+| ------- |
+| If you are still developing the software/app taht uses this library. Do *not* use the production library.  |
 
 Also, make sure Axios is loaded **before** BattlelogJS.
 
