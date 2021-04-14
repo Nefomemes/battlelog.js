@@ -81,3 +81,5 @@ console.log(user);
 
 ## Bundles
 BattlelogJS provides multiple bundles you can import. You can also pick what Webpack target you want to use, for now we support production and development target.
+
+This is handy especially when you are developing for the web, or you want to optimize your app/software.
