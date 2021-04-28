@@ -8,10 +8,10 @@ on:
       - "*"
     paths:
       - "src/**.js"
+      - "test.js"
+      - "jest.config.ts"
+    
   workflow_dispatch:
-    branches:
-      - "*"
-      - "!gh-pages"
 
 jobs:
   test:
