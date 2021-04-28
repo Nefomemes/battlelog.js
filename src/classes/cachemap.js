@@ -4,7 +4,7 @@
  * @class
  * @augments Map
  */
-class BattlelogMap extends Map {
+class CacheMap extends Map {
   /**
    * If the key existed in the instance, calls
    *
