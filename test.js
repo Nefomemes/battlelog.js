@@ -1,18 +1,20 @@
 const bljs = require("./src/index");
-
+const CacheMap = require("./src/classes/cachemap");
 let battlelog = bljs();
 
-	let bf3 = battlelog.game("bf3");
+let bf3 = battlelog.game("bf3");
 
 
-test("BattlelogMap.structureData(key, value, op+tions)", () => {
-    let map = new bljs.BattlelogMap(); 
+test("CacheMap.structureData(key, value, options)", () => {
+    let map = new CacheMap(); 
 
     map.structureData("key", "value")
 
     expect(Array.from(map)).toStrictEqual([["key", "value"]]);
 
 })
+
+   
 
 test("Fetch my Battlelog profile and recycle it's User instance", async () => {
 	
