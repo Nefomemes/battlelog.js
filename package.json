@@ -1,8 +1,8 @@
 {
   "name": "battlelog.js",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
-  "main": "dist/bundle.prod.min.js",
+  "main": "dist/bundle.dev.js",
   "scripts": {
     "test": "jest",
     "gitconfig": "bash gitconfig.sh",
