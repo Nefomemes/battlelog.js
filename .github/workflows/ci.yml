@@ -10,9 +10,7 @@ on:
       - "src/**.js"
       - "test.js"
       - "jest.config.ts"
-    
-  workflow_dispatch:
-
+      - "./.github/workflows/ci.yml"
 jobs:
   test:
     name: Test with Jest
