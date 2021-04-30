@@ -13,7 +13,7 @@ class Platoon {
       this.structureData(data);
     }
   }
-  
+
   badge = {};
   /**
    * Structure the class using the data provided.
@@ -24,17 +24,15 @@ class Platoon {
   structureData(data) {
     utils.structureData(this, data, { blacklist: ["badgePath"] });
 
-    var badgeUrl1 = (data.badgePath || data.emblemPath);
-    
-    if(badgeUrl1){
-     badgeUrl1 = badgeUrl1.split("[FORMAT]")
-      .join("png")
-      .split("[SIZE]");
+    var badgeUrl1 = data.badgePath || data.emblemPath;
 
-    this.badge[60] = badgeUrl1.join("60");
-    this.badge[320] = badgeUrl1.join("320");
+    if (badgeUrl1) {
+      badgeUrl1 = badgeUrl1.split("[FORMAT]").join("png").split("[SIZE]");
+
+      this.badge[60] = badgeUrl1.join("60");
+      this.badge[320] = badgeUrl1.join("320");
     }
-    
+    return this;
   }
 
   async fetch() {

@@ -34,11 +34,14 @@ class Server {
   }
 
   structureData(data) {
+	/**
+	 * @property ""
+	 */
     utils.structureData(this, data, {
       blacklist: ["settings"],
       setBoolean: ["punkbuster", "fairfight", "hasPassword", "ranked"],
     });
-    this.client.servers.cache.set(this.guid, this);
+   
 
     utils.structureData(this.settings, data.settings, {
       alias: {
@@ -49,9 +52,30 @@ class Server {
         vmin: "showMinimap",
         vkca: "showKillcam",
       },
-      setBoolean: ["vhud", "vffi", "vmin", "vkca"],
+      setBoolean: ["displayHUD", "friendlyFire", "showMinimap", "showKillcam"],
     });
 
     return this;
   }
+
+  /**
+   * The settings configured for a server.
+   * 
+   * @typedef ServerSettings
+   * @property {boolean} displayHUD - Whether HUD is displayed
+   * @property {Number} teamKillsBeforeKicked - How many friendly fire kills before a player is kicked out from the server
+   * @property {boolean} showMinimap - Whether minimap is displayed
+   * @property {boolean} friendlyFire - Whether players can do friendly fire.
+   * @property {Number} bulletDamageModifier - This property basically tunes the TTK.
+   */
+
+  /**
+   * The settings configured for the server.
+   * 
+   * @property {ServerSettings} 
+   */
+  settings = {};
+
 }
+
+module.exports.Server = Server;

@@ -1,6 +1,5 @@
 const { Platoon } = require("./platoon");
 const utils = require("../utils/utils");
-const { stringify } = require("querystring");
 
 const { SoldiersManager } = require("./soldiersmanager");
 const { Soldier } = require("./soldier");
@@ -30,20 +29,11 @@ class User {
   platoonFans = new BattlelogMap();
 
   /**
-   * The user's friemd ;ist. Only have 10 of all of the user's friends though.
+   * The user's friend list. Only have 10 of all of the user's friends though.
    *
    * @property {BattlelogMap<User>}
    */
   friends = new BattlelogMap();
-
-  /**
-   * The platoon of the user. This is different than User#platoons as that
-   * property is only available if the game supports joining multiple platoons.
-   *
-   * @property {Platoon}
-   */
-
-  platoon;
 
   /**
    * @typedef {(User|string|object)} UserResolvable - Something that can be
@@ -129,6 +119,7 @@ class User {
 
     if (typeof data === "object") {
       this.structureData(data);
+      
     } else if (typeof data == "string") {
       this.name = data;
     }
@@ -144,6 +135,7 @@ class User {
     const res = await this.client.axios.get(`/user/${this.name}`);
 
     const profile = res.data.context.profileCommon;
+    if(!profile) console.warn("This is weird but we can not find profileCommon in the context object")
     this.structureData(profile);
     this.soldiers.structureData(res.data.context.soldiersBox);
 
@@ -156,6 +148,8 @@ class User {
    * @returns {User} the User
    */
   structureData(data) {
+	  
+  	if(!data) return this;
     utils.structureData(this, data, {
       blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
     });
@@ -164,24 +158,24 @@ class User {
      *
      */
 
-    utils.structureData(this, data.user, { blacklist: ["gravatarMd5"] });
-
-    if (data.user.gravatarMd5) {
-      this.gravatarEmailHash = data.user.gravatarMd5;
-    }
+    utils.structureData(this, data.user);
 
     if (data.tenFriends && data.tenFriends.length) {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
     }
 
-    if (data.platoons) {
-      this.platoons = data.platoons.map((i) => new Platoon(this.client, i));
-    }
+   let platoonOptions = {
+   	callbackKey: (k, v) => v.guid,
+   	callbackValue: (k, v) => new Platoon(this.client, v)
+   };
 
-    if (data.platoonFans) {
-      this.platoonFans = data.platoonFans.map(
-        (i) => new Platoon(this.client, i)
-      );
+    if (data.platoons) {
+         this.structureData(null, data.platoons, platoonOptions)	
+    }
+    if (data.platoonFans){
+    	
+    this.structureData(null, data.platoonFans, platoonOptions);
+    
     }
 
     if (data.club) {
@@ -203,7 +197,7 @@ class User {
   displayAvatarURL(options = {}) {
     utils.validateOptions(options, {
       alias: { size: "s", rating: "r", default: "d", extension: "e" },
-      defaults: { default: "retro", rating: 'g' },
+      defaults: { default: "retro", rating: "g" },
     });
 
     if (options.size && options.size > 2048)
@@ -217,7 +211,8 @@ class User {
 
     if (options.rating === "x") throw Error("Ok coomer");
 
-    if (!["g", "pg"].includes(options.rating)) throw Error("Rating must be either 'g' or 'pg'");
+    if (!["g", "pg"].includes(options.rating))
+      throw Error("Rating must be either 'g' or 'pg'");
     if (
       !(
         options.default.startsWith("http://") ||
@@ -240,7 +235,10 @@ class User {
     let params = { r: options.rating, d: options.default, s: options.size };
 
     if (options.forceDefault) params.f = "y";
-    return `https://www.gravatar.com/avatar/${this.gravatarEmailHash}.${
+
+    const { stringify } = require("querystring");
+
+    return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
       options.extension
     }?${stringify(params)}`;
   }

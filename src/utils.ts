@@ -7,10 +7,10 @@
 /**
  * Get the article of a noun
  *
- * @param {string} str
+ * @param {stringstr
  * @param {boolean} plural
  */
-function getArticle(str, plural) {
+function getArticle(str: string, plural?: boolean) {
   if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
 
   if (typeof str !== "string")
@@ -28,8 +28,8 @@ function getArticle(str, plural) {
  * Manages options. Does not support recursion yet.
  *
  * @function
- * @param {object} data - The options object data.
- * @param {object} rules - The rules used to manage the options.
+ * @param data - The options object data.
+ * @param rules - The rules used to manage the options.
  */
 function validateOptions(data, rules) {
   if (rules.alias) {
@@ -121,7 +121,7 @@ function validateOptions(data, rules) {
  */
 function structureData(cls, data, rules = {}) {
   if (!data) return;
-  if (!cls) throw Error();
+  if (!cls) throw Error("Target object is not provided.");
 
   validateOptions(rules, {
     typeof: {

@@ -15,7 +15,6 @@ class SoldiersManager {
    * @param {Array} [data] -  Raw array data of the user's soldiers.
    */
   constructor(user, data) {
-    
     Object.defineProperty(this, "user", { value: user, enumerable: false });
 
     Object.defineProperty(this, "client", {
@@ -35,15 +34,14 @@ class SoldiersManager {
    * @returns {SoldiersManager} this
    */
   structureData(data, fetch) {
-    if (Array.isArray(data)) {
-      for (let soldier of data) {
-        this.cache.structureData(
-          soldier.persona.personaId,
-          new Soldier(this.user, soldier, fetch),
-          fetch
-        );
-      }
+    for (let soldier of data) {
+      this.cache.structureData(
+        soldier.persona.personaId,
+        new Soldier(this.user, soldier, fetch),
+        fetch
+      );
     }
+
     return this;
   }
   /**

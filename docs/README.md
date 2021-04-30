@@ -5,7 +5,6 @@
 <summary><bold>Node.js</bold></summary>
 <br/>
 
-
 If you want to install this trough the NPM registry.
 
 ```bash
@@ -21,13 +20,13 @@ yarn add battlelog.js
 You can even install it from GitHub:
 
 ```bash
-npm i Nefomemes/battlelog.js
+npm i https://gitlab.com/BLThunderstorm/battlelog.js.git
 ```
 
 Or if you use Yarn:
 
-```
-yarn add https://github.com/Nefomemes/battlelog.js.git
+```bash
+yarn add https://gitlab.com/BLThunderstorm/battlelog.js.git
 ```
 
 </details>
@@ -41,8 +40,6 @@ library in pretty much any major CDN services, like
 [JSDelivr](https://www.jsdelivr.com/package/npm/battlelog.js),
 [UnPKG](https://unpkg.com/), and [GitCDN](https://gitcdn.link)
 
-You can use two bundles, one is the development bundle (dist/bundle.dev.js) and
-the minified production bundle (dist/bundle.prod.min.js)
 
 Then you can of course paste the CDN link to your HTML app.
 
@@ -53,10 +50,13 @@ Then you can of course paste the CDN link to your HTML app.
 For example using GitCDN:
 
 ```html
-<script src="gitcdn.link/cdn/Nefomemes/battlelog.js/master/dist/bundle.prod.min.js"></script>
+<script src="gitcdn.link/cdn/BLThunderstorm/battlelog.js/master/dist/bundle.prod.min.js"></script>
 ```
 
-Secondly, Battlelog.js expects users to install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
+Secondly, Battlelog.js expects users install Axios as well. When you install Battlelog.js for Node.js environments (NPM/Yarn), Axios should get automatically installed. And of course `querystring` is a pre-installed library. But this isn't the case for browsers. You will have to manually add Axios into your HTML app.
+| |
+| ------- |
+| If you are still developing the software/app that uses this library. Do **not** use the production library.  |
 
 Also, make sure Axios is loaded **before** BattlelogJS.
 
@@ -78,3 +78,8 @@ var user = await bf3.users.fetch("Nefomemes");
 
 console.log(user);
 ```
+
+## Bundles
+BattlelogJS provides multiple bundles you can import. You can also pick what Webpack target you want to use, for now we support production and development target.
+
+This is handy especially when you are developing for the web, or you want to optimize your app/software.

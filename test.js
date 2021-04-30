@@ -1,30 +1,36 @@
-<<<<<<< HEAD
-(async function(){
+const bljs = require("./src/index");
+const CacheMap = require("./src/classes/cachemap");
+let battlelog = bljs();
+
+let bf3 = battlelog.game("bf3");
+
+
+test("CacheMap.structureData(key, value, options)", () => {
+    let map = new CacheMap(); 
+
+    map.structureData("key", "value")
+
+    expect(Array.from(map)).toStrictEqual([["key", "value"]]);
+
+})
+
+   
+
+test("Fetch my Battlelog profile and recycle it's User instance", async () => {
 	
-const bl = require("./src/index.js");
+	
+	let user = await bf3.fetchUser("Nefomemes");
+	
+	let recycledUser = new bljs.User(bf3, user);
+	
+	expect(recycledUser).toStrictEqual(user);
+})
 
-var client = bl();
+test("Fetch servers and recycle one of them.", async () => {
+	let server = Array.from(await bf3.fetchServers())[0][1]
+	
+	console.log(server);
+	let recycledServer = new bljs.Server(bf3, server);
 
-var bf3 = client.game('bf4');
-
-var user = await bf3.users.fetch( "DANNYonPC");
-
-
-
-console.log(user);
-})()
-
-=======
-(async function () {
-  const bl = require("./src/index.js");
-
-  var client = bl();
-
-  var bf3 = client.game("bf4");
-
-  var user = await bf3.users.fetch("JackFrags");
-
-  await user.soldiers.fetch();
-  console.log(user.soldiers.cache);
-})();
->>>>>>> 6fd1b11e6854fc741831a2859af99e04412fc7fb
+	expect(recycledServer).toStrictEqual(server);
+})
