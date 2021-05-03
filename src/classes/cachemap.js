@@ -56,4 +56,4 @@ class CacheMap extends Map {
   }
 }
 
-module.exports.BattlelogMap = BattlelogMap;
+module.exports.CacheMap = CacheMap;
