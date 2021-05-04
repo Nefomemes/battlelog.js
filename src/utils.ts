@@ -7,8 +7,8 @@
 /**
  * Get the article of a noun
  *
- * @param {stringstr
- * @param {boolean} plural
+ * @param str - The word to be checked
+ * @param plural
  */
 function getArticle(str: string, plural?: boolean) {
   if (!str) throw Error("Expected parameter 'str'. Found no parameters.");

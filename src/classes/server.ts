@@ -1,5 +1,5 @@
-const utils = require("../utils/utils");
-const { User } = require("./user");
+import utils from "../utils/utils";
+import User from "./user";
 
 /**
  * Represents a server.
@@ -7,6 +7,9 @@ const { User } = require("./user");
  * @class
  */
 class Server {
+
+
+   guid: /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/i;
   /**
    * Creates a new Server instance.
    *
@@ -70,12 +73,20 @@ class Server {
    */
 
   /**
-   * The settings configured for the server.
    * 
-   * @property {ServerSettings} 
+   * @property settings - The settings configured for the server.
+   * @property settings.vhud - Whether HUD is displayed
+   * @property settings.vkca - Whether killcam is displayed
+   * @property settings.vbdm - Bullet damage bulletDamageModifier
+   * @property settings.vtkk - How many friendly fire kills tolerated before a player is kicked out from the server
    */
-  settings = {};
+  settings: {
+  vhud: boolean,
+  vffi: boolean,
+  vtkk: number,
+  vbdm: number,
+  vmin: boolean,
+  vkca: boolean
+  };
 
-}
-
-module.exports.Server = Server;
+};

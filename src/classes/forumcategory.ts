@@ -1,17 +1,18 @@
-const utils = require("../utils/utils");
+import utils from '../utils';
+import type ForumClient from './forumclient';
 
 /**
  * Represents a Forum Category.
  *
  * @class
  */
-class ForumCategory {
+export class ForumCategory {
   /**
    *
-   * @param {ForumClient} forum - The forum client of this instance.
-   * @param {object} data - The data of this instance.
+   * @param forum - The forum client of this instance.
+   * @param data - The data of this instance.
    */
-  constructor(forum, data) {
+  constructor(forum: ForumClient, data: ForumCategory) {
     Object.defineProperty(this, "client", {
       value: forum.client,
       enumerable: false,
@@ -28,12 +29,10 @@ class ForumCategory {
    * @param {object} object - The object used to structure the instance.
    * @param data
    * @function
-   * @returns {ForumCategory} - The instance
+   * @returns - The instance
    */
-  structureData(data) {
+  structureData(data: ForumCategory) {
     utils.structureData(this, data);
     return this;
   }
 }
-
-module.exports.ForumCategory = ForumCategory;
