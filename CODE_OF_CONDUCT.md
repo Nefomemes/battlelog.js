@@ -1,5 +1,5 @@
 
-# Contributor Covenant Code of Conduct
+# BLThunderstorm Code of Conduct
 
 ## Our Pledge
 
@@ -125,7 +125,7 @@ the community.
 
 This Code of Conduct is adapted from the [Contributor Covenant][homepage],
 version 2.0, available at
-[https://www.contributor-covenant.org/version/2/0/code_of_conduct.html][v2.0].
+[https://www.contributor-covenant.org/version/2/0/code_of_conduct.html][v2.0], with some small changes from the BLThunderstorm team that is the addition of u/cupcake1713's beautiful post [here](https://www.reddit.com/r/blog/comments/1ytp7q/remember_the_human/).
 
 Community Impact Guidelines were inspired by 
 [Mozilla's code of conduct enforcement ladder][Mozilla CoC].
