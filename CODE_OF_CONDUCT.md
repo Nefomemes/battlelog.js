@@ -37,6 +37,14 @@ Examples of unacceptable behavior include:
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
 
+Also, keep in mind what u/cupcake1713 said [here](https://www.reddit.com/r/blog/comments/1ytp7q/remember_the_human/).
+> Hi reddit. cupcake here.
+>
+> I wanted to bring up an important reminder about how folks interact with each other online. It is not a problem that exists solely on reddit, but rather the internet as a whole. The internet is a wonderful tool for interacting with people from all walks of life, but the anonymity it can afford can make it easy to forget that really, on the other end of the screens and keyboards, we're all just people. Living, breathing, people who have lives and goals and fears, have favorite TV shows and books and methods for breeding Pokemon, and each and every last one of us has opinions. Sure, those opinions might differ from your own. But that’s okay! People are entitled to their opinions. When you argue with people in person, do you say as many of the hate filled and vitriolic statements you see people slinging around online? Probably not. Please think about this next time you're in a situation that makes you want to lash out. If you wouldn't say it to their face, perhaps it's best you don't say it online.
+>
+> Try to be courteous to others. See someone having a bad day? Give them a compliment or ask them a thoughtful question, and it might make their day better. Did someone reply to your comment with valuable insights or something that cheered you up? Send them a quick thanks letting them know you appreciate their comment.
+>
+> So I ask you, the next time a user picks a fight with you, or you get the urge to harass another user because of something they typed on a keyboard, please... remember the human.
 ## Enforcement Responsibilities
 
 Community leaders are responsible for clarifying and enforcing our standards of
