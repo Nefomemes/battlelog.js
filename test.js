@@ -1,10 +1,21 @@
-const bljs = require("./dist/bundle.dev");
+(async function () {
+  var bl;
 
-test("BattlelogMap.structureData(key, value, options)", () => {
-    let map = new bljs.BattlelogMap(); 
+  if (process.env.BLJS_RAW) {
+    bl = require("./src/index.js");
+  } else if (process.env.BLJS_DEV) {
+    bl = require("./dist/bundle.dev.js");
+  } else {
+    bl = require("./dist/bundle.prod.min.js");
+  }
+  var client = bl();
 
-    map.structureData("key", "value")
+  var bf3 = client.game("bf3");
 
-    expect(Array.from(map)).toBe([["key", "value"]]);
+  var user = await bf3.users.fetch("DANNYonPC");
 
-})
+  console.log(user);
+  
+  await user.soldiers.fetch();
+  console.log(user.soldiers.cache);
+})();
