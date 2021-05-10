@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 (async function () {
   var bl;
 
@@ -9,9 +10,21 @@
     bl = require("./dist/bundle.prod.min.js");
   }
   var client = bl();
+=======
+const bljs = require("./src/index");
+
+let battlelog = bljs();
+
+	let bf3 = battlelog.game("bf3");
+
+
+test("BattlelogMap.structureData(key, value, op+tions)", () => {
+    let map = new bljs.BattlelogMap(); 
+>>>>>>> fbb3344ecf738e1aed7a266ea92a2ea454bad1d1
 
   var bf3 = client.game("bf3");
 
+<<<<<<< HEAD
   var user = await bf3.users.fetch("DANNYonPC");
 
   console.log(user);
@@ -19,3 +32,27 @@
   await user.soldiers.fetch();
   console.log(user.soldiers.cache);
 })();
+=======
+    expect(Array.from(map)).toStrictEqual([["key", "value"]]);
+
+})
+
+test("Fetch Danny's profile and recycle it's User instance", async () => {
+	
+	
+	let user = await bf3.fetchUser("DANNYonPC");
+	
+	let recycledUser = new bljs.User(bf3, user);
+	
+	expect(recycledUser).toStrictEqual(user);
+})
+
+test("Fetch servers and recycle one of them.", async () => {
+	let server = Array.from(await bf3.fetchServers())[0][1]
+	
+	console.log(server);
+	let recycledServer = new bljs.Server(bf3, server);
+
+	expect(recycledServer).toStrictEqual(server);
+})
+>>>>>>> fbb3344ecf738e1aed7a266ea92a2ea454bad1d1

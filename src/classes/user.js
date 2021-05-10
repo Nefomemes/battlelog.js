@@ -1,5 +1,5 @@
 const { Platoon } = require("./platoon");
-const utils = require("../utils/utils");
+const utils = require("../utils");
 
 const { SoldiersManager } = require("./soldiersmanager");
 const { Soldier } = require("./soldier");
@@ -119,6 +119,7 @@ class User {
 
     if (typeof data === "object") {
       this.structureData(data);
+      
     } else if (typeof data == "string") {
       this.name = data;
     }
@@ -134,6 +135,7 @@ class User {
     const res = await this.client.axios.get(`/user/${this.name}`);
 
     const profile = res.data.context.profileCommon;
+    if(!profile) console.warn("This is weird but we can not find profileCommon in the context object")
     this.structureData(profile);
     this.soldiers.structureData(res.data.context.soldiersBox);
 
@@ -146,6 +148,8 @@ class User {
    * @returns {User} the User
    */
   structureData(data) {
+	  
+  	if(!data) return this;
     utils.structureData(this, data, {
       blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
     });
@@ -160,18 +164,18 @@ class User {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
     }
 
-
+   let platoonOptions = {
+   	callbackKey: (k, v) => v.guid,
+   	callbackValue: (k, v) => new Platoon(this.client, v)
+   };
 
     if (data.platoons) {
-         	
+         this.structureData(null, data.platoons, platoonOptions)	
     }
-    if (data.platoonFans) {
-      for (let platoon of data.platoonFans) {
-        this.platoons.structureData(
-          platoon.id,
-          new Platoon(this.client, platoon)
-        );
-      }
+    if (data.platoonFans){
+    	
+    this.structureData(null, data.platoonFans, platoonOptions);
+    
     }
 
     if (data.club) {
