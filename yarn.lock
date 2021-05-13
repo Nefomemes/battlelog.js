@@ -3325,9 +3325,9 @@ hmac-drbg@^1.0.1:
     minimalistic-crypto-utils "^1.0.1"
 
 hosted-git-info@^2.1.4:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.8.tgz#7539bd4bc1e0e0a895815a2e0262420b12858488"
-  integrity sha512-f/wzC2QaWBs7t9IYqB4T3sR1xviIViXJRJTWBlx2Gf3g0Xi5vI7Yy4koXQ1c9OYDGHN9sBy1DQ2AB8fqZBWhUg==
+  version "2.8.9"
+  resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
+  integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
@@ -4537,9 +4537,9 @@ node-notifier@^8.0.0:
     which "^2.0.2"
 
 node-polyfill-webpack-plugin@^1.0.3:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/node-polyfill-webpack-plugin/-/node-polyfill-webpack-plugin-1.1.1.tgz#75cf1681d623b059f8807a5345f3876129b90b22"
-  integrity sha512-7XluenXhlJ3hEfdVP24ShDTSI8jYx0C0gQ8JpH7eAH+Wlv5dnX9+tHXY2xMBt2re9FuHIabFiyHLy+3eY+SfRA==
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/node-polyfill-webpack-plugin/-/node-polyfill-webpack-plugin-1.1.2.tgz#3e8e8640a920b566d5842df84f1c8c077554250e"
+  integrity sha512-ubwf7M73V13RDlKaDmMh1+giB/D8KL75umXEGabGtxSt/WRCirl01urhK1qsr6Cdt77escQ9SNb5OoTR8IwEHg==
   dependencies:
     assert "^2.0.0"
     browserify-zlib "^0.2.0"
