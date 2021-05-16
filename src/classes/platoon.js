@@ -1,4 +1,4 @@
-const utils = require("../utils/utils");
+const utils = require("../utils");
 
 class Platoon {
   /**
@@ -32,6 +32,7 @@ class Platoon {
       this.badge[60] = badgeUrl1.join("60");
       this.badge[320] = badgeUrl1.join("320");
     }
+    return this;
   }
 
   async fetch() {

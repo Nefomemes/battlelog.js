@@ -37,7 +37,7 @@ class SoldiersManager {
     for (let soldier of data) {
       this.cache.structureData(
         soldier.persona.personaId,
-        new Soldier(this.user, soldier, fetch),
+        new Soldier(this.user, soldier, {structureDataParams: [fetch]}),
         fetch
       );
     }

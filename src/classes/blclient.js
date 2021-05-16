@@ -1,4 +1,4 @@
-const utils = require("../utils/utils");
+const utils = require("../utils");
 const { GameClient } = require("./gameclient");
 /**
 
