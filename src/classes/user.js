@@ -3,7 +3,7 @@ const utils = require("../utils/utils");
 
 const { SoldiersManager } = require("./soldiersmanager");
 const { Soldier } = require("./soldier");
-const { BattlelogMap } = require("./blmap");
+
 /**
  * Represents a Battlelog user.
  *
@@ -18,7 +18,7 @@ class User {
    *
    * @property {Map<Platoon>}
    */
-  platoons = new BattlelogMap();
+  platoons = new Map();
 
   /**
    * The platoons the user is a fan of.
@@ -26,14 +26,14 @@ class User {
    * @property {Map<Platoon>}
    */
 
-  platoonFans = new BattlelogMap();
+  platoonFans = new Map();
 
   /**
    * The user's friend list. Only have 10 of all of the user's friends though.
    *
    * @property {BattlelogMap<User>}
    */
-  friends = new BattlelogMap();
+  friends = new Map();
 
   /**
    * @typedef {(User|string|object)} UserResolvable - Something that can be
