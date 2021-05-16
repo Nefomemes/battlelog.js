@@ -19,13 +19,13 @@ export class CacheMap extends Map {
    *     to the key's structureData method.
    */
 
-  structureData(key: Map<any> | Array<any> | any, value?: any, options?: {
+  structureData(key: Map<any, any> | Array<any> | any, value?: any, options: {
     structureDataParams?: Array<any>,
     callbackKey?: Function,
     callbackValue?: Function
   } = {}) {
 
-    function runCallback(k?: Function, v: Function) {
+    function runCallback(k: Function, v: Function) {
       let result = [];
   
       if(typeof options.callbackKey === "function") result[0] = options.callbackKey(k, v, options);
@@ -41,8 +41,12 @@ export class CacheMap extends Map {
         
          
         
-         if (super.get(key)) super.get(key)<{structureData: Function}>.structureData(value, ...(options.structureDataParams || [])));
-        else super.set(...<[any, any]>runCallback(key, value, options));
+         if (super.get(key)) {
+
+        <{structureData: Function}>super.get(key)
+         .structureData(value, ...(options.structureDataParams || []));
+         }
+         else super.set(...<[any, any]>runCallback(key, value));
         
       } else if (!key && value instanceof Map) {
       	
@@ -51,7 +55,7 @@ export class CacheMap extends Map {
       } else if (!key && Array.isArray(value)) {
   
         for (let v of value) {
-          this.structureData(...runCallback(null, v));
+          this.structureData(...(<[any, any]>runCallback(null, v)));
         }
 
       

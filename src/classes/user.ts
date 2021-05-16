@@ -1,32 +1,34 @@
-const { Platoon } = require("./platoon");
-const utils = require("../utils");
+import { Platoon } from "./platoon";
+import * as utils from "../utils";
+import { Soldier } from "./soldier";
 
-const { SoldiersManager } = require("./soldiersmanager");
-const { Soldier } = require("./soldier");
-
+export type  DisplayAvatarUrlOptions = {
+s?: number,
+r?: 'g' | 'pg',
+d?: 404 | '404' | 'mp' | 'wavatar' | 'blank' | 'robohash' | 'identicon' | 'retro' | 'monsterid',
+};
 /**
  * Represents a Battlelog user.
  *
  * @class
- * @param {GameClient} client - The client used to access this user.
+ * @param  client - The client used to access this user.
  * @param {object} data - Raw object data of the user.
  */
-class User {
+export class User {
   /**
    * The platoon the user is a part of. Please do not confuse this with
    * User#platoon
    *
-   * @property {Map<Platoon>}
+   * @property
    */
-  platoons = new Map();
+  platoons: Map<string, Platoon> = new Map();
 
   /**
    * The platoons the user is a fan of.
    *
-   * @property {Map<Platoon>}
    */
 
-  platoonFans = new Map();
+  platoonFans: Map<string, Platoon> = new Map();
 
   /**
    * The user's friend list. Only have 10 of all of the user's friends though.
@@ -44,10 +46,8 @@ class User {
 
   /**
    * The soldiers of this user.
-   *
-   * @property {SoldiersManager}
    */
-  soldiers;
+  soldiers: Map<string, Soldier> = new Map();
   /*
   userinfo: {
       privacyFeedAndGameActivity: 2,
@@ -164,20 +164,7 @@ class User {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
     }
 
-   let platoonOptions = {
-   	callbackKey: (k, v) => v.guid,
-   	callbackValue: (k, v) => new Platoon(this.client, v)
-   };
-
-    if (data.platoons) {
-         this.structureData(null, data.platoons, platoonOptions)	
-    }
-    if (data.platoonFans){
-    	
-    this.structureData(null, data.platoonFans, platoonOptions);
-    
-    }
-
+  
     if (data.club) {
       this.platoon = new Platoon(this.client, data.club);
     }
@@ -186,7 +173,6 @@ class User {
       this.soldiers.structureData(data.soldiersBox);
     }
   }
-
   /**
    * Get the URL string of the user's avatar.
    *
@@ -241,6 +227,14 @@ class User {
     return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
       options.extension
     }?${stringify(params)}`;
+  }
+
+  async fetchSoldiers() {
+    var res = await this.client.axios.get(
+      `/user/overviewBoxStats/${this.user.userId}`
+    );
+
+  
   }
 }
 

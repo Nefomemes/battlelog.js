@@ -1,10 +1,10 @@
 {
     "compilerOptions":{
         "alwaysStrict": true,
-        "noImplicitAny": true,
-        "allowUnreachableCode": false,
+        "noImplicitAny": false,
+        "allowUnreachableCode": true,
         "inlineSourceMap": true
     },
-    "include":["./src/"],
-    "exclude":["./"]
+    "include":["./src/**.ts"],
+
 }

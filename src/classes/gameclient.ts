@@ -1,5 +1,5 @@
 import axios from "axios";
-import defaultHeader from "../assets/json/headers.json";
+import defaultHeader from "../assets/headers.json";
 import { CacheMap } from "./cachemap";
 import { User } from "./user";
 import { Server } from "./server";

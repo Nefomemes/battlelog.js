@@ -10,7 +10,7 @@
  * @param str - The word to be checked
  * @param plural
  */
-function getArticle(str: string, plural?: boolean) {
+export function getArticle(str: string, plural?: boolean) {
   if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
 
   if (typeof str !== "string")
@@ -31,14 +31,16 @@ function getArticle(str: string, plural?: boolean) {
  * @param data - The options object data.
  * @param rules - The rules used to manage the options.
  */
-function validateOptions(data: object, rules: {
+export type validateOptionsOptions = {
   alias?: object,
   defaults?: object,
   required?: Array<string>,
   types?: any,
-  convertTo: any,
-  blacklist: Array<any> /* TODO */
-}) {
+  convertTo?: any,
+  blacklist?: Array<any> /* TODO */
+};
+
+export function validateOptions(data: object, rules: validateOptionsOptions) {
   if (rules.alias) {
     for (let [name, value] of Object.entries(rules.alias)) {
       if (typeof data[name] === "undefined") data[name] = data[value];
@@ -102,27 +104,35 @@ function validateOptions(data: object, rules: {
 
   return data;
 }
-
+/**
+ * Rules for utils.structureData().
+ * 
+ * @param blacklist - An array filled with properties
+ *     that should be ignored
+ * @param setBoolean - An array filled with properties
+ *     that should be set to true if they are truthy or false if they are falsy.
+ * @param rules.alias] - An object that rules which properties should
+ *     be renamed and what should they be renamed to. Other rules will use this
+ * alias to refer the property
+ * @param rules.onlyAssignIfTruthy - An array filled 
+ */
+export type StructureDataOptions = {
+  blacklist?: Array<string>,
+  setBoolean?: Array<string>,
+  alias?: object,
+  whitelist?: Array<string>,
+  onlyAssignIfTruthy?: Array<string>
+};
 /**
  * Populate an object with a raw data object. Does not currently support
  * recursion.
  *
  * @param {object} cls - The class/object to populate
  * @param {object} data - The data whose properties will be used to populate the
- *     class / object.
- * @param {object} [rules] - An object filled with how things should be done.
- * @param {string[]} [rules.blacklist] - An array filled with properties
- *     that should be ignored
- * @param {string[]} [rules.setBoolean] - An array filled with properties
- *     that should be set to true if they are truthy or false if they are falsy.
- * @param {object} [rules.alias] - An object that rules which properties should
- *     be renamed and what should they be renamed to. Other rules will use this
- * alias to refer the property
- * @param {string[]} [rules.onlyAssignIfTruthy] - An array filled
- * @param {string[]}
- * @returns {object} - The class/object
+ *     class instance
+ * @returns {object} - The class/objectbject.
  */
-export function structureData(cls, data, rules = {}) {
+export function structureData(cls, data, rules: StructureDataOptions = {}) {
   if (!data) return;
   if (!cls) throw Error("Target object is not provided.");
 
