@@ -1,4 +1,5 @@
-## Installation
+# Getting Started
+
 
 <details>
 
@@ -70,16 +71,36 @@ Also, make sure Axios is loaded **before** BattlelogJS.
 ## Running it
 
 ```js
-const bl = require("battlelog.js");
-var blClient = bl();
+import bljs from 'battlelog.js';
+var battlelog = bljs();
 
 var bf3 = client.game("bf3");
-var user = await bf3.users.fetch("Nefomemes");
+var user = await bf3.fetchUser("Nefomemes");
 
 console.log(user);
 ```
 
+<<<<<<< HEAD
 ## Bundles
 BattlelogJS provides multiple bundles you can import. You can also pick what Webpack target you want to use, for now we support production and development target.
 
 This is handy especially when you are developing for the web, or you want to optimize your app/software.
+=======
+## Selecting bundle version
+
+**From source (default in Node.js)** Import the raw source code from the main entry point. As the name suggest, it's not bundled with Webpack.
+
+```js
+import bljs from 'battlelog.js';
+```
+
+Please note that you can't use the library from source in browsers and you have to bundle it with Webpack or Browserify.
+
+**Development bundle** 
+This
+
+```js
+import bljs from 'battlelog.js/dist/dev';
+```
+
+>>>>>>> dev

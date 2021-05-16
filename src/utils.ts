@@ -7,8 +7,13 @@
 /**
  * Get the article of a noun
  *
+<<<<<<< HEAD
  * @param str - The word to be checked
  * @param plural
+=======
+ * @param {string} str
+ * @param {boolean} plural
+>>>>>>> dev
  */
 function getArticle(str: string, plural?: boolean) {
   if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
@@ -31,7 +36,17 @@ function getArticle(str: string, plural?: boolean) {
  * @param data - The options object data.
  * @param rules - The rules used to manage the options.
  */
+<<<<<<< HEAD
 function validateOptions(data, rules) {
+=======
+function validateOptions(data: object, rules: {
+  alias?: object,
+  defaults?: object,
+  required?: Array<string>,
+  typeof?: any,
+  convertTo:
+}) {
+>>>>>>> dev
   if (rules.alias) {
     for (let [name, value] of Object.entries(rules.alias)) {
       if (typeof data[name] === "undefined") data[name] = data[value];
@@ -53,7 +68,11 @@ function validateOptions(data, rules) {
     }
   }
 
+<<<<<<< HEAD
   if (rules.typeof) {
+=======
+  if (rules.types) {
+>>>>>>> dev
     for (let [prop, value] of Object.entries(rules.typeof)) {
       var isTrue;
       if (value === "array") {
@@ -62,6 +81,24 @@ function validateOptions(data, rules) {
         isTrue = typeof data[prop] === value;
       } else if (typeof value === "function") {
         isTrue = data[prop] instanceof value;
+<<<<<<< HEAD
+=======
+      } else  if(Array.isArray(value)){
+            if (!value.includes(data[prop]))
+              throw Error(
+                `Option ${prop} is required to be ${(() => {
+                  var lastOne = value.pop();
+    
+                  return `${value
+                    .map((i) => `'${i}'`)
+                    .join(", ")}, or '${lastOne}'`;
+                })()}`
+              );
+          }
+        }
+
+      
+>>>>>>> dev
       } else {
         throw Error(
           `Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(
@@ -80,6 +117,7 @@ function validateOptions(data, rules) {
     }
   }
 
+<<<<<<< HEAD
   if (rules.requiredToBe) {
     for (let [prop, value] of Object.entries(rules.requiredToBe)) {
       if (value && value.length) {
@@ -96,6 +134,9 @@ function validateOptions(data, rules) {
       }
     }
   }
+=======
+  
+>>>>>>> dev
 
   return data;
 }

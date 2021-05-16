@@ -1,5 +1,9 @@
+<<<<<<< HEAD:src/classes/forumcategory.ts
 import utils from '../utils';
 import type ForumClient from './forumclient';
+=======
+const utils = require("../utils");
+>>>>>>> dev:src/classes/forumcategory.js
 
 /**
  * Represents a Forum Category.

@@ -1,5 +1,10 @@
+<<<<<<< HEAD:src/classes/blclient.ts
 import utils from '../utils/utils';
 import { GameClient } from "./gameclient";
+=======
+const utils = require("../utils");
+const { GameClient } = require("./gameclient");
+>>>>>>> dev:src/classes/blclient.js
 /**
 
  * Represents a Battlelog session.

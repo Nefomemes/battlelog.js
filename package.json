@@ -2,13 +2,15 @@
   "name": "battlelog.js",
   "version": "0.3.0",
   "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
-  "main": "dist/bundle.dev.js",
   "scripts": {
-    "test": "jest",
-    "gitconfig": "bash gitconfig.sh",
     "lint": "eslint ./ --fix",
     "lint:report": "eslint --output-file eslint_report.json --format json ./",
     "docs": "docgen --source ./src --output dist/docs.json",
+=======
+    "lint": "eslint ./src --fix",
+    "lint:report": "eslint --output-file eslint_report.json --format json ./src",
+    "docs": "docgen --source ./src --output docs/docs.json",
+>>>>>>> dev
     "docs:test": "npx docgen --source ./src",
     "build:prod": "webpack --mode production --output-filename bundle.prod.min.js",
     "build:dev": "npx webpack --mode development --output-filename bundle.dev.js ",
@@ -38,8 +40,15 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "^33.0.0",
     "eslint-plugin-node": "^11.1.0",
+<<<<<<< HEAD
+    "eslint-plugin-promise": "^4.3.1",
+=======
     "eslint-plugin-promise": "^5.1.0",
     "jest": "^26.6.3",
+<<<<<<< HEAD
+=======
+>>>>>>> fbb3344ecf738e1aed7a266ea92a2ea454bad1d1
+>>>>>>> dev
     "node-polyfill-webpack-plugin": "^1.0.3",
     "prettier": "2.2.1",
     "ts-node": "^9.1.1",
