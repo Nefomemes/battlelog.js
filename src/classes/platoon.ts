@@ -1,14 +1,14 @@
-const utils = require("../utils");
-
-class Platoon {
+import * as utils from "../utils";
+import type { GameClient } from './gameclient';
+export class Platoon {
   /**
    * Creates a new Platoon instance.
    *
    * @class
-   * @param {GameClient} client
-   * @param {object} data
+   * @param client
+   * @param data
    */
-  constructor(client, data) {
+  constructor(client: GameClient, data: Platoon) {
     if (data) {
       this.structureData(data);
     }

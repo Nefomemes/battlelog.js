@@ -7,13 +7,8 @@
 /**
  * Get the article of a noun
  *
-<<<<<<< HEAD
  * @param str - The word to be checked
  * @param plural
-=======
- * @param {string} str
- * @param {boolean} plural
->>>>>>> dev
  */
 function getArticle(str: string, plural?: boolean) {
   if (!str) throw Error("Expected parameter 'str'. Found no parameters.");
@@ -36,17 +31,14 @@ function getArticle(str: string, plural?: boolean) {
  * @param data - The options object data.
  * @param rules - The rules used to manage the options.
  */
-<<<<<<< HEAD
-function validateOptions(data, rules) {
-=======
 function validateOptions(data: object, rules: {
   alias?: object,
   defaults?: object,
   required?: Array<string>,
-  typeof?: any,
-  convertTo:
+  types?: any,
+  convertTo: any,
+  blacklist: Array<any> /* TODO */
 }) {
->>>>>>> dev
   if (rules.alias) {
     for (let [name, value] of Object.entries(rules.alias)) {
       if (typeof data[name] === "undefined") data[name] = data[value];
@@ -68,21 +60,15 @@ function validateOptions(data: object, rules: {
     }
   }
 
-<<<<<<< HEAD
-  if (rules.typeof) {
-=======
   if (rules.types) {
->>>>>>> dev
-    for (let [prop, value] of Object.entries(rules.typeof)) {
-      var isTrue;
+    for (let [prop, value] of Object.entries(rules.types)) {
+      var isTrue: boolean;
       if (value === "array") {
         isTrue = Array.isArray(data[prop]);
       } else if (typeof value === "string") {
         isTrue = typeof data[prop] === value;
       } else if (typeof value === "function") {
         isTrue = data[prop] instanceof value;
-<<<<<<< HEAD
-=======
       } else  if(Array.isArray(value)){
             if (!value.includes(data[prop]))
               throw Error(
@@ -94,12 +80,7 @@ function validateOptions(data: object, rules: {
                     .join(", ")}, or '${lastOne}'`;
                 })()}`
               );
-          }
-        }
-
-      
->>>>>>> dev
-      } else {
+          } else {
         throw Error(
           `Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(
             typeof value
@@ -109,7 +90,7 @@ function validateOptions(data: object, rules: {
       if (!isTrue)
         throw Error(
           `Option '${prop}' is required to be ${getArticle(
-            value
+            <string>value
           )} ${value} while it is actually a ${
             data[prop].constructor
           } (${typeof data[prop]}).`
@@ -117,26 +98,7 @@ function validateOptions(data: object, rules: {
     }
   }
 
-<<<<<<< HEAD
-  if (rules.requiredToBe) {
-    for (let [prop, value] of Object.entries(rules.requiredToBe)) {
-      if (value && value.length) {
-        if (!value.includes(data[prop]))
-          throw Error(
-            `Option ${prop} is required to be ${(() => {
-              var lastOne = value.pop();
-
-              return `${value
-                .map((i) => `'${i}'`)
-                .join(", ")}, or '${lastOne}'`;
-            })()}`
-          );
-      }
-    }
-  }
-=======
   
->>>>>>> dev
 
   return data;
 }
@@ -160,12 +122,12 @@ function validateOptions(data: object, rules: {
  * @param {string[]}
  * @returns {object} - The class/object
  */
-function structureData(cls, data, rules = {}) {
+export function structureData(cls, data, rules = {}) {
   if (!data) return;
   if (!cls) throw Error("Target object is not provided.");
 
   validateOptions(rules, {
-    typeof: {
+    types: {
       blacklist: "array",
       setBoolean: "array",
       alias: "object",
@@ -213,6 +175,3 @@ function structureData(cls, data, rules = {}) {
   return cls;
 }
 
-module.exports.getArticle = getArticle;
-module.exports.structureData = structureData;
-module.exports.validateOptions = validateOptions;

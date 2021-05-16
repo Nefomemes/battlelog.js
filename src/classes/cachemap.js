@@ -4,7 +4,7 @@
  * @class
  * @augments Map
  */
-class CacheMap extends Map {
+export class CacheMap extends Map {
   /**
    * If the key existed in the instance, calls
    *

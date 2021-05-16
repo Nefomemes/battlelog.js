@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src/classes/blclient.ts
-import utils from '../utils/utils';
+import utils from '../utils';
 import { GameClient } from "./gameclient";
-=======
-const utils = require("../utils");
-const { GameClient } = require("./gameclient");
->>>>>>> dev:src/classes/blclient.js
 /**
 
  * Represents a Battlelog session.
@@ -12,7 +7,7 @@ const { GameClient } = require("./gameclient");
  * @class
  */
 
-class BattlelogClient {
+export class BattlelogClient {
   type = "BattlelogClient";
 
   /**
@@ -23,7 +18,7 @@ class BattlelogClient {
    * @paramoptions- The options used here.
    */
 
-  constructor(options?: object = {}) {
+  constructor(options: object = {}) {
     if (options && typeof options !== "object") {
       throw Error(
         `Parameter 'options' is required to be an object.  While it is ${utils.getArticle(
@@ -32,16 +27,21 @@ class BattlelogClient {
       );
     }
   }
-
+  #clients: {
+    bf3?: GameClient,
+    bf4?: GameClient,
+    bfh?: GameClient,
+    mohw?: GameClient
+  };
   /**
 
    * Creates a new GameClient instance.
    *
-   * @param {...*} params - The params used to create the instance.
+   * @param {} params - The params used to create the instance.
    */
-  game(...params) {
-    return new GameClient(this, ...params);
+  game(game, ...params: Array<any>) {
+    
   }
 }
+}
 
-module.exports.BattlelogClient = BattlelogClient;

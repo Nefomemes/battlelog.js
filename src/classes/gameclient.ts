@@ -1,26 +1,31 @@
-const axios = require("axios");
-const defaultHeader = require("../assets/json/headers.json");
-const { BattlelogMap } = require("./blmap");
-const { ForumClient } = require("./forumclient");
-const { User } = require("./user");
-const { Server } = require("./server");
-
+import axios from "axios";
+import defaultHeader from "../assets/json/headers.json";
+import { CacheMap } from "./cachemap";
+import { User } from "./user";
+import { Server } from "./server";
+import type { SupportedGames } from '../types/games';
+import type { AxiosRequestConfig } from 'axios';
+import { Platoon } from './platoon';
+import type { BattlelogClient } from './blclient';
+ 
 /**
  *  Represents that /:game/ part. The main brain of everything.
  *
  * @class
  */
-class GameClient {
-	type = "GameClient";
+export class GameClient {
+	game: SupportedGames;
 	/**
 	 * Creates a new GameClient instance.
 	 *
 	 * @class
-	 * @param {BattlelogClient} client - The client of this instance.
-	 * @param {GameType} game - The game of this GameClient.
-	 * @param {options} [options] - The options used for this instance.
+	 * @param client - The client of this instance.
+	 * @param  game - The game of this GameClient.
+	 * @param  [options] - The options used for this instance.
 	 */
-	constructor(client, game = "bf3", options = {}) {
+	constructor(client: BattlelogClient, game: SupportedGames = "bf3", options: {
+		axios?: AxiosRequestConfig
+	} = {}) {
 		if (!client) throw Error("The 'client' parameter is required. ");
 
 		if (typeof options !== "object")
@@ -28,14 +33,10 @@ class GameClient {
 
 		if (typeof game !== "string")
 			throw Error("Parameter 'game' is required to be a string.");
-		game = game.toLowerCase();
+		game = <SupportedGames>game.toLowerCase();
 
 		if (!["bf3", "bf4", "mohw", "bfh"].includes(game))
 			throw Error("The game is not available in Battlelog.");
-
-		/**
-		 * @typedef {('bf3'|'bf4'|'bfh'|'mohw')} GameType
-		 */
 
 		this.game = game;
 		/**
@@ -47,9 +48,10 @@ class GameClient {
 		if (!options.axios) options.axios = {};
 
 		let instance = axios.create({
-			baseURL: `https://battlelog.battlefield.com/${this.game}`,
+		
 
 			...options.axios,
+			baseURL: `https://battlelog.battlefield.com/${this.game}`,
 			headers: { ...(options.axios.headers || {}), ...defaultHeader },
 		});
 
@@ -59,10 +61,9 @@ class GameClient {
 		});
 	}
 
-	users = new BattlelogMap();
-	servers = new BattlelogMap();
-	forum = new ForumClient(this);
-	platoons = new BattlelogMap();
+	users = new CacheMap();
+	servers = new CacheMap();
+	platoons = new CacheMap();
 
 	async fetchUser(...params) {
 		let user = await new User(this, ...params).fetch();

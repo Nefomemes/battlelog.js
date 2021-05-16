@@ -1,0 +1,45 @@
+name: JSON documentation
+on:
+  push:
+    branches:
+      - "*"
+      - "!gh-pages"
+    tags:
+      - "*"
+    paths:
+      - "src/**.js"
+jobs:
+  docs:
+    name: Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+
+      - name: Install Node v14
+        uses: actions/setup-node@master
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build documentation
+        run: npm run docs
+
+      - name: Commit the documentation
+        run: |
+          git branch -u origin/${GITHUB_REF##*/}
+          git pull
+          git add --all
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Generated JSON documentation" -a
+
+        continue-on-error: true
+      - name: Push the docs
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+        continue-on-error: true

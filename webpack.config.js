@@ -7,7 +7,6 @@ module.exports = {
   output: {
     globalObject: "this",
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.min.js",
     libraryTarget: "umd",
     library: "bljs",
   },

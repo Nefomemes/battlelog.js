@@ -1,4 +1,3 @@
-
 # BLThunderstorm Code of Conduct
 
 ## Our Pledge
@@ -120,11 +119,9 @@ individual, or aggression toward or disparagement of classes of individuals.
 
 **Consequence**: A permanent ban from any sort of public interaction within
 the community.
-
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage],
-version 2.0, available at
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 2.0, available at
 [https://www.contributor-covenant.org/version/2/0/code_of_conduct.html][v2.0], with some small changes from the BLThunderstorm team, which includes the addition of u/cupcake1713's beautiful post [here](https://www.reddit.com/r/blog/comments/1ytp7q/remember_the_human/).
 
 Community Impact Guidelines were inspired by 
@@ -139,4 +136,3 @@ at [https://www.contributor-covenant.org/translations][translations].
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
-

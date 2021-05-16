@@ -1,23 +1,31 @@
-import utils from "../utils/utils";
+import * as utils from "../utils";
 import User from "./user";
-
+import type { GameClient } from './gameclient';
 /**
  * Represents a server.
  *
  * @class
  */
-class Server {
+export class Server {
 
+    /**
+     * The server unique GUID identifier
+     */
+   guid: string;
 
-   guid: /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}$/i;
+   /**
+    * The GameClient of this server.
+    */
+   client: GameClient;
+
   /**
    * Creates a new Server instance.
    *
-   * @param {GameClient} client
-   * @param {object} data
+   * @param client
+   * @param data
    */
-  constructor(client, data) {
-    this.client = client;
+  constructor(client: GameClient, data: Server) {
+    Object.defineProperty(this, "client", { value: client, enumerable: false });
     this.structureData(data);
   }
   /**

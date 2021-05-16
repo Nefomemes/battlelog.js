@@ -18,9 +18,9 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     steps:
       - name: Checkout things
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.4
       - name: Setup Node.js v14
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: 14
       - name: Run test
@@ -29,12 +29,12 @@ jobs:
     name: Build
     needs: test
     runs-on: ubuntu-latest
-   
     steps:
       - name: Checkout things
-        uses: actions/checkout@v2
+
+        uses: actions/checkout@v2.3.4
       - name: Setup Node.js v14
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v2.1.5
         with:
           node-version: "14"
       - name: Install Yarn
@@ -50,19 +50,11 @@ jobs:
       - name: Build library
         run: |
           yarn install
-          yarn build:dev
-          yarn build:prod
-      - name: Commit the dist
-        run: |
-
-          git add --all
-
-          git commit -m "Build: Build library" -a
-        continue-on-error: true
-      - name: Push the dist
-        uses: ad-m/github-push-action@master
+          yarn build
+      - name: Upload Dev Bundle 
+        uses: actions/upload-artifact@v2.2.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
-        continue-on-error: true
+          name: bundle.dev.js
+          path: dist/dev.js
+
   
