@@ -51,7 +51,7 @@ jobs:
         run: |
           yarn install
           yarn build
-       - name: Upload DevBundle 
+      - name: Upload Dev Bundle 
         uses: actions/upload-artifact@v2.2.3
         with:
           name: bundle.dev.js
