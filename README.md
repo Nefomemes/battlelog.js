@@ -1,5 +1,4 @@
 
-
 [![](https://raw.githubusercontent.com/Nefomemes/battlelog.js/master/docs/20210329_082904.png)](https://github.com/Nefomemes/battlelog.js)
 
 ![Run this repo on Replit](https://replit.com/badge/github/Nefomemes/battlelog.js)
@@ -15,6 +14,10 @@ Unofficial API wrapper for
 [Battlefield Battlelog](https://battlelog.battlefield.com)
 
 </p> 
+
+| |
+| ----- |
+| **Note** The GitHub repository of BattlelogJS, which can be found [here](https://gitlab.com/BLThunderstorm/battlelog.js),  is mirrored from BattlelofJS' GitLab repository, which can be found [here](https://gitlab.com/BLThunderstorm/battlelog-js). All issues and pull requests should go there instead. We will only use the GitHub repository for CI/CD and dependabot moving forward, so we are not going to archive the GitHub repo. |
 
 ## Resources
 
