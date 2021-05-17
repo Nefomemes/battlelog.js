@@ -1,18 +1,21 @@
-const utils = require("../utils");
+import * as utils from "../utils";
+import { User } from "./user";
+import type { PersonaType } from "../types/persona";
 /**
  * Represents a Battlelog soldier.
  *
  * @class
  */
 
-class Soldier {
+export class Soldier {
   /**
    * The user of this soldier.
    *
    * @property {User}
    */
-  user;
+  user: User;
 
+  persona: PersonaType;
   /**
    * @typedef {object} SoldierStats
    * @property {number} coopMissionsFinished - How many coop missions have the
@@ -111,5 +114,3 @@ class Soldier {
     return this;
   }
 }
-
-module.exports.Soldier = Soldier;

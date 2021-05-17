@@ -1,5 +1,7 @@
+
 import * as utils from '../utils';
 import { GameClient } from "./gameclient";
+import type { SupportedGames } from "../types/games";
 /**
 
  * Represents a Battlelog sessio
@@ -9,7 +11,8 @@ import { GameClient } from "./gameclient";
  */
 
 export class BattlelogClient {
-  type = "BattlelogClient";
+
+
 
   /**
 
@@ -29,7 +32,7 @@ export class BattlelogClient {
     }
   };
 
-  #clients: {
+  private clients: {
     bf3?: GameClient,
     bf4?: GameClient,
     bfh?: GameClient,
@@ -40,11 +43,11 @@ export class BattlelogClient {
 
    * Creates a new GameClient instance.
    *
-   * @param {} params - The params used to create the instance.
+   * @param params - The params used to create the instance.
    */
-  game(game) {  
-  this.#clients[game] = this.#clients[game] || new GameClient(this, game);
-  return this.#clients[game];
+  game(game: SupportedGames) {  
+  this.clients[game] = this.clients[game] || new GameClient(this, game);
+  return this.clients[game];
   }
 }
 

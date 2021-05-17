@@ -1,14 +1,10 @@
 import { Platoon } from "./platoon";
 import * as utils from "../utils";
 import { Soldier } from "./soldier";
-export type UserInfo = {
-  twitchUsername: string
-}
-export type  DisplayAvatarUrlOptions = {
-s?: number,
-r?: 'g' | 'pg',
-d?: 404 | '404' | 'mp' | 'wavatar' | 'blank' | 'robohash' | 'identicon' | 'retro' | 'monsterid', 
-};
+import type { UserInfoType } from "../types/userinfo";
+import { GameClient } from "./gameclient";
+import type { UserPropType } from "../types/userprop";
+import type { GravatarDefaultAvatarType } from "../types/gravatarda";
 /**
  * Represents a Battlelog user.
  *
@@ -17,6 +13,10 @@ d?: 404 | '404' | 'mp' | 'wavatar' | 'blank' | 'robohash' | 'identicon' | 'retro
  * @param {object} data - Raw object data of the user.
  */
 export class User {
+
+  user: UserPropType;
+  userinfo: UserInfoType
+ client: GameClient;
   /**
    * The platoon the user is a part of. Please do not confuse this with
    * User#platoon
@@ -25,6 +25,9 @@ export class User {
    */
   platoons: Map<string, Platoon> = new Map();
 
+  /**
+   * 
+   */
   /**
    * The platoons the user is a fan of.
    *
@@ -50,58 +53,8 @@ export class User {
    * The soldiers of this user.
    */
   soldiers: Map<string, Soldier> = new Map();
-  /*
-  userinfo: {
-      privacyFeedAndGameActivity: 2,
-      twitchUsername: null,
-      userId: '3307924356088947575',
-      introSectionBitmask: 48,
-      feedHidden: false,
-      pushSettings: -1,
-      showDetails: false,
-      forumSignature: null,
-      locality: null,
-      location: null,
-      icon: 0,
-      presentation: '',
-      profileBlocked: 0,
-      allowFriendRequests: true,
-      showFriendsUI: false,
-      gravatarHidden: false,
-      presencePrivacy: 0,
-      presentationHidden: false,
-      loginCounter: 140,
-      privacyShowFriends: 2,
-      forumSignatureHidden: false,
-      name: null,
-      age: null,
-      birthdate: null,
-      feedActive: false,
-      lastLogin: 1614320260,
-      privacyDetails: 2
-    },
-  */
+ 
 
-  /**
-   * Much more detailed properties of the user..
-   *
-   * @typedef UserInfo
-   * @property {string} twitchUsername - The user's Twitch username
-   * @property {number} lastLogin - The last time the user logged in to
-   * Battlelog
-   * @property {*} birthdate - Since when the user have played the game
-   * "Outside"
-   * @property {*} name - The user's username in the game "Outside"
-   * @property {boolean} gravatarHidden - Whether the user's avatar is hidden
-   * @property {string} presentation - The presentation of the user.
-   */
-
-  /**
-   * Much more detailed properties of the user..
-   *
-   * @property {UserInfo}
-   */
-  userinfo = {};
 
   /**
    * Creates a new User instance.
@@ -122,7 +75,7 @@ export class User {
       this.structureData(data);
       
     } else if (typeof data == "string") {
-      this.name = data;
+      this.user.name = data;
     }
   }
   /**
@@ -138,7 +91,11 @@ export class User {
     const profile = res.data.context.profileCommon;
     if(!profile) console.warn("This is weird but we can not find profileCommon in the context object")
     this.structureData(profile);
-    this.soldiers.structureData(res.data.context.soldiersBox);
+    
+    this.soldiers
+    res.data.context.soldiersBox;
+
+
 
     return this;
   }
@@ -159,8 +116,6 @@ export class User {
      *
      */
 
-    utils.structureData(this, data.user);
-
     if (data.tenFriends && data.tenFriends.length) {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
     }
@@ -179,29 +134,34 @@ export class User {
    * @param {object} options - Options used
    * @returns {string} URL string for the user's avatar.
    */
-  displayAvatarURL(options = {}) {
+  displayAvatarURL(options: {
+    d?: GravatarDefaultAvatarType,
+    s?: number,
+    r?: "g" | "pg",
+    f?: boolean | string,
+  } = {}) {
     utils.validateOptions(options, {
-      alias: { size: "s", rating: "r", default: "d", extension: "e" },
-      defaults: { default: "retro", rating: "g" },
+      defaults: { d: "retro", r: "g" }
     });
 
-    if (options.size && options.size > 2048)
+    if (options.s && options.s > 2048)
       throw Error("Option 'size' is required to be less than 2048.");
-    if (options.size && options.size < 1)
+    if (options.s && options.s < 1)
       throw Error("Option 'size' is required to be more than 1.");
-    if (options.rating === "r")
+      // @ts-ignore
+    if (options.r === "r")
       throw Error(
         "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted."
       );
+// @ts-ignore
+    if (options.r === "x") throw Error("Ok coomer");
 
-    if (options.rating === "x") throw Error("Ok coomer");
-
-    if (!["g", "pg"].includes(options.rating))
+    if (!["g", "pg"].includes(options.r))
       throw Error("Rating must be either 'g' or 'pg'");
     if (
       !(
-        options.default.startsWith("http://") ||
-        options.default.startsWith("https://")
+        options.d.startsWith("http://") ||
+        options.d.startsWith("https://")
       ) &&
       ![
         "404",
@@ -212,14 +172,14 @@ export class User {
         "retro",
         "robohash",
         "blank",
-      ].includes(options.default)
+      ].includes(options.d)
     )
       throw Error(
         "Option 'default' did not provide a valid default profile picture"
       );
-    let params = { r: options.rating, d: options.default, s: options.size };
+    
 
-    if (options.forceDefault) params.f = "y";
+    if(typeof options.f === "boolean") options.f = options.f ? "y" : "n";
 
     const { stringify } = require("querystring");
 

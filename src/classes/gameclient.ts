@@ -1,5 +1,6 @@
 import axios from "axios";
-import defaultHeader from "../assets/headers.json";
+import type { AxiosInstance } from "axios";
+import * as defaultHeader from "../assets/headers.json";
 import { CacheMap } from "./cachemap";
 import { User } from "./user";
 import { Server } from "./server";
@@ -15,6 +16,7 @@ import type { BattlelogClient } from './blclient';
  */
 export class GameClient {
 	game: SupportedGames;
+	axios: AxiosInstance;
 	/**
 	 * Creates a new GameClient instance.
 	 *
@@ -66,17 +68,17 @@ export class GameClient {
 	platoons = new CacheMap();
 
 	async fetchUser(...params) {
-		let user = await new User(this, ...params).fetch();
+		let user = await new User(this, ...<[User|string]>params).fetch();
 
-		this.users.structureData(user.userId, user);
+		this.users.structureData(user.user.userId, user);
 		return user;
 	}
 
-	async fetchPlatoon(...params) {
-		let platoon = await new Platoon(this, ...params).fetch();
+	async fetchPlatoon(data: Platoon | string) {
+		let platoon = await new Platoon(this, data).fetch();
 
-		this.platoons.structureData(platoon.id, platoon);
-		return user;
+		this.platoons.structureData(platoon.id , platoon);
+		return platoon;
 	}
 
 	async fetchServers() {
@@ -90,9 +92,9 @@ export class GameClient {
 		return this.servers;
 	}
 
-	async fetchServer(...args) {
-		let server = await new Server(this, ...args).fetch();
-		this.servers.structureData(server.id, server);
+	async fetchServer(data: Server | string) {
+		let server = await new Server(this, data).fetch();
+		this.servers.structureData(server.guid, server);
 
 		return server;
 	}

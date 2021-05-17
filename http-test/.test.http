@@ -1,0 +1,5 @@
+GET https://battlelog.battlefield.com/bf3/user/Nefomemes HTTP/1.1
+X-Requested-With: XMLHttpRequest
+X-AjaxNavigation: 1
+
+===

@@ -24,9 +24,13 @@ export class Server {
    * @param client
    * @param data
    */
-  constructor(client: GameClient, data: Server) {
+  constructor(client: GameClient, data: Server | string) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
+    if(typeof data === "string"){
+      this.guid = data;
+    } else {
     this.structureData(data);
+    }
   }
   /**
    * Fetch the server and populate the server's stats again.

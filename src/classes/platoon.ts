@@ -1,6 +1,13 @@
+import type { AxiosInstance } from "axios";
 import * as utils from "../utils";
 import type { GameClient } from './gameclient';
 export class Platoon {
+  
+  id: string;
+
+  client: GameClient;
+
+  axios: AxiosInstance;
   /**
    * Creates a new Platoon instance.
    *
@@ -8,13 +15,19 @@ export class Platoon {
    * @param client
    * @param data
    */
-  constructor(client: GameClient, data: Platoon) {
-    if (data) {
+  constructor(client: GameClient, data: Platoon | string) {
+    if (data && typeof data === "string") {
+      this.id = data;
+    } else {
       this.structureData(data);
     }
   }
-
-  badge = {};
+  isFan: boolean;
+  allowNewMember: boolean;
+  badge: {
+    '60': string,
+    '320': string
+    };
   /**
    * Structure the class using the data provided.
    *
@@ -38,9 +51,11 @@ export class Platoon {
   async fetch() {
     const res = await this.client.axios.get(`/platoon/${this.id}/`);
 
-    this.structureData(this, res.data.context.platoon);
+    this.structureData(res.data.context.platoon);
 
     this.isFan = res.data.context.isFan;
+
+    return this;
   }
 }
 
