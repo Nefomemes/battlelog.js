@@ -1,11 +1,13 @@
 import { Platoon } from "./platoon";
 import * as utils from "../utils";
 import { Soldier } from "./soldier";
-
+export type UserInfo = {
+  twitchUsername: string
+}
 export type  DisplayAvatarUrlOptions = {
 s?: number,
 r?: 'g' | 'pg',
-d?: 404 | '404' | 'mp' | 'wavatar' | 'blank' | 'robohash' | 'identicon' | 'retro' | 'monsterid',
+d?: 404 | '404' | 'mp' | 'wavatar' | 'blank' | 'robohash' | 'identicon' | 'retro' | 'monsterid', 
 };
 /**
  * Represents a Battlelog user.
@@ -112,7 +114,6 @@ export class User {
   constructor(client, data) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
 
-    this.soldiers = new SoldiersManager(this, []);
     /**
      * @property {GameClient} client - The client used to access this user.
      */
@@ -165,9 +166,7 @@ export class User {
     }
 
   
-    if (data.club) {
-      this.platoon = new Platoon(this.client, data.club);
-    }
+   
 
     if (data.soldiersBox) {
       this.soldiers.structureData(data.soldiersBox);
