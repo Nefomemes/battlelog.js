@@ -1,5 +1,5 @@
 import * as utils from "../utils";
-import User from "./user";
+import { User } from "./user";
 import type { GameClient } from './gameclient';
 /**
  * Represents a server.
@@ -12,6 +12,10 @@ export class Server {
      * The server unique GUID identifier
      */
    guid: string;
+
+   players: {
+     [userId: string]: User
+   };
 
    /**
     * The GameClient of this server.

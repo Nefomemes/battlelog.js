@@ -1,20 +1,23 @@
 import * as utils from "../utils";
-import { User } from "./user";
+import type { User } from "./user";
 import type { PersonaType } from "../types/persona";
 /**
  * Represents a Battlelog soldier.
- *
- * @class
+ * 
  */
 
 export class Soldier {
   /**
    * The user of this soldier.
-   *
-   * @property {User}
    */
   user: User;
-
+  /**
+   * How many coop missions have been completed with the soldier.
+   */
+  coopLevelsTaken: number;
+  /**
+  *  The persona of this soldier.
+  */
   persona: PersonaType;
   /**
    * @typedef {object} SoldierStats
@@ -51,7 +54,7 @@ export class Soldier {
    *     instance.
    */
 
-  constructor(user, data, fetch) {
+  constructor(user: User, data: Soldier, fetch?: boolean) {
     this.structureData(data, fetch);
     Object.defineProperties(this, {
       user: { value: user, enumerable: false },
@@ -65,7 +68,7 @@ export class Soldier {
    * @param {boolean} [fetch] - Whether the raw data is from a fetch function.
    * @returns {Soldier} - The soldier
    */
-  structureData(data, fetch) {
+  structureData(data: Soldier, fetch?: boolean) {
     var rules = {};
     var soldierRootStats = [
       "timePlayed",
@@ -109,8 +112,6 @@ export class Soldier {
         numLosses: "losses",
       },
     });
-
-    this.stats.coopMissionsFinished = res.data.data.coopLevelsTaken;
     return this;
   }
 }

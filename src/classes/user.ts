@@ -17,6 +17,8 @@ export class User {
   user: UserPropType;
   userinfo: UserInfoType
  client: GameClient;
+ gravatarMd5: string;
+
   /**
    * The platoon the user is a part of. Please do not confuse this with
    * User#platoon
@@ -52,7 +54,9 @@ export class User {
   /**
    * The soldiers of this user.
    */
-  soldiers: Map<string, Soldier> = new Map();
+  soldiers: {
+    [personaId: string]: Soldier
+  } = { };
  
 
 
@@ -75,18 +79,17 @@ export class User {
       this.structureData(data);
       
     } else if (typeof data == "string") {
-      this.user.name = data;
+      this.user.username = data;
     }
   }
   /**
    * Fetch the user in Battlelog and refresh his data with the raw data
    * Battlelog gave.
    *
-   * @async
-   * @returns {User} the User
+   * @returns the User instance
    */
-  async fetch() {
-    const res = await this.client.axios.get(`/user/${this.name}`);
+  async fetch() : Promise<User> {
+    const res = await this.client.axios.get(`/user/${this.user.username}`);
 
     const profile = res.data.context.profileCommon;
     if(!profile) console.warn("This is weird but we can not find profileCommon in the context object")
@@ -118,13 +121,20 @@ export class User {
 
     if (data.tenFriends && data.tenFriends.length) {
       this.friends = data.tenFriends.map((i) => new User(this.client, i));
-    }
+    } 
 
   
    
 
     if (data.soldiersBox) {
-      this.soldiers.structureData(data.soldiersBox);
+      for(let soldier of <Array<Soldier>>data.soldiersBox){
+        let soldierInnit = this.soldiers[soldier.persona.personaId];
+       if(soldierInnit){
+        soldierInnit.structureData(soldier);
+       } else {
+        this.soldiers[soldier.persona.personaId] = new Soldier(this, soldier);
+       } 
+      };
     }
   }
   /**
@@ -139,9 +149,10 @@ export class User {
     s?: number,
     r?: "g" | "pg",
     f?: boolean | string,
+    e?:  "png" | "jpg"
   } = {}) {
     utils.validateOptions(options, {
-      defaults: { d: "retro", r: "g" }
+      defaults: { d: "retro", r: "g", e: "png" }
     });
 
     if (options.s && options.s > 2048)
@@ -184,9 +195,9 @@ export class User {
     const { stringify } = require("querystring");
 
     return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
-      options.extension
-    }?${stringify(params)}`;
-  }
+      options.e
+    }?${stringify()}`;
+  } 
 
   async fetchSoldiers() {
     var res = await this.client.axios.get(
