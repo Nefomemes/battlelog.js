@@ -9,7 +9,7 @@
 <div><b>
   <p align=center>✅ Written in Typescript</p>
   <p align=center>✅ Cache support</p>
-  <p align=center>✅ Cross-platfoem (excluding Deno)</p>
+  <p align=center>✅ Cross-platform (excluding Deno)</p>
   </b>
   </div>
   
