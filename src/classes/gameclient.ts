@@ -67,21 +67,21 @@ export class GameClient {
 	servers = new CacheMap();
 	platoons = new CacheMap();
 
-	async fetchUser(...params) {
+	async fetchUser(...params) : User {
 		let user = await new User(this, ...<[User|string]>params).fetch();
 
 		this.users.structureData(user.user.userId, user);
 		return user;
 	}
 
-	async fetchPlatoon(data: Platoon | string) {
+	async fetchPlatoon(data: Platoon | string) : CacheMap<Platoon> {
 		let platoon = await new Platoon(this, data).fetch();
 
 		this.platoons.structureData(platoon.id , platoon);
 		return platoon;
 	}
 
-	async fetchServers() {
+	async fetchServers() : CacheMap<Server> {
 		let res = await this.axios.get("/servers");
 		this.servers.structureData(null, res.data.context.servers, {
 			callbackKey: (k, v) => v.guid,
@@ -91,8 +91,8 @@ export class GameClient {
 
 		return this.servers;
 	}
-
-	async fetchServer(data: Server | string) {
+	
+	async fetchServer(data: Server | string) : Server {
 		let server = await new Server(this, data).fetch();
 		this.servers.structureData(server.guid, server);
 
