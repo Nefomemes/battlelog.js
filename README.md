@@ -14,3 +14,16 @@
   </div>
   
 ---
+
+## Example usage
+```ts
+import { BattlelogClient } from "battlelog.js";
+
+let battlelog = new BattlelogClient();
+// Can be 'bf3', 'bf4', 'bfh', or 'mohw'
+let bf3 = battlelog.game("bf3");
+
+let user = await bf3.fetchUser("Nefomemes");
+
+console.log(user); // Logs the User to the console.
+```
