@@ -100,5 +100,3 @@ export class GameClient {
 	}
 
 }
-
-module.exports.GameClient = GameClient;
