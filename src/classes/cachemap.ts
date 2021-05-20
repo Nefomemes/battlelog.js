@@ -59,7 +59,10 @@ export class CacheMap extends Map {
         }
 
       
-      } else throw Error("Invalid syntax");
+      } else {
+   
+        throw Error("Invalid syntax");
+      }
   return this;
   }
 }

@@ -13,9 +13,11 @@ import type { GravatarDefaultAvatarType } from "../types/gravatarda";
  * @param {object} data - Raw object data of the user.
  */
 export class User {
+// @ts-ignore
+  user: UserPropType = {};
 
-  user: UserPropType;
-  userinfo: UserInfoType
+  // @ts-ignore
+  userinfo: UserInfoType = {};
  client: GameClient;
  gravatarMd5: string;
 
@@ -95,8 +97,7 @@ export class User {
     if(!profile) console.warn("This is weird but we can not find profileCommon in the context object")
     this.structureData(profile);
     
-    this.soldiers
-    res.data.context.soldiersBox;
+    this.soldiers = res.data.context.soldiersBox;
 
 
 
@@ -112,7 +113,7 @@ export class User {
 	  
   	if(!data) return this;
     utils.structureData(this, data, {
-      blacklist: ["user", "tenFriends", "platoons", "platoonFans"],
+      blacklist: ["tenFriends", "platoons", "platoonFans"],
     });
 
     /**
@@ -136,6 +137,7 @@ export class User {
        } 
       };
     }
+    return this;
   }
   /**
    * Get the URL string of the user's avatar.
@@ -194,7 +196,7 @@ export class User {
 
     const { stringify } = require("querystring");
 
-    return `https://www.gravatar.com/avatar/${this.gravatarMd5}.${
+    return `https://www.gravatar.com/avatar/${this.user.gravatarMd5}.${
       options.e
     }?${stringify()}`;
   } 

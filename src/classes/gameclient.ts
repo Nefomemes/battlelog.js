@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { AxiosInstance } from "axios";
-import * as defaultHeader from "../assets/headers.json";
+
 import { CacheMap } from "./cachemap";
 import { User } from "./user";
 import { Server } from "./server";
@@ -54,7 +54,10 @@ export class GameClient {
 
 			...options.axios,
 			baseURL: `https://battlelog.battlefield.com/${this.game}`,
-			headers: { ...(options.axios.headers || {}), ...defaultHeader },
+			headers: { ...(options.axios.headers || {}), 
+				"X-Requested-With": "XMLHttpRequest",
+				"X-AjaxNavigation": "1"
+			  			   },
 		});
 
 		Object.defineProperty(this, "axios", {
@@ -67,21 +70,21 @@ export class GameClient {
 	servers = new CacheMap();
 	platoons = new CacheMap();
 
-	async fetchUser(...params) : User {
+	async fetchUser(...params) : Promise<User> {
 		let user = await new User(this, ...<[User|string]>params).fetch();
 
 		this.users.structureData(user.user.userId, user);
 		return user;
 	}
 
-	async fetchPlatoon(data: Platoon | string) : CacheMap<Platoon> {
+	async fetchPlatoon(data: Platoon | string) : Promise<Platoon> {
 		let platoon = await new Platoon(this, data).fetch();
 
-		this.platoons.structureData(platoon.id , platoon);
+		this.platoons.structureData(platoon.id, platoon);
 		return platoon;
 	}
 
-	async fetchServers() : CacheMap<Server> {
+	async fetchServers() : Promise<Map<string, Server>> {
 		let res = await this.axios.get("/servers");
 		this.servers.structureData(null, res.data.context.servers, {
 			callbackKey: (k, v) => v.guid,
@@ -92,7 +95,7 @@ export class GameClient {
 		return this.servers;
 	}
 	
-	async fetchServer(data: Server | string) : Server {
+	async fetchServer(data: Server | string) : Promise<Server> {
 		let server = await new Server(this, data).fetch();
 		this.servers.structureData(server.guid, server);
 

@@ -37,7 +37,7 @@ export class BattlelogClient {
     bf4?: GameClient,
     bfh?: GameClient,
     mohw?: GameClient
-  };
+} = {};
   
   /**
 
