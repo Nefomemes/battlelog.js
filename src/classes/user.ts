@@ -5,6 +5,7 @@ import type { UserInfoType } from "../types/userinfo";
 import { GameClient } from "./gameclient";
 import type { UserPropType } from "../types/userprop";
 import type { GravatarDefaultAvatarType } from "../types/gravatarda";
+import * as querystring from  "querystring";
 /**
  * Represents a Battlelog user.
  *
@@ -194,12 +195,12 @@ export class User {
 
     if(typeof options.f === "boolean") options.f = options.f ? "y" : "n";
 
-    const { stringify } = require("querystring");
+   
 
     return `https://www.gravatar.com/avatar/${this.user.gravatarMd5}.${
       options.e
-    }?${stringify()}`;
-  } 
+    }?${(() => { delete options.e; return querystring.stringify(options) })()}`;
+  } // This module is declared with using 'export =', and can only be used with a default import when using the 'allowSyntheticDefaultImports' flag.
 
   async fetchSoldiers() {
     var res = await this.client.axios.get(
