@@ -1,0 +1,9 @@
+GET https://battlelog.battlefield.com/bf3/user/Nefomemes HTTP/1.1
+X-Requested-With: XMLHttpRequest
+X-AjaxNavigation: 1
+
+###
+
+GET https://battlelog.battlefield.com/bf3/user/overviewBoxStats/3307924356088947575 HTTP/1.1
+X-Requested-With: XMLHttpRequest
+X-AjaxNavigation: 1

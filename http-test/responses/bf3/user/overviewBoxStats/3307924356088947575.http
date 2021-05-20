@@ -1,0 +1,94 @@
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 610
+Content-Encoding: gzip
+Vary: Accept-Encoding
+X-Node: 127.0.0.1
+Expires: Thu, 20 May 2021 12:58:55 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Thu, 20 May 2021 12:58:55 GMT
+Connection: close
+
+{
+  "type": "success",
+  "message": "OK",
+  "data": {
+    "soldiersBox": [
+      {
+        "activeEmblem": null,
+        "timePlayed": 105215,
+        "persona": {
+          "picture": "bf3-us-recon",
+          "userId": "3307924356088947575",
+          "user": null,
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {
+            "1": "2"
+          },
+          "clanTag": "BLTH"
+        },
+        "kills": 221,
+        "deaths": 934,
+        "npStatus": null,
+        "legendaryLevel": 0,
+        "rsNumWins": 0,
+        "rsNumLosses": 0,
+        "rank": 14,
+        "platform": 1,
+        "game": 2,
+        "score": 211495,
+        "numLosses": 47,
+        "isPersonaBanned": false,
+        "active": true,
+        "skill": 0,
+        "dogtagsForPersona": {
+          "advancedDogTag": {
+            "statValue": null,
+            "index": 285,
+            "stat": null,
+            "isAdvanced": true,
+            "backgroundInverted": false,
+            "nameSID": "BF3_ID_XP4_DT_N_PROMO_NOOB",
+            "statUnit": null,
+            "image": "xp4_promo_noob",
+            "statSID": "",
+            "imageConfig": null
+          },
+          "basicDogTag": {
+            "statValue": null,
+            "index": 55,
+            "stat": null,
+            "isAdvanced": false,
+            "backgroundInverted": false,
+            "nameSID": "BF3_ID_DT_N_DTB039_MEDICAL",
+            "statUnit": null,
+            "image": "dtb038",
+            "statSID": null,
+            "imageConfig": null
+          }
+        },
+        "numWins": 28
+      }
+    ],
+    "userGames": {
+      "2": [
+        1
+      ]
+    },
+    "userGameExpansions": {
+      "268435456": [
+        1
+      ],
+      "8589934592": [
+        1
+      ]
+    }
+  }
+}

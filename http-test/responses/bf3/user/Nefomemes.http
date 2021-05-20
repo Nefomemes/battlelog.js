@@ -1,0 +1,1173 @@
+HTTP/1.1 200 OK
+Content-Type: application/json;charset=utf-8
+Content-Length: 3468
+Content-Encoding: gzip
+Vary: Accept-Encoding
+X-Json: 1
+X-Node: 127.0.0.1
+Expires: Mon, 17 May 2021 14:05:01 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Mon, 17 May 2021 14:05:01 GMT
+Connection: close
+Set-Cookie: beaker.session.id=f38c82b635a933d3e052bd0fe445c609; Path=/;HttpOnly;Secure
+
+{
+  "template": "profile.overview",
+  "globalContext": {
+    "feed": [],
+    "currentUrl": "|bf3|user|Nefomemes",
+    "isAjaxFetch": false,
+    "currentCanonicalURL": "http:\/\/battlelog.battlefield.com\/bf3\/user\/Nefomemes",
+    "useIdentity2RedirectFlow": true,
+    "systemUtcTime": 1621260301,
+    "bf4trialbannerActive": true,
+    "staticPrefix": "\/\/cdn.battlelog.com\/bl-cdn\/cdnprefix\/1323197",
+    "realm": {
+      "lang": 1,
+      "game": 2,
+      "section": 2
+    },
+    "pushConnections": [
+      {
+        "sslAddress": "beaconpush.battlelog.com",
+        "apiKey": "planet",
+        "nodeNumber": 0,
+        "channelsWithAuth": [
+          "1621303501;1c264a6996f4a3f3fe88aca9aa8d641d82d641d0profilefeed_3307924356088947575",
+          "1621303501;e3470b62329f76301df0195fcbdce02ab6991883bp:user",
+          "1621303501;7bfd1d421bc6a947f194756c65ab19d6170bca49user.profile.3307924356088947575"
+        ],
+        "sslEnabled": true,
+        "sslWsAddress": "beaconpush.battlelog.com",
+        "channels": [
+          "profilefeed_3307924356088947575",
+          "bp:user",
+          "user.profile.3307924356088947575"
+        ],
+        "token": "1621303501;e7991771ac5aeb56f00247794b6287f097f2821e",
+        "user": "guest_1621260301.71",
+        "address": "beaconpush.battlelog.com",
+        "wsAddress": "beaconpush.battlelog.com",
+        "log": false
+      }
+    ],
+    "isBFHVisible": true,
+    "requestURI": "http:\/\/battlelog.battlefield.com\/bf3\/user\/Nefomemes",
+    "activitystreaminfo": {},
+    "pushOperator": "planet",
+    "writeBanUntil": 0,
+    "componentName": "profile",
+    "hasWriteBan": false,
+    "activeMenu": "",
+    "filePrefix": "\/\/d34ymitoc1pg7m.cloudfront.net",
+    "isAjaxNavigation": true,
+    "actionName": "view",
+    "isSecure": true,
+    "banType": 0,
+    "profileUserId": "3307924356088947575",
+    "hideComcenter": false,
+    "clientIp": "36.73.32.48",
+    "bfhbetabannerActive": false
+  },
+  "context": {
+    "feed": [],
+    "activitystream": [
+      {
+        "persona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": {
+            "username": "Nefomemes",
+            "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+            "userId": "3307924356088947575",
+            "createdAt": 1604901587,
+            "presence": {
+              "userId": "3307924356088947575",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          },
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {},
+          "clanTag": ""
+        },
+        "MOHWAWARDS": null,
+        "BF4TRACKINGCOMPLETE": null,
+        "BF4ASSIGNMENTS": null,
+        "MOHWTOUR": null,
+        "userId": "3307924356088947575",
+        "personaId": "1005012929719",
+        "BF4DOGTAGS": null,
+        "BFHRANKUP": null,
+        "BF4GAMEREPORT": null,
+        "game": 2,
+        "BFHAWARDS": null,
+        "user": {
+          "username": "Nefomemes",
+          "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+          "userId": "3307924356088947575",
+          "createdAt": 1604901587,
+          "presence": {
+            "userId": "3307924356088947575",
+            "updatedAt": 1621260301,
+            "presenceStates": "0"
+          }
+        },
+        "BF3AWARDS": {
+          "statItems": [
+            {
+              "nameSID": "BF3_ID_P_AWARD_R12_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R12_DESC",
+              "imageName": "r12",
+              "unlockId": "r12",
+              "type": 2048
+            },
+            {
+              "nameSID": "BF3_ID_P_AWARD_R15_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R15_DESC",
+              "imageName": "r15",
+              "unlockId": "r15",
+              "type": 2048
+            },
+            {
+              "nameSID": "BF3_ID_P_AWARD_R44_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R44_DESC",
+              "imageName": "r44",
+              "unlockId": "r44",
+              "type": 2048
+            }
+          ]
+        },
+        "autoshare": null,
+        "BF3RANKUP": null,
+        "MOHWITEMS": null,
+        "id": "5971435722",
+        "BF3GAMEREPORT": null,
+        "timestamp": 1620962710,
+        "BLAZECLUBJOINED": null,
+        "BF3ASSIGNMENTS": null,
+        "BF4RANKUP": null,
+        "eventName": "BF3AWARDS",
+        "platform": 1,
+        "BLAZECLUBCREATED": null,
+        "likeUserIds": [],
+        "RANKUP": null,
+        "gameHistoryId": "93298916",
+        "isShared": false,
+        "BFHGAMEREPORT": null,
+        "MOHWRECORD": null,
+        "BF4AWARDS": null
+      },
+      {
+        "persona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": {
+            "username": "Nefomemes",
+            "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+            "userId": "3307924356088947575",
+            "createdAt": 1604901587,
+            "presence": {
+              "userId": "3307924356088947575",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          },
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {},
+          "clanTag": ""
+        },
+        "MOHWAWARDS": null,
+        "BF4TRACKINGCOMPLETE": null,
+        "BF4ASSIGNMENTS": null,
+        "MOHWTOUR": null,
+        "userId": "3307924356088947575",
+        "personaId": "1005012929719",
+        "BF4DOGTAGS": null,
+        "BFHRANKUP": null,
+        "BF4GAMEREPORT": null,
+        "game": 2,
+        "BFHAWARDS": null,
+        "user": {
+          "username": "Nefomemes",
+          "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+          "userId": "3307924356088947575",
+          "createdAt": 1604901587,
+          "presence": {
+            "userId": "3307924356088947575",
+            "updatedAt": 1621260301,
+            "presenceStates": "0"
+          }
+        },
+        "BF3AWARDS": {
+          "statItems": [
+            {
+              "nameSID": "BF3_ID_P_AWARD_R35_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R35_DESC",
+              "imageName": "r35",
+              "unlockId": "r35",
+              "type": 2048
+            }
+          ]
+        },
+        "autoshare": null,
+        "BF3RANKUP": null,
+        "MOHWITEMS": null,
+        "id": "5965640935",
+        "BF3GAMEREPORT": null,
+        "timestamp": 1620959815,
+        "BLAZECLUBJOINED": null,
+        "BF3ASSIGNMENTS": null,
+        "BF4RANKUP": null,
+        "eventName": "BF3AWARDS",
+        "platform": 1,
+        "BLAZECLUBCREATED": null,
+        "likeUserIds": [],
+        "RANKUP": null,
+        "gameHistoryId": "93298903",
+        "isShared": false,
+        "BFHGAMEREPORT": null,
+        "MOHWRECORD": null,
+        "BF4AWARDS": null
+      },
+      {
+        "persona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": {
+            "username": "Nefomemes",
+            "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+            "userId": "3307924356088947575",
+            "createdAt": 1604901587,
+            "presence": {
+              "userId": "3307924356088947575",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          },
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {},
+          "clanTag": ""
+        },
+        "MOHWAWARDS": null,
+        "BF4TRACKINGCOMPLETE": null,
+        "BF4ASSIGNMENTS": null,
+        "MOHWTOUR": null,
+        "userId": "3307924356088947575",
+        "personaId": "1005012929719",
+        "BF4DOGTAGS": null,
+        "BFHRANKUP": null,
+        "BF4GAMEREPORT": null,
+        "game": 2,
+        "BFHAWARDS": null,
+        "user": {
+          "username": "Nefomemes",
+          "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+          "userId": "3307924356088947575",
+          "createdAt": 1604901587,
+          "presence": {
+            "userId": "3307924356088947575",
+            "updatedAt": 1621260301,
+            "presenceStates": "0"
+          }
+        },
+        "BF3AWARDS": null,
+        "autoshare": null,
+        "BF3RANKUP": null,
+        "MOHWITEMS": null,
+        "id": "5965640807",
+        "BF3GAMEREPORT": {
+          "statItems": [
+            {
+              "nameSID": "BF3_ID_P_ANAME_MAG",
+              "image": "ext_mag01",
+              "guid": null,
+              "slug": "extended-mag",
+              "parentNameSID": "BF3_ID_P_WNAME_870",
+              "parentImage": "remington870",
+              "descriptionSID": "BF3_ID_P_ADESC_MAG",
+              "unlockId": "ID_P_ANAME_MAG",
+              "codeNeeded": "c_sg870__kwa_g",
+              "valueNeeded": "30.0",
+              "type": 256
+            }
+          ]
+        },
+        "timestamp": 1620959815,
+        "BLAZECLUBJOINED": null,
+        "BF3ASSIGNMENTS": null,
+        "BF4RANKUP": null,
+        "eventName": "BF3GAMEREPORT",
+        "platform": 1,
+        "BLAZECLUBCREATED": null,
+        "likeUserIds": [],
+        "RANKUP": null,
+        "gameHistoryId": "93298903",
+        "isShared": false,
+        "BFHGAMEREPORT": null,
+        "MOHWRECORD": null,
+        "BF4AWARDS": null
+      },
+      {
+        "persona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": {
+            "username": "Nefomemes",
+            "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+            "userId": "3307924356088947575",
+            "createdAt": 1604901587,
+            "presence": {
+              "userId": "3307924356088947575",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          },
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {},
+          "clanTag": ""
+        },
+        "MOHWAWARDS": null,
+        "BF4TRACKINGCOMPLETE": null,
+        "BF4ASSIGNMENTS": null,
+        "MOHWTOUR": null,
+        "userId": "3307924356088947575",
+        "personaId": "1005012929719",
+        "BF4DOGTAGS": null,
+        "BFHRANKUP": null,
+        "BF4GAMEREPORT": null,
+        "game": 2,
+        "BFHAWARDS": null,
+        "user": {
+          "username": "Nefomemes",
+          "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+          "userId": "3307924356088947575",
+          "createdAt": 1604901587,
+          "presence": {
+            "userId": "3307924356088947575",
+            "updatedAt": 1621260301,
+            "presenceStates": "0"
+          }
+        },
+        "BF3AWARDS": {
+          "statItems": [
+            {
+              "nameSID": "BF3_ID_P_AWARD_R13_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R13_DESC",
+              "imageName": "r13",
+              "unlockId": "r13",
+              "type": 2048
+            },
+            {
+              "nameSID": "BF3_ID_P_AWARD_R44_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R44_DESC",
+              "imageName": "r44",
+              "unlockId": "r44",
+              "type": 2048
+            }
+          ]
+        },
+        "autoshare": null,
+        "BF3RANKUP": null,
+        "MOHWITEMS": null,
+        "id": "5213386448",
+        "BF3GAMEREPORT": null,
+        "timestamp": 1620558649,
+        "BLAZECLUBJOINED": null,
+        "BF3ASSIGNMENTS": null,
+        "BF4RANKUP": null,
+        "eventName": "BF3AWARDS",
+        "platform": 1,
+        "BLAZECLUBCREATED": null,
+        "likeUserIds": [],
+        "RANKUP": null,
+        "gameHistoryId": "93293338",
+        "isShared": false,
+        "BFHGAMEREPORT": null,
+        "MOHWRECORD": null,
+        "BF4AWARDS": null
+      },
+      {
+        "persona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": {
+            "username": "Nefomemes",
+            "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+            "userId": "3307924356088947575",
+            "createdAt": 1604901587,
+            "presence": {
+              "userId": "3307924356088947575",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          },
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {},
+          "clanTag": ""
+        },
+        "MOHWAWARDS": null,
+        "BF4TRACKINGCOMPLETE": null,
+        "BF4ASSIGNMENTS": null,
+        "MOHWTOUR": null,
+        "userId": "3307924356088947575",
+        "personaId": "1005012929719",
+        "BF4DOGTAGS": null,
+        "BFHRANKUP": null,
+        "BF4GAMEREPORT": null,
+        "game": 2,
+        "BFHAWARDS": null,
+        "user": {
+          "username": "Nefomemes",
+          "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+          "userId": "3307924356088947575",
+          "createdAt": 1604901587,
+          "presence": {
+            "userId": "3307924356088947575",
+            "updatedAt": 1621260301,
+            "presenceStates": "0"
+          }
+        },
+        "BF3AWARDS": {
+          "statItems": [
+            {
+              "nameSID": "BF3_ID_P_AWARD_R35_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R35_DESC",
+              "imageName": "r35",
+              "unlockId": "r35",
+              "type": 2048
+            }
+          ]
+        },
+        "autoshare": null,
+        "BF3RANKUP": null,
+        "MOHWITEMS": null,
+        "id": "5208839026",
+        "BF3GAMEREPORT": null,
+        "timestamp": 1620555593,
+        "BLAZECLUBJOINED": null,
+        "BF3ASSIGNMENTS": null,
+        "BF4RANKUP": null,
+        "eventName": "BF3AWARDS",
+        "platform": 1,
+        "BLAZECLUBCREATED": null,
+        "likeUserIds": [],
+        "RANKUP": null,
+        "gameHistoryId": "93293300",
+        "isShared": false,
+        "BFHGAMEREPORT": null,
+        "MOHWRECORD": null,
+        "BF4AWARDS": null
+      },
+      {
+        "persona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": {
+            "username": "Nefomemes",
+            "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+            "userId": "3307924356088947575",
+            "createdAt": 1604901587,
+            "presence": {
+              "userId": "3307924356088947575",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          },
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {},
+          "clanTag": ""
+        },
+        "MOHWAWARDS": null,
+        "BF4TRACKINGCOMPLETE": null,
+        "BF4ASSIGNMENTS": null,
+        "MOHWTOUR": null,
+        "userId": "3307924356088947575",
+        "personaId": "1005012929719",
+        "BF4DOGTAGS": null,
+        "BFHRANKUP": null,
+        "BF4GAMEREPORT": null,
+        "game": 2,
+        "BFHAWARDS": null,
+        "user": {
+          "username": "Nefomemes",
+          "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+          "userId": "3307924356088947575",
+          "createdAt": 1604901587,
+          "presence": {
+            "userId": "3307924356088947575",
+            "updatedAt": 1621260301,
+            "presenceStates": "0"
+          }
+        },
+        "BF3AWARDS": {
+          "statItems": [
+            {
+              "nameSID": "BF3_ID_P_AWARD_R31_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R31_DESC",
+              "imageName": "r31",
+              "unlockId": "r31",
+              "type": 2048
+            },
+            {
+              "nameSID": "BF3_ID_P_AWARD_R36_NAME",
+              "image": null,
+              "descriptionSID": "BF3_ID_P_AWARD_R36_DESC",
+              "imageName": "r36",
+              "unlockId": "r36",
+              "type": 2048
+            }
+          ]
+        },
+        "autoshare": null,
+        "BF3RANKUP": null,
+        "MOHWITEMS": null,
+        "id": "5207279943",
+        "BF3GAMEREPORT": null,
+        "timestamp": 1620554573,
+        "BLAZECLUBJOINED": null,
+        "BF3ASSIGNMENTS": null,
+        "BF4RANKUP": null,
+        "eventName": "BF3AWARDS",
+        "platform": 1,
+        "BLAZECLUBCREATED": null,
+        "likeUserIds": [],
+        "RANKUP": null,
+        "gameHistoryId": "93293283",
+        "isShared": false,
+        "BFHGAMEREPORT": null,
+        "MOHWRECORD": null,
+        "BF4AWARDS": null
+      }
+    ],
+    "_href": "\/bf3\/user\/Nefomemes\/",
+    "userGameExpansions": {
+      "268435456": [
+        1
+      ],
+      "8589934592": [
+        1
+      ]
+    },
+    "userIsBlockedBy": false,
+    "profilePersonas": [
+      {
+        "picture": "",
+        "personaId": "1005012929719",
+        "games": {
+          "1": "2"
+        },
+        "personaName": "Nefomemes",
+        "updatedAt": 1607031181,
+        "userId": "3307924356088947575",
+        "clanTag": "",
+        "originalPersona": {
+          "picture": "",
+          "userId": "3307924356088947575",
+          "user": null,
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {
+            "1": "2"
+          },
+          "clanTag": ""
+        },
+        "namespace": "cem_ea_id"
+      }
+    ],
+    "isCreateChatAdmin": false,
+    "activitystreamLoaded": true,
+    "notification": null,
+    "fullSoldiersBoxUrl": "\/bf3\/user\/overviewBoxStats\/3307924356088947575\/",
+    "gameReportPreviewCount": 0,
+    "userMessageBox": null,
+    "userGames": {
+      "2": [
+        1
+      ]
+    },
+    "activitystreamFilterShow": "all",
+    "favoriteGameReports": [],
+    "soldiersBox": [
+      {
+        "activeEmblem": null,
+        "timePlayed": 0,
+        "persona": {
+          "picture": "bf3-us-recon",
+          "userId": "3307924356088947575",
+          "user": null,
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {
+            "1": "2"
+          },
+          "clanTag": "BLTH"
+        },
+        "kills": 0,
+        "deaths": 0,
+        "npStatus": null,
+        "legendaryLevel": 0,
+        "rsNumWins": 0,
+        "rsNumLosses": 0,
+        "rank": 0,
+        "platform": 1,
+        "game": 2,
+        "score": 0,
+        "numLosses": 0,
+        "isPersonaBanned": false,
+        "active": true,
+        "skill": 0,
+        "dogtagsForPersona": null,
+        "numWins": 0
+      }
+    ],
+    "feedContext": "profile",
+    "nowTimestamp": 1621260301,
+    "gameReportPreviewGroups": [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ],
+    "bf3GadgetsLocale": "",
+    "profileCommon": {
+      "friendCount": 3,
+      "veteranStatus": {
+        "status": 0,
+        "games": null
+      },
+      "club": null,
+      "mutualFriends": [],
+      "blazeClubs": [],
+      "profiletab": "view",
+      "blazeClubsLoaded": true,
+      "mutualFriendCount": null,
+      "friendStatus": "NONE",
+      "platoonFans": [
+        {
+          "website": "",
+          "memberCounter": 2,
+          "name": "No Anime Task Force",
+          "creatorId": "3307924356088947575",
+          "flag": "",
+          "game": 2,
+          "badgePath": "https:\/\/eaassets-a.akamaihd.net\/battlelog\/prod\/emblem\/441\/60\/[SIZE]\/3307924251402236617.[FORMAT]?v=1613040463",
+          "allowNewMembers": true,
+          "platform": 1,
+          "fans": [
+            3307924356088947575
+          ],
+          "tag": "NATF",
+          "members": {
+            "3370545246938073741": {
+              "isSelected": false,
+              "platoonId": "3307924585601482205",
+              "persona": {
+                "picture": "",
+                "userId": "3370545246938073741",
+                "user": {
+                  "username": "RealP3nguin",
+                  "gravatarMd5": "94be45afafb1be267934a7f1e8c7b25b",
+                  "userId": "3370545246938073741",
+                  "createdAt": 1609147362,
+                  "presence": {
+                    "userId": "3370545246938073741",
+                    "updatedAt": 1621260301,
+                    "presenceStates": "0"
+                  }
+                },
+                "updatedAt": 1617346983,
+                "firstPartyId": "",
+                "personaId": "1866532263",
+                "personaName": "RealP3nguin",
+                "gamesLegacy": "0",
+                "namespace": "cem_ea_id",
+                "gamesJson": "{\"1\":\"2048\"}",
+                "games": {},
+                "clanTag": ""
+              },
+              "game": 2,
+              "user": {
+                "username": "RealP3nguin",
+                "gravatarMd5": "94be45afafb1be267934a7f1e8c7b25b",
+                "userId": "3370545246938073741",
+                "createdAt": 1609147362,
+                "presence": {
+                  "userId": "3370545246938073741",
+                  "updatedAt": 1621260301,
+                  "presenceStates": "0"
+                }
+              },
+              "personaId": "1866532263",
+              "userId": "3370545246938073741",
+              "id": "3307924585606094045",
+              "membershipLevel": 4
+            },
+            "3307924356088947575": {
+              "isSelected": false,
+              "platoonId": "3307924585601482205",
+              "persona": {
+                "picture": "",
+                "userId": "3307924356088947575",
+                "user": {
+                  "username": "Nefomemes",
+                  "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                  "userId": "3307924356088947575",
+                  "createdAt": 1604901587,
+                  "presence": {
+                    "userId": "3307924356088947575",
+                    "updatedAt": 1621260301,
+                    "presenceStates": "0"
+                  }
+                },
+                "updatedAt": 1607031181,
+                "firstPartyId": "",
+                "personaId": "1005012929719",
+                "personaName": "Nefomemes",
+                "gamesLegacy": "0",
+                "namespace": "cem_ea_id",
+                "gamesJson": "{\"1\":\"2\"}",
+                "games": {},
+                "clanTag": ""
+              },
+              "game": 2,
+              "user": {
+                "username": "Nefomemes",
+                "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                "userId": "3307924356088947575",
+                "createdAt": 1604901587,
+                "presence": {
+                  "userId": "3307924356088947575",
+                  "updatedAt": 1621260301,
+                  "presenceStates": "0"
+                }
+              },
+              "personaId": "1005012929719",
+              "userId": "3307924356088947575",
+              "id": "3307924585601482333",
+              "membershipLevel": 256
+            }
+          },
+          "fanCounter": 1,
+          "blazeClubId": 1337,
+          "hidden": false,
+          "creationDate": 1613001600,
+          "presentation": "Hi! Welcome to the No Anime Task Force. \r\nThis is a satirical platoon that basically, \"No Anime\".\r\n\r\nWell that's it, and remember guys- no anime.",
+          "id": "3307924585601482205",
+          "icon": ""
+        },
+        {
+          "website": "https:\/\/github.com\/BLThunderstorm",
+          "memberCounter": 1,
+          "name": "BLThunderstorm",
+          "creatorId": "3307924356088947575",
+          "flag": "",
+          "game": 2,
+          "badgePath": "https:\/\/eaassets-a.akamaihd.net\/battlelog\/prod\/emblem\/786\/77\/[SIZE]\/3477189570138944162.[FORMAT]?v=1620998476",
+          "allowNewMembers": true,
+          "platform": 1,
+          "fans": [
+            3307924356088947575
+          ],
+          "tag": "BLTH",
+          "members": {
+            "3307924356088947575": {
+              "isSelected": true,
+              "platoonId": "3477189569561324678",
+              "persona": {
+                "picture": "",
+                "userId": "3307924356088947575",
+                "user": {
+                  "username": "Nefomemes",
+                  "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                  "userId": "3307924356088947575",
+                  "createdAt": 1604901587,
+                  "presence": {
+                    "userId": "3307924356088947575",
+                    "updatedAt": 1621260301,
+                    "presenceStates": "0"
+                  }
+                },
+                "updatedAt": 1607031181,
+                "firstPartyId": "",
+                "personaId": "1005012929719",
+                "personaName": "Nefomemes",
+                "gamesLegacy": "0",
+                "namespace": "cem_ea_id",
+                "gamesJson": "{\"1\":\"2\"}",
+                "games": {},
+                "clanTag": ""
+              },
+              "game": 2,
+              "user": {
+                "username": "Nefomemes",
+                "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                "userId": "3307924356088947575",
+                "createdAt": 1604901587,
+                "presence": {
+                  "userId": "3307924356088947575",
+                  "updatedAt": 1621260301,
+                  "presenceStates": "0"
+                }
+              },
+              "personaId": "1005012929719",
+              "userId": "3307924356088947575",
+              "id": "3477189569561324806",
+              "membershipLevel": 256
+            }
+          },
+          "fanCounter": 1,
+          "blazeClubId": 1337,
+          "hidden": false,
+          "creationDate": 1619827200,
+          "presentation": "The official BF3 platoon for BLThunderstorm!",
+          "id": "3477189569561324678",
+          "icon": ""
+        }
+      ],
+      "user": {
+        "username": "Nefomemes",
+        "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+        "userId": "3307924356088947575",
+        "createdAt": 1604901587,
+        "presence": {
+          "userId": "3307924356088947575",
+          "updatedAt": 1621260301,
+          "presenceStates": "0"
+        }
+      },
+      "platoons": [
+        {
+          "website": "",
+          "memberCounter": 2,
+          "name": "No Anime Task Force",
+          "creatorId": "3307924356088947575",
+          "flag": "",
+          "game": 2,
+          "badgePath": "https:\/\/eaassets-a.akamaihd.net\/battlelog\/prod\/emblem\/441\/60\/[SIZE]\/3307924251402236617.[FORMAT]?v=1613040463",
+          "allowNewMembers": true,
+          "platform": 1,
+          "fans": [
+            3307924356088947575
+          ],
+          "tag": "NATF",
+          "members": {
+            "3370545246938073741": {
+              "isSelected": false,
+              "platoonId": "3307924585601482205",
+              "persona": {
+                "picture": "",
+                "userId": "3370545246938073741",
+                "user": {
+                  "username": "RealP3nguin",
+                  "gravatarMd5": "94be45afafb1be267934a7f1e8c7b25b",
+                  "userId": "3370545246938073741",
+                  "createdAt": 1609147362,
+                  "presence": {
+                    "userId": "3370545246938073741",
+                    "updatedAt": 1621260301,
+                    "presenceStates": "0"
+                  }
+                },
+                "updatedAt": 1617346983,
+                "firstPartyId": "",
+                "personaId": "1866532263",
+                "personaName": "RealP3nguin",
+                "gamesLegacy": "0",
+                "namespace": "cem_ea_id",
+                "gamesJson": "{\"1\":\"2048\"}",
+                "games": {},
+                "clanTag": ""
+              },
+              "game": 2,
+              "user": {
+                "username": "RealP3nguin",
+                "gravatarMd5": "94be45afafb1be267934a7f1e8c7b25b",
+                "userId": "3370545246938073741",
+                "createdAt": 1609147362,
+                "presence": {
+                  "userId": "3370545246938073741",
+                  "updatedAt": 1621260301,
+                  "presenceStates": "0"
+                }
+              },
+              "personaId": "1866532263",
+              "userId": "3370545246938073741",
+              "id": "3307924585606094045",
+              "membershipLevel": 4
+            },
+            "3307924356088947575": {
+              "isSelected": false,
+              "platoonId": "3307924585601482205",
+              "persona": {
+                "picture": "",
+                "userId": "3307924356088947575",
+                "user": {
+                  "username": "Nefomemes",
+                  "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                  "userId": "3307924356088947575",
+                  "createdAt": 1604901587,
+                  "presence": {
+                    "userId": "3307924356088947575",
+                    "updatedAt": 1621260301,
+                    "presenceStates": "0"
+                  }
+                },
+                "updatedAt": 1607031181,
+                "firstPartyId": "",
+                "personaId": "1005012929719",
+                "personaName": "Nefomemes",
+                "gamesLegacy": "0",
+                "namespace": "cem_ea_id",
+                "gamesJson": "{\"1\":\"2\"}",
+                "games": {},
+                "clanTag": ""
+              },
+              "game": 2,
+              "user": {
+                "username": "Nefomemes",
+                "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                "userId": "3307924356088947575",
+                "createdAt": 1604901587,
+                "presence": {
+                  "userId": "3307924356088947575",
+                  "updatedAt": 1621260301,
+                  "presenceStates": "0"
+                }
+              },
+              "personaId": "1005012929719",
+              "userId": "3307924356088947575",
+              "id": "3307924585601482333",
+              "membershipLevel": 256
+            }
+          },
+          "fanCounter": 1,
+          "blazeClubId": 1337,
+          "hidden": false,
+          "creationDate": 1613001600,
+          "presentation": "Hi! Welcome to the No Anime Task Force. \r\nThis is a satirical platoon that basically, \"No Anime\".\r\n\r\nWell that's it, and remember guys- no anime.",
+          "id": "3307924585601482205",
+          "icon": ""
+        },
+        {
+          "website": "https:\/\/github.com\/BLThunderstorm",
+          "memberCounter": 1,
+          "name": "BLThunderstorm",
+          "creatorId": "3307924356088947575",
+          "flag": "",
+          "game": 2,
+          "badgePath": "https:\/\/eaassets-a.akamaihd.net\/battlelog\/prod\/emblem\/786\/77\/[SIZE]\/3477189570138944162.[FORMAT]?v=1620998476",
+          "allowNewMembers": true,
+          "platform": 1,
+          "fans": [
+            3307924356088947575
+          ],
+          "tag": "BLTH",
+          "members": {
+            "3307924356088947575": {
+              "isSelected": true,
+              "platoonId": "3477189569561324678",
+              "persona": {
+                "picture": "",
+                "userId": "3307924356088947575",
+                "user": {
+                  "username": "Nefomemes",
+                  "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                  "userId": "3307924356088947575",
+                  "createdAt": 1604901587,
+                  "presence": {
+                    "userId": "3307924356088947575",
+                    "updatedAt": 1621260301,
+                    "presenceStates": "0"
+                  }
+                },
+                "updatedAt": 1607031181,
+                "firstPartyId": "",
+                "personaId": "1005012929719",
+                "personaName": "Nefomemes",
+                "gamesLegacy": "0",
+                "namespace": "cem_ea_id",
+                "gamesJson": "{\"1\":\"2\"}",
+                "games": {},
+                "clanTag": ""
+              },
+              "game": 2,
+              "user": {
+                "username": "Nefomemes",
+                "gravatarMd5": "1f3a91144edb76fa883d94be70bd34cd",
+                "userId": "3307924356088947575",
+                "createdAt": 1604901587,
+                "presence": {
+                  "userId": "3307924356088947575",
+                  "updatedAt": 1621260301,
+                  "presenceStates": "0"
+                }
+              },
+              "personaId": "1005012929719",
+              "userId": "3307924356088947575",
+              "id": "3477189569561324806",
+              "membershipLevel": 256
+            }
+          },
+          "fanCounter": 1,
+          "blazeClubId": 1337,
+          "hidden": false,
+          "creationDate": 1619827200,
+          "presentation": "The official BF3 platoon for BLThunderstorm!",
+          "id": "3477189569561324678",
+          "icon": ""
+        }
+      ],
+      "tenFriends": [
+        {
+          "userId": "2955058504406414012",
+          "user": {
+            "username": "inuhraT",
+            "gravatarMd5": "5c1c2e5ff5529d79dcddf07e787275a7",
+            "userId": "2955058504406414012",
+            "createdAt": 1497656701,
+            "presence": {
+              "userId": "2955058504406414012",
+              "updatedAt": 1621255737,
+              "presenceStates": "0"
+            }
+          }
+        },
+        {
+          "userId": "3370545246938073741",
+          "user": {
+            "username": "RealP3nguin",
+            "gravatarMd5": "94be45afafb1be267934a7f1e8c7b25b",
+            "userId": "3370545246938073741",
+            "createdAt": 1609147362,
+            "presence": {
+              "userId": "3370545246938073741",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          }
+        },
+        {
+          "userId": "3307924270281690415",
+          "user": {
+            "username": "Rakhonshm",
+            "gravatarMd5": null,
+            "userId": "3307924270281690415",
+            "createdAt": 1607789245,
+            "presence": {
+              "userId": "3307924270281690415",
+              "updatedAt": 1621260301,
+              "presenceStates": "0"
+            }
+          }
+        }
+      ],
+      "usergames": [],
+      "isChatDisabled": false,
+      "userStatusMessage": {
+        "statusMessageChanged": 1607318234,
+        "preview": null,
+        "userId": "3307924356088947575",
+        "statusMessage": "Hello there"
+      },
+      "userinfo": {
+        "privacyFeedAndGameActivity": 2,
+        "twitchUsername": null,
+        "userId": "3307924356088947575",
+        "introSectionBitmask": 48,
+        "feedHidden": 0,
+        "pushSettings": -1,
+        "showDetails": false,
+        "forumSignature": null,
+        "locality": null,
+        "location": null,
+        "icon": 0,
+        "presentation": "Hi, my name is Nefomemes. I'm a hobbyist junior web developer that loves making stuff.\r\n",
+        "profileBlocked": 0,
+        "allowFriendRequests": 1,
+        "showFriendsUI": false,
+        "gravatarHidden": 0,
+        "presencePrivacy": 0,
+        "presentationHidden": 0,
+        "loginCounter": 212,
+        "privacyShowFriends": 2,
+        "forumSignatureHidden": 0,
+        "name": null,
+        "age": null,
+        "birthdate": null,
+        "feedActive": false,
+        "lastLogin": 1621049052,
+        "privacyDetails": 2
+      }
+    },
+    "searchUsers": [],
+    "logClientSideErrors": false,
+    "enableVideoBackground": "0",
+    "searchPersonas": [],
+    "hasValidEntitlement": false,
+    "titleSection": "Battlefield 3"
+  }
+}
