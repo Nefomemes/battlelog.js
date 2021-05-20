@@ -2,7 +2,7 @@ import { Platoon } from "./platoon";
 import * as utils from "../utils";
 import { Soldier } from "./soldier";
 import type { UserInfoType } from "../types/userinfo";
-import { GameClient } from "./gameclient";
+import type { GameClient } from "./gameclient";
 import type { UserPropType } from "../types/userprop";
 import type { GravatarDefaultAvatarType } from "../types/gravatarda";
 import * as querystring from  "querystring";
@@ -71,7 +71,7 @@ export class User {
    * @param client
    * @param {UserResolvable} [data] - The user's data.
    */
-  constructor(client, data) {
+  constructor(client: GameClient, data: User) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
 
     /**
@@ -107,10 +107,10 @@ export class User {
   /**
    * Structure the class using the data provided.
    *
-   * @param {object} data - The data used to structure the class
-   * @returns {User} the User
+   * @param  data - The data used to structure the class
+   * @returns the User
    */
-  structureData(data) {
+  structureData(data) : User {
 	  
   	if(!data) return this;
     utils.structureData(this, data, {
@@ -144,8 +144,8 @@ export class User {
    * Get the URL string of the user's avatar.
    *
    * @function
-   * @param {object} options - Options used
-   * @returns {string} URL string for the user's avatar.
+   * @param  options - Options used
+   * @returns URL string for the user's avatar.
    */
   displayAvatarURL(options: {
     d?: GravatarDefaultAvatarType,
@@ -153,7 +153,7 @@ export class User {
     r?: "g" | "pg",
     f?: boolean | string,
     e?:  "png" | "jpg"
-  } = {}) {
+  } = {}) : string {
     utils.validateOptions(options, {
       defaults: { d: "retro", r: "g", e: "png" }
     });
@@ -202,12 +202,14 @@ export class User {
     }?${(() => { delete options.e; return querystring.stringify(options) })()}`;
   } // This module is declared with using 'export =', and can only be used with a default import when using the 'allowSyntheticDefaultImports' flag.
 
-  async fetchSoldiers() {
+  async fetchSoldiers() :  Promise<{
+    [personaId: string]: Soldier
+  }> {
     var res = await this.client.axios.get(
       `/user/overviewBoxStats/${this.user.userId}`
     );
-
-  
+   
+  return this.soldiers;
   }
 }
 
