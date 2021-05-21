@@ -77,19 +77,9 @@ export class Server {
     return this;
   }
 
-  /**
-   * The settings configured for a server.
-   * 
-   * @typedef ServerSettings
-   * @property {boolean} displayHUD - Whether HUD is displayed
-   * @property {Number} teamKillsBeforeKicked - How many friendly fire kills before a player is kicked out from the server
-   * @property {boolean} showMinimap - Whether minimap is displayed
-   * @property {boolean} friendlyFire - Whether players can do friendly fire.
-   * @property {Number} bulletDamageModifier - This property basically tunes the TTK.
-   */
+
 
   /**
-   * 
    * @property settings - The settings configured for the server.
    * @property settings.vhud - Whether HUD is displayed
    * @property settings.vkca - Whether killcam is displayed
@@ -97,12 +87,12 @@ export class Server {
    * @property settings.vtkk - How many friendly fire kills tolerated before a player is kicked out from the server
    */
   settings: {
-  vhud: boolean,
-  vffi: boolean,
-  vtkk: number,
-  vbdm: number,
-  vmin: boolean,
-  vkca: boolean
-  };
+  vhud?: boolean,
+  vffi?: boolean,
+  vtkk?: number,
+  vbdm?: number,
+  vmin?: boolean,
+  vkca?: boolean
+  } = {};
 
 };
