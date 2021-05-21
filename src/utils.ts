@@ -111,7 +111,7 @@ export function validateOptions(data: object, rules: validateOptionsOptions) {
  *     that should be ignored
  * @param setBoolean - An array filled with properties
  *     that should be set to true if they are truthy or false if they are falsy.
- * @param rules.alias] - An object that rules which properties should
+ * @param rules.alias - An object that rules which properties should
  *     be renamed and what should they be renamed to. Other rules will use this
  * alias to refer the property
  * @param rules.onlyAssignIfTruthy - An array filled 
@@ -134,7 +134,7 @@ export type StructureDataOptions = {
  */
 export function structureData(cls, data, rules: StructureDataOptions = {}) {
   if (!data) return;
-  if (!cls) throw Error("Target object is not provided.");
+  if (typeof cls == "undefined") throw Error("Target object is not provided.");
 
   validateOptions(rules, {
     types: {
