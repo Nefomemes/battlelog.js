@@ -6,4 +6,4 @@ export type GravatarDefaultAvatarType = "404" |
                                         "retro" |
                                         "robohash" |
                                         "blank" |
-                                        `${string}://${string}`
+                                        `${string}://${string}` 
