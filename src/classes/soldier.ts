@@ -1,6 +1,8 @@
 import * as utils from "../utils";
-import type { User } from "./user";
+import { User } from "./user";
 import type { PersonaType } from "../types/persona";
+import type { GameClient } from "./gameclient";
+import { UserPropType } from "../types/userprop";
 /**
  * Represents a Battlelog soldier.
  * 
@@ -11,6 +13,7 @@ export class Soldier {
    * The user of this soldier.
    */
   user: User;
+  client: GameClient;
   /**
    * How many coop missions have been completed with the soldier.
    */
@@ -69,7 +72,11 @@ export class Soldier {
    * @returns {Soldier} - The soldier
    */
   structureData(data: Soldier, fetch?: boolean) {
-    var rules = {};
+    var rules: utils.StructureDataOptions = {
+      blacklist: ["user"]
+    };
+
+
     var soldierRootStats = [
       "timePlayed",
       "kills",
@@ -86,8 +93,14 @@ export class Soldier {
     ];
     if (!fetch) {
       rules = {
-        blacklist: soldierRootStats,
+        ...rules,
+        blacklist: [...rules.blacklist, ...soldierRootStats],
       };
+    }
+
+    if(!this.user && data.user){
+      // @ts-ignore
+      this.user = new User(this.client, {user: data.user});
     }
     utils.structureData(this, data, rules);
 
