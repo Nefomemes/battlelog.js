@@ -14,7 +14,7 @@ import * as querystring from  "querystring";
  * @param {object} data - Raw object data of the user.
  */
 export class User {
-// @ts-ignore
+  // @ts-ignore
   user: UserPropType = {};
 
   // @ts-ignore
