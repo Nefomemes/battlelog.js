@@ -70,8 +70,8 @@ export class GameClient {
 	servers = new CacheMap();
 	platoons = new CacheMap();
 
-	async fetchUser(...params) : Promise<User> {
-		let user = await new User(this, ...<[User|string]>params).fetch();
+	async fetchUser(data: User|string) : Promise<User> {
+		let user = await new User(this, data).fetch();
 
 		this.users.structureData(user.user.userId, user);
 		return user;
