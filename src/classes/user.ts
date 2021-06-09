@@ -67,11 +67,10 @@ export class User {
    * Creates a new User instance.
    *
    * @class
-   * @param {Client} - The client for this user.
-   * @param client
-   * @param {UserResolvable} [data] - The user's data.
+   * @param client - The client for this user.
+   * @param data - The user's data.
    */
-  constructor(client: GameClient, data: User) {
+  constructor(client: GameClient, data: string | User) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
 
     /**
