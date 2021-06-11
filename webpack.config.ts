@@ -1,7 +1,7 @@
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
-const path = require("path");
+import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
+import path from "path";
 
-module.exports = {
+const config = {
   entry: "./src/index.ts ",
   devtool: "inline-source-map",
   output: {
@@ -21,6 +21,11 @@ module.exports = {
 
  
   },
+  resolve: {
+    plugins: [
+      PnpWebpackPlugin
+    ]
+  },
 
   module: {
     rules: [
@@ -28,9 +33,14 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "ts-loader",
+          options: {
+            "transpileOnly": true
+          }
         },
       },
     ],
   },
 };
+
+export default config;
