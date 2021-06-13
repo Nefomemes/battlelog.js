@@ -1,8 +1,34 @@
 import * as utils from "../utils";
 import { User } from "./user";
-import type { PersonaType } from "../types/persona";
 import type { GameClient } from "./gameclient";
 import { UserPropType } from "../types/userprop";
+/*
+"picture": "bf3-us-recon",
+          "userId": "3307924356088947575",
+          "user": null,
+          "updatedAt": 1607031181,
+          "firstPartyId": "",
+          "personaId": "1005012929719",
+          "personaName": "Nefomemes",
+          "gamesLegacy": "0",
+          "namespace": "cem_ea_id",
+          "gamesJson": "{\"1\":\"2\"}",
+          "games": {
+            "1": "2"
+          },
+          "clanTag": "BLTH"
+
+*/
+export type PersonaType = {
+  personaId: string,
+  picture: string,
+  user: User,
+  userId: string,
+  updatedAt: number,
+  personaName: string,
+  clanTag: string
+}
+
 /**
  * Represents a Battlelog soldier.
  * 
