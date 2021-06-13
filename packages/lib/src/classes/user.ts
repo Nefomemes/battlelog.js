@@ -28,7 +28,7 @@ export class User {
    *
    * @property
    */
-  platoons: Map<string, Platoon> = new Map();
+  platoons: Array<Platoon> = [];
 
   /**
    * 
@@ -38,14 +38,14 @@ export class User {
    *
    */
 
-  platoonFans: Map<string, Platoon> = new Map();
+  platoonFans: Array<Platoon> = [];
 
   /**
    * The user's friend list. Only have 10 of all of the user's friends though.
    *
    * @property {BattlelogMap<User>}
    */
-  friends = new Map();
+  friends: Array<User> = [];
 
   /**
    * @typedef {(User|string|object)} UserResolvable - Something that can be
