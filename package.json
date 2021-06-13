@@ -1,45 +1,7 @@
 {
-  "name": "battlelog.js",
-  "version": "0.3.0",
-  "description": "[WIP] Unofficial API wrapper for battlelog.battlefield.com",
-  "scripts": {
-    "lint": "eslint ./ --fix",
-    "lint:report": "eslint --output-file eslint_report.json --format json ./",
-    "build:prod": "webpack --mode production --output-filename prod.js",
-    "build:dev": "npx webpack --mode development --output-filename dev.js ",
-    "build": "yarn build:prod ; yarn build:dev"
-  },
-  "keywords": [
-    "battlelog",
-    "battlefield"
-  ],
-  "author": "Nefomemes",
-  "license": "MIT",
-  "dependencies": {
-    "@babel/runtime": "^7.13.10",
-    "axios": "^0.21.1"
-  },
+  "name": "root",
+  "private": true,
   "devDependencies": {
-    "@babel/core": ">=7.2.0",
-    "@babel/eslint-parser": "^7.12.16",
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.12.16",
-    "@babel/runtime-corejs3": "^7.13.10",
-    "babel-loader": "^8.2.2",
-    "eslint": "^7.1.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^35.0.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "jest": "^27.0.3",
-    "node-polyfill-webpack-plugin": "^1.0.3",
-    "prettier": "2.2.1",
-    "ts-loader": "^9.2.3",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4",
-    "webpack": "^5.27.2",
-    "webpack-cli": "^4.5.0"
+    "lerna": "^4.0.0"
   }
 }
