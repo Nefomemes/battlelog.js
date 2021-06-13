@@ -35,6 +35,9 @@ importers:
       typedoc: 0.21.0-beta.2
       typedoc-plugin-markdown: 3.9.0_typedoc@0.21.0-beta.2
 
+  packages/lib:
+    specifiers: {}
+
 packages:
 
   /@algolia/autocomplete-core/1.0.0-alpha.44:
