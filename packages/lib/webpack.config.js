@@ -1,7 +1,7 @@
-import NodePolyfillPlugin from "node-polyfill-webpack-plugin";
-import path from "path";
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+const path = require("path");
 
-const config = {
+module.exports = {
   entry: "./src/index.ts ",
   devtool: "inline-source-map",
   output: {
@@ -39,4 +39,4 @@ const config = {
   },
 };
 
-export default config;
+
