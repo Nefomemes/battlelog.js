@@ -138,19 +138,22 @@ export class Soldier {
   }
 
   async fetch() {
+    let url: string;
+    switch(this.user.client.game){
+      case "bf4":{
+        url = `/warsawoverviewpopulate/${this.persona.personaId}/1/`;
+        break;
+      }
+      default:{
+        url =    `/overviewPopulateStats/${this.persona.personaId}/o/1/`;
+      }
+    }
+
     const res = await this.user.client.axios.get(
-      `/overviewPopulateStats/${this.persona.personaId}/o/1/`
+      url
     );
 
-    utils.structureData(this.stats, res.data.data.overviewStats, {
-      alias: {
-        numWins: "wins",
-        numRounds: "matchesPlayed",
-        mcomDestroy: "mcomDestroyed",
-        killAssists: "assists",
-        numLosses: "losses",
-      },
-    });
+    utils.structureData(this.stats, res.data.data.overviewStats);
     return this;
   }
 }
