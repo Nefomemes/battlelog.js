@@ -57,9 +57,7 @@ export class User {
   /**
    * The soldiers of this user.
    */
-  soldiers: {
-    [personaId: string]: Soldier
-  } = { };
+  soldiers: Array<Soldier> = [];
  
 
 
@@ -201,9 +199,7 @@ export class User {
     }?${(() => { delete options.e; return querystring.stringify(options) })()}`;
   } // This module is declared with using 'export =', and can only be used with a default import when using the 'allowSyntheticDefaultImports' flag.
 
-  async fetchSoldiers() :  Promise<{
-    [personaId: string]: Soldier
-  }> {
+  async fetchSoldiers() :  Promise<Array<Soldier>> {
     var res = await this.client.axios.get(
       `/user/overviewBoxStats/${this.user.userId}`
     );

@@ -29,6 +29,9 @@ export type PersonaType = {
   clanTag: string
 }
 
+export type BitPlatform =  1 | 2 | 4 | 8 | 16 | 32 | 64;
+export type BitGame = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 1024 | 2048 | 4096 | 8192; 
+
 /**
  * Represents a Battlelog soldier.
  * 
@@ -40,6 +43,8 @@ export class Soldier {
    */
   user: User;
   client: GameClient;
+  platform: BitPlatform;
+  game: BitGame;
   /**
    * How many coop missions have been completed with the soldier.
    */

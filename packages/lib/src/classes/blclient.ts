@@ -45,7 +45,7 @@ export class BattlelogClient {
    *
    * @param params - The params used to create the instance.
    */
-  game(game: SupportedGames) {  
+  game(game: SupportedGames)  : GameClient {  
   this.clients[game] = this.clients[game] || new GameClient(this, game);
   return this.clients[game];
   }
