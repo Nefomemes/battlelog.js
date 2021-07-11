@@ -1,11 +1,94 @@
 import { Platoon } from "./platoon";
 import * as utils from "../utils";
 import { Soldier } from "./soldier";
-import type { UserInfoType } from "../types/userinfo";
+
 import type { GameClient } from "./gameclient";
-import type { UserPropType } from "../types/userprop";
 import type { GravatarDefaultAvatarType } from "../types/gravatarda";
 import * as querystring from "querystring";
+/**
+ * Represents the userinfo property of a user's profile
+ */
+export interface UserInfo {
+  /**
+   * @prop {string} twitchUsername - The user's Twitch username.
+   * @prop {number} privacyFeedAndgameActivity - 
+   * @prop {string} userId - The user's ID
+   * @prop {string} presentation - The user's presentation
+   * @prop {boolean} allowFriendRequests - Whether the user allow friend requests
+   * @prop {boolean} gravatarHidden - Whether the user choose not to display his/her avatar.
+   * @prop {boolean} privacyShowFriends - Whether the user hides his/her friends.
+   * @prop {number} lastLogin - Last time the user logged in.
+   * 
+   */
+  twitchUsername: string;
+  privacyFeedAndGameActivity: number;
+  userId: string /*
+     introSectionBitmask: 48,
+      feedHidden: false,
+      pushSettings: -1,
+      showDetails: false,
+      forumSignature: null,
+      locality: null,
+      location: null,
+      icon: 0,*/;
+  presentation: string;
+  /*profileBlocked: 0,*/
+  allowFriendRequests: boolean;
+  showFriendsUI: boolean;
+  gravatarHidden: boolean;
+  /*   presencePrivacy: 0,*/
+  presentationHidden: boolean;
+  loginCounter: number;
+  privacyShowFriends: number;
+  forumSignatureHidden: boolean;
+  name: string;
+  age: number;
+  /*birthdate: null,*/
+  feedActive: boolean;
+  lastLogin: number /*,
+      privacyDetails: 2*/;
+};
+
+export interface UserPresence {
+    /**
+     * @prop {string} userId - The user's ID.
+     * @prop {string} updatedAt - The last time the presence have been updated.
+     * @prop {number} presenceStates - Whether the user is online or not. If online it's 1, if invisible or offline then 0. 
+     */
+    userId: string;
+    updatedAt: number;
+    presenceStates: number; // 0 or 1
+
+}
+export interface UserObject {
+  /**
+   * @prop {string} username - The user's username.
+   * @prop {string} userId - The user's ID.
+   * @prop {UserPresence} presence - The user's presence status.
+   * @prop {string} gravatarMd5 - The user's gravatar Md5 hash.
+   */
+  username: string;
+  userId: string;
+  gravatarMd5: string;
+  presence: UserPresence;
+}
+/**
+ * Represents a User Profile. Contains (almost) everything you would see in a Battlelog profile page.
+ * 
+ * @class
+ */
+export interface UserProfile {
+  /**
+  * 
+  * @prop {Array<Platoon>} platoons - The platoons the user is a part of.
+  * @prop {UserObject} user - The user of this profile. 
+  * @prop {Array<Soldier>} soldiers - Soldiers the user have.
+  */
+   user: UserObject;
+   platoons: Array<Platoon>;
+   friends: Array<User>;
+   soldiers: Array<Soldier>;
+};
 /**
  * Represents a Battlelog user.
  *
@@ -13,53 +96,17 @@ import * as querystring from "querystring";
  * @param  client - The client used to access this user.
  * @param {object} data - Raw object data of the user.
  */
-export class User {
-  // @ts-ignore
-  user: UserPropType = {};
-
-  // @ts-ignore
-  userinfo: UserInfoType = {};
-
+export class User implements UserProfile {
+  // @ts-expect-error
+  user: UserObject = {};
+  // @ts-expect-error
+  userinfo: UserInfo = {};
   client!: GameClient;
-  gravatarMd5: string;
-
-  /**
-   * The platoon the user is a part of. Please do not confuse this with
-   * User#platoon
-   *
-   * @property
-   */
   platoons: Array<Platoon> = [];
-
-  /**
-   *
-   */
-  /**
-   * The platoons the user is a fan of.
-   *
-   */
-
   platoonFans: Array<Platoon> = [];
-
-  /**
-   * The user's friend list. Only have 10 of all of the user's friends though.
-   *
-   * @property {BattlelogMap<User>}
-   */
   friends: Array<User> = [];
-
-  /**
-   * @typedef {(User|string|object)} UserResolvable - Something that can be
-   * parsed into a User instance. Could be a User instance, the username of the
-   * user, or a raw data object of the user.
-   *
-   */
-
-  /**
-   * The soldiers of this user.
-   */
   soldiers: Array<Soldier> = [];
-
+  
   /**
    * Creates a new User instance.
    *
