@@ -52,7 +52,7 @@ jobs:
           yarn install
           yarn build
       - name: Upload Dev Bundle 
-        uses: actions/upload-artifact@v2.2.3
+        uses: actions/upload-artifact@v2.2.4
         with:
           name: bundle.dev.js
           path: dist/dev.js
