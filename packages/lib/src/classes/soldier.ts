@@ -20,21 +20,35 @@ import { UserPropType } from "../types/userprop";
 
 */
 export type PersonaType = {
-  personaId: string,
-  picture: string,
-  user: User,
-  userId: string,
-  updatedAt: number,
-  personaName: string,
-  clanTag: string
-}
+  personaId: string;
+  picture: string;
+  user: User;
+  userId: string;
+  updatedAt: number;
+  personaName: string;
+  clanTag: string;
+};
 
-export type BitPlatform =  1 | 2 | 4 | 8 | 16 | 32 | 64;
-export type BitGame = 1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256 | 512 | 1024 | 2048 | 4096 | 8192; 
+export type BitPlatform = 1 | 2 | 4 | 8 | 16 | 32 | 64;
+export type BitGame =
+  | 1
+  | 2
+  | 4
+  | 8
+  | 16
+  | 32
+  | 64
+  | 128
+  | 256
+  | 512
+  | 1024
+  | 2048
+  | 4096
+  | 8192;
 
 /**
  * Represents a Battlelog soldier.
- * 
+ *
  */
 
 export class Soldier {
@@ -50,8 +64,8 @@ export class Soldier {
    */
   coopLevelsTaken: number;
   /**
-  *  The persona of this soldier.
-  */
+   *  The persona of this soldier.
+   */
   persona: PersonaType;
   /**
    * @typedef {object} SoldierStats
@@ -104,9 +118,8 @@ export class Soldier {
    */
   structureData(data: Soldier, fetch?: boolean) {
     var rules: utils.StructureDataOptions = {
-      blacklist: ["user"]
+      blacklist: ["user"],
     };
-
 
     var soldierRootStats = [
       "timePlayed",
@@ -129,9 +142,9 @@ export class Soldier {
       };
     }
 
-    if(!this.user && data.user){
+    if (!this.user && data.user) {
       // @ts-ignore
-      this.user = new User(this.client, {user: data.user});
+      this.user = new User(this.client, { user: data.user });
     }
     utils.structureData(this, data, rules);
 
@@ -144,19 +157,17 @@ export class Soldier {
 
   async fetch() {
     let url: string;
-    switch(this.user.client.game){
-      case "bf4":{
+    switch (this.user.client.game) {
+      case "bf4": {
         url = `/warsawoverviewpopulate/${this.persona.personaId}/1/`;
         break;
       }
-      default:{
-        url =    `/overviewPopulateStats/${this.persona.personaId}/o/1/`;
+      default: {
+        url = `/overviewPopulateStats/${this.persona.personaId}/o/1/`;
       }
     }
 
-    const res = await this.user.client.axios.get(
-      url
-    );
+    const res = await this.user.client.axios.get(url);
 
     utils.structureData(this.stats, res.data.data.overviewStats);
     return this;

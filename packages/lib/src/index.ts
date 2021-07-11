@@ -1,4 +1,3 @@
-
 export { User } from "./classes/user";
 export { Platoon } from "./classes/platoon";
 export { GameClient } from "./classes/gameclient";

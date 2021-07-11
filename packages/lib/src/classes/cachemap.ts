@@ -5,10 +5,6 @@
  * @augments Map
  */
 export class CacheMap extends Map {
-
-  
-  
-
   /**
    * If the key existed in the instance, calls
    *
@@ -19,51 +15,45 @@ export class CacheMap extends Map {
    *     to the key's structureData method.
    */
 
-  structureData(key: Map<any, any> | Array<any> | any, value?: any, options: {
-    structureDataParams?: Array<any>,
-    callbackKey?: Function,
-    callbackValue?: Function
-  } = {}) {
-
+  structureData(
+    key: Map<any, any> | Array<any> | any,
+    value?: any,
+    options: {
+      structureDataParams?: Array<any>;
+      callbackKey?: Function;
+      callbackValue?: Function;
+    } = {}
+  ) {
     function runCallback(k: Function, v: Function) {
       let result = [];
-  
-      if(typeof options.callbackKey === "function") result[0] = options.callbackKey(k, v, options);
+
+      if (typeof options.callbackKey === "function")
+        result[0] = options.callbackKey(k, v, options);
       else result[0] = k;
-  
-      if(typeof options.callbackValue === "function") result[1] = options.callbackValue(k, v, options);
+
+      if (typeof options.callbackValue === "function")
+        result[1] = options.callbackValue(k, v, options);
       else result[1] = v;
-      
+
       return result;
     }
-    
+
     if (key && value) {
-        
-         
-        
-         if (super.get(key)) {
-
-        <{structureData: Function}>super.get(key)
-         .structureData(value, ...(options.structureDataParams || []));
-         }
-         else super.set(...<[any, any]>runCallback(key, value));
-        
-      } else if (!key && value instanceof Map) {
-      	
-      
-   
-      } else if (!key && Array.isArray(value)) {
-  
-        for (let v of value) {
-          this.structureData(...(<[any, any]>runCallback(null, v)));
-        }
-
-      
-      } else {
-   
-        throw Error("Invalid syntax");
+      if (super.get(key)) {
+        <{ structureData: Function }>(
+          super
+            .get(key)
+            .structureData(value, ...(options.structureDataParams || []))
+        );
+      } else super.set(...(<[any, any]>runCallback(key, value)));
+    } else if (!key && value instanceof Map) {
+    } else if (!key && Array.isArray(value)) {
+      for (let v of value) {
+        this.structureData(...(<[any, any]>runCallback(null, v)));
       }
-  return this;
+    } else {
+      throw Error("Invalid syntax");
+    }
+    return this;
   }
 }
-

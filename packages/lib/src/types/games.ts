@@ -1,1 +1,1 @@
-export type SupportedGames = 'bf3' | 'bf4' | 'bfh' | 'mohw';
+export type SupportedGames = "bf3" | "bf4" | "bfh" | "mohw";

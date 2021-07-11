@@ -11,7 +11,7 @@
     "node": true
   },
   "plugins": ["import", "node", "promise"],
-  "extends":["prettier"],
+  "extends": ["prettier"],
   "globals": {
     "document": "readonly",
     "navigator": "readonly",

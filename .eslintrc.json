@@ -1,38 +1,40 @@
 {
-   "env":{
-      "es2021":true,
-      "node":true
+   "env": {
+      "es2021": true,
+      "node": true
    },
-   "plugins":[
+   "plugins": [
       "import",
       "node",
       "promise",
       "jsdoc"
    ],
-   "globals":{
-      "document":"readonly",
-      "navigator":"readonly",
-      "window":"readonly"
+   "globals": {
+      "document": "readonly",
+      "navigator": "readonly",
+      "window": "readonly"
    },
-   "extends":[
+   "extends": [
       "plugin:jsdoc/recommended",
       "eslint:recommended"
    ],
-   "rules":{
-      "no-unused-vars":"off",
+   "rules": {
+      "no-unused-vars": "off",
       "no-mixed-spaces-and-tabs": "off",
-      "no-empty":"warn"
+      "no-empty": "warn"
    },
-   "parser":"@babel/eslint-parser",
-   "parserOptions":{
-      "sourceType":"module",
-      "allowImportExportEverywhere":false,
-      "ecmaFeatures":{
-         "globalReturn":true
+   "parser": "@babel/eslint-parser",
+   "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": false,
+      "ecmaFeatures": {
+         "globalReturn": true
       },
-         "requireConfigFile": false,
-         "babelOptions": {
-  "plugins": ["@babel/plugin-proposal-class-properties"]
-}
+      "requireConfigFile": false,
+      "babelOptions": {
+         "plugins": [
+            "@babel/plugin-proposal-class-properties"
+         ]
+      }
    }
 }

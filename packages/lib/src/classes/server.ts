@@ -1,26 +1,25 @@
 import * as utils from "../utils";
 import { User } from "./user";
-import type { GameClient } from './gameclient';
+import type { GameClient } from "./gameclient";
 /**
  * Represents a server.
  *
  * @class
  */
 export class Server {
+  /**
+   * The server unique GUID identifier
+   */
+  guid: string;
 
-    /**
-     * The server unique GUID identifier
-     */
-   guid: string;
+  players: {
+    [userId: string]: User;
+  };
 
-   players: {
-     [userId: string]: User
-   };
-
-   /**
-    * The GameClient of this server.
-    */
-   client: GameClient;
+  /**
+   * The GameClient of this server.
+   */
+  client: GameClient;
 
   /**
    * Creates a new Server instance.
@@ -30,10 +29,10 @@ export class Server {
    */
   constructor(client: GameClient, data: Server | string) {
     Object.defineProperty(this, "client", { value: client, enumerable: false });
-    if(typeof data === "string"){
+    if (typeof data === "string") {
       this.guid = data;
     } else {
-    this.structureData(data);
+      this.structureData(data);
     }
   }
   /**
@@ -53,14 +52,13 @@ export class Server {
   }
 
   structureData(data) {
-	/**
-	 * @property ""
-	 */
+    /**
+     * @property ""
+     */
     utils.structureData(this, data, {
       blacklist: ["settings"],
       setBoolean: ["punkbuster", "fairfight", "hasPassword", "ranked"],
     });
-   
 
     utils.structureData(this.settings, data.settings, {
       alias: {
@@ -77,8 +75,6 @@ export class Server {
     return this;
   }
 
-
-
   /**
    * @property settings - The settings configured for the server.
    * @property settings.vhud - Whether HUD is displayed
@@ -87,12 +83,11 @@ export class Server {
    * @property settings.vtkk - How many friendly fire kills tolerated before a player is kicked out from the server
    */
   settings: {
-  vhud?: boolean,
-  vffi?: boolean,
-  vtkk?: number,
-  vbdm?: number,
-  vmin?: boolean,
-  vkca?: boolean
+    vhud?: boolean;
+    vffi?: boolean;
+    vtkk?: number;
+    vbdm?: number;
+    vmin?: boolean;
+    vkca?: boolean;
   } = {};
-
-};
+}

@@ -16,6 +16,7 @@
 ---
 
 ## Example usage
+
 ```ts
 import { BattlelogClient } from "battlelog.js";
 
@@ -28,6 +29,4 @@ let user = await bf3.fetchUser("Nefomemes");
 console.log(user); // Logs the User to the console.
 ```
 
-
-
- <br/> <div> <p align="center">Made with ❤ by <a href="https://github.com/Nefomemes">Nefomemes</p></p> </div>
+<br/> <div> <p align="center">Made with ❤ by <a href="https://github.com/Nefomemes">Nefomemes</p></p> </div>

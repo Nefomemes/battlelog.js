@@ -1,3 +1,1 @@
-export type SoldierStatsType = {
-    
-}
+export type SoldierStatsType = {};

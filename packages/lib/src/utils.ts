@@ -32,12 +32,12 @@ export function getArticle(str: string, plural?: boolean) {
  * @param rules - The rules used to manage the options.
  */
 export type validateOptionsOptions = {
-  alias?: object,
-  defaults?: object,
-  required?: Array<string>,
-  types?: any,
-  convertTo?: any,
-  blacklist?: Array<any> /* TODO */
+  alias?: object;
+  defaults?: object;
+  required?: Array<string>;
+  types?: any;
+  convertTo?: any;
+  blacklist?: Array<any> /* TODO */;
 };
 
 export function validateOptions(data: object, rules: validateOptionsOptions) {
@@ -71,18 +71,18 @@ export function validateOptions(data: object, rules: validateOptionsOptions) {
         isTrue = typeof data[prop] === value;
       } else if (typeof value === "function") {
         isTrue = data[prop] instanceof value;
-      } else  if(Array.isArray(value)){
-            if (!value.includes(data[prop]))
-              throw Error(
-                `Option ${prop} is required to be ${(() => {
-                  var lastOne = value.pop();
-    
-                  return `${value
-                    .map((i) => `'${i}'`)
-                    .join(", ")}, or '${lastOne}'`;
-                })()}`
-              );
-          } else {
+      } else if (Array.isArray(value)) {
+        if (!value.includes(data[prop]))
+          throw Error(
+            `Option ${prop} is required to be ${(() => {
+              var lastOne = value.pop();
+
+              return `${value
+                .map((i) => `'${i}'`)
+                .join(", ")}, or '${lastOne}'`;
+            })()}`
+          );
+      } else {
         throw Error(
           `Rule typeof.${prop} is required to be a string or a class. While it is ${getArticle(
             typeof value
@@ -100,13 +100,11 @@ export function validateOptions(data: object, rules: validateOptionsOptions) {
     }
   }
 
-  
-
   return data;
 }
 /**
  * Rules for utils.structureData().
- * 
+ *
  * @param blacklist - An array filled with properties
  *     that should be ignored
  * @param setBoolean - An array filled with properties
@@ -114,14 +112,14 @@ export function validateOptions(data: object, rules: validateOptionsOptions) {
  * @param rules.alias - An object that rules which properties should
  *     be renamed and what should they be renamed to. Other rules will use this
  * alias to refer the property
- * @param rules.onlyAssignIfTruthy - An array filled 
+ * @param rules.onlyAssignIfTruthy - An array filled
  */
 export type StructureDataOptions = {
-  blacklist?: Array<string>,
-  setBoolean?: Array<string>,
-  alias?: object,
-  whitelist?: Array<string>,
-  onlyAssignIfTruthy?: Array<string>
+  blacklist?: Array<string>;
+  setBoolean?: Array<string>;
+  alias?: object;
+  whitelist?: Array<string>;
+  onlyAssignIfTruthy?: Array<string>;
 };
 /**
  * Populate an object with a raw data object. Does not currently support
@@ -184,4 +182,3 @@ export function structureData(cls, data, rules: StructureDataOptions = {}) {
 
   return cls;
 }
-
