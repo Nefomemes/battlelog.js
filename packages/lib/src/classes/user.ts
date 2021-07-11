@@ -114,12 +114,13 @@ export class User implements UserProfile {
    * @param client - The client for this user.
    * @param data - The user's data.
    */
-  constructor(client: GameClient, data: string | User) {
-    this.client = client;
-
-    /**
-     * @property {GameClient} client - The client used to access this user.
-     */
+  constructor(client: GameClient, data: string | UserProfile) {
+    Object.defineProperty(this, "client", {
+      value: client,
+      enumerable: false
+    });
+    
+  
 
     if (typeof data === "object") {
       this.structureData(data);
