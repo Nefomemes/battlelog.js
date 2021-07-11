@@ -5,9 +5,8 @@
     "version": "0.2.0",
     "configurations": [
         {
-=======
-            "command": "npm run test",
-            "name": "Run npm run test",
+            "command": "pnpm run test",
+            "name": "Run test",
             "request": "launch",
             "type": "node-terminal"
         }
@@ -16,6 +15,6 @@
 
 
 
-fc7fb
+
     ]
 }
