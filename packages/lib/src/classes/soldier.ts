@@ -55,18 +55,18 @@ export class Soldier {
   /**
    * The user of this soldier.
    */
-  user: User;
-  client: GameClient;
-  platform: BitPlatform;
-  game: BitGame;
+  user!: User;
+  client!: GameClient;
+  platform!: BitPlatform;
+  game!: BitGame;
   /**
    * How many coop missions have been completed with the soldier.
    */
-  coopLevelsTaken: number;
+  coopLevelsTaken!: number;
   /**
    *  The persona of this soldier.
    */
-  persona: PersonaType;
+  persona!: PersonaType;
   /**
    * @typedef {object} SoldierStats
    * @property {number} coopMissionsFinished - How many coop missions have the
