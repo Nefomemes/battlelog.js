@@ -1,13 +1,15 @@
 {
-    "compilerOptions":{
-        "alwaysStrict": true,
-        "noImplicitAny": false,
-        "allowUnreachableCode": true,
-        "inlineSourceMap": true,
-        "target":"ES6",
-        "moduleResolution":"Node",
-        "resolveJsonModule": true
-    },
-    "include":["./src/**.ts"],
-
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "noImplicitAny": false,
+    "allowUnreachableCode": true,
+    "inlineSourceMap": true,
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "composite": true,
+    "declarationMap": true,
+    "declaration": true
+  },
+  "include": ["./src/**/**.ts"]
 }
