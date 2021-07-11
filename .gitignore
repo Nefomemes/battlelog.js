@@ -117,3 +117,5 @@ out
 # Docusaurus
 build
 .docusaurus
+
+dist
