@@ -1,17 +1,23 @@
 {
-"sourceType": "unambiguous",
-            "presets": [
-              [
-                "@babel/preset-env",
-                { "targets": "defaults", "modules": "commonjs" },
-              ],
-            ],
-            "plugins": [
-              [
-                "@babel/plugin-transform-runtime",
-                { "regenerator": true, "corejs": 3, "useESModules": false },
-              ],
-              "@babel/plugin-proposal-class-properties",
-        
-            ],
-          }
+    "sourceType": "unambiguous",
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": "defaults",
+                "modules": "commonjs"
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "regenerator": true,
+                "corejs": 3,
+                "useESModules": false
+            }
+        ],
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
