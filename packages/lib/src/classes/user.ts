@@ -177,71 +177,15 @@ export class User implements UserProfile {
     }
     return this;
   }
-  /**
-   * Get the URL string of the user's avatar.
-   *
-   * @function
-   * @param  options - Options used
-   * @returns URL string for the user's avatar.
-   */
-  displayAvatarURL(
-    options: {
-      d?: GravatarDefaultAvatarType;
-      s?: number;
-      r?: "g" | "pg";
-      f?: boolean | string;
-      e?: "png" | "jpg";
-    } = {}
-  ): string {
-    utils.validateOptions(options, {
-      defaults: { d: "retro", r: "g", e: "png" },
-    });
-
-    if (options.s && options.s > 2048)
-      throw Error("Option 'size' is required to be less than 2048.");
-    if (options.s && options.s < 1)
-      throw Error("Option 'size' is required to be more than 1.");
-    // @ts-ignore
-    if (options.r === "r")
-      throw Error(
-        "To prevent abuse of this library. Avatars that are rated 'r' or 'x' is not permitted."
-      );
-    // @ts-ignore
-    if (options.r === "x") throw Error("Ok coomer");
-
-    if (!["g", "pg"].includes(options.r))
-      throw Error("Rating must be either 'g' or 'pg'");
-    if (
-      !(options.d.startsWith("http://") || options.d.startsWith("https://")) &&
-      ![
-        "404",
-        "mp",
-        "identicon",
-        "monsterid",
-        "wavatar",
-        "retro",
-        "robohash",
-        "blank",
-      ].includes(options.d)
-    )
-      throw Error(
-        "Option 'default' did not provide a valid default profile picture"
-      );
-
-    if (typeof options.f === "boolean") options.f = options.f ? "y" : "n";
-
-    return `https://www.gravatar.com/avatar/${this.user.gravatarMd5}.${
-      options.e
-    }?${(() => {
-      delete options.e;
-      return querystring.stringify(options);
-    })()}`;
-  } // This module is declared with using 'export =', and can only be used with a default import when using the 'allowSyntheticDefaultImports' flag.
 
   async fetchSoldiers(): Promise<Array<Soldier>> {
     var res = await this.client.axios.get(
       `/user/overviewBoxStats/${this.user.userId}`
     );
+    
+      this.soldiers = res.data.soldiersBox?.map((soldier) => {
+        return new Soldier(this.user, soldier)
+      })
 
     return this.soldiers;
   }
